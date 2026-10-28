@@ -36,17 +36,15 @@ export default function App() {
     <>
       <div ref={hostRef} aria-label="Daniel Hu portfolio" />
       <div
-        id="spotify-embed-main"
-        aria-hidden="true"
+        id="spotify-embed-root"
         style={{
           position: 'fixed',
           left: '-10000px',
           top: '0',
           width: '320px',
           height: '352px',
-          opacity: 0,
-          pointerEvents: 'none',
           overflow: 'hidden',
+          zIndex: 2,
         }}
       />
     </>
