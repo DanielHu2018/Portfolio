@@ -1555,11 +1555,12 @@ class Component extends DCLogic {
           const match = String(uri).match(/(?:track:|\/track\/)([A-Za-z0-9]+)/);
           const id = match ? match[1] : '';
           const idx = this.spotifyIds().indexOf(id);
+          this.spotifyHasTrack = true;
           if (idx >= 0 && Number(data.duration) > 0) {
             if (!this.spotifyDurations) this.spotifyDurations = {};
             this.spotifyDurations[id] = Math.max(1, Math.round(Number(data.duration) / 1000));
           }
-          const duration = idx >= 0 && this.spotifyDurations ? this.spotifyDurations[id] : 240;
+          const duration = idx >= 0 && this.spotifyDurations ? this.spotifyDurations[id] : 0;
           const position = Math.max(0, Math.min(duration, Math.floor(Number(data.position || 0) / 1000)));
           this.setState({ playing: data.isPaused === undefined ? true : !data.isPaused, elapsed: position, ...(idx >= 0 ? { track: idx } : {}) });
         };
@@ -2298,8 +2299,9 @@ class Component extends DCLogic {
       openHob_hb_volley: opener('hobby', 'hb-volley')
     };
     const plist = this.playlist();
-    const trk = plist[(s.track || 0) % plist.length];
-    const duration = (this.spotifyDurations && this.spotifyDurations[trk.id]) || trk.dur;
+    const hasTrack = this.spotifyHasTrack === true;
+    const trk = hasTrack ? plist[(s.track || 0) % plist.length] : { id: '', title: 'Spotify playlist', artist: 'Choose a track', dur: 0, art: '' };
+    const duration = hasTrack ? ((this.spotifyDurations && this.spotifyDurations[trk.id]) || trk.dur) : 0;
     const elapsed = Math.min(s.elapsed || 0, duration);
     const fmt = (sec) => {
       const whole = Math.max(0, Math.floor(Number(sec) || 0));
