@@ -1557,9 +1557,11 @@ class Component extends DCLogic {
           const idx = this.spotifyIds().indexOf(id);
           if (idx >= 0 && Number(data.duration) > 0) {
             if (!this.spotifyDurations) this.spotifyDurations = {};
-            this.spotifyDurations[id] = Number(data.duration) / 1000;
+            this.spotifyDurations[id] = Math.max(1, Math.round(Number(data.duration) / 1000));
           }
-          this.setState({ playing: data.isPaused === undefined ? true : !data.isPaused, elapsed: Math.floor((data.position || 0) / 1000), ...(idx >= 0 ? { track: idx } : {}) });
+          const duration = idx >= 0 && this.spotifyDurations ? this.spotifyDurations[id] : 240;
+          const position = Math.max(0, Math.min(duration, Math.floor(Number(data.position || 0) / 1000)));
+          this.setState({ playing: data.isPaused === undefined ? true : !data.isPaused, elapsed: position, ...(idx >= 0 ? { track: idx } : {}) });
         };
         controller.addListener('ready', () => {
           this.spotifyEmbedReady = true;
@@ -1600,7 +1602,9 @@ class Component extends DCLogic {
     const s = this.st();
     if (!s.playing) return;
     if (this.spotifyEmbedController) {
-      this.setState({ elapsed: (s.elapsed || 0) + 1 });
+      const idx = s.track || 0;
+      const duration = (this.spotifyDurations && this.spotifyDurations[this.spotifyIds()[idx]]) || 240;
+      this.setState({ elapsed: Math.min(duration, Math.floor(s.elapsed || 0) + 1) });
       return;
     }
     const list = this.playlist();
@@ -2297,7 +2301,10 @@ class Component extends DCLogic {
     const trk = plist[(s.track || 0) % plist.length];
     const duration = (this.spotifyDurations && this.spotifyDurations[trk.id]) || trk.dur;
     const elapsed = Math.min(s.elapsed || 0, duration);
-    const fmt = (sec) => Math.floor(sec / 60) + ':' + String(sec % 60).padStart(2, '0');
+    const fmt = (sec) => {
+      const whole = Math.max(0, Math.floor(Number(sec) || 0));
+      return Math.floor(whole / 60) + ':' + String(whole % 60).padStart(2, '0');
+    };
     const pct = (elapsed / duration * 100).toFixed(1);
     const seen = s.seen || {};
     const labels = ['Home', 'About', 'Experience', 'Projects', 'Skills', 'Off the clock', 'Contact'];
