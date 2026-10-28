@@ -1,10 +1,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+const required = ['SPOTIFY_CLIENT_ID', 'SPOTIFY_CLIENT_SECRET', 'SPOTIFY_REFRESH_TOKEN'];
+const missing = required.filter((name) => !process.env[name]);
+if (missing.length) throw new Error(`Missing GitHub Actions secrets: ${missing.join(', ')}`);
 const clientId = process.env.SPOTIFY_CLIENT_ID;
 const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
 const refreshToken = process.env.SPOTIFY_REFRESH_TOKEN;
-if (!clientId || !clientSecret || !refreshToken) throw new Error('Missing Spotify environment variables');
 
 const outputDir = path.resolve('public/assets/receipts');
 fs.mkdirSync(outputDir, { recursive: true });
