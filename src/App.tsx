@@ -32,5 +32,23 @@ export default function App() {
     };
   }, []);
 
-  return <div ref={hostRef} aria-label="Daniel Hu portfolio" />;
+  return (
+    <>
+      <div ref={hostRef} aria-label="Daniel Hu portfolio" />
+      <div
+        id="spotify-embed-main"
+        aria-hidden="true"
+        style={{
+          position: 'fixed',
+          left: '-10000px',
+          top: '0',
+          width: '320px',
+          height: '352px',
+          opacity: 0,
+          pointerEvents: 'none',
+          overflow: 'hidden',
+        }}
+      />
+    </>
+  );
 }
