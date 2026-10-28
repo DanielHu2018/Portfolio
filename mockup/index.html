@@ -1598,9 +1598,12 @@ class Component extends DCLogic {
     } catch (e) { /* generic track labels remain if Spotify metadata is unavailable */ }
   }
   onTick() {
-    if (this.spotifyEmbedController) return;
     const s = this.st();
     if (!s.playing) return;
+    if (this.spotifyEmbedController) {
+      this.setState({ elapsed: (s.elapsed || 0) + 1 });
+      return;
+    }
     const list = this.playlist();
     const idx = s.track || 0;
     const el = (s.elapsed || 0) + 1;
