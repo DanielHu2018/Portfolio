@@ -70,7 +70,7 @@ export default async function handler(req, res) {
     const rawItems = Array.isArray(data.items) ? data.items : [];
     const items = type === 'genres'
       ? Object.entries(rawItems.reduce((counts, artist) => { for (const genre of artist.genres || []) counts[genre] = (counts[genre] || 0) + 1; return counts; }, {})).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([name, count]) => ({ name, secondary: `${count} top artist${count === 1 ? '' : 's'}` })))
-      : rawItems.map((item) => ({ name: item.name, secondary: type === 'artists' ? `${item.followers?.total?.toLocaleString() || '—'} followers` : (item.artists || []).map((artist) => artist.name).join(', ') }));
+      : rawItems.map((item) => ({ name: item.name, secondary: type === 'artists' ? 'listens' : (item.artists || []).map((artist) => artist.name).join(', ') }));
     if (!items.length) throw new Error(`Spotify returned no ${type}`);
     res.status(200);
     res.setHeader('Content-Type', 'image/svg+xml; charset=utf-8');
