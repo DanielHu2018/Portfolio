@@ -2411,7 +2411,7 @@ class Component extends DCLogic {
         };
       }),
       ...focusVals,
-      receiptSrc: '/api/receipt?type=' + receiptView.type + '&range=' + receiptView.range,
+      receiptSrc: '/assets/receipts/' + receiptView.type + '-' + receiptView.range + '.svg',
       trackTitle: trk.title,
       trackArtist: trk.artist,
       miniArtStyle: 'width: 40px; height: 40px; flex-shrink: 0; border-radius: 50%; background: ' + (trk.art ? 'url("' + trk.art + '") center / cover no-repeat' : 'linear-gradient(135deg, #BDEBFB, #FFB8DA)') + '; border: 2px solid #D5DAE1',
