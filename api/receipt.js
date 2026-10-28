@@ -39,6 +39,14 @@ function receiptSvg(items, type, range) {
   </svg>`;
 }
 
+function genreMenuSvg(items, range) {
+  const width = 720;
+  const height = 190 + items.length * 58 + 90;
+  const rangeLabel = range === 'medium_term' ? 'LAST 6 MONTHS' : 'LAST 4 WEEKS';
+  const rows = items.map((item, index) => { const y = 150 + index * 58; return `<rect x="62" y="${y - 34}" width="596" height="48" rx="6" fill="${index === 0 ? '#DDF3FC' : '#FFFFFF'}" stroke="#D5DAE1" stroke-width="2"/>${textLine(String(index + 1).padStart(2, '0'), 82, y - 2, 16, 700)}${textLine(item.name, 122, y - 2, 19, 700)}${textLine(item.secondary, 620, y - 2, 14, 700, 'end')}<path d="M636 ${y - 10} l8 8 -8 8" fill="none" stroke="#7E848D" stroke-width="2"/>`; }).join('');
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><rect width="100%" height="100%" fill="#fffdf5"/><rect x="16" y="16" width="${width - 32}" height="${height - 32}" rx="18" fill="#F2F4F7" stroke="#D5DAE1" stroke-width="4"/><rect x="42" y="42" width="636" height="68" rx="12" fill="#FFFFFF" stroke="#C3CBD5" stroke-width="3"/><text x="360" y="86" font-family="sans-serif" font-size="26px" font-weight="800" text-anchor="middle" fill="#3C4046">GENRES</text>${textLine(rangeLabel, 360, height - 38, 14, 700, 'middle')}${rows}</svg>`;
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'GET') {
     res.status(405).setHeader('Allow', 'GET').send('Method Not Allowed');
@@ -75,7 +83,7 @@ export default async function handler(req, res) {
     res.status(200);
     res.setHeader('Content-Type', 'image/svg+xml; charset=utf-8');
     res.setHeader('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400');
-    res.send(receiptSvg(items, type, range));
+    res.send(type === 'genres' ? genreMenuSvg(items, range) : receiptSvg(items, type, range));
   } catch (error) {
     console.error('Receipt generation failed:', error);
     res.status(502).setHeader('Content-Type', 'text/plain; charset=utf-8').send('Unable to generate the Spotify receipt right now.');
