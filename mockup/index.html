@@ -150,7 +150,7 @@ footer.shift{padding-bottom:120px !important}
   <sc-if value="{{fIsPhoto}}" hint-placeholder-val="{{ false }}">
     <div style="{{fCard}}">
       <div style="position: relative; background: #FFFFFF; border: 3px solid #D5DAE1; border-radius: 12px; padding: 22px 22px 0">
-        <div role="img" aria-label="Photo of Daniel (placeholder)" style="aspect-ratio: 1 / 1; background: linear-gradient(180deg, #E9F8FE, #BDEBFB); border: 2px solid #D5DAE1; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; color: #1677A8">[PHOTO OF YOU]</div>
+        <img src="/assets/photo_of_me.jpg" alt="Photo of Daniel" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: linear-gradient(180deg, #E9F8FE, #BDEBFB); border: 2px solid #D5DAE1; border-radius: 6px">
         <p style="margin: 18px 0 24px; font-family: 'Permanent Marker', cursive; font-size: 32px; text-align: center; color: #3C4046">hi, I'm Daniel</p>
         <div aria-hidden="true" style="position: absolute; top: -20px; left: 50%; width: 150px; height: 40px; transform: translateX(-50%) rotate(-5deg); background: #FFE58A; opacity: 0.95; border: 2px solid #E8C65A; border-radius: 4px"></div>
       </div>
@@ -160,9 +160,9 @@ footer.shift{padding-bottom:120px !important}
   <sc-if value="{{fIsConcert}}" hint-placeholder-val="{{ false }}">
     <div style="{{fCard}}">
       <div style="background: #FFFFFF; border: 3px solid #D5DAE1; border-radius: 10px; padding: 18px 18px 0">
-        <div role="img" aria-label="Concert photo (placeholder)" style="aspect-ratio: 1 / 1; background: #3C4046; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; color: #FFE58A">[CONCERT PHOTO]</div>
-        <p style="margin: 14px 0 4px; font-family: 'Permanent Marker', cursive; font-size: 28px; text-align: center; color: #3C4046">[ARTIST]</p>
-        <p style="margin: 0 0 18px; font: 600 15px 'Helvetica Neue', Arial, sans-serif; text-align: center; color: #5A5F67">[VENUE] · [DATE]</p>
+        <img src="{{fc.src}}" alt="{{fc.artist}} concert photo" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: #3C4046; border-radius: 5px">
+        <p style="margin: 14px 0 4px; font-family: 'Permanent Marker', cursive; font-size: 28px; text-align: center; color: #3C4046">{{fc.artist}}</p>
+        <p style="margin: 0 0 18px; font: 600 15px 'Helvetica Neue', Arial, sans-serif; text-align: center; color: #5A5F67">{{fc.city}} · {{fc.date}}</p>
       </div>
     </div>
   </sc-if>
@@ -172,7 +172,8 @@ footer.shift{padding-bottom:120px !important}
       <div style="position: relative; height: 100%; box-sizing: border-box; padding: 20px 20px 28px; border-radius: 40px; background: linear-gradient(160deg, #FFFFFF 0%, #F2F4F7 55%, #DFE3E9 100%); border: 3px solid #D5DAE1; box-shadow: inset 0 3px 0 #FFFFFF; display: flex; flex-direction: column; align-items: center; gap: 22px">
         <div style="width: 100%; box-sizing: border-box; border: 8px solid #23262B; border-radius: 12px; background: #23262B; overflow: hidden">
           <div style="background: linear-gradient(180deg, #FAFBFC, #E7EAEE); border-bottom: 1px solid #B9BFC8; padding: 3px 8px; display: flex; justify-content: space-between; align-items: center; font: 700 12px 'Helvetica Neue', Arial, sans-serif; color: #23262B"><span>{{fp.name}}</span><sc-if value="{{fp.hasBadge}}" hint-placeholder-val="{{ false }}"><span style="{{fp.badgeStyle}}">{{fp.badge}}</span></sc-if></div>
-          <div role="img" aria-label="{{fp.name}} screenshot (placeholder)" style="height: 150px; background: linear-gradient(180deg, #FFFFFF, #EEF1F5); border-bottom: 1px solid #D5DAE1; display: flex; align-items: center; justify-content: center; font: 700 12px 'Helvetica Neue', Arial, sans-serif; color: #5A5F67">{{fp.shot}}</div>
+          <sc-if value="{{fp.isVideo}}" hint-placeholder-val="{{ false }}"><video src="{{fp.media}}" aria-label="{{fp.name}} demo video" muted loop playsinline autoplay style="display: block; width: 100%; height: 150px; object-fit: cover; background: linear-gradient(180deg, #FFFFFF, #EEF1F5); border-bottom: 1px solid #D5DAE1"></video></sc-if>
+          <sc-if value="{{fp.isImage}}" hint-placeholder-val="{{ false }}"><img src="{{fp.media}}" alt="{{fp.name}} screenshot" style="display: block; width: 100%; height: 150px; object-fit: cover; background: linear-gradient(180deg, #FFFFFF, #EEF1F5); border-bottom: 1px solid #D5DAE1"></sc-if>
           <div style="background: #FFFFFF; padding: 12px 12px 14px; display: flex; flex-direction: column; gap: 6px; font-family: 'Helvetica Neue', Arial, sans-serif; color: #23262B">
             <h3 style="margin: 0; font: 800 24px 'M PLUS Rounded 1c', sans-serif; color: #3C4046">{{fp.name}}</h3>
             <p style="margin: 0; font-weight: 700; font-size: 12px; color: #4A4F57">{{fp.sub}}</p>
@@ -373,20 +374,20 @@ footer.shift{padding-bottom:120px !important}
   <div class="{{rv_about}}" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: center">
     <div class="dots rv-item" style="background: #FFFFFF; border: 4px solid #D5DAE1; border-radius: 32px; box-shadow: inset 0 0 0 4px #FFFFFF; padding: 36px; display: flex; flex-direction: column; gap: 18px">
       <span style="align-self: flex-start; font-weight: 800; font-size: 13px; color: #0B3550; background: #BDEBFB; border-radius: 999px; padding: 5px 14px">About</span>
-      <h2 style="margin: 0; font-weight: 800; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.12">I build agentic AI apps on top of foundation models.</h2>
-      <p style="margin: 0; font-size: 17px; line-height: 1.75; color: #4A4F57">I'm an Honors Computer Science and Engineering student at Ohio State with a Statistics minor, graduating in December 2026. I've shipped enterprise software at Nationwide, spent two years teaching robot arms in a research lab, and I lead the AI track for a 100+ member student org.</p>
-      <p style="margin: 0; font-size: 17px; line-height: 1.75; color: #4A4F57">Now looking for new grad software and AI engineering roles.</p>
+      <h2 style="margin: 0; font-weight: 800; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.12">Computer Science and Engineering student focused on AI.</h2>
+      <p style="margin: 0; font-size: 17px; line-height: 1.75; color: #4A4F57">I'm pursuing a B.S. in Computer Science and Engineering with a Statistics minor at The Ohio State University. I have a 3.8 GPA, am in the Engineering Honors Program, and am a National Merit Scholar.</p>
+      <p style="margin: 0; font-size: 17px; line-height: 1.75; color: #4A4F57">My experience includes enterprise software at Nationwide, AI/ML research in Ohio State's DISL robotics lab, and leading the Foundations of AI track for Big Data and Analytics Association.</p>
       <div style="display: flex; flex-wrap: wrap; gap: 8px">
         <span style="font-weight: 700; font-size: 13px; border-radius: 999px; padding: 6px 14px; background: #FFE58A; color: #4A3700">3.8 GPA</span>
         <span style="font-weight: 700; font-size: 13px; border-radius: 999px; padding: 6px 14px; background: #FFB8DA; color: #5C1236">National Merit Scholar</span>
-        <span style="font-weight: 700; font-size: 13px; border-radius: 999px; padding: 6px 14px; background: #A9EBC2; color: #12452A">Engineering Honors</span>
+        <span style="font-weight: 700; font-size: 13px; border-radius: 999px; padding: 6px 14px; background: #A9EBC2; color: #12452A">Engineering Honors Program</span>
       </div>
     </div>
     <div style="display: flex; justify-content: center; padding: 24px">
       <div class="rv-item" onClick="{{openPhoto}}" style="cursor: zoom-in; position: relative; width: 320px; transform-style: preserve-3d; transform: perspective(900px) rotateY(-14deg) rotate(3deg)">
         <div aria-hidden="true" style="position: absolute; inset: 0; transform: translate3d(18px, 18px, -24px); background-image: radial-gradient(#9AD9F0 1.6px, transparent 1.9px); background-size: 7px 7px; border-radius: 10px"></div><div class="flap">
         <div class="slab3d" style="position: relative; background: #FFFFFF; border: 3px solid #D5DAE1; border-radius: 10px; padding: 16px 16px 0"><sc-for list="{{slabThin}}" as="L" hint-placeholder-count="0"><div class="slab-layer" aria-hidden="true" style="{{L.style}}"></div></sc-for>
-          <div role="img" aria-label="Photo of Daniel (placeholder)" style="aspect-ratio: 1 / 1; background: linear-gradient(180deg, #E9F8FE, #BDEBFB); border: 2px solid #D5DAE1; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; color: #1677A8">[PHOTO OF YOU]</div>
+          <img src="/assets/photo_of_me.jpg" alt="Photo of Daniel" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: linear-gradient(180deg, #E9F8FE, #BDEBFB); border: 2px solid #D5DAE1; border-radius: 4px">
           <p style="margin: 14px 0 18px; font-family: 'Permanent Marker', cursive; font-size: 24px; text-align: center; color: #3C4046">hi, I'm Daniel</p>
         </div><div aria-hidden="true" style="position: absolute; top: -16px; left: 50%; width: 120px; height: 32px; transform: translateX(-50%) translateZ(2px) rotate(-5deg); z-index: 4; background: #FFE58A; opacity: 0.95; border: 2px solid #E8C65A; border-radius: 4px"></div></div>
       </div>
@@ -403,11 +404,11 @@ footer.shift{padding-bottom:120px !important}
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
       <article class="dots rv-item" style="background: #FFFFFF; border: 4px solid #D5DAE1; border-radius: 28px; box-shadow: inset 0 0 0 4px #FFFFFF; display: flex; flex-direction: column">
-        <div style="border-radius: 24px 24px 0 0; height: 92px; background: linear-gradient(180deg, #E9F8FE, #BDEBFB); display: flex; align-items: flex-end; justify-content: space-between; padding: 14px 20px"><span style="font-weight: 800; font-size: 13px; color: #0B3550">Internship</span><span style="font-weight: 700; font-size: 13px; color: #0B3550">[DATES]</span></div>
+        <div style="border-radius: 24px 24px 0 0; height: 92px; background: linear-gradient(180deg, #E9F8FE, #BDEBFB); display: flex; align-items: flex-end; justify-content: space-between; padding: 14px 20px"><span style="font-weight: 800; font-size: 13px; color: #0B3550">Internship</span><span style="font-weight: 700; font-size: 13px; color: #0B3550">May 2026 — Present</span></div>
         <div style="padding: 22px; display: flex; flex-direction: column; gap: 10px">
           <h3 style="margin: 0; font-weight: 800; font-size: 26px">Nationwide</h3>
           <p style="margin: 0; font-weight: 700; font-size: 15px">Software Engineering Intern · Annuity and Retirement, Quality Corps</p>
-          <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #4A4F57">Built 15+ features and 20+ endpoints for an enterprise financial platform module.</p>
+          <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #4A4F57">Owned and built a business-critical module end to end with 18 features and 22 endpoints, designing PostgreSQL tables, REST APIs, and an Angular/TypeScript UI.</p>
           <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px">
             <span style="font-weight: 700; font-size: 12px; border-radius: 999px; padding: 4px 12px; background: #EEF1F5">PostgreSQL</span>
             <span style="font-weight: 700; font-size: 12px; border-radius: 999px; padding: 4px 12px; background: #EEF1F5">REST</span>
@@ -416,11 +417,11 @@ footer.shift{padding-bottom:120px !important}
         </div>
       </article>
       <article class="dots rv-item" style="background: #FFFFFF; border: 4px solid #D5DAE1; border-radius: 28px; box-shadow: inset 0 0 0 4px #FFFFFF; display: flex; flex-direction: column">
-        <div style="border-radius: 24px 24px 0 0; height: 92px; background: linear-gradient(180deg, #F1ECFF, #CDBDFF); display: flex; align-items: flex-end; justify-content: space-between; padding: 14px 20px"><span style="font-weight: 800; font-size: 13px; color: #2E1F70">Research</span><span style="font-weight: 700; font-size: 13px; color: #2E1F70">2 years</span></div>
+        <div style="border-radius: 24px 24px 0 0; height: 92px; background: linear-gradient(180deg, #F1ECFF, #CDBDFF); display: flex; align-items: flex-end; justify-content: space-between; padding: 14px 20px"><span style="font-weight: 800; font-size: 13px; color: #2E1F70">Research</span><span style="font-weight: 700; font-size: 13px; color: #2E1F70">Mar 2024 — Aug 2024 · May 2025 — May 2026</span></div>
         <div style="padding: 22px; display: flex; flex-direction: column; gap: 10px">
           <h3 style="margin: 0; font-weight: 800; font-size: 26px">OSU Robotics Lab</h3>
           <p style="margin: 0; font-weight: 700; font-size: 15px">Undergraduate AI/ML Researcher</p>
-          <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #4A4F57">Vision-language-action and CNN behavior-cloning policies for robotic manipulation on a UR5e arm.</p>
+          <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #4A4F57">Integrated a VLA policy for autonomous robot manipulation, trained CNN-based behavior cloning for a 6-DOF UR5e arm, and reproduced Stanford's UMI environment.</p>
           <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px">
             <span style="font-weight: 700; font-size: 12px; border-radius: 999px; padding: 4px 12px; background: #EEF1F5">VLA policies</span>
             <span style="font-weight: 700; font-size: 12px; border-radius: 999px; padding: 4px 12px; background: #EEF1F5">Behavior cloning</span>
@@ -429,11 +430,11 @@ footer.shift{padding-bottom:120px !important}
         </div>
       </article>
       <article class="dots rv-item" style="background: #FFFFFF; border: 4px solid #D5DAE1; border-radius: 28px; box-shadow: inset 0 0 0 4px #FFFFFF; display: flex; flex-direction: column">
-        <div style="border-radius: 24px 24px 0 0; height: 92px; background: linear-gradient(180deg, #E6FAEE, #A9EBC2); display: flex; align-items: flex-end; justify-content: space-between; padding: 14px 20px"><span style="font-weight: 800; font-size: 13px; color: #12452A">Leadership</span><span style="font-weight: 700; font-size: 13px; color: #12452A">[DATES]</span></div>
+        <div style="border-radius: 24px 24px 0 0; height: 92px; background: linear-gradient(180deg, #E6FAEE, #A9EBC2); display: flex; align-items: flex-end; justify-content: space-between; padding: 14px 20px"><span style="font-weight: 800; font-size: 13px; color: #12452A">Leadership</span><span style="font-weight: 700; font-size: 13px; color: #12452A">Nov 2025 — Present</span></div>
         <div style="padding: 22px; display: flex; flex-direction: column; gap: 10px">
           <h3 style="margin: 0; font-weight: 800; font-size: 26px">BDAA</h3>
           <p style="margin: 0; font-weight: 700; font-size: 15px">Foundations of AI Track Lead</p>
-          <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #4A4F57">Leads the AI track for Big Data and Analytics Association, a 100+ member student organization at Ohio State.</p>
+          <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #4A4F57">Led the Foundations of AI track for a 100+ member organization, overseeing teams building AI-powered products and mentoring students on scoping, AI integration, and presentation.</p>
           <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px">
             <span style="font-weight: 700; font-size: 12px; border-radius: 999px; padding: 4px 12px; background: #EEF1F5">Teaching</span>
             <span style="font-weight: 700; font-size: 12px; border-radius: 999px; padding: 4px 12px; background: #EEF1F5">Workshops</span>
@@ -458,7 +459,7 @@ footer.shift{padding-bottom:120px !important}
         <div class="slab3d proj" onClick="{{openProj0}}" onPointerMove="{{projMove}}" onPointerLeave="{{projLeave}}" style="position: relative; height: 100%; box-sizing: border-box; padding: 20px 20px 28px; border-radius: 40px; background: linear-gradient(160deg, #FFFFFF 0%, #F2F4F7 55%, #DFE3E9 100%); border: 3px solid #D5DAE1; box-shadow: inset 0 3px 0 #FFFFFF; display: flex; flex-direction: column; align-items: center; gap: 22px"><sc-for list="{{slab}}" as="L" hint-placeholder-count="0"><div class="slab-layer" aria-hidden="true" style="{{L.style}}"></div></sc-for>
           <div style="width: 100%; box-sizing: border-box; border: 8px solid #23262B; border-radius: 12px; background: #23262B; overflow: hidden">
             <div style="background: linear-gradient(180deg, #FAFBFC, #E7EAEE); border-bottom: 1px solid #B9BFC8; padding: 3px 8px; display: flex; justify-content: space-between; align-items: center; font: 700 12px 'Helvetica Neue', Arial, sans-serif; color: #23262B"><span>CLARA</span><span style="color: #4A3700; background: #FFD23F; border-radius: 999px; padding: 0 8px">1st place</span></div>
-            <div role="img" aria-label="CLARA screenshot (placeholder)" style="height: 150px; background: linear-gradient(180deg, #FFFFFF, #EEF1F5); border-bottom: 1px solid #D5DAE1; display: flex; align-items: center; justify-content: center; font: 700 12px 'Helvetica Neue', Arial, sans-serif; color: #5A5F67">[CLARA SCREENSHOT]</div>
+            <video src="/assets/clara-demo.mp4" aria-label="CLARA demo video" muted loop playsinline autoplay style="display: block; width: 100%; height: 150px; object-fit: cover; background: linear-gradient(180deg, #FFFFFF, #EEF1F5); border-bottom: 1px solid #D5DAE1"></video>
             <div style="background: #FFFFFF; padding: 12px 12px 14px; display: flex; flex-direction: column; gap: 6px; font-family: 'Helvetica Neue', Arial, sans-serif; color: #23262B">
               <h3 style="margin: 0; font: 800 24px 'M PLUS Rounded 1c', sans-serif; color: #3C4046">CLARA</h3>
               <p style="margin: 0; font-weight: 700; font-size: 12px; color: #4A4F57">IBM SkillsBuild × OSU FinTech Hackathon</p>
@@ -480,7 +481,7 @@ footer.shift{padding-bottom:120px !important}
         <div class="slab3d proj" onClick="{{openProj1}}" onPointerMove="{{projMove}}" onPointerLeave="{{projLeave}}" style="position: relative; height: 100%; box-sizing: border-box; padding: 20px 20px 28px; border-radius: 40px; background: linear-gradient(160deg, #FFFFFF 0%, #F2F4F7 55%, #DFE3E9 100%); border: 3px solid #D5DAE1; box-shadow: inset 0 3px 0 #FFFFFF; display: flex; flex-direction: column; align-items: center; gap: 22px"><sc-for list="{{slab}}" as="L" hint-placeholder-count="0"><div class="slab-layer" aria-hidden="true" style="{{L.style}}"></div></sc-for>
           <div style="width: 100%; box-sizing: border-box; border: 8px solid #23262B; border-radius: 12px; background: #23262B; overflow: hidden">
             <div style="background: linear-gradient(180deg, #FAFBFC, #E7EAEE); border-bottom: 1px solid #B9BFC8; padding: 3px 8px; display: flex; justify-content: space-between; align-items: center; font: 700 12px 'Helvetica Neue', Arial, sans-serif; color: #23262B"><span>Sierra</span></div>
-            <div role="img" aria-label="Sierra screenshot (placeholder)" style="height: 150px; background: linear-gradient(180deg, #FFFFFF, #EEF1F5); border-bottom: 1px solid #D5DAE1; display: flex; align-items: center; justify-content: center; font: 700 12px 'Helvetica Neue', Arial, sans-serif; color: #5A5F67">[SIERRA SCREENSHOT]</div>
+            <img src="/assets/sierra.png" alt="Sierra screenshot" style="display: block; width: 100%; height: 150px; object-fit: cover; background: linear-gradient(180deg, #FFFFFF, #EEF1F5); border-bottom: 1px solid #D5DAE1">
             <div style="background: #FFFFFF; padding: 12px 12px 14px; display: flex; flex-direction: column; gap: 6px; font-family: 'Helvetica Neue', Arial, sans-serif; color: #23262B">
               <h3 style="margin: 0; font: 800 24px 'M PLUS Rounded 1c', sans-serif; color: #3C4046">Sierra</h3>
               <p style="margin: 0; font-weight: 700; font-size: 12px; color: #4A4F57">[YOUR ROLE]</p>
@@ -502,7 +503,7 @@ footer.shift{padding-bottom:120px !important}
         <div class="slab3d proj" onClick="{{openProj2}}" onPointerMove="{{projMove}}" onPointerLeave="{{projLeave}}" style="position: relative; height: 100%; box-sizing: border-box; padding: 20px 20px 28px; border-radius: 40px; background: linear-gradient(160deg, #FFFFFF 0%, #F2F4F7 55%, #DFE3E9 100%); border: 3px solid #D5DAE1; box-shadow: inset 0 3px 0 #FFFFFF; display: flex; flex-direction: column; align-items: center; gap: 22px"><sc-for list="{{slab}}" as="L" hint-placeholder-count="0"><div class="slab-layer" aria-hidden="true" style="{{L.style}}"></div></sc-for>
           <div style="width: 100%; box-sizing: border-box; border: 8px solid #23262B; border-radius: 12px; background: #23262B; overflow: hidden">
             <div style="background: linear-gradient(180deg, #FAFBFC, #E7EAEE); border-bottom: 1px solid #B9BFC8; padding: 3px 8px; display: flex; justify-content: space-between; align-items: center; font: 700 12px 'Helvetica Neue', Arial, sans-serif; color: #23262B"><span>Disco</span><span style="color: #12452A; background: #A9EBC2; border-radius: 999px; padding: 0 8px">HackOHI/O 2026</span></div>
-            <div role="img" aria-label="Disco screenshot (placeholder)" style="height: 150px; background: linear-gradient(180deg, #FFFFFF, #EEF1F5); border-bottom: 1px solid #D5DAE1; display: flex; align-items: center; justify-content: center; font: 700 12px 'Helvetica Neue', Arial, sans-serif; color: #5A5F67">[DISCO SCREENSHOT]</div>
+            <video src="/assets/disco-demo.mp4" aria-label="Disco demo video" muted loop playsinline autoplay style="display: block; width: 100%; height: 150px; object-fit: cover; background: linear-gradient(180deg, #FFFFFF, #EEF1F5); border-bottom: 1px solid #D5DAE1"></video>
             <div style="background: #FFFFFF; padding: 12px 12px 14px; display: flex; flex-direction: column; gap: 6px; font-family: 'Helvetica Neue', Arial, sans-serif; color: #23262B">
               <h3 style="margin: 0; font: 800 24px 'M PLUS Rounded 1c', sans-serif; color: #3C4046">Disco</h3>
               <p style="margin: 0; font-weight: 700; font-size: 12px; color: #4A4F57">Think less, party more.</p>
@@ -562,14 +563,14 @@ footer.shift{padding-bottom:120px !important}
           <sc-for list="{{flow}}" as="c" hint-placeholder-count="7">
             <div style="{{c.style}}" onClick="{{c.open}}"><div class="proj photo3d" onPointerMove="{{projMove}}" onPointerLeave="{{projLeave}}" onPointerOut="{{photoOut}}" style="position: relative; transform-style: preserve-3d">
               <div class="slab3d" style="position: relative; background: #FFFFFF; border: 3px solid #D5DAE1; border-radius: 6px; padding: 10px 10px 0"><sc-for list="{{slabThin}}" as="L" hint-placeholder-count="0"><div class="slab-layer" aria-hidden="true" style="{{L.style}}"></div></sc-for>
-                <div role="img" aria-label="Concert photo (placeholder)" style="aspect-ratio: 1 / 1; background: #3C4046; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 11px; color: #FFE58A">[CONCERT PHOTO]</div>
-                <p style="margin: 8px 0 10px; font-family: 'Permanent Marker', cursive; font-size: 15px; text-align: center; color: #3C4046">[ARTIST]</p>
+                <img src="{{c.src}}" alt="{{c.artist}} concert photo" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: #3C4046; border-radius: 3px">
+                <p style="margin: 8px 0 10px; font-family: 'Permanent Marker', cursive; font-size: 15px; text-align: center; color: #3C4046">{{c.artist}}</p>
               </div>
             </div>
             <div aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 100%; margin-top: 6px; transform: scaleY(-1); transform-origin: 50% 50%; pointer-events: none">
               <div style="position: relative; background: #FFFFFF; border: 3px solid #D5DAE1; border-radius: 6px; padding: 10px 10px 0">
-                <div style="aspect-ratio: 1 / 1; background: #3C4046; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 11px; color: #FFE58A">[CONCERT PHOTO]</div>
-                <p style="margin: 8px 0 10px; font-family: 'Permanent Marker', cursive; font-size: 15px; text-align: center; color: #3C4046">[ARTIST]</p>
+                <img src="{{c.src}}" alt="{{c.artist}} concert photo" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: #3C4046; border-radius: 3px">
+                <p style="margin: 8px 0 10px; font-family: 'Permanent Marker', cursive; font-size: 15px; text-align: center; color: #3C4046">{{c.artist}}</p>
               </div>
               <div style="position: absolute; inset: -4px; background: linear-gradient(to top, rgba(255, 246, 214, 0.55) 0%, rgba(255, 246, 214, 0.85) 30%, #FFF6D6 55%, #FFF6D6 100%)"></div>
             </div></div>
@@ -577,8 +578,8 @@ footer.shift{padding-bottom:120px !important}
         </div>
           <button type="button" class="flow-arrow" aria-label="Next photo" onClick="{{flowNext}}" style="flex-shrink: 0; margin-bottom: 110px; width: 64px; height: 64px; border-radius: 50%; border: 3px solid #D5DAE1; background: linear-gradient(180deg, #FFFFFF, #EDF0F4); box-shadow: inset 0 2px 0 #FFFFFF, inset 0 -3px 6px rgba(60, 64, 70, 0.06); cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path d="M18 6v12M6 6l9 6-9 6z" fill="#7E848D" stroke="#7E848D" stroke-width="2" stroke-linejoin="round"></path></svg></button>
         </div>
-        <p style="position: relative; margin: 0; font: 700 16px 'Helvetica Neue', Arial, sans-serif; color: #3C4046">[ARTIST]</p>
-        <p style="position: relative; margin: 0; font: 500 14px 'Helvetica Neue', Arial, sans-serif; color: #5A5F67">[VENUE] · [DATE]</p>
+        <p style="position: relative; margin: 0; font: 700 16px 'Helvetica Neue', Arial, sans-serif; color: #3C4046">{{flowCurrent.artist}}</p>
+        <p style="position: relative; margin: 0; font: 500 14px 'Helvetica Neue', Arial, sans-serif; color: #5A5F67">{{flowCurrent.city}} · {{flowCurrent.date}}</p>
       </div>
     </div>
 
@@ -2035,9 +2036,9 @@ class Component extends DCLogic {
     }
     const bootState = s.boot || this._bootInit;
     const projData = [
-      { name: 'CLARA', href: '#clara', shot: '[CLARA SCREENSHOT]', hasBadge: true, badge: '1st place', badgeStyle: 'color: #4A3700; background: #FFD23F; border-radius: 999px; padding: 0 9px', sub: 'IBM SkillsBuild × OSU FinTech Hackathon', desc: 'A Claude-powered competitive intelligence agent on AWS Bedrock, paired with Black-Scholes pricing.', chips: [{ ch: 'Claude' }, { ch: 'AWS Bedrock' }, { ch: 'Black-Scholes' }] },
-      { name: 'Sierra', href: '#sierra', shot: '[SIERRA SCREENSHOT]', hasBadge: false, badge: '', badgeStyle: '', sub: '[YOUR ROLE]', desc: 'Routes transmission lines with multi-objective pathfinding and answers regulatory questions with RAG.', chips: [{ ch: 'Pathfinding' }, { ch: 'RAG' }, { ch: '[STACK]' }] },
-      { name: 'Disco', href: '#disco', shot: '[DISCO SCREENSHOT]', hasBadge: true, badge: 'HackOHI/O 2026', badgeStyle: 'color: #12452A; background: #A9EBC2; border-radius: 999px; padding: 0 9px', sub: 'Think less, party more.', desc: "Turns friends' opinions into recommendations and plans group outings with agents. [FULL DETAILS COMING]", chips: [{ ch: 'Multi-agent' }, { ch: '[STACK]' }] }
+      { name: 'CLARA', href: '#clara', media: '/assets/clara-demo.mp4', isVideo: true, isImage: false, hasBadge: true, badge: '1st place', badgeStyle: 'color: #4A3700; background: #FFD23F; border-radius: 999px; padding: 0 9px', sub: 'IBM SkillsBuild × OSU FinTech Hackathon', desc: 'A Claude-powered competitive intelligence agent on AWS Bedrock, paired with Black-Scholes pricing.', chips: [{ ch: 'Claude' }, { ch: 'AWS Bedrock' }, { ch: 'Black-Scholes' }] },
+      { name: 'Sierra', href: '#sierra', media: '/assets/sierra.png', isVideo: false, isImage: true, hasBadge: false, badge: '', badgeStyle: '', sub: 'AI platform for transmission planning', desc: 'Routes transmission lines with multi-objective pathfinding and answers regulatory questions with RAG.', chips: [{ ch: 'Pathfinding' }, { ch: 'RAG' }, { ch: 'TypeScript' }] },
+      { name: 'Disco', href: '#disco', media: '/assets/disco-demo.mp4', isVideo: true, isImage: false, hasBadge: true, badge: 'HackOHI/O 2026', badgeStyle: 'color: #12452A; background: #A9EBC2; border-radius: 999px; padding: 0 9px', sub: 'Think less, party more.', desc: "Turns friends' opinions into recommendations and plans group outings with agents.", chips: [{ ch: 'Multi-agent' }, { ch: 'AI agents' }] }
     ];
     const hobData = {
       'hb-guitar': { title: 'Guitar', label: '3D model of an electric guitar', blurb: '[A QUICK BLURB ABOUT LEARNING GUITAR]' },
@@ -2045,6 +2046,18 @@ class Component extends DCLogic {
       'hb-ski': { title: 'Skiing', label: '3D model of a pair of skis', blurb: '[A QUICK BLURB ABOUT SKIING]' },
       'hb-volley': { title: 'Volleyball', label: '3D model of a volleyball', blurb: '[A QUICK BLURB ABOUT VOLLEYBALL]' }
     };
+    const concertData = [
+      { artist: 'Baby Keem', date: 'June 10, 2026', city: 'Columbus', src: '/assets/Baby_Keem_06102026_Columbus.jpeg' },
+      { artist: 'Glaive', date: 'October 4, 2026', city: 'Columbus', src: '/assets/Glaive_10042026_Columbus.JPG' },
+      { artist: 'Jane Remover', date: 'September 18, 2026', city: 'Columbus', src: '/assets/Jane_Remover_09182026_Columbus.JPEG' },
+      { artist: 'JPEGMAFIA', date: 'September 20, 2024', city: 'Columbus', src: '/assets/jpegmafia_9202024_Columbus.JPEG' },
+      { artist: 'Kid Cudi', date: 'September 17, 2022', city: 'Cleveland', src: '/assets/Kid_Cudi_09172022_Cleveland.JPG' },
+      { artist: 'Ninajirachi', date: 'September 22, 2026', city: 'Columbus', src: '/assets/Ninajirachi_099222026_Columbus.JPG' },
+      { artist: 'Slayr', date: 'September 5, 2026', city: 'Columbus', src: '/assets/slayr_09052026_Columbus.jpg' },
+      { artist: 'The Strokes', date: 'July 14, 2026', city: 'Cincinnati', src: '/assets/The_Strokes_07142026_Cincinnati.jpg' },
+      { artist: 'Tiffany Day', date: 'October 4, 2026', city: 'Columbus', src: '/assets/Tiffany_Day_10042026_Columbus.JPEG' },
+      { artist: 'Wynton Marsalis', date: 'October 6, 2026', city: 'Columbus', src: '/assets/Wynton_Marsalis_10062026_Columbus.jpeg' }
+    ];
     const f = s.focus;
     const ph = s.fPhase;
     const shown = f && ph === 'open';
@@ -2071,6 +2084,7 @@ class Component extends DCLogic {
     }
     const fh = f && f.kind === 'hobby' ? hobData[f.idx] : { title: '', label: '', blurb: '' };
     const fp = f && f.kind === 'proj' ? projData[f.idx] : projData[0];
+    const fc = f && f.kind === 'concert' ? concertData[f.idx] : concertData[0];
     const opener = (kind, idx) => (e) => this.openFocus(kind, idx, e);
     const focusVals = {
       fOpen: !!f,
@@ -2081,6 +2095,7 @@ class Component extends DCLogic {
       fIsHobby: !!f && f.kind === 'hobby',
       fLabel: f ? (f.kind === 'hobby' ? fh.title : (f.kind === 'proj' ? fp.name : (f.kind === 'spotify' ? 'Music player' : (f.kind === 'concert' ? 'Concert photo' : 'Photo of Daniel')))) : '',
       fp: fp,
+      fc: fc,
       fh: fh,
       fCard: fCard,
       fBlurb: fBlurb,
@@ -2115,7 +2130,7 @@ class Component extends DCLogic {
       go: (e) => { if (e && e.preventDefault) e.preventDefault(); this.go(i); if (this.st().navOpen) this.setState({ navOpen: false }); }
     }));
     const rv = (id) => 'reveal';
-    const PHOTOS = 7;
+    const PHOTOS = concertData.length;
     const M = PHOTOS * 2;
     const center = s.flow ?? 0;
     const flow = Array.from({ length: M }, (_, i) => {
@@ -2129,10 +2144,15 @@ class Component extends DCLogic {
       const shown = ad <= 3;
       return {
         photo: i % PHOTOS,
+        src: concertData[i % PHOTOS].src,
+        artist: concertData[i % PHOTOS].artist,
+        city: concertData[i % PHOTOS].city,
+        date: concertData[i % PHOTOS].date,
         style: 'position: absolute; top: 44px; left: 50%; width: 170px; margin-left: -85px; perspective: 700px; cursor: pointer; z-index: ' + (20 - ad) + '; opacity: ' + (shown ? 1 : 0) + '; pointer-events: ' + (shown ? 'auto' : 'none') + '; transform: translateX(' + x + 'px) rotateY(' + ry + 'deg) translateZ(' + z + 'px); transition: transform 0.65s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.45s ease',
         open: (e) => this.openFocus('concert', i % PHOTOS, e)
       };
     });
+    const flowCurrent = concertData[((center % PHOTOS) + PHOTOS) % PHOTOS];
     return {
       accent: accent,
       rows: rows,
@@ -2197,6 +2217,7 @@ class Component extends DCLogic {
       trackNext: () => this.skip(1),
       flowPrev: () => this.setState({ flow: center - 1 }),
       flowNext: () => this.setState({ flow: center + 1 }),
+      flowCurrent: flowCurrent,
       slabThin: Array.from({ length: 4 }, (_, i) => ({ style: 'inset: -3px; transform: translateZ(-' + ((i + 1) * 1.5).toFixed(1) + 'px); background: ' + (i === 3 ? '#D3D9E1' : 'rgb(' + (236 - i * 8) + ', ' + (239 - i * 8) + ', ' + (244 - i * 7) + ')') })),
       slab: Array.from({ length: 12 }, (_, i) => {
         const d = (i + 1) * 2;
