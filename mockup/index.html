@@ -890,7 +890,8 @@ class Component extends DCLogic {
   }
   componentDidMount() {
     this.loadGuestbook();
-    this.loadSpotifyTracks().then(() => this.initSpotifyEmbed());
+    this.initSpotifyEmbed();
+    this.loadSpotifyTracks();
     this.embedPosition = () => this.positionSpotifyEmbed();
     window.addEventListener('scroll', this.embedPosition, { passive: true });
     window.addEventListener('resize', this.embedPosition);
