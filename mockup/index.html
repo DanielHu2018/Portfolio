@@ -181,10 +181,7 @@ footer.shift{padding-bottom:120px !important}
   <sc-if value="{{fIsSpotify}}" hint-placeholder-val="{{ false }}">
     <div style="{{fCard}}">
       <div class="slab3d" style="position: relative; width: 100%; box-sizing: border-box; padding: 20px 20px 28px; border-radius: 40px; background: linear-gradient(160deg, #FFFFFF 0%, #F2F4F7 55%, #DFE3E9 100%); border: 3px solid #D5DAE1; box-shadow: inset 0 3px 0 #FFFFFF; display: flex; flex-direction: column; align-items: center; gap: 22px"><sc-for list="{{slab}}" as="L" hint-placeholder-count="0"><div class="slab-layer" aria-hidden="true" style="{{L.style}}"></div></sc-for>
-          <div style="width: 100%">
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 14px"><button type="button" onClick="{{receiptTracks}}" style="{{receiptTracksStyle}}">Tracks</button><button type="button" onClick="{{receiptArtists}}" style="{{receiptArtistsStyle}}">Artists</button><button type="button" onClick="{{receiptGenres}}" style="{{receiptGenresStyle}}">Genres</button><button type="button" onClick="{{receiptMonth}}" style="{{receiptMonthStyle}}">1 month</button><button type="button" onClick="{{receiptSixMonths}}" style="{{receiptSixMonthsStyle}}">6 months</button></div>
-            <img src="{{receiptSrc}}" alt="Daniel's listening receipt" style="display: block; width: 100%; max-height: 520px; object-fit: contain; border-radius: 12px; background: #FFFDF5">
-          </div>
+          <img src="{{receiptSrc}}" alt="Daniel's listening receipt" style="display: block; width: 100%; max-height: 520px; object-fit: contain; border-radius: 12px; background: #FFFDF5">
           <div style="position: relative; width: 160px; height: 160px; border-radius: 50%; background: linear-gradient(180deg, #FFFFFF, #EDF0F4); border: 3px solid #D5DAE1; box-shadow: inset 0 2px 6px rgba(60, 64, 70, 0.08)">
       <button type="button" aria-label="Menu: back to top" onClick="{{menu}}" style="position: absolute; top: 2px; left: 50%; transform: translateX(-50%); min-width: 60px; min-height: 44px; border: 0; background: transparent; font: 800 12px 'Helvetica Neue', Arial, sans-serif; letter-spacing: 0.06em; color: #7E848D; cursor: pointer">MENU</button>
       <button type="button" aria-label="Previous track" onClick="{{trackPrev}}" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border: 0; background: transparent; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M6 6v12M18 6l-9 6 9 6z" fill="#7E848D" stroke="#7E848D" stroke-width="2" stroke-linejoin="round"></path></svg></button>
@@ -557,10 +554,7 @@ footer.shift{padding-bottom:120px !important}
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; align-items: start">
       <div style="display: flex; justify-content: center">
         <div class="dots rv-item" style="position: relative; width: 320px; border-radius: 40px; perspective: 1100px"><div class="slab3d proj" onClick="{{openSpotify}}" onPointerMove="{{projMove}}" onPointerLeave="{{projLeave}}" style="cursor: zoom-in; position: relative; width: 320px; box-sizing: border-box; padding: 20px 20px 28px; border-radius: 40px; background: linear-gradient(160deg, #FFFFFF 0%, #F2F4F7 55%, #DFE3E9 100%); border: 3px solid #D5DAE1; box-shadow: inset 0 3px 0 #FFFFFF; display: flex; flex-direction: column; align-items: center; gap: 22px"><sc-for list="{{slab}}" as="L" hint-placeholder-count="0"><div class="slab-layer" aria-hidden="true" style="{{L.style}}"></div></sc-for>
-          <div id="spotify-embed-slot" style="display: block; width: 100%; border-radius: 12px; overflow: hidden">
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 14px"><button type="button" onClick="{{receiptTracks}}" style="{{receiptTracksStyle}}">Tracks</button><button type="button" onClick="{{receiptArtists}}" style="{{receiptArtistsStyle}}">Artists</button><button type="button" onClick="{{receiptGenres}}" style="{{receiptGenresStyle}}">Genres</button><button type="button" onClick="{{receiptMonth}}" style="{{receiptMonthStyle}}">1 month</button><button type="button" onClick="{{receiptSixMonths}}" style="{{receiptSixMonthsStyle}}">6 months</button></div>
-            <img src="{{receiptSrc}}" alt="Daniel's listening receipt" style="display: block; width: 100%; max-height: 520px; object-fit: contain; border-radius: 12px; background: #FFFDF5">
-          </div>
+          <div id="spotify-embed-slot" style="display: block; width: 100%; border-radius: 12px; overflow: hidden"><img src="{{receiptSrc}}" alt="Daniel's listening receipt" style="display: block; width: 100%; max-height: 520px; object-fit: contain; border-radius: 12px; background: #FFFDF5"></div>
           <div style="position: relative; width: 160px; height: 160px; border-radius: 50%; background: linear-gradient(180deg, #FFFFFF, #EDF0F4); border: 3px solid #D5DAE1; box-shadow: inset 0 2px 6px rgba(60, 64, 70, 0.08)">
       <button type="button" aria-label="Menu: back to top" onClick="{{menu}}" style="position: absolute; top: 2px; left: 50%; transform: translateX(-50%); min-width: 60px; min-height: 44px; border: 0; background: transparent; font: 800 12px 'Helvetica Neue', Arial, sans-serif; letter-spacing: 0.06em; color: #7E848D; cursor: pointer">MENU</button>
       <button type="button" aria-label="Previous track" onClick="{{trackPrev}}" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border: 0; background: transparent; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M6 6v12M18 6l-9 6 9 6z" fill="#7E848D" stroke="#7E848D" stroke-width="2" stroke-linejoin="round"></path></svg></button>
@@ -2354,11 +2348,16 @@ class Component extends DCLogic {
       };
     });
     const flowCurrent = concertData[((center % PHOTOS) + PHOTOS) % PHOTOS];
-    const receiptType = s.receiptType || 'tracks';
-    const receiptRange = s.receiptRange || '1m';
-    const receiptButton = 'border: 2px solid #D5DAE1; border-radius: 999px; padding: 6px 11px; background: ';
-    const receiptActive = receiptButton + '#34BEED; color: #FFFFFF; font: 700 12px \'Helvetica Neue\', Arial, sans-serif; cursor: pointer';
-    const receiptInactive = receiptButton + '#FFFFFF; color: #3C4046; font: 700 12px \'Helvetica Neue\', Arial, sans-serif; cursor: pointer';
+    const receiptViews = [
+      { type: 'tracks', range: '1m' },
+      { type: 'tracks', range: '6m' },
+      { type: 'artists', range: '1m' },
+      { type: 'artists', range: '6m' },
+      { type: 'genres', range: '1m' },
+      { type: 'genres', range: '6m' }
+    ];
+    const receiptIndex = ((s.receiptView || 0) % receiptViews.length + receiptViews.length) % receiptViews.length;
+    const receiptView = receiptViews[receiptIndex];
     return {
       accent: accent,
       rows: rows,
@@ -2412,17 +2411,7 @@ class Component extends DCLogic {
         };
       }),
       ...focusVals,
-      receiptSrc: '/api/receipt?type=' + receiptType + '&range=' + receiptRange,
-      receiptTracks: () => this.setState({ receiptType: 'tracks' }),
-      receiptArtists: () => this.setState({ receiptType: 'artists' }),
-      receiptGenres: () => this.setState({ receiptType: 'genres' }),
-      receiptMonth: () => this.setState({ receiptRange: '1m' }),
-      receiptSixMonths: () => this.setState({ receiptRange: '6m' }),
-      receiptTracksStyle: receiptType === 'tracks' ? receiptActive : receiptInactive,
-      receiptArtistsStyle: receiptType === 'artists' ? receiptActive : receiptInactive,
-      receiptGenresStyle: receiptType === 'genres' ? receiptActive : receiptInactive,
-      receiptMonthStyle: receiptRange === '1m' ? receiptActive : receiptInactive,
-      receiptSixMonthsStyle: receiptRange === '6m' ? receiptActive : receiptInactive,
+      receiptSrc: '/api/receipt?type=' + receiptView.type + '&range=' + receiptView.range,
       trackTitle: trk.title,
       trackArtist: trk.artist,
       miniArtStyle: 'width: 40px; height: 40px; flex-shrink: 0; border-radius: 50%; background: ' + (trk.art ? 'url("' + trk.art + '") center / cover no-repeat' : 'linear-gradient(135deg, #BDEBFB, #FFB8DA)') + '; border: 2px solid #D5DAE1',
@@ -2434,8 +2423,8 @@ class Component extends DCLogic {
       barMini: 'display: block; width: 150px; height: 6px; border-radius: 999px; border: 1px solid #9AA2AD; background: linear-gradient(90deg, #2A8BD8 0%, #6EC3F5 ' + pct + '%, #F1F3F6 ' + pct + '%)',
       barSmall: 'height: 5px; border-radius: 999px; border: 1px solid #9AA2AD; background: linear-gradient(90deg, #2A8BD8 0%, #6EC3F5 ' + pct + '%, #FFFFFF ' + pct + '%)',
       barLarge: 'height: 10px; border-radius: 999px; border: 1px solid #9AA2AD; background: linear-gradient(90deg, #2A8BD8 0%, #6EC3F5 ' + pct + '%, #F1F3F6 ' + pct + '%)',
-      trackPrev: () => this.skip(-1),
-      trackNext: () => this.skip(1),
+      trackPrev: () => this.setState({ receiptView: receiptIndex - 1 }),
+      trackNext: () => this.setState({ receiptView: receiptIndex + 1 }),
       flowPrev: () => this.setState({ flow: center - 1 }),
       flowNext: () => this.setState({ flow: center + 1 }),
       flowCurrent: flowCurrent,
@@ -2459,7 +2448,7 @@ class Component extends DCLogic {
       notPlaying: !playing,
       playingAttr: playing ? 'true' : 'false',
       togglePlay: () => this.toggleSpotifyEmbed(),
-      menu: () => this.go(0),
+      menu: () => { this.setState({ receiptView: 0 }); this.go(0); },
       prev: () => this.go(sel - 1),
       next: () => this.go(sel + 1),
       center: () => this.go(sel),
