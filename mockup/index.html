@@ -263,10 +263,7 @@ footer.shift{padding-bottom:120px !important}
     </div>
     <div style="height: 64px; display: flex; align-items: center; justify-content: center">
       <sc-if value="{{bootIdle}}" hint-placeholder-val="{{ true }}">
-        <button type="button" class="boot-btn" onClick="{{bootStart}}" style="display: inline-flex; align-items: center; gap: 12px; min-height: 52px; font: 800 17px 'M PLUS Rounded 1c', sans-serif; color: #3C4046; background: linear-gradient(180deg, #FFFFFF 0%, #E9EDF2 100%); border: 3px solid #C9D0D9; border-radius: 999px; padding: 8px 28px 8px 10px; box-shadow: inset 0 2px 0 #FFFFFF; cursor: pointer">
-          <span aria-hidden="true" style="width: 34px; height: 34px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font: 800 16px 'M PLUS Rounded 1c', sans-serif; color: #FFFFFF; background: radial-gradient(circle at 35% 30%, #A6E6FB 0%, #34BEED 60%, #1A8CC6 100%); border: 2px solid #FFFFFF; box-shadow: 0 0 0 2px #A9DDF2">&#9654;</span>
-          Press anywhere to start
-        </button>
+        <div class="boot-btn" role="button" tabIndex="0" onClick="{{bootStart}}" onKeyDown="{{bootKey}}" style="font: 800 17px 'M PLUS Rounded 1c', sans-serif; color: #3C4046; cursor: pointer">Press anywhere to start</div>
       </sc-if>
       <sc-if value="{{bootLoading}}" hint-placeholder-val="{{ false }}">
         <div role="progressbar" aria-label="Loading" style="display: flex; flex-direction: column; align-items: center; gap: 10px">
