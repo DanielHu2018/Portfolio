@@ -864,6 +864,9 @@ class Component extends DCLogic {
   componentDidMount() {
     this.loadGuestbook();
     this.loadSpotifyTracks();
+    const spotifyParams = new URLSearchParams(window.location.search);
+    if (spotifyParams.get('code')) this.initSpotify();
+    if (spotifyParams.get('spotify') === 'login') setTimeout(() => this.spotifyLogin(), 0);
     this.initStaffs();
     this.initSfx();
     setTimeout(() => { const b = typeof document !== 'undefined' ? document.querySelector('.boot') : null; if (b && b.focus) b.focus(); }, 50);
