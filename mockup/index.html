@@ -161,7 +161,11 @@ footer.shift{padding-bottom:120px !important}
   <sc-if value="{{fIsConcert}}" hint-placeholder-val="{{ false }}">
     <div style="{{fCard}}">
       <div style="background: #FFFFFF; border: 3px solid #D5DAE1; border-radius: 10px; padding: 18px 18px 0">
-        <img src="{{fc.src}}" alt="{{fc.artist}} concert photo" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: #3C4046; border-radius: 5px">
+        <div style="position: relative">
+          <button type="button" aria-label="Previous concert" onClick="{{concertPrev}}" style="position: absolute; z-index: 1; left: -10px; top: 50%; transform: translateY(-50%); width: 42px; height: 42px; border-radius: 50%; border: 3px solid #D5DAE1; background: linear-gradient(180deg, #FFFFFF, #EDF0F4); box-shadow: inset 0 2px 0 #FFFFFF; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="M6 6v12M18 6l-9 6 9 6z" fill="#7E848D" stroke="#7E848D" stroke-width="2" stroke-linejoin="round"></path></svg></button>
+          <img src="{{fc.src}}" alt="{{fc.artist}} concert photo" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: #3C4046; border-radius: 5px">
+          <button type="button" aria-label="Next concert" onClick="{{concertNext}}" style="position: absolute; z-index: 1; right: -10px; top: 50%; transform: translateY(-50%); width: 42px; height: 42px; border-radius: 50%; border: 3px solid #D5DAE1; background: linear-gradient(180deg, #FFFFFF, #EDF0F4); box-shadow: inset 0 2px 0 #FFFFFF; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="M18 6v12M6 6l9 6-9 6z" fill="#7E848D" stroke="#7E848D" stroke-width="2" stroke-linejoin="round"></path></svg></button>
+        </div>
         <p style="margin: 14px 0 4px; font-family: 'Permanent Marker', cursive; font-size: 28px; text-align: center; color: #3C4046">{{fc.artist}}</p>
         <p style="margin: 0 0 18px; font: 600 15px 'Helvetica Neue', Arial, sans-serif; text-align: center; color: #5A5F67">{{fc.city}} · {{fc.date}}</p>
       </div>
@@ -556,7 +560,7 @@ footer.shift{padding-bottom:120px !important}
     </div>
 
     <div style="display: flex; flex-direction: column; gap: 10px">
-      <h3 style="margin: 0; font-weight: 800; font-size: 28px">Live shows</h3>
+      <h3 style="margin: 0; font-weight: 800; font-size: 28px">Concerts</h3>
       <div class="rv-item" style="margin-top: 0; padding: 0 0 24px; position: relative; display: flex; flex-direction: column; align-items: center; gap: 8px">
         <div class="flow-row" style="position: relative; display: flex; align-items: center; gap: 16px; width: 100%">
           <button type="button" class="flow-arrow" aria-label="Previous photo" onClick="{{flowPrev}}" style="flex-shrink: 0; margin-bottom: 110px; width: 64px; height: 64px; border-radius: 50%; border: 3px solid #D5DAE1; background: linear-gradient(180deg, #FFFFFF, #EDF0F4); box-shadow: inset 0 2px 0 #FFFFFF, inset 0 -3px 6px rgba(60, 64, 70, 0.06); cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path d="M6 6v12M18 6l-9 6 9 6z" fill="#7E848D" stroke="#7E848D" stroke-width="2" stroke-linejoin="round"></path></svg></button>
@@ -579,8 +583,8 @@ footer.shift{padding-bottom:120px !important}
         </div>
           <button type="button" class="flow-arrow" aria-label="Next photo" onClick="{{flowNext}}" style="flex-shrink: 0; margin-bottom: 110px; width: 64px; height: 64px; border-radius: 50%; border: 3px solid #D5DAE1; background: linear-gradient(180deg, #FFFFFF, #EDF0F4); box-shadow: inset 0 2px 0 #FFFFFF, inset 0 -3px 6px rgba(60, 64, 70, 0.06); cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path d="M18 6v12M6 6l9 6-9 6z" fill="#7E848D" stroke="#7E848D" stroke-width="2" stroke-linejoin="round"></path></svg></button>
         </div>
-        <p style="position: relative; margin: 0; font: 700 16px 'Helvetica Neue', Arial, sans-serif; color: #3C4046">{{flowCurrent.artist}}</p>
-        <p style="position: relative; margin: 0; font: 500 14px 'Helvetica Neue', Arial, sans-serif; color: #5A5F67">{{flowCurrent.city}} · {{flowCurrent.date}}</p>
+        <p aria-hidden="true" style="display: none; position: relative; margin: 0; font: 700 16px 'Helvetica Neue', Arial, sans-serif; color: #3C4046">{{flowCurrent.artist}}</p>
+        <p aria-hidden="true" style="display: none; position: relative; margin: 0; font: 500 14px 'Helvetica Neue', Arial, sans-serif; color: #5A5F67">{{flowCurrent.city}} · {{flowCurrent.date}}</p>
       </div>
     </div>
 
@@ -1462,6 +1466,12 @@ class Component extends DCLogic {
     if (dir < 0 && (s.elapsed || 0) > 3) { this.setState({ elapsed: 0 }); return; }
     this.setState({ track: (idx + dir + n) % n, elapsed: 0 });
   }
+  concertMove(dir) {
+    const f = this.st().focus;
+    if (!f || f.kind !== 'concert') return;
+    const n = 10;
+    this.setState({ focus: { ...f, idx: (f.idx + dir + n) % n } });
+  }
   focusTarget(kind) {
     const vw = typeof window !== 'undefined' ? window.innerWidth : 1440;
     const vh = typeof window !== 'undefined' ? window.innerHeight : 900;
@@ -2105,6 +2115,8 @@ class Component extends DCLogic {
       fClose: () => this.closeFocus(),
       fKey: (e) => { if (e.key === 'Escape') { e.preventDefault(); this.closeFocus(); } },
       openPhoto: opener('photo', 0),
+      concertPrev: () => this.concertMove(-1),
+      concertNext: () => this.concertMove(1),
       openProj0: opener('proj', 0),
       openProj1: opener('proj', 1),
       openProj2: opener('proj', 2),
