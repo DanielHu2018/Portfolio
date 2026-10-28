@@ -70,6 +70,7 @@ footer.shift{padding-bottom:140px !important}
 .proj{cursor:pointer}
 .proj-inner{transform-style:preserve-3d}
 .slab3d{transform-style:preserve-3d}
+.project-card{display:flex;flex-direction:column}.project-card>.slab3d{flex:1}
 .slab-layer{position:absolute;inset:-4px;border-radius:inherit;pointer-events:none}
 .proj .slab-layer{display:none}
 .proj:hover .slab-layer,.proj[data-edge="1"] .slab-layer{display:block}
@@ -455,7 +456,7 @@ footer.shift{padding-bottom:120px !important}
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px 32px; align-items: stretch">
 
-      <article class="dots rv-item" style="--dot: #E8B400; position: relative; border-radius: 40px; perspective: 1100px">
+      <article class="dots rv-item project-card" style="--dot: #E8B400; position: relative; min-height: 680px; border-radius: 40px; perspective: 1100px">
         <div class="slab3d proj" onClick="{{openProj0}}" onPointerMove="{{projMove}}" onPointerLeave="{{projLeave}}" style="position: relative; height: 100%; box-sizing: border-box; padding: 20px 20px 28px; border-radius: 40px; background: linear-gradient(160deg, #FFFFFF 0%, #F2F4F7 55%, #DFE3E9 100%); border: 3px solid #D5DAE1; box-shadow: inset 0 3px 0 #FFFFFF; display: flex; flex-direction: column; align-items: center; gap: 22px"><sc-for list="{{slab}}" as="L" hint-placeholder-count="0"><div class="slab-layer" aria-hidden="true" style="{{L.style}}"></div></sc-for>
           <div style="width: 100%; box-sizing: border-box; border: 8px solid #23262B; border-radius: 12px; background: #23262B; overflow: hidden">
             <div style="background: linear-gradient(180deg, #FAFBFC, #E7EAEE); border-bottom: 1px solid #B9BFC8; padding: 3px 8px; display: flex; justify-content: space-between; align-items: center; font: 700 12px 'Helvetica Neue', Arial, sans-serif; color: #23262B"><span>CLARA</span><span style="color: #4A3700; background: #FFD23F; border-radius: 999px; padding: 0 8px">1st place</span></div>
@@ -477,7 +478,7 @@ footer.shift{padding-bottom:120px !important}
         </div>
       </article>
 
-      <article class="dots rv-item" style="--dot: #3FB872; position: relative; border-radius: 40px; perspective: 1100px">
+      <article class="dots rv-item project-card" style="--dot: #3FB872; position: relative; min-height: 680px; border-radius: 40px; perspective: 1100px">
         <div class="slab3d proj" onClick="{{openProj1}}" onPointerMove="{{projMove}}" onPointerLeave="{{projLeave}}" style="position: relative; height: 100%; box-sizing: border-box; padding: 20px 20px 28px; border-radius: 40px; background: linear-gradient(160deg, #FFFFFF 0%, #F2F4F7 55%, #DFE3E9 100%); border: 3px solid #D5DAE1; box-shadow: inset 0 3px 0 #FFFFFF; display: flex; flex-direction: column; align-items: center; gap: 22px"><sc-for list="{{slab}}" as="L" hint-placeholder-count="0"><div class="slab-layer" aria-hidden="true" style="{{L.style}}"></div></sc-for>
           <div style="width: 100%; box-sizing: border-box; border: 8px solid #23262B; border-radius: 12px; background: #23262B; overflow: hidden">
             <div style="background: linear-gradient(180deg, #FAFBFC, #E7EAEE); border-bottom: 1px solid #B9BFC8; padding: 3px 8px; display: flex; justify-content: space-between; align-items: center; font: 700 12px 'Helvetica Neue', Arial, sans-serif; color: #23262B"><span>Sierra</span></div>
@@ -499,7 +500,7 @@ footer.shift{padding-bottom:120px !important}
         </div>
       </article>
 
-      <article class="dots rv-item" style="--dot: #EE5FA6; position: relative; border-radius: 40px; perspective: 1100px">
+      <article class="dots rv-item project-card" style="--dot: #EE5FA6; position: relative; min-height: 680px; border-radius: 40px; perspective: 1100px">
         <div class="slab3d proj" onClick="{{openProj2}}" onPointerMove="{{projMove}}" onPointerLeave="{{projLeave}}" style="position: relative; height: 100%; box-sizing: border-box; padding: 20px 20px 28px; border-radius: 40px; background: linear-gradient(160deg, #FFFFFF 0%, #F2F4F7 55%, #DFE3E9 100%); border: 3px solid #D5DAE1; box-shadow: inset 0 3px 0 #FFFFFF; display: flex; flex-direction: column; align-items: center; gap: 22px"><sc-for list="{{slab}}" as="L" hint-placeholder-count="0"><div class="slab-layer" aria-hidden="true" style="{{L.style}}"></div></sc-for>
           <div style="width: 100%; box-sizing: border-box; border: 8px solid #23262B; border-radius: 12px; background: #23262B; overflow: hidden">
             <div style="background: linear-gradient(180deg, #FAFBFC, #E7EAEE); border-bottom: 1px solid #B9BFC8; padding: 3px 8px; display: flex; justify-content: space-between; align-items: center; font: 700 12px 'Helvetica Neue', Arial, sans-serif; color: #23262B"><span>Disco</span><span style="color: #12452A; background: #A9EBC2; border-radius: 999px; padding: 0 8px">HackOHI/O 2026</span></div>
