@@ -117,7 +117,10 @@ footer.shift{padding-bottom:120px !important}
 </svg>
 
 <div class="mini" role="region" aria-label="Music player">
-  <div id="spotify-mini-root" style="width: min(456px, calc(100vw - 24px)); height: 80px; overflow: hidden; border-radius: 12px; background: #191414"></div>
+  <div style="position: relative; width: min(456px, calc(100vw - 24px)); height: 80px; overflow: hidden; border-radius: 12px; background: #191414">
+    <div id="spotify-mini-root" style="width: 100%; height: 80px"></div>
+    <div aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 80px; height: 80px; border-radius: 12px 0 0 12px; background: #191414 center / cover no-repeat; background-image: {{miniEmbedArt}}; pointer-events: none"></div>
+  </div>
 </div>
 
 <sc-if value="{{fOpen}}" hint-placeholder-val="{{ false }}">
@@ -2404,6 +2407,7 @@ class Component extends DCLogic {
       trackTitle: trk.title,
       trackArtist: trk.artist,
       miniArtStyle: 'width: 40px; height: 40px; flex-shrink: 0; border-radius: 50%; background: ' + (trk.art ? 'url("' + trk.art + '") center / cover no-repeat' : 'linear-gradient(135deg, #BDEBFB, #FFB8DA)') + '; border: 2px solid #D5DAE1',
+      miniEmbedArt: trk.art ? 'url("' + trk.art + '")' : 'none',
       trackArtStyle: 'width: 86px; height: 86px; flex-shrink: 0; border-radius: 4px; background: ' + (trk.art ? 'url("' + trk.art + '") center / cover no-repeat' : 'linear-gradient(135deg, #BDEBFB, #FFB8DA)') + '; display: flex; align-items: center; justify-content: center; font: 700 10px \'Helvetica Neue\', Arial, sans-serif; color: #3C4046; text-align: center',
       trackArtLabel: trk.art ? '' : 'Album art',
       elapsedText: fmt(elapsed),
