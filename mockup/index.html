@@ -1553,8 +1553,13 @@ class Component extends DCLogic {
         const update = (data) => {
           if (!data) return;
           const uri = data.playingURI || '';
-          const id = uri.split(':').pop();
+          const match = String(uri).match(/(?:track:|\/track\/)([A-Za-z0-9]+)/);
+          const id = match ? match[1] : '';
           const idx = this.spotifyIds().indexOf(id);
+          if (idx >= 0 && Number(data.duration) > 0) {
+            if (!this.spotifyDurations) this.spotifyDurations = {};
+            this.spotifyDurations[id] = Number(data.duration) / 1000;
+          }
           this.setState({ playing: data.isPaused === undefined ? true : !data.isPaused, elapsed: Math.floor((data.position || 0) / 1000), ...(idx >= 0 ? { track: idx } : {}) });
         };
         controller.addListener('ready', () => {
@@ -2288,9 +2293,10 @@ class Component extends DCLogic {
     };
     const plist = this.playlist();
     const trk = plist[(s.track || 0) % plist.length];
-    const elapsed = Math.min(s.elapsed || 0, trk.dur);
+    const duration = (this.spotifyDurations && this.spotifyDurations[trk.id]) || trk.dur;
+    const elapsed = Math.min(s.elapsed || 0, duration);
     const fmt = (sec) => Math.floor(sec / 60) + ':' + String(sec % 60).padStart(2, '0');
-    const pct = (elapsed / trk.dur * 100).toFixed(1);
+    const pct = (elapsed / duration * 100).toFixed(1);
     const seen = s.seen || {};
     const labels = ['Home', 'About', 'Experience', 'Projects', 'Skills', 'Off the clock', 'Contact'];
     const ids = this.sectionIds();
@@ -2385,7 +2391,7 @@ class Component extends DCLogic {
       trackArtStyle: 'width: 86px; height: 86px; flex-shrink: 0; border-radius: 4px; background: ' + (trk.art ? 'url("' + trk.art + '") center / cover no-repeat' : 'linear-gradient(135deg, #BDEBFB, #FFB8DA)') + '; display: flex; align-items: center; justify-content: center; font: 700 10px \'Helvetica Neue\', Arial, sans-serif; color: #3C4046; text-align: center',
       trackArtLabel: trk.art ? '' : 'Album art',
       elapsedText: fmt(elapsed),
-      remainText: fmt(trk.dur - elapsed),
+      remainText: fmt(duration - elapsed),
       barMini: 'display: block; width: 150px; height: 6px; border-radius: 999px; border: 1px solid #9AA2AD; background: linear-gradient(90deg, #2A8BD8 0%, #6EC3F5 ' + pct + '%, #F1F3F6 ' + pct + '%)',
       barSmall: 'height: 5px; border-radius: 999px; border: 1px solid #9AA2AD; background: linear-gradient(90deg, #2A8BD8 0%, #6EC3F5 ' + pct + '%, #FFFFFF ' + pct + '%)',
       barLarge: 'height: 10px; border-radius: 999px; border: 1px solid #9AA2AD; background: linear-gradient(90deg, #2A8BD8 0%, #6EC3F5 ' + pct + '%, #F1F3F6 ' + pct + '%)',
