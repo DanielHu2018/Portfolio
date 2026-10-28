@@ -1,4 +1,36 @@
-// Port in progress: sections from mockup/index.html are moved over one at a time.
+import { useEffect, useRef } from 'react';
+import mockupDocument from '../mockup/index.html?raw';
+import mockupRuntime from '../mockup/support.js?raw';
+
+function sourceParts() {
+  const doc = new DOMParser().parseFromString(mockupDocument, 'text/html');
+  const template = doc.querySelector('x-dc');
+  const logic = doc.querySelector('script[data-dc-script]');
+  if (!template || !logic) throw new Error('The mockup document is missing its x-dc template or logic script.');
+  return { template: template.cloneNode(true), logic: logic.cloneNode(true) as HTMLScriptElement };
+}
+
+/** Mount the finished mockup unchanged while the site is deployed. */
 export default function App() {
-  return <div className="rv-root" />;
+  const hostRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const host = hostRef.current;
+    if (!host) return;
+    const { template, logic } = sourceParts();
+    host.replaceChildren(template, logic);
+
+    const runtime = document.createElement('script');
+    runtime.textContent = mockupRuntime;
+    document.body.appendChild(runtime);
+
+    return () => {
+      runtime.remove();
+      host.replaceChildren();
+      document.querySelectorAll('style[data-dc-canvas], style#dc-root').forEach(node => node.remove());
+      document.documentElement.removeAttribute('data-wii');
+    };
+  }, []);
+
+  return <div ref={hostRef} aria-label="Daniel Hu portfolio" />;
 }

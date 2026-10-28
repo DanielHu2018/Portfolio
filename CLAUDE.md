@@ -11,7 +11,8 @@ porting or editing, match it exactly unless Daniel asks for a change.
 
 It must be served over http (opening the file directly with file:// half-works):
 
-    npx serve .        # then open http://localhost:3000
+    npm run dev        # React port at http://localhost:5173
+    npm run mockup     # original mockup at http://localhost:3000
 
 ## How index.html is organized
 
@@ -48,12 +49,12 @@ Bracketed text in index.html: `[PHOTO OF YOU]`, `[CONCERT PHOTO]` / `[VENUE]` / 
 
 ## Not real yet
 
-- Guestbook stickers only live in memory; production needs a small backend (e.g. a serverless
-  function + database) plus a way for Daniel to remove stickers.
+- Guestbook persistence is implemented through `/api/stickers` and Supabase; configure the
+  environment variables in `STICKERS.md` and use the protected DELETE endpoint for moderation.
 - The music player is simulated; the Spotify embed is a placeholder.
 
 ## Porting to a production stack
 
 If asked to rebuild in a framework (React/Vite, Next.js, Astro, etc.), keep it pixel-identical:
 port section by section, keep the canvas drawing code as-is in effects/hooks, keep the fonts
-(M PLUS Rounded 1c from Google Fonts), and compare side by side with `npx serve` of this folder.
+(M PLUS Rounded 1c from Google Fonts), and compare side by side with `npm run mockup` on this folder.

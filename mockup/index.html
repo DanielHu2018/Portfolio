@@ -789,15 +789,26 @@ class Component extends DCLogic {
   gbSeed() {
     return [[12, 28, 0, -8, 'thanks for visiting!'], [26, 60, 2, 6, '[NOTE]'], [44, 22, 1, 10, '[NOTE]'], [58, 66, 4, -5, ''], [73, 30, 3, -12, '[NOTE]'], [86, 62, 6, 7, '']].map((a) => ({ x: a[0], y: a[1], k: a[2], r: a[3], n: a[4] }));
   }
+  async loadGuestbook() {
+    try {
+      const response = await fetch('/api/stickers');
+      if (!response.ok) return;
+      const data = await response.json();
+      if (Array.isArray(data)) this.setState({ gb: data.map((g) => ({ x: Number(g.x), y: Number(g.y), k: Number(g.k), r: Number(g.r), n: String(g.n || '') })) });
+    } catch (e) { /* local seed remains available if the API is unavailable */ }
+  }
   gbAdd(x, y) {
     const inp = document.getElementById('gb-name');
     const name = inp ? inp.value.replace(/\s+/g, ' ').trim().slice(0, 40) : '';
     if (inp) inp.value = '';
-    const list = (this.st().gb || this.gbSeed()).concat([{ x: x, y: y, k: this.st().gbSk || 0, r: Math.round(Math.random() * 30 - 15), n: name }]).slice(-80);
+    const sticker = { x: x, y: y, k: this.st().gbSk || 0, r: Math.round(Math.random() * 30 - 15), n: name };
+    const list = (this.st().gb || this.gbSeed()).concat([sticker]).slice(-80);
     this.setState({ gb: list, gbStatus: 'Thanks for stopping by!', gbErr: false });
+    fetch('/api/stickers', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(sticker) }).catch(() => { /* keep the local sticker visible if saving is unavailable */ });
     this.sfx('sign');
   }
   componentDidMount() {
+    this.loadGuestbook();
     this.initStaffs();
     this.initSfx();
     setTimeout(() => { const b = typeof document !== 'undefined' ? document.querySelector('.boot') : null; if (b && b.focus) b.focus(); }, 50);
