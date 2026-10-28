@@ -1527,11 +1527,14 @@ class Component extends DCLogic {
     window.open('https://open.spotify.com/playlist/4SZEX761tkduix81wc63Wk', '_blank', 'noopener,noreferrer');
   }
   initSpotifyEmbed() {
+    if (this.spotifyEmbedController || this.spotifyEmbedLoading) return;
+    this.spotifyEmbedLoading = true;
     const ready = (api) => {
       const element = document.getElementById('spotify-embed-main');
-      if (!element || this.spotifyEmbedController) return;
+      if (!element || this.spotifyEmbedController) { this.spotifyEmbedLoading = false; return; }
       api.createController(element, { width: '100%', height: '352', url: 'https://open.spotify.com/playlist/4SZEX761tkduix81wc63Wk' }, (controller) => {
         this.spotifyEmbedController = controller;
+        this.spotifyEmbedLoading = false;
         const update = (data) => {
           if (!data) return;
           const uri = data.playingURI || '';
@@ -1541,6 +1544,10 @@ class Component extends DCLogic {
         };
         controller.addListener('playback_started', (event) => update(event.data));
         controller.addListener('playback_update', (event) => update(event.data));
+        if (this.spotifyEmbedPendingToggle) {
+          this.spotifyEmbedPendingToggle = false;
+          controller.togglePlay();
+        }
       });
     };
     window.onSpotifyIframeApiReady = ready;
@@ -1548,6 +1555,14 @@ class Component extends DCLogic {
     script.src = 'https://open.spotify.com/embed/iframe-api/v1';
     script.async = true;
     document.head.appendChild(script);
+  }
+  toggleSpotifyEmbed() {
+    if (this.spotifyEmbedController) {
+      this.spotifyEmbedController.togglePlay();
+      return;
+    }
+    this.spotifyEmbedPendingToggle = true;
+    this.initSpotifyEmbed();
   }
   spotifyIds() {
     return ['45LwOlqL3HOEQkPjjHpu7U','3fuyYaLhZ2RoP9eWpvfP1H','4Ji5pXYxvpxIAR87YGGx3Q','1nBwKZktEYZTEDi7gN1i3d','0zXnqruuTKhV7dTmbaO52L','1YhNljrEyPYaYNgBNsWap5','7qK5yucb59oDorFpxyNltH','3gkVuPHTyp4rHH5YrczzOL','5784KrKKqX0AVijoYlP3LU','10uWZ95CuGmW3P1j8xKm6M','4FNptC8qbW6cAJBsymtHMI','1p2TWJxUlHE5JR0sE6E1d7','26AmP3ukYC4Zs9lSGlh55I','1aKvZDoLGkNMxoRYgkckZG','1k0JAiH11gHL9dc5dfQjQr','4divPEANeDkW7sEMs3ZIQd','4IKG0oDjlYYJKSGhPxaoSd','2u32Om58SrFPqiBndR1RiD','4lA562F7nT6LMkytf2l479','5IBgHRJfCoxwIlalQZsW08','2ESvL4eB86KG9VslZHu4Dd','6rRk5ExVeKu5nnf6VD5pst','5kI88ybsxuqXdmnOATVXN7','63Pi2NAx5yCgeLhCTOrEou','5UBfLYnkImP1RKMMy4TGs8','6POxiQbr5dFg2gU68yh4NK','2s6Jh6GmDhAOsSMII07fVs','4mwswlM0HATHu9SabiiXiY','65krtHkaYLPr0mEbjL61UP','5fMzsDRT8cHtZ1R9aLiYAZ','7hvwgwbZCCGZaNRQSf8bin','42qNWdLKCI41S4uzfamhFM','2TmqHjg7uhizGndzXQdFuf','3DrkYwyu8QqZQ05r2gGqHi','52qxHBgcQGVV2JrMwPhYJl','6SjxVgMjH3b3AI4wVviZfi','0a4MMyCrzT0En247IhqZbD','4O45RxFmWr88UfFlNtsXUy','4lJjVASVLA8m4RJUCD6MPL','6IyyPhSRdLrUSJXAMTOyCz','2VRYSgoKZZamsXCqcGnEIG','0A0FrmoICOQTDbnUQuBYn6','5dUg4sGusRRtfgX5WjQ6hF','3n6Djc8XgC8VJwe1MGmWYf','5S5iSPQ8gkI3Y2pfkp4YlQ','7ajtHztSp6n46rFz1lLrWO','3FOSK5yJqHDVKCkea6rMW1','1sBI7wATa9F4HJjnOjFpGC','5CVPRYfCmELZIBEBXyY97U','7JW8FRWVCOQDs40IjEXdPi','6dnMPOx96NSEAQqcDSdngO','0FyhBw60Tk0UyVqJEJqn9N','30P4anN6nOSBifO45J6WH4','1wDkJu5A6GlgtxHf7HEc5d','4JOP8ELK6AaeySe7sKe996','5oeKoJMi9g6GXEbtz1ta0f','4u3Aajaq6TYC9tElKr3p6C','2RdEC8Ff83WkX7kDVCHseE','3heQu7YLQFf0WY4Z2giXhk','7aYGCP34Xo6XujY7Ix1DxB','3ozo6hdOQAJKY1KZExV6UJ','6rIsZ4WR4aENaUXOcLEfR0','5vkJZHiK2s7Os8AM1vInjv','4mMW7j3QfSOAR2MSsTKnaq','7k6jxIMMAcXjHnbbHmGC9H','33kesTmBYjdWJ3OuIFFx2S','3U27tTgADLPyL7i7CpJt1f','4yiZRvxlnnof4pKzxXGUpc','1iUPor4IVSkCX5C781v8hZ','5fLnmDBdrLt865wBBRprbo','01xyAVYhR2QJ9YsiFnGzw7','1Vrj9Vcbb0lOG94pQbYvzv'];
@@ -2386,7 +2401,7 @@ class Component extends DCLogic {
       playing: playing,
       notPlaying: !playing,
       playingAttr: playing ? 'true' : 'false',
-      togglePlay: () => this.spotifyEmbedController ? this.spotifyEmbedController.togglePlay() : this.openSpotifyPlaylist(),
+      togglePlay: () => this.toggleSpotifyEmbed(),
       menu: () => this.go(0),
       prev: () => this.go(sel - 1),
       next: () => this.go(sel + 1),
