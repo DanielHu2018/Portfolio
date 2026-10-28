@@ -58,7 +58,7 @@ footer.shift{padding-bottom:140px !important}
 .slab3d{transform-style:preserve-3d}
 .slab-layer{position:absolute;inset:-4px;border-radius:inherit;pointer-events:none}
 .proj .slab-layer{display:none}
-.proj:hover .slab-layer,.proj[data-edge="1"] .slab-layer{display:block}
+.proj:hover .slab-layer,.proj[data-edge="1"] .slab-layer{display:none}
 .proj-screen{transition:transform 0.35s cubic-bezier(0.2,0.8,0.2,1)}
 .proj-back{transition:translate 0.35s cubic-bezier(0.2,0.8,0.2,1),scale 0.35s cubic-bezier(0.2,0.8,0.2,1)}
 .proj-glare{position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity 0.3s;background:radial-gradient(circle at var(--gx,50%) var(--gy,30%),rgba(255,255,255,0.7),rgba(255,255,255,0) 50%);z-index:3}
