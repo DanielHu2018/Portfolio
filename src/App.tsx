@@ -39,10 +39,12 @@ export default function App() {
         id="spotify-embed-root"
         style={{
           position: 'fixed',
-          left: '-10000px',
+          left: '0',
           top: '0',
           width: '320px',
           height: '352px',
+          opacity: 0.01,
+          pointerEvents: 'none',
           overflow: 'hidden',
           zIndex: 2,
         }}
