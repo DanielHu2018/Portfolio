@@ -684,6 +684,106 @@ footer.shift{padding-bottom:120px !important}
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#34BEED","options":["#34BEED","#FF6FB5","#FFB020","#4CD07D"]},"miiSkin":{"editor":"color","default":"#E8B98F","options":["#F6D7BE","#E8B98F","#C68A5E","#8D5A3B"],"section":"Avatar"},"miiHair":{"editor":"color","default":"#2A2522","options":["#2A2522","#5A3A22","#B07A3E","#E2C27A"],"section":"Avatar"},"miiShirt":{"editor":"color","default":"#34BEED","options":["#34BEED","#FF6FB5","#4CD07D","#3C4046"],"section":"Avatar"},"$preview":{"width":1440,"height":6400}}'>
 class Component extends DCLogic {
+  spotifyClientId() { return '74b02a5bae4d4fe68eb5f7e05262985c'; }
+  spotifyRedirectUri() {
+    const u = new URL(window.location.href);
+    if (u.hostname === 'localhost') u.hostname = '127.0.0.1';
+    u.pathname = '/callback'; u.search = ''; u.hash = '';
+    return u.toString();
+  }
+  async spotifyChallenge(value) {
+    const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value));
+    return btoa(String.fromCharCode(...new Uint8Array(digest))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  }
+  async spotifyLogin() {
+    const verifier = this.spotifyRandom(64);
+    const state = this.spotifyRandom(24);
+    localStorage.setItem('dh-spotify-verifier', verifier);
+    localStorage.setItem('dh-spotify-state', state);
+    const challenge = await this.spotifyChallenge(verifier);
+    const params = new URLSearchParams({ client_id: this.spotifyClientId(), response_type: 'code', redirect_uri: this.spotifyRedirectUri(), code_challenge_method: 'S256', code_challenge: challenge, state: state, scope: 'streaming user-read-email user-read-private user-read-playback-state user-modify-playback-state' });
+    window.location.href = 'https://accounts.spotify.com/authorize?' + params.toString();
+  }
+  spotifyRandom(length) {
+    const bytes = new Uint8Array(length);
+    crypto.getRandomValues(bytes);
+    return Array.from(bytes, (b) => ('0' + b.toString(16)).slice(-2)).join('');
+  }
+  async spotifyExchange(code) {
+    const verifier = localStorage.getItem('dh-spotify-verifier');
+    if (!verifier) return false;
+    const body = new URLSearchParams({ client_id: this.spotifyClientId(), grant_type: 'authorization_code', code: code, redirect_uri: this.spotifyRedirectUri(), code_verifier: verifier });
+    const response = await fetch('https://accounts.spotify.com/api/token', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body });
+    if (!response.ok) throw new Error('Spotify authorization failed');
+    const data = await response.json();
+    localStorage.setItem('dh-spotify-token', JSON.stringify({ access_token: data.access_token, refresh_token: data.refresh_token, expires_at: Date.now() + data.expires_in * 1000 }));
+    localStorage.removeItem('dh-spotify-verifier');
+    localStorage.removeItem('dh-spotify-state');
+    return true;
+  }
+  async spotifyToken() {
+    let saved = null;
+    try { saved = JSON.parse(localStorage.getItem('dh-spotify-token') || 'null'); } catch (e) { saved = null; }
+    if (!saved) return null;
+    if (saved.expires_at > Date.now() + 60000) return saved.access_token;
+    if (!saved.refresh_token) return null;
+    const body = new URLSearchParams({ client_id: this.spotifyClientId(), grant_type: 'refresh_token', refresh_token: saved.refresh_token });
+    const response = await fetch('https://accounts.spotify.com/api/token', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body });
+    if (!response.ok) return null;
+    const data = await response.json();
+    const next = { access_token: data.access_token, refresh_token: data.refresh_token || saved.refresh_token, expires_at: Date.now() + data.expires_in * 1000 };
+    localStorage.setItem('dh-spotify-token', JSON.stringify(next));
+    return next.access_token;
+  }
+  async initSpotify() {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const code = params.get('code');
+      const returnedState = params.get('state');
+      const savedState = localStorage.getItem('dh-spotify-state');
+      if (code && returnedState && savedState && returnedState === savedState) {
+        await this.spotifyExchange(code);
+        window.history.replaceState({}, '', '/');
+      }
+      if (!(await this.spotifyToken())) return;
+      if (window.Spotify) this.initSpotifyPlayer();
+      else {
+        window.onSpotifyWebPlaybackSDKReady = () => this.initSpotifyPlayer();
+        const script = document.createElement('script');
+        script.src = 'https://sdk.scdn.co/spotify-player.js';
+        script.async = true;
+        document.head.appendChild(script);
+      }
+    } catch (e) { /* Spotify stays disconnected until the next Play click */ }
+  }
+  async initSpotifyPlayer() {
+    if (this.spotifyPlayer) return;
+    const token = await this.spotifyToken();
+    if (!token || !window.Spotify) return;
+    this.spotifyPlayer = new window.Spotify.Player({ name: 'Daniel Hu Portfolio', getOAuthToken: async (cb) => cb(await this.spotifyToken()), volume: 0.8 });
+    this.spotifyPlayer.addListener('ready', ({ device_id }) => { this.spotifyDevice = device_id; this.spotifyReady = true; if (this.spotifyPendingPlay !== undefined) { const i = this.spotifyPendingPlay; this.spotifyPendingPlay = undefined; this.spotifyPlay(i); } });
+    this.spotifyPlayer.addListener('player_state_changed', (state) => {
+      if (!state || !state.track_window || !state.track_window.current_track) return;
+      const id = state.track_window.current_track.id;
+      const idx = this.spotifyIds().indexOf(id);
+      this.setState({ playing: !state.paused, elapsed: Math.floor((state.position || 0) / 1000), ...(idx >= 0 ? { track: idx } : {}) });
+    });
+    this.spotifyPlayer.addListener('authentication_error', () => { localStorage.removeItem('dh-spotify-token'); this.spotifyPlayer = null; this.spotifyReady = false; });
+    this.spotifyPlayer.connect();
+  }
+  async spotifyPlay(index) {
+    const token = await this.spotifyToken();
+    if (!token) { this.spotifyPendingPlay = index; await this.spotifyLogin(); return; }
+    if (!this.spotifyReady || !this.spotifyDevice) { this.spotifyPendingPlay = index; if (!this.spotifyPlayer) await this.initSpotifyPlayer(); return; }
+    await fetch('https://api.spotify.com/v1/me/player/play?device_id=' + encodeURIComponent(this.spotifyDevice), { method: 'PUT', headers: { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' }, body: JSON.stringify({ uris: ['spotify:track:' + this.spotifyIds()[index]] }) });
+  }
+  async toggleSpotify() {
+    const token = await this.spotifyToken();
+    if (!token) { this.spotifyPendingPlay = this.st().track || 0; await this.spotifyLogin(); return; }
+    if (!this.spotifyReady || !this.spotifyPlayer) { this.spotifyPendingPlay = this.st().track || 0; await this.initSpotifyPlayer(); return; }
+    if (this.st().playing) await this.spotifyPlayer.pause();
+    else await this.spotifyPlay(this.st().track || 0);
+  }
   sectionIds() {
     return ['hero', 'about', 'experience', 'work', 'skills', 'off', 'contact'];
   }
@@ -819,6 +919,7 @@ class Component extends DCLogic {
   componentDidMount() {
     this.loadGuestbook();
     this.loadSpotifyTracks();
+    this.initSpotify();
     this.initStaffs();
     this.initSfx();
     setTimeout(() => { const b = typeof document !== 'undefined' ? document.querySelector('.boot') : null; if (b && b.focus) b.focus(); }, 50);
@@ -1479,6 +1580,12 @@ class Component extends DCLogic {
     const s = this.st();
     const n = this.playlist().length;
     const idx = s.track || 0;
+    if (this.spotifyReady) {
+      const next = (idx + dir + n) % n;
+      this.setState({ track: next, elapsed: 0 });
+      this.spotifyPlay(next);
+      return;
+    }
     if (dir < 0 && (s.elapsed || 0) > 3) { this.setState({ elapsed: 0 }); return; }
     this.setState({ track: (idx + dir + n) % n, elapsed: 0 });
   }
@@ -2271,7 +2378,7 @@ class Component extends DCLogic {
       playing: playing,
       notPlaying: !playing,
       playingAttr: playing ? 'true' : 'false',
-      togglePlay: () => this.setState({ playing: !playing }),
+      togglePlay: () => this.toggleSpotify(),
       menu: () => this.go(0),
       prev: () => this.go(sel - 1),
       next: () => this.go(sel + 1),
