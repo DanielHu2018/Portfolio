@@ -161,7 +161,7 @@ footer.shift{padding-bottom:120px !important}
   <sc-if value="{{fIsResume}}" hint-placeholder-val="{{ false }}">
     <div style="{{fCard}}">
       <div style="background: #FFFFFF; border: 3px solid #D5DAE1; border-radius: 12px; padding: 14px 14px 0">
-        <iframe src="/assets/DanielHu_Resume_08_06_2026.pdf" title="Daniel Hu resume" style="display: block; width: 100%; height: min(70vh, 760px); border: 2px solid #D5DAE1; border-radius: 6px; background: #FFFFFF"></iframe>
+        <iframe src="/assets/DanielHu_Resume_08_06_2026.pdf" title="Daniel Hu resume" style="display: block; width: 100%; height: min(80vh, 720px); border: 2px solid #D5DAE1; border-radius: 6px; background: #FFFFFF"></iframe>
         <div style="display: flex; justify-content: center; gap: 10px; padding: 14px 0">
           <a href="/assets/DanielHu_Resume_08_06_2026.pdf" download="Daniel-Hu-Resume.pdf" class="pill" style="min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; font-weight: 800; font-size: 14px; text-decoration: none; color: #3C4046; background: #FFFFFF; border: 3px solid #C9CED6; border-radius: 999px; padding: 8px 18px">Download</a>
           <button type="button" onClick="{{fClose}}" class="pill" style="min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; font: 800 14px 'M PLUS Rounded 1c', sans-serif; color: #3C4046; background: #FFFFFF; border: 3px solid #C9CED6; border-radius: 999px; padding: 8px 18px; cursor: pointer">Exit</button>
@@ -1490,7 +1490,7 @@ class Component extends DCLogic {
     const fit = (w, h) => Math.min(w, (vw - 48), (vh - 120) * (w / h));
     if (kind === 'photo') return { w: fit(440, 560), cx: vw / 2, cy: vh / 2 };
     if (kind === 'concert') return { w: fit(400, 520), cx: vw / 2, cy: vh / 2 };
-    if (kind === 'resume') return { w: fit(760, 980), cx: vw / 2, cy: vh / 2 };
+    if (kind === 'resume') return { w: fit(860, 860), cx: vw / 2, cy: vh / 2 };
     if (kind === 'proj') return { w: fit(440, 860), cx: vw / 2, cy: vh / 2 };
     if (kind === 'spotify') return { w: fit(400, 760), cx: vw / 2, cy: vh / 2 };
     const w = Math.min(440, vw * 0.42);
