@@ -1566,6 +1566,12 @@ class Component extends DCLogic {
         };
         controller.addListener('ready', () => {
           this.spotifyEmbedReady = true;
+          if (this.spotifyPendingTrack !== undefined) {
+            const pending = this.spotifyPendingTrack;
+            this.spotifyPendingTrack = undefined;
+            this.startSpotifyTrack(pending);
+            return;
+          }
           if (this.spotifyEmbedPendingToggle) {
             this.spotifyEmbedPendingToggle = false;
             if (this.spotifyHasTrack !== true) this.startSpotifyTrack(Math.floor(Math.random() * this.spotifyIds().length));
@@ -1610,7 +1616,7 @@ class Component extends DCLogic {
   onTick() {
     const s = this.st();
     if (!s.playing) return;
-    if (this.spotifyEmbedController) {
+    if (this.spotifyEmbedController && this.spotifyEmbedReady) {
       const idx = s.track || 0;
       const duration = (this.spotifyDurations && this.spotifyDurations[this.spotifyIds()[idx]]) || 0;
       if (duration > 0) this.setState({ elapsed: Math.min(duration, Math.floor(s.elapsed || 0) + 1) });
@@ -1637,12 +1643,13 @@ class Component extends DCLogic {
     const n = this.playlist().length;
     const idx = s.track || 0;
     const next = this.randomTrackIndex(idx, n);
-    if (this.spotifyEmbedController) {
+    if (this.spotifyEmbedController && this.spotifyEmbedReady) {
       this.spotifyEmbedController.loadEntity('spotify:track:' + this.spotifyIds()[next]);
       this.spotifyEmbedController.play();
       return;
     }
-    this.setState({ track: next, elapsed: 0 });
+    this.spotifyPendingTrack = next;
+    this.initSpotifyEmbed();
   }
   concertMove(dir) {
     const f = this.st().focus;
