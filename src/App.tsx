@@ -35,20 +35,6 @@ export default function App() {
   return (
     <>
       <div ref={hostRef} aria-label="Daniel Hu portfolio" />
-      <div
-        id="spotify-embed-root"
-        style={{
-          position: 'fixed',
-          left: '0',
-          top: '0',
-          width: '320px',
-          height: '352px',
-          opacity: 0.01,
-          pointerEvents: 'none',
-          overflow: 'hidden',
-          zIndex: 2,
-        }}
-      />
     </>
   );
 }
