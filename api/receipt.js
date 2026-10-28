@@ -54,21 +54,23 @@ export default async function handler(req, res) {
 
   const refreshToken = process.env.SPOTIFY_REFRESH_TOKEN;
   const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
-  if (!refreshToken || !clientSecret) {
+  if (!refreshToken) {
     res.status(503).setHeader('Content-Type', 'text/plain; charset=utf-8').send('Spotify receipt is not configured yet.');
     return;
   }
 
   try {
-    const basic = Buffer.from(`${CLIENT_ID}:${clientSecret}`).toString('base64');
-    const tokenResponse = await fetch('https://accounts.spotify.com/api/token', {
+    const refresh = (headers, body) => fetch('https://accounts.spotify.com/api/token', {
       method: 'POST',
-      headers: {
-        Authorization: `Basic ${basic}`,
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: new URLSearchParams({ grant_type: 'refresh_token', refresh_token: refreshToken }),
+      headers,
+      body,
     });
+    const pkceBody = new URLSearchParams({ client_id: CLIENT_ID, grant_type: 'refresh_token', refresh_token: refreshToken });
+    let tokenResponse = await refresh({ 'Content-Type': 'application/x-www-form-urlencoded' }, pkceBody);
+    if (!tokenResponse.ok && clientSecret) {
+      const basic = Buffer.from(`${CLIENT_ID}:${clientSecret}`).toString('base64');
+      tokenResponse = await refresh({ Authorization: `Basic ${basic}`, 'Content-Type': 'application/x-www-form-urlencoded' }, new URLSearchParams({ grant_type: 'refresh_token', refresh_token: refreshToken }));
+    }
     if (!tokenResponse.ok) throw new Error(`Spotify token refresh failed (${tokenResponse.status})`);
     const token = await tokenResponse.json();
 
