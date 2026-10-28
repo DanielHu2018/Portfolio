@@ -212,11 +212,11 @@ footer.shift{padding-bottom:120px !important}
             <div style="background: linear-gradient(180deg, #FAFBFC, #E7EAEE); border-bottom: 1px solid #B9BFC8; padding: 3px 8px; text-align: center; font: 700 12px 'Helvetica Neue', Arial, sans-serif; color: #23262B">Now Playing</div>
             <div style="background: #FFFFFF; padding: 12px; display: flex; flex-direction: column; gap: 10px">
               <div style="display: flex; gap: 12px; align-items: center">
-                <div role="img" aria-label="Album art (placeholder)" style="width: 86px; height: 86px; flex-shrink: 0; border-radius: 4px; background: linear-gradient(135deg, #BDEBFB, #FFB8DA); display: flex; align-items: center; justify-content: center; font: 700 10px 'Helvetica Neue', Arial, sans-serif; color: #3C4046; text-align: center">[ALBUM ART]</div>
+                <div role="img" aria-label="Album art" style="{{trackArtStyle}}">{{trackArtLabel}}</div>
                 <div style="display: flex; flex-direction: column; gap: 3px; font-family: 'Helvetica Neue', Arial, sans-serif; min-width: 0">
                   <span style="font-weight: 700; font-size: 14px; color: #23262B">{{trackTitle}}</span>
                   <span style="font-size: 13px; color: #4A4F57">{{trackArtist}}</span>
-                  <span style="font-size: 13px; color: #4A4F57">[YOUR PLAYLIST]</span>
+                  <span style="font-size: 13px; color: #4A4F57">Spotify playlist</span>
                 </div>
               </div>
               <div aria-hidden="true" style="{{barLarge}}"></div>
@@ -599,11 +599,11 @@ footer.shift{padding-bottom:120px !important}
             <div style="background: linear-gradient(180deg, #FAFBFC, #E7EAEE); border-bottom: 1px solid #B9BFC8; padding: 3px 8px; text-align: center; font: 700 12px 'Helvetica Neue', Arial, sans-serif; color: #23262B">Now Playing</div>
             <div style="background: #FFFFFF; padding: 12px; display: flex; flex-direction: column; gap: 10px">
               <div style="display: flex; gap: 12px; align-items: center">
-                <div role="img" aria-label="Album art (placeholder)" style="width: 86px; height: 86px; flex-shrink: 0; border-radius: 4px; background: linear-gradient(135deg, #BDEBFB, #FFB8DA); display: flex; align-items: center; justify-content: center; font: 700 10px 'Helvetica Neue', Arial, sans-serif; color: #3C4046; text-align: center">[ALBUM ART]</div>
+                <div role="img" aria-label="Album art" style="{{trackArtStyle}}">{{trackArtLabel}}</div>
                 <div style="display: flex; flex-direction: column; gap: 3px; font-family: 'Helvetica Neue', Arial, sans-serif; min-width: 0">
                   <span style="font-weight: 700; font-size: 14px; color: #23262B">{{trackTitle}}</span>
                   <span style="font-size: 13px; color: #4A4F57">{{trackArtist}}</span>
-                  <span style="font-size: 13px; color: #4A4F57">[YOUR PLAYLIST]</span>
+                  <span style="font-size: 13px; color: #4A4F57">Spotify playlist</span>
                 </div>
               </div>
               <div aria-hidden="true" style="{{barLarge}}"></div>
@@ -818,6 +818,7 @@ class Component extends DCLogic {
   }
   componentDidMount() {
     this.loadGuestbook();
+    this.loadSpotifyTracks();
     this.initStaffs();
     this.initSfx();
     setTimeout(() => { const b = typeof document !== 'undefined' ? document.querySelector('.boot') : null; if (b && b.focus) b.focus(); }, 50);
@@ -1445,13 +1446,25 @@ class Component extends DCLogic {
     el._edgeT = setTimeout(() => { el.setAttribute('data-edge', '0'); el._edgeT = null; }, slow ? 950 : 650);
   }
   playlist() {
-    return [
-      { title: '[SONG 1]', artist: '[ARTIST]', dur: 214 },
-      { title: '[SONG 2]', artist: '[ARTIST]', dur: 187 },
-      { title: '[SONG 3]', artist: '[ARTIST]', dur: 243 },
-      { title: '[SONG 4]', artist: '[ARTIST]', dur: 199 },
-      { title: '[SONG 5]', artist: '[ARTIST]', dur: 228 }
-    ];
+    const ids = this.spotifyIds();
+    const loaded = this.st().spotifyTracks || [];
+    return ids.map((id, i) => loaded[i] || { id: id, title: 'Track ' + (i + 1), artist: 'Spotify', dur: 240, art: '' });
+  }
+  spotifyIds() {
+    return ['45LwOlqL3HOEQkPjjHpu7U','3fuyYaLhZ2RoP9eWpvfP1H','4Ji5pXYxvpxIAR87YGGx3Q','1nBwKZktEYZTEDi7gN1i3d','0zXnqruuTKhV7dTmbaO52L','1YhNljrEyPYaYNgBNsWap5','7qK5yucb59oDorFpxyNltH','3gkVuPHTyp4rHH5YrczzOL','5784KrKKqX0AVijoYlP3LU','10uWZ95CuGmW3P1j8xKm6M','4FNptC8qbW6cAJBsymtHMI','1p2TWJxUlHE5JR0sE6E1d7','26AmP3ukYC4Zs9lSGlh55I','1aKvZDoLGkNMxoRYgkckZG','1k0JAiH11gHL9dc5dfQjQr','4divPEANeDkW7sEMs3ZIQd','4IKG0oDjlYYJKSGhPxaoSd','2u32Om58SrFPqiBndR1RiD','4lA562F7nT6LMkytf2l479','5IBgHRJfCoxwIlalQZsW08','2ESvL4eB86KG9VslZHu4Dd','6rRk5ExVeKu5nnf6VD5pst','5kI88ybsxuqXdmnOATVXN7','63Pi2NAx5yCgeLhCTOrEou','5UBfLYnkImP1RKMMy4TGs8','6POxiQbr5dFg2gU68yh4NK','2s6Jh6GmDhAOsSMII07fVs','4mwswlM0HATHu9SabiiXiY','65krtHkaYLPr0mEbjL61UP','5fMzsDRT8cHtZ1R9aLiYAZ','7hvwgwbZCCGZaNRQSf8bin','42qNWdLKCI41S4uzfamhFM','2TmqHjg7uhizGndzXQdFuf','3DrkYwyu8QqZQ05r2gGqHi','52qxHBgcQGVV2JrMwPhYJl','6SjxVgMjH3b3AI4wVviZfi','0a4MMyCrzT0En247IhqZbD','4O45RxFmWr88UfFlNtsXUy','4lJjVASVLA8m4RJUCD6MPL','6IyyPhSRdLrUSJXAMTOyCz','2VRYSgoKZZamsXCqcGnEIG','0A0FrmoICOQTDbnUQuBYn6','5dUg4sGusRRtfgX5WjQ6hF','3n6Djc8XgC8VJwe1MGmWYf','5S5iSPQ8gkI3Y2pfkp4YlQ','7ajtHztSp6n46rFz1lLrWO','3FOSK5yJqHDVKCkea6rMW1','1sBI7wATa9F4HJjnOjFpGC','5CVPRYfCmELZIBEBXyY97U','7JW8FRWVCOQDs40IjEXdPi','6dnMPOx96NSEAQqcDSdngO','0FyhBw60Tk0UyVqJEJqn9N','30P4anN6nOSBifO45J6WH4','1wDkJu5A6GlgtxHf7HEc5d','4JOP8ELK6AaeySe7sKe996','5oeKoJMi9g6GXEbtz1ta0f','4u3Aajaq6TYC9tElKr3p6C','2RdEC8Ff83WkX7kDVCHseE','3heQu7YLQFf0WY4Z2giXhk','7aYGCP34Xo6XujY7Ix1DxB','3ozo6hdOQAJKY1KZExV6UJ','6rIsZ4WR4aENaUXOcLEfR0','5vkJZHiK2s7Os8AM1vInjv','4mMW7j3QfSOAR2MSsTKnaq','7k6jxIMMAcXjHnbbHmGC9H','33kesTmBYjdWJ3OuIFFx2S','3U27tTgADLPyL7i7CpJt1f','4yiZRvxlnnof4pKzxXGUpc','1iUPor4IVSkCX5C781v8hZ','5fLnmDBdrLt865wBBRprbo','01xyAVYhR2QJ9YsiFnGzw7','1Vrj9Vcbb0lOG94pQbYvzv'];
+    return ids;
+  }
+  async loadSpotifyTracks() {
+    try {
+      const tracks = await Promise.all(this.spotifyIds().map(async (id) => {
+        const url = 'https://open.spotify.com/oembed?url=' + encodeURIComponent('https://open.spotify.com/track/' + id);
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Spotify metadata unavailable');
+        const data = await response.json();
+        return { id: id, title: data.title || 'Spotify track', artist: data.author_name || 'Spotify', dur: 240, art: data.thumbnail_url || '' };
+      }));
+      this.setState({ spotifyTracks: tracks });
+    } catch (e) { /* generic track labels remain if Spotify metadata is unavailable */ }
   }
   onTick() {
     const s = this.st();
@@ -2227,6 +2240,8 @@ class Component extends DCLogic {
       ...focusVals,
       trackTitle: trk.title,
       trackArtist: trk.artist,
+      trackArtStyle: 'width: 86px; height: 86px; flex-shrink: 0; border-radius: 4px; background: ' + (trk.art ? 'url("' + trk.art + '") center / cover no-repeat' : 'linear-gradient(135deg, #BDEBFB, #FFB8DA)') + '; display: flex; align-items: center; justify-content: center; font: 700 10px \'Helvetica Neue\', Arial, sans-serif; color: #3C4046; text-align: center',
+      trackArtLabel: trk.art ? '' : 'Album art',
       elapsedText: fmt(elapsed),
       remainText: fmt(trk.dur - elapsed),
       barMini: 'display: block; width: 150px; height: 6px; border-radius: 999px; border: 1px solid #9AA2AD; background: linear-gradient(90deg, #2A8BD8 0%, #6EC3F5 ' + pct + '%, #F1F3F6 ' + pct + '%)',
