@@ -1573,21 +1573,26 @@ class Component extends DCLogic {
     const list = this.playlist();
     const idx = s.track || 0;
     const el = (s.elapsed || 0) + 1;
-    if (el >= list[idx].dur) this.setState({ track: (idx + 1) % list.length, elapsed: 0 });
+    if (el >= list[idx].dur) {
+      const next = this.randomTrackIndex(idx, list.length);
+      this.setState({ track: next, elapsed: 0 });
+      if (this.spotifyReady) this.spotifyPlay(next);
+    }
     else this.setState({ elapsed: el });
+  }
+  randomTrackIndex(current, count) {
+    if (count < 2) return 0;
+    let next = current;
+    while (next === current) next = Math.floor(Math.random() * count);
+    return next;
   }
   skip(dir) {
     const s = this.st();
     const n = this.playlist().length;
     const idx = s.track || 0;
-    if (this.spotifyReady) {
-      const next = (idx + dir + n) % n;
-      this.setState({ track: next, elapsed: 0 });
-      this.spotifyPlay(next);
-      return;
-    }
-    if (dir < 0 && (s.elapsed || 0) > 3) { this.setState({ elapsed: 0 }); return; }
-    this.setState({ track: (idx + dir + n) % n, elapsed: 0 });
+    const next = this.randomTrackIndex(idx, n);
+    this.setState({ track: next, elapsed: 0 });
+    if (this.spotifyReady) this.spotifyPlay(next);
   }
   concertMove(dir) {
     const f = this.st().focus;
