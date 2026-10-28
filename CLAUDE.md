@@ -1,7 +1,7 @@
 # Daniel Hu — personal site
 
 This folder is the finished design mockup of Daniel's portfolio site, exported as-is.
-`index.html` is the whole site (markup, styles and logic in one file). `support.js` is the small
+`mockup/index.html` is the whole site (markup, styles and logic in one file). `support.js` is the small
 runtime it needs (it bundles React and a template engine). `DESIGN.md` is the design doc: vision,
 palette, page structure, content, signature elements, recommended stack, build plan and open
 questions. Read it before starting work. Treat the current look and behavior as the spec: when

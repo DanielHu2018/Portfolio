@@ -1,0 +1,88 @@
+body{margin:0;background:#FFFFFF;color:#3C4046;font-family:'M PLUS Rounded 1c',system-ui,sans-serif}
+a{color:#1677A8}a:hover{color:#0E5A82}
+.staffs{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none}
+.sway{animation-name:staffSway;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-direction:alternate}
+.drift{animation-name:staffDrift;animation-timing-function:linear;animation-iteration-count:infinite}
+.hop{transform-box:fill-box;transform-origin:50% 100%;animation-iteration-count:infinite;filter:drop-shadow(0 4px 4px rgba(26,70,110,0.25))}
+@keyframes staffDrift{from{transform:translateX(0)}to{transform:translateX(-1440px)}}
+@keyframes staffSway{from{transform:translateY(-14px)}to{transform:translateY(14px)}}
+@keyframes noteHop{from{transform:translateY(0)}to{transform:translateY(-9px)}}
+@keyframes noteSpin{from{transform:rotateY(0deg)}to{transform:rotateY(360deg)}}
+@media (prefers-reduced-motion: reduce){.sway,.drift,.hop{animation:none}}
+html{scroll-behavior:smooth}
+html[data-wii],html[data-wii] *{cursor:none !important}
+.rip{position:fixed;left:0;top:0;width:0;height:0;z-index:9998;pointer-events:none}
+.rip > span{position:absolute;left:-34px;top:-34px;width:68px;height:68px;box-sizing:border-box;border-radius:50%;border:3px solid #34BEED;opacity:0;transform:scale(0.2)}
+.rip > span:nth-child(2){border:2px solid #FFFFFF;box-shadow:0 0 12px rgba(52,190,237,0.7),inset 0 0 8px rgba(52,190,237,0.4)}
+.rip > .rip-dot{left:-7px;top:-7px;width:14px;height:14px;border:0;background:radial-gradient(circle,#FFFFFF 0%,#8EE3FA 60%,rgba(52,190,237,0) 100%)}
+.rip.go > span{animation:ripOut 0.6s cubic-bezier(0.2,0.8,0.2,1) forwards}
+.rip.go > span:nth-child(2){animation-delay:0.07s}
+.rip.go > .rip-dot{animation:ripDot 0.35s ease-out forwards}
+@keyframes ripOut{0%{opacity:0.95;transform:scale(0.2)}100%{opacity:0;transform:scale(1.3)}}
+@keyframes ripDot{0%{opacity:1;transform:scale(1.4)}100%{opacity:0;transform:scale(0.4)}}
+@media (prefers-reduced-motion: reduce){.rip.go > span{animation:ripDot 0.4s ease-out forwards}}
+.boot-logo{animation:bootPop 0.7s cubic-bezier(0.2,1.4,0.4,1) both}
+.boot-name{animation:bootUp 0.6s cubic-bezier(0.2,0.8,0.2,1) 0.25s both}
+.boot-sub{animation:bootUp 0.6s cubic-bezier(0.2,0.8,0.2,1) 0.4s both}
+.boot-btn{animation:bootUp 0.6s cubic-bezier(0.2,0.8,0.2,1) 0.6s both,bootPulse 1.6s ease-in-out 1.2s infinite}
+.gb-stk{animation:gbIn 0.45s cubic-bezier(0.2,1.5,0.4,1) both}
+@keyframes gbIn{0%{opacity:0;scale:0.2}100%{opacity:1;scale:1}}
+.boot-tile{animation:bootPop 0.7s cubic-bezier(0.2,1.3,0.4,1) both}
+.boot-bar{animation:bootBar 0.7s cubic-bezier(0.2,0.8,0.2,1) 0.2s both}
+@keyframes bootBar{0%{transform:translateY(100%)}100%{transform:none}}
+.boot-fill{animation:bootFill 1.5s cubic-bezier(0.4,0,0.2,1) both}
+@keyframes bootFill{0%{width:6%}25%{width:34%}40%{width:46%}65%{width:80%}82%{width:88%}100%{width:100%}}
+.boot-shine{animation:bootShine 0.6s linear infinite}
+@keyframes bootShine{0%{background-position:0 0}100%{background-position:22.6px 0}}
+.boot-dots::after{content:'';animation:bootDots 1.2s steps(4) infinite}
+@keyframes bootDots{0%{content:''}25%{content:'.'}50%{content:'..'}75%{content:'...'}}
+@keyframes bootPop{0%{opacity:0;transform:scale(0.3)}100%{opacity:1;transform:scale(1)}}
+@keyframes bootUp{0%{opacity:0;transform:translateY(18px)}100%{opacity:1;transform:none}}
+@keyframes bootPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+@media (prefers-reduced-motion: reduce){.boot-logo,.boot-name,.boot-sub,.boot-btn,.boot-tile,.boot-bar,.boot-shine{animation:none}.boot-fill{animation-duration:0.6s}}
+.shift{isolation:isolate;min-height:min(100vh,1400px);box-sizing:border-box;display:flex;flex-direction:column;justify-content:center}
+header.shift{justify-content:flex-start}
+.shift > *:not(.bleed):not(canvas){width:100%}
+.mini{position:fixed;z-index:48;bottom:16px;left:calc((100% - 260px) / 2);transform:translateX(-50%)}
+@media (max-width:1099px){.mini{left:12px;right:160px;transform:none}.mini-progress{display:none !important}}
+footer.shift{padding-bottom:140px !important}
+.pill{transition:transform 0.2s cubic-bezier(0.2,0.8,0.2,1),background 0.2s,border-color 0.2s,color 0.2s}
+.pill:hover,.pill:focus-visible{background:linear-gradient(180deg,#A6E6FB 0%,#34BEED 100%) !important;border-color:#1A9CCB !important;color:#0B3550 !important;box-shadow:inset 0 2px 0 rgba(255,255,255,0.7) !important;transform:translateY(-3px) scale(1.06)}
+.rv-item{transition:opacity 0.7s ease,translate 0.8s cubic-bezier(0.2,0.8,0.2,1),scale 0.8s cubic-bezier(0.2,0.8,0.2,1)}
+[data-armed] .rv-item:not([data-in]){opacity:0;translate:0 60px;scale:0.95}
+.flap{position:relative;transform-origin:50% 0;transform-style:preserve-3d;animation:flap 3.4s ease-in-out infinite}
+.flap:hover{animation-duration:2s}
+@keyframes flap{0%{transform:rotateX(0deg) rotateZ(0deg)}25%{transform:rotateX(6deg) rotateZ(-0.6deg)}50%{transform:rotateX(-2.5deg) rotateZ(0.4deg)}75%{transform:rotateX(4deg) rotateZ(-0.2deg)}100%{transform:rotateX(0deg) rotateZ(0deg)}}
+.proj{cursor:pointer}
+.proj-inner{transform-style:preserve-3d}
+.slab3d{transform-style:preserve-3d}
+.slab-layer{position:absolute;inset:-4px;border-radius:inherit;pointer-events:none}
+.proj .slab-layer{display:none}
+.proj:hover .slab-layer,.proj[data-edge="1"] .slab-layer{display:block}
+.proj-screen{transition:transform 0.35s cubic-bezier(0.2,0.8,0.2,1)}
+.proj-back{transition:translate 0.35s cubic-bezier(0.2,0.8,0.2,1),scale 0.35s cubic-bezier(0.2,0.8,0.2,1)}
+.proj-glare{position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity 0.3s;background:radial-gradient(circle at var(--gx,50%) var(--gy,30%),rgba(255,255,255,0.7),rgba(255,255,255,0) 50%);z-index:3}
+.proj:hover .proj-glare{opacity:1}
+.proj-cta{transition:scale 0.25s cubic-bezier(0.2,0.8,0.2,1)}
+.proj:hover .proj-cta{scale:1.07}
+@media (prefers-reduced-motion: reduce){.flap{animation:none}[data-armed] .rv-item:not([data-in]){opacity:1;translate:none;scale:none}}
+.dots{position:relative}
+.dots::before{content:'';position:absolute;inset:0;transform:translate(var(--dx,14px),var(--dy,14px));background-image:radial-gradient(var(--dot,#9AD9F0) 1.6px,transparent 1.9px);background-size:7px 7px;border-radius:inherit;z-index:-1;pointer-events:none}
+.dots-sm::before{transform:translate(5px,5px);background-image:radial-gradient(var(--dot,#9AD9F0) 1.3px,transparent 1.6px);background-size:5px 5px}
+.ipod{position:fixed;right:24px;top:50%;transform:translateY(-50%) scale(0.84);transform-origin:right center;z-index:50}
+@media (max-width:1099px){.ipod{top:auto;bottom:12px;right:12px;transform:scale(0.54);transform-origin:bottom right}}
+.nav-btn{display:none}
+@media (max-width:699px){
+.ipod{display:none}
+.nav-open .ipod{display:block;left:50% !important;right:auto !important;top:auto !important;bottom:88px !important;transform:translateX(-50%) scale(0.86) !important;transform-origin:bottom center !important}
+.mini{left:12px !important;right:12px !important;bottom:12px !important;transform:none !important}
+.mini > div{justify-content:space-between;padding:6px 8px 6px 6px !important;gap:8px !important}
+.nav-btn{display:inline-flex !important}
+.flow-arrow{width:44px !important;height:44px !important;margin-bottom:96px !important}
+.flow-row{gap:4px !important}
+footer.shift{padding-bottom:120px !important}
+}
+@media (min-width:1100px){.shift{padding-right:260px !important}.bleed{margin-right:-260px !important;padding-right:260px !important}}
+.reveal{transition:opacity 0.7s ease,transform 0.7s cubic-bezier(0.2,0.8,0.2,1)}
+.reveal.pre{opacity:0;transform:translateY(48px)}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.reveal.pre{opacity:1;transform:none}}
