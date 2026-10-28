@@ -1637,11 +1637,12 @@ class Component extends DCLogic {
     const n = this.playlist().length;
     const idx = s.track || 0;
     const next = this.randomTrackIndex(idx, n);
-    this.setState({ track: next, elapsed: 0 });
     if (this.spotifyEmbedController) {
       this.spotifyEmbedController.loadEntity('spotify:track:' + this.spotifyIds()[next]);
       this.spotifyEmbedController.play();
+      return;
     }
+    this.setState({ track: next, elapsed: 0 });
   }
   concertMove(dir) {
     const f = this.st().focus;
