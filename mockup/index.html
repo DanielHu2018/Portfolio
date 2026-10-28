@@ -1566,6 +1566,11 @@ class Component extends DCLogic {
         };
         controller.addListener('ready', () => {
           this.spotifyEmbedReady = true;
+          if (this.bootReadyResolve) {
+            this.bootReadyResolve();
+            this.bootReadyResolve = null;
+            if (this.bootReadyTimer) clearTimeout(this.bootReadyTimer);
+          }
           if (this.spotifyPendingTrack !== undefined) {
             const pending = this.spotifyPendingTrack;
             this.spotifyPendingTrack = undefined;
@@ -2210,8 +2215,15 @@ class Component extends DCLogic {
     if (cur !== 'on') return;
     this.sfx('boot');
     this.setState({ boot: 'loading' });
-    setTimeout(() => this.setState({ boot: 'leaving' }), 1650);
-    setTimeout(() => this.setState({ boot: 'done' }), 2300);
+    const minLoad = new Promise((resolve) => setTimeout(resolve, 1650));
+    const spotifyLoad = this.spotifyEmbedReady ? Promise.resolve() : new Promise((resolve) => {
+      this.bootReadyResolve = resolve;
+      this.bootReadyTimer = setTimeout(resolve, 5000);
+    });
+    Promise.all([minLoad, spotifyLoad]).then(() => {
+      this.setState({ boot: 'leaving' });
+      setTimeout(() => this.setState({ boot: 'done' }), 650);
+    });
   }
   go(i) {
     const ids = this.sectionIds();
