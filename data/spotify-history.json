@@ -575,6 +575,52 @@
       "artists": [
         "Mazzy Star"
       ]
+    },
+    {
+      "played_at": "2026-10-29T05:07:19.604Z",
+      "track_id": "26AmP3ukYC4Zs9lSGlh55I",
+      "track_name": "Take Me Home",
+      "artist_ids": [
+        "78rUTD7y6Cy67W1RVzYs7t"
+      ],
+      "artists": [
+        "PinkPantheress"
+      ]
+    },
+    {
+      "played_at": "2026-10-29T05:18:24.516Z",
+      "track_id": "7qK5yucb59oDorFpxyNltH",
+      "track_name": "Close your eyes",
+      "artist_ids": [
+        "7KfMR05zRrWyhQimnYa8li"
+      ],
+      "artists": [
+        "After"
+      ]
+    },
+    {
+      "played_at": "2026-10-29T05:22:10.744Z",
+      "track_id": "1p2TWJxUlHE5JR0sE6E1d7",
+      "track_name": "Best to You",
+      "artist_ids": [
+        "6LEeAFiJF8OuPx747e1wxR",
+        "5QuBVnBPEzwYvFrgBbwpmU"
+      ],
+      "artists": [
+        "Blood Orange",
+        "Empress Of"
+      ]
+    },
+    {
+      "played_at": "2026-10-29T05:25:34.842Z",
+      "track_id": "42qNWdLKCI41S4uzfamhFM",
+      "track_name": "Duvet",
+      "artist_ids": [
+        "5jTtGLk1mGFMY5lQOvJYUj"
+      ],
+      "artists": [
+        "bôa"
+      ]
     }
   ]
 }

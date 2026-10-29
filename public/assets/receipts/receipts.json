@@ -7,93 +7,7 @@
         "secondary": "3 plays"
       },
       {
-        "name": "Take Me to Sunrise",
-        "secondary": "2 plays"
-      },
-      {
-        "name": "Something Comforting",
-        "secondary": "2 plays"
-      },
-      {
-        "name": "Girls Just Want to Have Fun",
-        "secondary": "2 plays"
-      },
-      {
-        "name": "Promise (When You Go)",
-        "secondary": "2 plays"
-      },
-      {
-        "name": "300 dreams",
-        "secondary": "2 plays"
-      },
-      {
         "name": "Duvet",
-        "secondary": "2 plays"
-      },
-      {
-        "name": "How to Pretend",
-        "secondary": "2 plays"
-      },
-      {
-        "name": "Tonight",
-        "secondary": "2 plays"
-      },
-      {
-        "name": "Headlock",
-        "secondary": "2 plays"
-      }
-    ],
-    "artists-1m": [
-      {
-        "name": "PinkPantheress",
-        "secondary": "10 listens"
-      },
-      {
-        "name": "After",
-        "secondary": "9 listens"
-      },
-      {
-        "name": "Lucy Bedroque",
-        "secondary": "8 listens"
-      },
-      {
-        "name": "Porter Robinson",
-        "secondary": "4 listens"
-      },
-      {
-        "name": "Feng",
-        "secondary": "3 listens"
-      },
-      {
-        "name": "Bladee",
-        "secondary": "2 listens"
-      },
-      {
-        "name": "Ecco2k",
-        "secondary": "2 listens"
-      },
-      {
-        "name": "bôa",
-        "secondary": "2 listens"
-      },
-      {
-        "name": "fakemink",
-        "secondary": "2 listens"
-      },
-      {
-        "name": "Imogen Heap",
-        "secondary": "2 listens"
-      }
-    ],
-    "genres-1m": [
-      {
-        "name": "Genre data unavailable",
-        "secondary": "Keep collecting listens"
-      }
-    ],
-    "tracks-6m": [
-      {
-        "name": "Girl Like Me",
         "secondary": "3 plays"
       },
       {
@@ -117,7 +31,7 @@
         "secondary": "2 plays"
       },
       {
-        "name": "Duvet",
+        "name": "Close your eyes",
         "secondary": "2 plays"
       },
       {
@@ -127,20 +41,16 @@
       {
         "name": "Tonight",
         "secondary": "2 plays"
-      },
-      {
-        "name": "Headlock",
-        "secondary": "2 plays"
       }
     ],
-    "artists-6m": [
+    "artists-1m": [
       {
         "name": "PinkPantheress",
-        "secondary": "10 listens"
+        "secondary": "11 listens"
       },
       {
         "name": "After",
-        "secondary": "9 listens"
+        "secondary": "10 listens"
       },
       {
         "name": "Lucy Bedroque",
@@ -155,6 +65,10 @@
         "secondary": "3 listens"
       },
       {
+        "name": "bôa",
+        "secondary": "3 listens"
+      },
+      {
         "name": "Bladee",
         "secondary": "2 listens"
       },
@@ -163,7 +77,93 @@
         "secondary": "2 listens"
       },
       {
+        "name": "fakemink",
+        "secondary": "2 listens"
+      },
+      {
+        "name": "Imogen Heap",
+        "secondary": "2 listens"
+      }
+    ],
+    "genres-1m": [
+      {
+        "name": "Genre data unavailable",
+        "secondary": "Keep collecting listens"
+      }
+    ],
+    "tracks-6m": [
+      {
+        "name": "Girl Like Me",
+        "secondary": "3 plays"
+      },
+      {
+        "name": "Duvet",
+        "secondary": "3 plays"
+      },
+      {
+        "name": "Take Me to Sunrise",
+        "secondary": "2 plays"
+      },
+      {
+        "name": "Something Comforting",
+        "secondary": "2 plays"
+      },
+      {
+        "name": "Girls Just Want to Have Fun",
+        "secondary": "2 plays"
+      },
+      {
+        "name": "Promise (When You Go)",
+        "secondary": "2 plays"
+      },
+      {
+        "name": "300 dreams",
+        "secondary": "2 plays"
+      },
+      {
+        "name": "Close your eyes",
+        "secondary": "2 plays"
+      },
+      {
+        "name": "How to Pretend",
+        "secondary": "2 plays"
+      },
+      {
+        "name": "Tonight",
+        "secondary": "2 plays"
+      }
+    ],
+    "artists-6m": [
+      {
+        "name": "PinkPantheress",
+        "secondary": "11 listens"
+      },
+      {
+        "name": "After",
+        "secondary": "10 listens"
+      },
+      {
+        "name": "Lucy Bedroque",
+        "secondary": "8 listens"
+      },
+      {
+        "name": "Porter Robinson",
+        "secondary": "4 listens"
+      },
+      {
+        "name": "Feng",
+        "secondary": "3 listens"
+      },
+      {
         "name": "bôa",
+        "secondary": "3 listens"
+      },
+      {
+        "name": "Bladee",
+        "secondary": "2 listens"
+      },
+      {
+        "name": "Ecco2k",
         "secondary": "2 listens"
       },
       {
