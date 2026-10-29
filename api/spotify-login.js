@@ -14,7 +14,7 @@ export default function handler(req, res) {
     code_challenge_method: 'S256',
     code_challenge: challenge,
     state,
-    scope: 'user-read-recently-played user-top-read',
+    scope: 'user-read-recently-played user-top-read user-read-currently-playing',
   });
   res.setHeader('Set-Cookie', [
     `spotify_oauth_state=${state}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=600`,

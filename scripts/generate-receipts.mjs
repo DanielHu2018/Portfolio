@@ -57,15 +57,23 @@ function countItems(plays, field) {
 
 const allArtistIds = [...new Set(history.plays.flatMap((play) => play.artist_ids || []))];
 const artistGenres = await getArtistGenres(allArtistIds);
+const menuViews = {};
 for (const range of ['short_term', 'medium_term']) {
   const days = range === 'short_term' ? 30 : 180;
   const cutoff = Date.now() - days * 24 * 60 * 60 * 1000;
   const plays = history.plays.filter((play) => Date.parse(play.played_at) >= cutoff);
-  fs.writeFileSync(path.join(outputDir, `tracks-${range === 'short_term' ? '1m' : '6m'}.svg`), renderReceipt(countItems(plays, 'tracks'), 'tracks', range));
-  fs.writeFileSync(path.join(outputDir, `artists-${range === 'short_term' ? '1m' : '6m'}.svg`), renderReceipt(countItems(plays, 'artists'), 'artists', range));
+  const suffix = range === 'short_term' ? '1m' : '6m';
+  menuViews[`tracks-${suffix}`] = countItems(plays, 'tracks');
+  menuViews[`artists-${suffix}`] = countItems(plays, 'artists');
+  fs.writeFileSync(path.join(outputDir, `tracks-${suffix}.svg`), renderReceipt(menuViews[`tracks-${suffix}`], 'tracks', range));
+  fs.writeFileSync(path.join(outputDir, `artists-${suffix}.svg`), renderReceipt(menuViews[`artists-${suffix}`], 'artists', range));
   const genreCounts = new Map();
   for (const play of plays) for (const id of play.artist_ids || []) for (const genre of artistGenres[id] || []) genreCounts.set(genre, (genreCounts.get(genre) || 0) + 1);
   const genres = [...genreCounts].sort((a, b) => b[1] - a[1]).slice(0, 10).map(([name, count]) => ({ name, secondary: `${count} listens` }));
   if (!genres.length) genres.push({ name: 'Genre data unavailable', secondary: 'Keep collecting listens' });
-  fs.writeFileSync(path.join(outputDir, `genres-${range === 'short_term' ? '1m' : '6m'}.svg`), renderGenreMenu(genres, range));
+  menuViews[`genres-${suffix}`] = genres;
+  fs.writeFileSync(path.join(outputDir, `genres-${suffix}.svg`), renderGenreMenu(genres, range));
 }
+// The site's iPod menu reads this; the SVGs above are kept as standalone receipts.
+const updated = new Date().toLocaleString('en-US', { month: 'long', year: 'numeric', timeZone: 'America/New_York' });
+fs.writeFileSync(path.join(outputDir, 'receipts.json'), JSON.stringify({ updated, views: menuViews }, null, 2) + '\n');

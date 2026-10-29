@@ -9,7 +9,7 @@ const SLAB = Array.from({ length: 12 }, (_, i) => {
   const f = i / 11;
   const c = [221 - Math.round(48 * f), 226 - Math.round(44 * f), 232 - Math.round(36 * f)];
   return {
-    transform: 'translateZ(-' + (i + 1) * 2 + 'px)',
+    transform: 'translateZ(-' + (i + 1) * 3 + 'px)',
     background: i === 11 ? 'linear-gradient(135deg, #FFFFFF 0%, #C9CED6 30%, #F4F6F9 50%, #9AA2AD 75%, #E6E9EE 100%)' : 'rgb(' + c.join(', ') + ')',
   };
 });
@@ -22,7 +22,9 @@ const SLAB_THIN = Array.from({ length: 4 }, (_, i) => ({
 }));
 
 export function SlabLayers({ thin }: { thin?: boolean }) {
-  return (thin ? SLAB_THIN : SLAB).map((s, i) => <div key={i} className="slab-layer" aria-hidden="true" style={s} />);
+  const layers = (thin ? SLAB_THIN : SLAB).map((s, i) => <div key={i} className="slab-layer" aria-hidden="true" style={s} />);
+  // The face copy keeps the edge layers behind the body even where a browser flattens the 3D.
+  return thin ? layers : <>{layers}<div className="slab-layer slab-face" aria-hidden="true" /></>;
 }
 
 export function PrevIcon({ color, size }: { color: string; size: number }) {

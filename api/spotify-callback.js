@@ -10,7 +10,7 @@ function cookieValue(req, name) {
 function page(message, token = '') {
   const safe = String(message).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const safeToken = String(token).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  return `<!doctype html><meta charset="utf-8"><title>Spotify authorization</title><style>body{font:16px system-ui;max-width:720px;margin:48px auto;padding:0 20px}textarea{width:100%;height:100px}button{padding:10px 16px}</style><h1>Spotify authorization</h1><p>${safe}</p>${token ? `<textarea id="token" readonly>${safeToken}</textarea><p><button onclick="navigator.clipboard.writeText(document.getElementById('token').value)">Copy refresh token</button></p><p>Paste it into GitHub Actions as <code>SPOTIFY_REFRESH_TOKEN</code>. Do not share it.</p>` : ''}`;
+  return `<!doctype html><meta charset="utf-8"><title>Spotify authorization</title><style>body{font:16px system-ui;max-width:720px;margin:48px auto;padding:0 20px}textarea{width:100%;height:100px}button{padding:10px 16px}</style><h1>Spotify authorization</h1><p>${safe}</p>${token ? `<textarea id="token" readonly>${safeToken}</textarea><p><button onclick="navigator.clipboard.writeText(document.getElementById('token').value)">Copy refresh token</button></p><p>Paste it as <code>SPOTIFY_REFRESH_TOKEN</code> in both GitHub Actions and the Vercel project settings, then redeploy. Do not share it.</p>` : ''}`;
 }
 
 export default async function handler(req, res) {
@@ -29,7 +29,7 @@ export default async function handler(req, res) {
     const data = await tokenResponse.json();
     if (!tokenResponse.ok || !data.refresh_token) return res.status(502).send(page(`Spotify token exchange failed: ${data.error || tokenResponse.status}`));
     res.setHeader('Set-Cookie', ['spotify_oauth_state=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0', 'spotify_oauth_verifier=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0']);
-    return res.status(200).send(page('Authorization succeeded. Copy this refresh token into GitHub Actions.', data.refresh_token));
+    return res.status(200).send(page('Authorization succeeded. Copy this refresh token into GitHub Actions and Vercel.', data.refresh_token));
   } catch (error) {
     console.error('Spotify callback failed:', error);
     return res.status(500).send(page('Spotify authorization could not be completed.'));
