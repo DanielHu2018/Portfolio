@@ -61,7 +61,7 @@ export const STICKERS: { ch: string; color: string; label: string }[] = [
   { ch: '❄', color: '#7FB8FF', label: 'Snowflake' },
   { ch: '☀', color: '#FF9A3C', label: 'Sun' },
   { ch: '♫', color: '#A77BFF', label: 'Notes' },
-  { ch: '✦', color: '#2FC9B5', label: 'Sparkle' },
+  { ch: '🐯', color: '#FF8A1F', label: 'Tiger' },
 ];
 
 export interface Sticker { x: number; y: number; k: number; r: number; n: string }

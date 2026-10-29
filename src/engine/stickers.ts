@@ -27,7 +27,16 @@ export function stickerUri(i: number): string {
     }
   } else if (i === 5) { fill = poly(12, 48, 35, 50, 50, 0); detail = '<circle cx="50" cy="50" r="25" fill="#FFC46B"/><circle cx="42" cy="46" r="3.5" fill="#7A3E10"/><circle cx="58" cy="46" r="3.5" fill="#7A3E10"/><path d="M41 56 Q50 64 59 56" fill="none" stroke="#7A3E10" stroke-width="3.5" stroke-linecap="round"/>'; }
   else if (i === 6) fill = '<ellipse cx="25" cy="76" rx="16" ry="12" transform="rotate(-22 25 76)"/><ellipse cx="71" cy="66" rx="16" ry="12" transform="rotate(-22 71 66)"/><rect x="33" y="22" width="9" height="54" rx="3"/><rect x="79" y="12" width="9" height="54" rx="3"/><polygon points="33,22 88,10 88,26 33,38"/>';
-  else fill = '<path d="M50 4 C54 34 66 46 96 50 C66 54 54 66 50 96 C46 66 34 54 4 50 C34 46 46 34 50 4 Z"/><path d="M82 8 C83 16 85 18 93 19 C85 20 83 22 82 30 C81 22 79 20 71 19 C79 18 81 16 82 8 Z"/>';
+  else {
+    fill = '<circle cx="22" cy="24" r="15"/><circle cx="78" cy="24" r="15"/><ellipse cx="50" cy="56" rx="42" ry="37"/>';
+    detail = '<circle cx="22" cy="24" r="7" fill="#FFD3A6"/><circle cx="78" cy="24" r="7" fill="#FFD3A6"/>'
+      + '<ellipse cx="50" cy="73" rx="22" ry="15" fill="#FFF4E4"/>'
+      + '<g fill="none" stroke="#3C2A1E" stroke-linecap="round" stroke-width="5"><path d="M50 22 V34"/><path d="M37 25 L41 36"/><path d="M63 25 L59 36"/>'
+      + '<path d="M10 52 L23 56"/><path d="M11 65 L23 64"/><path d="M90 52 L77 56"/><path d="M89 65 L77 64"/></g>'
+      + '<circle cx="36" cy="52" r="5" fill="#3C2A1E"/><circle cx="64" cy="52" r="5" fill="#3C2A1E"/><circle cx="37.6" cy="50.4" r="1.6" fill="#FFFFFF"/><circle cx="65.6" cy="50.4" r="1.6" fill="#FFFFFF"/>'
+      + '<path d="M44 64 H56 L50 71 Z" fill="#FF6FB5" stroke="#FF6FB5" stroke-width="2" stroke-linejoin="round"/>'
+      + '<path d="M50 71 Q46 78 40 75 M50 71 Q54 78 60 75" fill="none" stroke="#3C2A1E" stroke-width="2.6" stroke-linecap="round"/>';
+  }
   const lw = 11;
   const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-14 -14 128 128">'
     + '<defs><clipPath id="c">' + fill + '</clipPath></defs>'
