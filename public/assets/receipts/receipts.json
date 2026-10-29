@@ -43,6 +43,54 @@
         "secondary": "2 plays"
       }
     ],
+    "artists-1m": [
+      {
+        "name": "PinkPantheress",
+        "secondary": "10 listens"
+      },
+      {
+        "name": "After",
+        "secondary": "9 listens"
+      },
+      {
+        "name": "Lucy Bedroque",
+        "secondary": "8 listens"
+      },
+      {
+        "name": "Porter Robinson",
+        "secondary": "4 listens"
+      },
+      {
+        "name": "Feng",
+        "secondary": "3 listens"
+      },
+      {
+        "name": "Bladee",
+        "secondary": "2 listens"
+      },
+      {
+        "name": "Ecco2k",
+        "secondary": "2 listens"
+      },
+      {
+        "name": "bôa",
+        "secondary": "2 listens"
+      },
+      {
+        "name": "fakemink",
+        "secondary": "2 listens"
+      },
+      {
+        "name": "Imogen Heap",
+        "secondary": "2 listens"
+      }
+    ],
+    "genres-1m": [
+      {
+        "name": "Genre data unavailable",
+        "secondary": "Keep collecting listens"
+      }
+    ],
     "tracks-6m": [
       {
         "name": "Girl Like Me",
@@ -85,48 +133,6 @@
         "secondary": "2 plays"
       }
     ],
-    "artists-1m": [
-      {
-        "name": "PinkPantheress",
-        "secondary": "10 listens"
-      },
-      {
-        "name": "After",
-        "secondary": "9 listens"
-      },
-      {
-        "name": "Lucy Bedroque",
-        "secondary": "7 listens"
-      },
-      {
-        "name": "Porter Robinson",
-        "secondary": "4 listens"
-      },
-      {
-        "name": "Feng",
-        "secondary": "3 listens"
-      },
-      {
-        "name": "Bladee",
-        "secondary": "2 listens"
-      },
-      {
-        "name": "Ecco2k",
-        "secondary": "2 listens"
-      },
-      {
-        "name": "bôa",
-        "secondary": "2 listens"
-      },
-      {
-        "name": "fakemink",
-        "secondary": "2 listens"
-      },
-      {
-        "name": "Imogen Heap",
-        "secondary": "2 listens"
-      }
-    ],
     "artists-6m": [
       {
         "name": "PinkPantheress",
@@ -138,7 +144,7 @@
       },
       {
         "name": "Lucy Bedroque",
-        "secondary": "7 listens"
+        "secondary": "8 listens"
       },
       {
         "name": "Porter Robinson",
@@ -167,12 +173,6 @@
       {
         "name": "Imogen Heap",
         "secondary": "2 listens"
-      }
-    ],
-    "genres-1m": [
-      {
-        "name": "Genre data unavailable",
-        "secondary": "Keep collecting listens"
       }
     ],
     "genres-6m": [

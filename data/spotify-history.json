@@ -553,6 +553,28 @@
       "artists": [
         "After"
       ]
+    },
+    {
+      "played_at": "2026-10-28T22:53:34.321Z",
+      "track_id": "34Z02j7zDFo9Xa4tyLDFdI",
+      "track_name": "SORORITY",
+      "artist_ids": [
+        "2I8H267eH5va9da4vGt38O"
+      ],
+      "artists": [
+        "Lucy Bedroque"
+      ]
+    },
+    {
+      "played_at": "2026-10-29T03:06:37.787Z",
+      "track_id": "3R6kyOmqWcAsqZqqe9CGL0",
+      "track_name": "Be My Angel",
+      "artist_ids": [
+        "37w38cCSGgKLdayTRjna4W"
+      ],
+      "artists": [
+        "Mazzy Star"
+      ]
     }
   ]
 }
