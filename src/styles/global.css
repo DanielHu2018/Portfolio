@@ -41,14 +41,16 @@ html[data-wii],html[data-wii] *{cursor:none !important}
 @keyframes bootPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
 @media (prefers-reduced-motion: reduce){.boot-logo,.boot-name,.boot-sub,.boot-btn,.boot-tile,.boot-bar,.boot-shine{animation:none}.boot-fill{animation-duration:0.6s}}
 .shift,.focus-root,.boot,.ipod>.dots,.mini>*,.np{zoom:var(--z,1)}
-.np{position:fixed;left:16px;bottom:16px;z-index:47;max-width:340px;animation:npIn 0.5s cubic-bezier(0.2,0.8,0.2,1);transition:translate 0.2s cubic-bezier(0.2,0.8,0.2,1)}
-.np:hover,.np:focus-visible{translate:0 -2px}
-@keyframes npIn{from{opacity:0;translate:0 16px}}
-.np-eq{display:inline-flex;align-items:flex-end;gap:2px;height:10px}
-.np-eq span{width:3px;height:100%;border-radius:2px;background:#1DB954;transform-origin:bottom;animation:npEq 0.9s ease-in-out infinite}
+.np{position:fixed;left:16px;bottom:16px;z-index:47;max-width:260px;opacity:0.85;animation:npIn 0.5s cubic-bezier(0.2,0.8,0.2,1);transition:opacity 0.2s,translate 0.2s cubic-bezier(0.2,0.8,0.2,1)}
+.np:hover,.np:focus-visible{opacity:1;translate:0 -2px}
+@keyframes npIn{from{opacity:0;translate:0 12px}}
+.sp-btn svg{transition:stroke 0.2s}
+.sp-btn:hover svg,.sp-btn:focus-visible svg{stroke:#1DB954}
+.np-eq{display:inline-flex;align-items:flex-end;gap:1.5px;height:8px}
+.np-eq span{width:2px;height:100%;border-radius:2px;background:#1DB954;transform-origin:bottom;animation:npEq 0.9s ease-in-out infinite}
 .np-eq span:nth-child(2){animation-delay:-0.3s}.np-eq span:nth-child(3){animation-delay:-0.6s}
 @keyframes npEq{0%,100%{transform:scaleY(0.3)}50%{transform:scaleY(1)}}
-@media (max-width:699px){.np{left:12px;right:12px;bottom:12px;max-width:none}}
+@media (max-width:699px){.np{left:12px;bottom:12px;max-width:calc(100% - 24px)}}
 @media (prefers-reduced-motion: reduce){.np{animation:none}.np-eq span{animation:none;transform:scaleY(0.6)}}
 .shift{isolation:isolate;min-height:calc(100vh / var(--z,1));box-sizing:border-box;display:flex;flex-direction:column;justify-content:center}
 header.shift{justify-content:flex-start}

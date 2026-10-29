@@ -57,14 +57,16 @@ html[data-wii],html[data-wii] *{cursor:none !important}
 @keyframes bootPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
 @media (prefers-reduced-motion: reduce){.boot-logo,.boot-name,.boot-sub,.boot-btn,.boot-tile,.boot-bar,.boot-shine{animation:none}.boot-fill{animation-duration:0.6s}}
 .shift,.focus-root,.boot,.ipod>.dots,.mini>*,.np{zoom:var(--z,1)}
-.np{position:fixed;left:16px;bottom:16px;z-index:47;max-width:340px;animation:npIn 0.5s cubic-bezier(0.2,0.8,0.2,1);transition:translate 0.2s cubic-bezier(0.2,0.8,0.2,1)}
-.np:hover,.np:focus-visible{translate:0 -2px}
-@keyframes npIn{from{opacity:0;translate:0 16px}}
-.np-eq{display:inline-flex;align-items:flex-end;gap:2px;height:10px}
-.np-eq span{width:3px;height:100%;border-radius:2px;background:#1DB954;transform-origin:bottom;animation:npEq 0.9s ease-in-out infinite}
+.np{position:fixed;left:16px;bottom:16px;z-index:47;max-width:260px;opacity:0.85;animation:npIn 0.5s cubic-bezier(0.2,0.8,0.2,1);transition:opacity 0.2s,translate 0.2s cubic-bezier(0.2,0.8,0.2,1)}
+.np:hover,.np:focus-visible{opacity:1;translate:0 -2px}
+@keyframes npIn{from{opacity:0;translate:0 12px}}
+.sp-btn svg{transition:stroke 0.2s}
+.sp-btn:hover svg,.sp-btn:focus-visible svg{stroke:#1DB954}
+.np-eq{display:inline-flex;align-items:flex-end;gap:1.5px;height:8px}
+.np-eq span{width:2px;height:100%;border-radius:2px;background:#1DB954;transform-origin:bottom;animation:npEq 0.9s ease-in-out infinite}
 .np-eq span:nth-child(2){animation-delay:-0.3s}.np-eq span:nth-child(3){animation-delay:-0.6s}
 @keyframes npEq{0%,100%{transform:scaleY(0.3)}50%{transform:scaleY(1)}}
-@media (max-width:699px){.np{left:12px;right:12px;bottom:12px;max-width:none}}
+@media (max-width:699px){.np{left:12px;bottom:12px;max-width:calc(100% - 24px)}}
 @media (prefers-reduced-motion: reduce){.np{animation:none}.np-eq span{animation:none;transform:scaleY(0.6)}}
 .shift{isolation:isolate;min-height:calc(100vh / var(--z,1));box-sizing:border-box;display:flex;flex-direction:column;justify-content:center}
 header.shift{justify-content:flex-start}
@@ -209,7 +211,7 @@ footer.shift{padding-bottom:120px !important}
       <button type="button" aria-label="Previous track" onClick="{{trackPrev}}" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border: 0; background: transparent; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M6 6v12M18 6l-9 6 9 6z" fill="#7E848D" stroke="#7E848D" stroke-width="2" stroke-linejoin="round"></path></svg></button>
       <button type="button" aria-label="Next track" onClick="{{trackNext}}" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border: 0; background: transparent; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M18 6v12M6 6l9 6-9 6z" fill="#7E848D" stroke="#7E848D" stroke-width="2" stroke-linejoin="round"></path></svg></button>
       <button type="button" aria-label="Play or pause music" aria-pressed="{{playingAttr}}" onClick="{{togglePlay}}" style="position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 44px; height: 44px; border: 0; background: transparent; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M4 6l8 6-8 6z" fill="#7E848D"></path><path d="M15 6v12M19 6v12" stroke="#7E848D" stroke-width="2.5"></path></svg></button>
-      <button type="button" aria-label="Select" onClick="{{togglePlay}}" style="position: absolute; left: 50%; top: 50%; width: 62px; height: 62px; margin: -31px 0 0 -31px; border-radius: 50%; background: linear-gradient(180deg, #F4F6F9, #DDE1E7); border: 3px solid #D5DAE1; box-shadow: inset 0 2px 0 #FFFFFF; cursor: pointer"></button>
+      <a class="proj-cta sp-btn" href="{{spotifyProfile}}" target="_blank" rel="noopener noreferrer" aria-label="Daniel on Spotify" style="position: absolute; left: 50%; top: 50%; width: 62px; height: 62px; margin: -31px 0 0 -31px; box-sizing: border-box; border-radius: 50%; background: linear-gradient(180deg, #F4F6F9, #DDE1E7); border: 3px solid #D5DAE1; box-shadow: inset 0 2px 0 #FFFFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#4A4F57" stroke-linecap="round"><path d="M3.6 8.7c5.4-1.8 11.6-1.3 16.6 1.4" stroke-width="2.7"></path><path d="M5 12.7c4.5-1.4 9.6-1 13.6 1.2" stroke-width="2.3"></path><path d="M6.3 16.5c3.7-1.1 7.6-.8 10.8 1" stroke-width="1.9"></path></svg></a>
     </div>
         </div>
     </div>
@@ -355,11 +357,11 @@ footer.shift{padding-bottom:120px !important}
 
 <!-- HERO -->
 <sc-if value="{{npShow}}" hint-placeholder-val="{{ false }}">
-<a class="np" href="{{npUrl}}" target="_blank" rel="noopener noreferrer" aria-label="Daniel is currently listening to {{npTitle}} by {{npArtist}} on Spotify" style="display: flex; align-items: center; gap: 12px; box-sizing: border-box; padding: 8px 16px 8px 8px; border-radius: 20px; background: #FFFFFF; border: 3px solid #D5DAE1; box-shadow: inset 0 0 0 3px #FFFFFF, 0 10px 24px -12px rgba(60, 64, 70, 0.35); text-decoration: none; color: #3C4046; font-family: 'M PLUS Rounded 1c', system-ui, sans-serif">
-  <img src="{{npArt}}" alt="" width="48" height="48" style="flex-shrink: 0; width: 48px; height: 48px; box-sizing: border-box; border-radius: 10px; object-fit: cover; background: #3C4046; border: 2px solid #D5DAE1">
-  <span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-    <span style="display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 11px; color: #5A5F67"><span class="np-eq" aria-hidden="true"><span></span><span></span><span></span></span>Currently listening to</span>
-    <span style="font-size: 13px; line-height: 1.35; overflow: hidden; text-overflow: ellipsis; white-space: nowrap"><strong style="font-weight: 800">{{npTitle}}</strong> by {{npArtist}}</span>
+<a class="np" href="{{npUrl}}" target="_blank" rel="noopener noreferrer" aria-label="Daniel is currently listening to {{npTitle}} by {{npArtist}} on Spotify" style="display: flex; align-items: center; gap: 8px; box-sizing: border-box; padding: 4px 12px 4px 4px; border-radius: 14px; background: rgba(255, 255, 255, 0.9); border: 2px solid #E3E6EB; text-decoration: none; color: #4A4F57; font-family: 'M PLUS Rounded 1c', system-ui, sans-serif">
+  <img src="{{npArt}}" alt="" width="32" height="32" style="flex-shrink: 0; width: 32px; height: 32px; border-radius: 9px; object-fit: cover; background: #3C4046">
+  <span style="display: flex; flex-direction: column; gap: 1px; min-width: 0">
+    <span style="display: flex; align-items: center; gap: 5px; font-weight: 700; font-size: 10px; color: #7E848D"><span class="np-eq" aria-hidden="true"><span></span><span></span><span></span></span>Currently listening to</span>
+    <span style="font-size: 12px; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap"><strong style="font-weight: 700; color: #3C4046">{{npTitle}}</strong> by {{npArtist}}</span>
   </span>
 </a>
 </sc-if>
@@ -643,7 +645,7 @@ footer.shift{padding-bottom:120px !important}
       <button type="button" aria-label="Previous track" onClick="{{trackPrev}}" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border: 0; background: transparent; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M6 6v12M18 6l-9 6 9 6z" fill="#7E848D" stroke="#7E848D" stroke-width="2" stroke-linejoin="round"></path></svg></button>
       <button type="button" aria-label="Next track" onClick="{{trackNext}}" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border: 0; background: transparent; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M18 6v12M6 6l9 6-9 6z" fill="#7E848D" stroke="#7E848D" stroke-width="2" stroke-linejoin="round"></path></svg></button>
       <button type="button" aria-label="Play or pause music" aria-pressed="{{playingAttr}}" onClick="{{togglePlay}}" style="position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 44px; height: 44px; border: 0; background: transparent; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M4 6l8 6-8 6z" fill="#7E848D"></path><path d="M15 6v12M19 6v12" stroke="#7E848D" stroke-width="2.5"></path></svg></button>
-      <button type="button" aria-label="Select" onClick="{{togglePlay}}" style="position: absolute; left: 50%; top: 50%; width: 62px; height: 62px; margin: -31px 0 0 -31px; border-radius: 50%; background: linear-gradient(180deg, #F4F6F9, #DDE1E7); border: 3px solid #D5DAE1; box-shadow: inset 0 2px 0 #FFFFFF; cursor: pointer"></button>
+      <a class="proj-cta sp-btn" href="{{spotifyProfile}}" target="_blank" rel="noopener noreferrer" aria-label="Daniel on Spotify" style="position: absolute; left: 50%; top: 50%; width: 62px; height: 62px; margin: -31px 0 0 -31px; box-sizing: border-box; border-radius: 50%; background: linear-gradient(180deg, #F4F6F9, #DDE1E7); border: 3px solid #D5DAE1; box-shadow: inset 0 2px 0 #FFFFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#4A4F57" stroke-linecap="round"><path d="M3.6 8.7c5.4-1.8 11.6-1.3 16.6 1.4" stroke-width="2.7"></path><path d="M5 12.7c4.5-1.4 9.6-1 13.6 1.2" stroke-width="2.3"></path><path d="M6.3 16.5c3.7-1.1 7.6-.8 10.8 1" stroke-width="1.9"></path></svg></a>
     </div>
         </div></div>
       </div>
@@ -2618,6 +2620,7 @@ class Component extends DCLogic {
       receiptTitle: receiptView.type === 'artists' ? 'Top Artists' : receiptView.type === 'genres' ? 'Top Genres' : 'Top Tracks',
       receiptRange: receiptView.range === '6m' ? '6 months' : '4 weeks',
       receiptRows: receiptRows,
+      spotifyProfile: 'https://open.spotify.com/user/rudda_rudda',
       npShow: !!s.np,
       npTitle: s.np ? s.np.title : '',
       npArtist: s.np ? s.np.artist : '',
