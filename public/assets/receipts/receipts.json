@@ -3,6 +3,14 @@
   "views": {
     "tracks-1m": [
       {
+        "name": "Something Comforting",
+        "secondary": "3 plays"
+      },
+      {
+        "name": "Girls Just Want to Have Fun",
+        "secondary": "3 plays"
+      },
+      {
         "name": "Girl Like Me",
         "secondary": "3 plays"
       },
@@ -11,57 +19,57 @@
         "secondary": "3 plays"
       },
       {
+        "name": "NOT CUTE ANYMORE",
+        "secondary": "3 plays"
+      },
+      {
+        "name": "Tonight",
+        "secondary": "3 plays"
+      },
+      {
         "name": "Take Me to Sunrise",
         "secondary": "2 plays"
       },
       {
-        "name": "Something Comforting",
+        "name": "blade bird",
         "secondary": "2 plays"
       },
       {
-        "name": "Girls Just Want to Have Fun",
+        "name": "Mosquito",
         "secondary": "2 plays"
       },
       {
         "name": "Promise (When You Go)",
-        "secondary": "2 plays"
-      },
-      {
-        "name": "300 dreams",
-        "secondary": "2 plays"
-      },
-      {
-        "name": "Close your eyes",
-        "secondary": "2 plays"
-      },
-      {
-        "name": "How to Pretend",
-        "secondary": "2 plays"
-      },
-      {
-        "name": "Tonight",
         "secondary": "2 plays"
       }
     ],
     "artists-1m": [
       {
         "name": "PinkPantheress",
-        "secondary": "11 listens"
+        "secondary": "16 listens"
+      },
+      {
+        "name": "Lucy Bedroque",
+        "secondary": "12 listens"
       },
       {
         "name": "After",
         "secondary": "10 listens"
       },
       {
-        "name": "Lucy Bedroque",
-        "secondary": "8 listens"
-      },
-      {
         "name": "Porter Robinson",
-        "secondary": "4 listens"
+        "secondary": "7 listens"
       },
       {
         "name": "Feng",
+        "secondary": "5 listens"
+      },
+      {
+        "name": "Bladee",
+        "secondary": "3 listens"
+      },
+      {
+        "name": "Ecco2k",
         "secondary": "3 listens"
       },
       {
@@ -69,19 +77,11 @@
         "secondary": "3 listens"
       },
       {
-        "name": "Bladee",
-        "secondary": "2 listens"
+        "name": "ILLIT",
+        "secondary": "3 listens"
       },
       {
-        "name": "Ecco2k",
-        "secondary": "2 listens"
-      },
-      {
-        "name": "fakemink",
-        "secondary": "2 listens"
-      },
-      {
-        "name": "Imogen Heap",
+        "name": "Oklou",
         "secondary": "2 listens"
       }
     ],
@@ -93,6 +93,14 @@
     ],
     "tracks-6m": [
       {
+        "name": "Something Comforting",
+        "secondary": "3 plays"
+      },
+      {
+        "name": "Girls Just Want to Have Fun",
+        "secondary": "3 plays"
+      },
+      {
         "name": "Girl Like Me",
         "secondary": "3 plays"
       },
@@ -101,57 +109,57 @@
         "secondary": "3 plays"
       },
       {
+        "name": "NOT CUTE ANYMORE",
+        "secondary": "3 plays"
+      },
+      {
+        "name": "Tonight",
+        "secondary": "3 plays"
+      },
+      {
         "name": "Take Me to Sunrise",
         "secondary": "2 plays"
       },
       {
-        "name": "Something Comforting",
+        "name": "blade bird",
         "secondary": "2 plays"
       },
       {
-        "name": "Girls Just Want to Have Fun",
+        "name": "Mosquito",
         "secondary": "2 plays"
       },
       {
         "name": "Promise (When You Go)",
-        "secondary": "2 plays"
-      },
-      {
-        "name": "300 dreams",
-        "secondary": "2 plays"
-      },
-      {
-        "name": "Close your eyes",
-        "secondary": "2 plays"
-      },
-      {
-        "name": "How to Pretend",
-        "secondary": "2 plays"
-      },
-      {
-        "name": "Tonight",
         "secondary": "2 plays"
       }
     ],
     "artists-6m": [
       {
         "name": "PinkPantheress",
-        "secondary": "11 listens"
+        "secondary": "16 listens"
+      },
+      {
+        "name": "Lucy Bedroque",
+        "secondary": "12 listens"
       },
       {
         "name": "After",
         "secondary": "10 listens"
       },
       {
-        "name": "Lucy Bedroque",
-        "secondary": "8 listens"
-      },
-      {
         "name": "Porter Robinson",
-        "secondary": "4 listens"
+        "secondary": "7 listens"
       },
       {
         "name": "Feng",
+        "secondary": "5 listens"
+      },
+      {
+        "name": "Bladee",
+        "secondary": "3 listens"
+      },
+      {
+        "name": "Ecco2k",
         "secondary": "3 listens"
       },
       {
@@ -159,19 +167,11 @@
         "secondary": "3 listens"
       },
       {
-        "name": "Bladee",
-        "secondary": "2 listens"
+        "name": "ILLIT",
+        "secondary": "3 listens"
       },
       {
-        "name": "Ecco2k",
-        "secondary": "2 listens"
-      },
-      {
-        "name": "fakemink",
-        "secondary": "2 listens"
-      },
-      {
-        "name": "Imogen Heap",
+        "name": "Oklou",
         "secondary": "2 listens"
       }
     ],
