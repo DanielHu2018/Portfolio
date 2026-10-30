@@ -3,6 +3,10 @@
   "views": {
     "tracks-1m": [
       {
+        "name": "Heaven or Las Vegas",
+        "secondary": "4 plays"
+      },
+      {
         "name": "Something Comforting",
         "secondary": "3 plays"
       },
@@ -23,24 +27,20 @@
         "secondary": "3 plays"
       },
       {
+        "name": "How to Pretend",
+        "secondary": "3 plays"
+      },
+      {
         "name": "Tonight",
         "secondary": "3 plays"
       },
       {
-        "name": "Take Me to Sunrise",
-        "secondary": "2 plays"
+        "name": "Be My Angel",
+        "secondary": "3 plays"
       },
       {
-        "name": "blade bird",
-        "secondary": "2 plays"
-      },
-      {
-        "name": "Mosquito",
-        "secondary": "2 plays"
-      },
-      {
-        "name": "Promise (When You Go)",
-        "secondary": "2 plays"
+        "name": "Apocalypse",
+        "secondary": "3 plays"
       }
     ],
     "artists-1m": [
@@ -50,18 +50,30 @@
       },
       {
         "name": "Lucy Bedroque",
-        "secondary": "12 listens"
+        "secondary": "16 listens"
       },
       {
         "name": "After",
-        "secondary": "10 listens"
+        "secondary": "11 listens"
       },
       {
         "name": "Porter Robinson",
         "secondary": "7 listens"
       },
       {
+        "name": "Cocteau Twins",
+        "secondary": "6 listens"
+      },
+      {
         "name": "Feng",
+        "secondary": "5 listens"
+      },
+      {
+        "name": "Mazzy Star",
+        "secondary": "5 listens"
+      },
+      {
+        "name": "UDG Records",
         "secondary": "5 listens"
       },
       {
@@ -70,18 +82,6 @@
       },
       {
         "name": "Ecco2k",
-        "secondary": "3 listens"
-      },
-      {
-        "name": "bôa",
-        "secondary": "3 listens"
-      },
-      {
-        "name": "ILLIT",
-        "secondary": "3 listens"
-      },
-      {
-        "name": "Mazzy Star",
         "secondary": "3 listens"
       }
     ],
@@ -93,6 +93,10 @@
     ],
     "tracks-6m": [
       {
+        "name": "Heaven or Las Vegas",
+        "secondary": "4 plays"
+      },
+      {
         "name": "Something Comforting",
         "secondary": "3 plays"
       },
@@ -113,24 +117,20 @@
         "secondary": "3 plays"
       },
       {
+        "name": "How to Pretend",
+        "secondary": "3 plays"
+      },
+      {
         "name": "Tonight",
         "secondary": "3 plays"
       },
       {
-        "name": "Take Me to Sunrise",
-        "secondary": "2 plays"
+        "name": "Be My Angel",
+        "secondary": "3 plays"
       },
       {
-        "name": "blade bird",
-        "secondary": "2 plays"
-      },
-      {
-        "name": "Mosquito",
-        "secondary": "2 plays"
-      },
-      {
-        "name": "Promise (When You Go)",
-        "secondary": "2 plays"
+        "name": "Apocalypse",
+        "secondary": "3 plays"
       }
     ],
     "artists-6m": [
@@ -140,18 +140,30 @@
       },
       {
         "name": "Lucy Bedroque",
-        "secondary": "12 listens"
+        "secondary": "16 listens"
       },
       {
         "name": "After",
-        "secondary": "10 listens"
+        "secondary": "11 listens"
       },
       {
         "name": "Porter Robinson",
         "secondary": "7 listens"
       },
       {
+        "name": "Cocteau Twins",
+        "secondary": "6 listens"
+      },
+      {
         "name": "Feng",
+        "secondary": "5 listens"
+      },
+      {
+        "name": "Mazzy Star",
+        "secondary": "5 listens"
+      },
+      {
+        "name": "UDG Records",
         "secondary": "5 listens"
       },
       {
@@ -160,18 +172,6 @@
       },
       {
         "name": "Ecco2k",
-        "secondary": "3 listens"
-      },
-      {
-        "name": "bôa",
-        "secondary": "3 listens"
-      },
-      {
-        "name": "ILLIT",
-        "secondary": "3 listens"
-      },
-      {
-        "name": "Mazzy Star",
         "secondary": "3 listens"
       }
     ],
