@@ -36,10 +36,10 @@ export const PROJECTS: Project[] = [
 export type HobbyId = 'hb-guitar' | 'hb-drawing' | 'hb-ski' | 'hb-volley';
 
 export const HOBBIES: { id: HobbyId; title: string; label: string; gridLabel: string; blurb: string }[] = [
-  { id: 'hb-guitar', title: 'Guitar', label: '3D model of an electric guitar', gridLabel: '3D model of an electric guitar (learning guitar)', blurb: '[A QUICK BLURB ABOUT LEARNING GUITAR]' },
-  { id: 'hb-drawing', title: 'Drawing', label: '3D model of a pencil', gridLabel: '3D model of a pencil (drawing)', blurb: '[A QUICK BLURB ABOUT DRAWING]' },
-  { id: 'hb-ski', title: 'Skiing', label: '3D model of a pair of skis', gridLabel: '3D model of crossed skis (skiing)', blurb: '[A QUICK BLURB ABOUT SKIING]' },
-  { id: 'hb-volley', title: 'Volleyball', label: '3D model of a volleyball', gridLabel: '3D model of a volleyball (volleyball)', blurb: '[A QUICK BLURB ABOUT VOLLEYBALL]' },
+  { id: 'hb-guitar', title: 'Guitar', label: '3D model of an electric guitar', gridLabel: '3D model of an electric guitar (learning guitar)', blurb: 'After seeing The Strokes live, I was inspired to learn guitar. I just started learning and am not very good (at all) but it’s a lot of fun lol. Right now, all I have is an electric guitar, but eventually want to get an acoustic as well. I also want to learn bass at some point.' },
+  { id: 'hb-drawing', title: 'Drawing', label: '3D model of a pencil', gridLabel: '3D model of a pencil (drawing)', blurb: 'I’ve been drawing since before I can remember. It’s a pretty casual hobby and I don’t really do large projects, but whenever there’s a small gap in my schedule, I like to draw random stuff in my sketchbook. Sometimes, I also like to go back and look at my old sketchbooks because they’re like snapshots of things I thought were cool at some point in time.' },
+  { id: 'hb-ski', title: 'Skiing', label: '3D model of a pair of skis', gridLabel: '3D model of crossed skis (skiing)', blurb: 'Skiing is my favorite winter activity. Nowadays, I tend to stick to traditional trails, but in middle/high school I was a big fan of park skiing. I like to go a couple times every year, but have never travelled outside Ohio for it. Someday, I’d love to visit France or Japan (Hokkaido specifically) for it.' },
+  { id: 'hb-volley', title: 'Volleyball', label: '3D model of a volleyball', gridLabel: '3D model of a volleyball (volleyball)', blurb: 'When I first started playing volleyball, I was incredibly bad (incredibly), but I stuck with it and gradually got a lot better. I typically play 2 or 3 times a week, both indoor and sand. I would definitely say I prefer indoor over sand, but sand is still really fun. Right now, my goal is to learn how to play outside hitter before indoor intramural starts. Besides volleyball, I also really like soccer and am the striker for my IM team.' },
 ];
 
 export const PLAYLIST = [
