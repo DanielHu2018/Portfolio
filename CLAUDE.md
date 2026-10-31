@@ -60,7 +60,7 @@ in index.html): `[PHOTO OF YOU]`, `[CONCERT PHOTO]` / `[VENUE]` / `[DATE]`,
 `[CLARA SCREENSHOT]`, `[SIERRA SCREENSHOT]`, `[DISCO SCREENSHOT]`, `[FULL DETAILS COMING]`,
 `[YOUR ROLE]`, `[STACK]`, `[DATES]`, `[FROM YOUR RESUME]`, `[SPOTIFY PLAYLIST EMBED]`,
 `[YOUR PLAYLIST]`, the 5 songs in `PLAYLIST`, the hobby blurbs (`[A QUICK BLURB ABOUT ...]`),
-`[NOTE]` sample stickers, and the `#resume` link. The domain is not decided yet.
+`[NOTE]` sample stickers, and the `#resume` link. The site is hosted on Vercel at https://www.dwho.dev (dwho.dev redirects there; dwho.vercel.app also works).
 
 ## Not real yet
 

@@ -163,7 +163,7 @@ Recommendation: port the mockup to Vite + React + TypeScript and host it statica
 | Guestbook storage | In memory only (resets on reload) | Serverless function + small database (for example Cloudflare D1 or Supabase), with rate limiting and a way to remove stickers |
 | Music | Simulated playlist; Spotify embed placeholder | Spotify playlist embed; mini player shows the playlist's tracks |
 | Photos | Placeholders | AVIF/WebP, resized and lazy-loaded |
-| Hosting | Claude artifact | Vercel or Cloudflare Pages on Daniel's domain |
+| Hosting | Claude artifact | Vercel at dwho.dev |
 
 The handoff package (below) includes the mockup files, so the port can be compared side by side as it is built.
 
@@ -203,7 +203,7 @@ The design is done; what is left is real content, a production port and two smal
 4. **Guestbook backend.** Store stickers, rate-limit posts, and add a simple way for Daniel to remove one.
 5. **Real music.** Spotify playlist embed in the Spotify iPod; mini player lists the playlist's tracks.
 6. **Audit.** Performance and accessibility against the targets above, on a real phone and a mid-range laptop.
-7. **Deploy** to Vercel or Cloudflare Pages on Daniel's domain.
+7. **Deploy** to Vercel at dwho.dev.
 8. **Backlog** items as time allows, starting with project detail pages.
 
 ## Handoff to Claude Code
@@ -223,7 +223,7 @@ The mockup is exported as **daniel-hu-site.zip**, which runs exactly like the mo
 
 ## Open questions
 
-- [ ] Domain URL (Daniel will send it).
+- [x] Domain URL: dwho.dev (bought through Vercel).
 - [ ] Photos: a few of Daniel (About) and concert photos with artist, venue and date for each.
 - [ ] Spotify playlist link and the real song names for the mini player.
 - [ ] Disco: one-liner, role, stack and demo link.
