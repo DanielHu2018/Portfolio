@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 
-const filename = 'DanielHu_Resume_08_06_2026.pdf';
+const filename = 'Daniel_Hu_Resume_10312026.pdf';
 
 export default async function handler(req, res) {
   if (req.method !== 'GET' && req.method !== 'HEAD') {
