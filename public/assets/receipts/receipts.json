@@ -1,13 +1,29 @@
 {
-  "updated": "October 2026",
+  "updated": "November 2026",
   "views": {
     "tracks-1m": [
+      {
+        "name": "NOT CUTE ANYMORE",
+        "secondary": "4 plays"
+      },
+      {
+        "name": "How to Pretend",
+        "secondary": "4 plays"
+      },
+      {
+        "name": "Be My Angel",
+        "secondary": "4 plays"
+      },
       {
         "name": "Heaven or Las Vegas",
         "secondary": "4 plays"
       },
       {
         "name": "Something Comforting",
+        "secondary": "3 plays"
+      },
+      {
+        "name": "blade bird",
         "secondary": "3 plays"
       },
       {
@@ -23,34 +39,18 @@
         "secondary": "3 plays"
       },
       {
-        "name": "NOT CUTE ANYMORE",
-        "secondary": "3 plays"
-      },
-      {
-        "name": "How to Pretend",
-        "secondary": "3 plays"
-      },
-      {
-        "name": "Tonight",
-        "secondary": "3 plays"
-      },
-      {
-        "name": "Easter Pink",
-        "secondary": "3 plays"
-      },
-      {
-        "name": "Be My Angel",
+        "name": "Kiss of Life",
         "secondary": "3 plays"
       }
     ],
     "artists-1m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "18 listens"
+        "secondary": "20 listens"
       },
       {
         "name": "PinkPantheress",
-        "secondary": "17 listens"
+        "secondary": "19 listens"
       },
       {
         "name": "After",
@@ -69,20 +69,20 @@
         "secondary": "7 listens"
       },
       {
+        "name": "Mazzy Star",
+        "secondary": "7 listens"
+      },
+      {
         "name": "Cocteau Twins",
         "secondary": "7 listens"
       },
       {
-        "name": "Mazzy Star",
+        "name": "The Marías",
         "secondary": "6 listens"
       },
       {
-        "name": "UDG Records",
-        "secondary": "5 listens"
-      },
-      {
-        "name": "kuru",
-        "secondary": "4 listens"
+        "name": "The Cranberries",
+        "secondary": "6 listens"
       }
     ],
     "genres-1m": [
@@ -93,11 +93,27 @@
     ],
     "tracks-6m": [
       {
+        "name": "NOT CUTE ANYMORE",
+        "secondary": "4 plays"
+      },
+      {
+        "name": "How to Pretend",
+        "secondary": "4 plays"
+      },
+      {
+        "name": "Be My Angel",
+        "secondary": "4 plays"
+      },
+      {
         "name": "Heaven or Las Vegas",
         "secondary": "4 plays"
       },
       {
         "name": "Something Comforting",
+        "secondary": "3 plays"
+      },
+      {
+        "name": "blade bird",
         "secondary": "3 plays"
       },
       {
@@ -113,34 +129,18 @@
         "secondary": "3 plays"
       },
       {
-        "name": "NOT CUTE ANYMORE",
-        "secondary": "3 plays"
-      },
-      {
-        "name": "How to Pretend",
-        "secondary": "3 plays"
-      },
-      {
-        "name": "Tonight",
-        "secondary": "3 plays"
-      },
-      {
-        "name": "Easter Pink",
-        "secondary": "3 plays"
-      },
-      {
-        "name": "Be My Angel",
+        "name": "Kiss of Life",
         "secondary": "3 plays"
       }
     ],
     "artists-6m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "18 listens"
+        "secondary": "20 listens"
       },
       {
         "name": "PinkPantheress",
-        "secondary": "17 listens"
+        "secondary": "19 listens"
       },
       {
         "name": "After",
@@ -159,20 +159,20 @@
         "secondary": "7 listens"
       },
       {
+        "name": "Mazzy Star",
+        "secondary": "7 listens"
+      },
+      {
         "name": "Cocteau Twins",
         "secondary": "7 listens"
       },
       {
-        "name": "Mazzy Star",
+        "name": "The Marías",
         "secondary": "6 listens"
       },
       {
-        "name": "UDG Records",
-        "secondary": "5 listens"
-      },
-      {
-        "name": "kuru",
-        "secondary": "4 listens"
+        "name": "The Cranberries",
+        "secondary": "6 listens"
       }
     ],
     "genres-6m": [
