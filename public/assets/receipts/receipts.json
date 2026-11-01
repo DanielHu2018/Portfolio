@@ -3,6 +3,10 @@
   "views": {
     "tracks-1m": [
       {
+        "name": "Girls Just Want to Have Fun",
+        "secondary": "4 plays"
+      },
+      {
         "name": "NOT CUTE ANYMORE",
         "secondary": "4 plays"
       },
@@ -24,10 +28,6 @@
       },
       {
         "name": "blade bird",
-        "secondary": "3 plays"
-      },
-      {
-        "name": "Girls Just Want to Have Fun",
         "secondary": "3 plays"
       },
       {
@@ -46,7 +46,7 @@
     "artists-1m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "20 listens"
+        "secondary": "23 listens"
       },
       {
         "name": "PinkPantheress",
@@ -77,11 +77,11 @@
         "secondary": "7 listens"
       },
       {
-        "name": "The Marías",
-        "secondary": "6 listens"
+        "name": "Ninajirachi",
+        "secondary": "7 listens"
       },
       {
-        "name": "The Cranberries",
+        "name": "The Marías",
         "secondary": "6 listens"
       }
     ],
@@ -92,6 +92,10 @@
       }
     ],
     "tracks-6m": [
+      {
+        "name": "Girls Just Want to Have Fun",
+        "secondary": "4 plays"
+      },
       {
         "name": "NOT CUTE ANYMORE",
         "secondary": "4 plays"
@@ -117,10 +121,6 @@
         "secondary": "3 plays"
       },
       {
-        "name": "Girls Just Want to Have Fun",
-        "secondary": "3 plays"
-      },
-      {
         "name": "Girl Like Me",
         "secondary": "3 plays"
       },
@@ -136,7 +136,7 @@
     "artists-6m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "20 listens"
+        "secondary": "23 listens"
       },
       {
         "name": "PinkPantheress",
@@ -167,11 +167,11 @@
         "secondary": "7 listens"
       },
       {
-        "name": "The Marías",
-        "secondary": "6 listens"
+        "name": "Ninajirachi",
+        "secondary": "7 listens"
       },
       {
-        "name": "The Cranberries",
+        "name": "The Marías",
         "secondary": "6 listens"
       }
     ],
