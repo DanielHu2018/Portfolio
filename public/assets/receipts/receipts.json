@@ -3,6 +3,14 @@
   "views": {
     "tracks-1m": [
       {
+        "name": "How to Pretend",
+        "secondary": "5 plays"
+      },
+      {
+        "name": "blade bird",
+        "secondary": "4 plays"
+      },
+      {
         "name": "Girls Just Want to Have Fun",
         "secondary": "4 plays"
       },
@@ -11,7 +19,11 @@
         "secondary": "4 plays"
       },
       {
-        "name": "How to Pretend",
+        "name": "Easter Pink",
+        "secondary": "4 plays"
+      },
+      {
+        "name": "Take Me Home",
         "secondary": "4 plays"
       },
       {
@@ -23,66 +35,54 @@
         "secondary": "4 plays"
       },
       {
-        "name": "Something Comforting",
-        "secondary": "3 plays"
+        "name": "Fade Into You",
+        "secondary": "4 plays"
       },
       {
-        "name": "blade bird",
-        "secondary": "3 plays"
-      },
-      {
-        "name": "Girl Like Me",
-        "secondary": "3 plays"
-      },
-      {
-        "name": "Duvet",
-        "secondary": "3 plays"
-      },
-      {
-        "name": "Kiss of Life",
-        "secondary": "3 plays"
+        "name": "The Peace",
+        "secondary": "4 plays"
       }
     ],
     "artists-1m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "23 listens"
+        "secondary": "26 listens"
       },
       {
         "name": "PinkPantheress",
-        "secondary": "19 listens"
+        "secondary": "22 listens"
       },
       {
         "name": "After",
         "secondary": "11 listens"
       },
       {
+        "name": "Ninajirachi",
+        "secondary": "11 listens"
+      },
+      {
         "name": "Porter Robinson",
+        "secondary": "10 listens"
+      },
+      {
+        "name": "fakemink",
+        "secondary": "9 listens"
+      },
+      {
+        "name": "The Cranberries",
+        "secondary": "9 listens"
+      },
+      {
+        "name": "Mazzy Star",
+        "secondary": "8 listens"
+      },
+      {
+        "name": "Cocteau Twins",
         "secondary": "8 listens"
       },
       {
         "name": "Feng",
         "secondary": "7 listens"
-      },
-      {
-        "name": "fakemink",
-        "secondary": "7 listens"
-      },
-      {
-        "name": "Mazzy Star",
-        "secondary": "7 listens"
-      },
-      {
-        "name": "Cocteau Twins",
-        "secondary": "7 listens"
-      },
-      {
-        "name": "Ninajirachi",
-        "secondary": "7 listens"
-      },
-      {
-        "name": "The Marías",
-        "secondary": "6 listens"
       }
     ],
     "genres-1m": [
@@ -93,6 +93,14 @@
     ],
     "tracks-6m": [
       {
+        "name": "How to Pretend",
+        "secondary": "5 plays"
+      },
+      {
+        "name": "blade bird",
+        "secondary": "4 plays"
+      },
+      {
         "name": "Girls Just Want to Have Fun",
         "secondary": "4 plays"
       },
@@ -101,7 +109,11 @@
         "secondary": "4 plays"
       },
       {
-        "name": "How to Pretend",
+        "name": "Easter Pink",
+        "secondary": "4 plays"
+      },
+      {
+        "name": "Take Me Home",
         "secondary": "4 plays"
       },
       {
@@ -113,66 +125,54 @@
         "secondary": "4 plays"
       },
       {
-        "name": "Something Comforting",
-        "secondary": "3 plays"
+        "name": "Fade Into You",
+        "secondary": "4 plays"
       },
       {
-        "name": "blade bird",
-        "secondary": "3 plays"
-      },
-      {
-        "name": "Girl Like Me",
-        "secondary": "3 plays"
-      },
-      {
-        "name": "Duvet",
-        "secondary": "3 plays"
-      },
-      {
-        "name": "Kiss of Life",
-        "secondary": "3 plays"
+        "name": "The Peace",
+        "secondary": "4 plays"
       }
     ],
     "artists-6m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "23 listens"
+        "secondary": "26 listens"
       },
       {
         "name": "PinkPantheress",
-        "secondary": "19 listens"
+        "secondary": "22 listens"
       },
       {
         "name": "After",
         "secondary": "11 listens"
       },
       {
+        "name": "Ninajirachi",
+        "secondary": "11 listens"
+      },
+      {
         "name": "Porter Robinson",
+        "secondary": "10 listens"
+      },
+      {
+        "name": "fakemink",
+        "secondary": "9 listens"
+      },
+      {
+        "name": "The Cranberries",
+        "secondary": "9 listens"
+      },
+      {
+        "name": "Mazzy Star",
+        "secondary": "8 listens"
+      },
+      {
+        "name": "Cocteau Twins",
         "secondary": "8 listens"
       },
       {
         "name": "Feng",
         "secondary": "7 listens"
-      },
-      {
-        "name": "fakemink",
-        "secondary": "7 listens"
-      },
-      {
-        "name": "Mazzy Star",
-        "secondary": "7 listens"
-      },
-      {
-        "name": "Cocteau Twins",
-        "secondary": "7 listens"
-      },
-      {
-        "name": "Ninajirachi",
-        "secondary": "7 listens"
-      },
-      {
-        "name": "The Marías",
-        "secondary": "6 listens"
       }
     ],
     "genres-6m": [
