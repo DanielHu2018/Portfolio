@@ -3,7 +3,7 @@
 </p>
 
 <h3 align="center">
-  <a href="https://www.dwho.dev">▶ visit dwho.dev</a>
+  <a href="https://www.dwho.dev">visit dwho.dev</a>
 </h3>
 
 <p align="center">
