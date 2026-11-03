@@ -3,8 +3,12 @@
   "views": {
     "tracks-1m": [
       {
+        "name": "The Peace",
+        "secondary": "7 plays"
+      },
+      {
         "name": "How to Pretend",
-        "secondary": "5 plays"
+        "secondary": "6 plays"
       },
       {
         "name": "Easter Pink",
@@ -12,10 +16,6 @@
       },
       {
         "name": "Heaven or Las Vegas",
-        "secondary": "5 plays"
-      },
-      {
-        "name": "The Peace",
         "secondary": "5 plays"
       },
       {
@@ -31,41 +31,49 @@
         "secondary": "4 plays"
       },
       {
+        "name": "The aisle",
+        "secondary": "4 plays"
+      },
+      {
         "name": "Take Me Home",
         "secondary": "4 plays"
       },
       {
         "name": "Be My Angel",
         "secondary": "4 plays"
-      },
-      {
-        "name": "Fade Into You",
-        "secondary": "4 plays"
       }
     ],
     "artists-1m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "26 listens"
+        "secondary": "29 listens"
       },
       {
         "name": "PinkPantheress",
-        "secondary": "24 listens"
+        "secondary": "26 listens"
       },
       {
         "name": "fakemink",
-        "secondary": "14 listens"
+        "secondary": "16 listens"
       },
       {
         "name": "Ninajirachi",
-        "secondary": "12 listens"
+        "secondary": "13 listens"
       },
       {
         "name": "After",
-        "secondary": "11 listens"
+        "secondary": "12 listens"
       },
       {
         "name": "Porter Robinson",
+        "secondary": "11 listens"
+      },
+      {
+        "name": "Tiffany Day",
+        "secondary": "11 listens"
+      },
+      {
+        "name": "underscores",
         "secondary": "10 listens"
       },
       {
@@ -75,14 +83,6 @@
       {
         "name": "Cocteau Twins",
         "secondary": "9 listens"
-      },
-      {
-        "name": "The Cranberries",
-        "secondary": "9 listens"
-      },
-      {
-        "name": "Mazzy Star",
-        "secondary": "8 listens"
       }
     ],
     "genres-1m": [
@@ -93,8 +93,12 @@
     ],
     "tracks-6m": [
       {
+        "name": "The Peace",
+        "secondary": "7 plays"
+      },
+      {
         "name": "How to Pretend",
-        "secondary": "5 plays"
+        "secondary": "6 plays"
       },
       {
         "name": "Easter Pink",
@@ -102,10 +106,6 @@
       },
       {
         "name": "Heaven or Las Vegas",
-        "secondary": "5 plays"
-      },
-      {
-        "name": "The Peace",
         "secondary": "5 plays"
       },
       {
@@ -121,41 +121,49 @@
         "secondary": "4 plays"
       },
       {
+        "name": "The aisle",
+        "secondary": "4 plays"
+      },
+      {
         "name": "Take Me Home",
         "secondary": "4 plays"
       },
       {
         "name": "Be My Angel",
         "secondary": "4 plays"
-      },
-      {
-        "name": "Fade Into You",
-        "secondary": "4 plays"
       }
     ],
     "artists-6m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "26 listens"
+        "secondary": "29 listens"
       },
       {
         "name": "PinkPantheress",
-        "secondary": "24 listens"
+        "secondary": "26 listens"
       },
       {
         "name": "fakemink",
-        "secondary": "14 listens"
+        "secondary": "16 listens"
       },
       {
         "name": "Ninajirachi",
-        "secondary": "12 listens"
+        "secondary": "13 listens"
       },
       {
         "name": "After",
-        "secondary": "11 listens"
+        "secondary": "12 listens"
       },
       {
         "name": "Porter Robinson",
+        "secondary": "11 listens"
+      },
+      {
+        "name": "Tiffany Day",
+        "secondary": "11 listens"
+      },
+      {
+        "name": "underscores",
         "secondary": "10 listens"
       },
       {
@@ -165,14 +173,6 @@
       {
         "name": "Cocteau Twins",
         "secondary": "9 listens"
-      },
-      {
-        "name": "The Cranberries",
-        "secondary": "9 listens"
-      },
-      {
-        "name": "Mazzy Star",
-        "secondary": "8 listens"
       }
     ],
     "genres-6m": [
