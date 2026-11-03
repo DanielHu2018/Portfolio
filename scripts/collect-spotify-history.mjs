@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { fetchRetry } from './fetch-retry.mjs';
 
 const required = ['SPOTIFY_CLIENT_ID', 'SPOTIFY_CLIENT_SECRET', 'SPOTIFY_REFRESH_TOKEN'];
 const missing = required.filter((name) => !process.env[name]);
@@ -12,12 +13,12 @@ fs.mkdirSync(path.dirname(historyPath), { recursive: true });
 const history = fs.existsSync(historyPath) ? JSON.parse(fs.readFileSync(historyPath, 'utf8')) : { plays: [] };
 
 const basic = Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
-const tokenResponse = await fetch('https://accounts.spotify.com/api/token', { method: 'POST', headers: { Authorization: `Basic ${basic}`, 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ grant_type: 'refresh_token', refresh_token: refreshToken }) });
+const tokenResponse = await fetchRetry('https://accounts.spotify.com/api/token', { method: 'POST', headers: { Authorization: `Basic ${basic}`, 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ grant_type: 'refresh_token', refresh_token: refreshToken }) });
 if (!tokenResponse.ok) throw new Error(`Spotify token refresh failed: ${tokenResponse.status} ${await tokenResponse.text()}`);
 const { access_token: accessToken } = await tokenResponse.json();
 const latest = history.plays.reduce((max, play) => Math.max(max, Date.parse(play.played_at) || 0), 0);
 const after = latest ? `&after=${latest}` : '';
-const response = await fetch(`https://api.spotify.com/v1/me/player/recently-played?limit=50${after}`, { headers: { Authorization: `Bearer ${accessToken}` } });
+const response = await fetchRetry(`https://api.spotify.com/v1/me/player/recently-played?limit=50${after}`, { headers: { Authorization: `Bearer ${accessToken}` } });
 if (!response.ok) throw new Error(`Spotify recently played failed: ${response.status} ${await response.text()}`);
 const data = await response.json();
 const seen = new Set(history.plays.map((play) => `${play.played_at}|${play.track_id}`));

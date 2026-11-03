@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { fetchRetry } from './fetch-retry.mjs';
 
 const required = ['SPOTIFY_CLIENT_ID', 'SPOTIFY_CLIENT_SECRET', 'SPOTIFY_REFRESH_TOKEN'];
 const missing = required.filter((name) => !process.env[name]);
@@ -12,7 +13,7 @@ const history = JSON.parse(fs.readFileSync(path.resolve('data/spotify-history.js
 fs.mkdirSync(outputDir, { recursive: true });
 
 const basic = Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
-const tokenResponse = await fetch('https://accounts.spotify.com/api/token', { method: 'POST', headers: { Authorization: `Basic ${basic}`, 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ grant_type: 'refresh_token', refresh_token: refreshToken }) });
+const tokenResponse = await fetchRetry('https://accounts.spotify.com/api/token', { method: 'POST', headers: { Authorization: `Basic ${basic}`, 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ grant_type: 'refresh_token', refresh_token: refreshToken }) });
 if (!tokenResponse.ok) throw new Error(`Spotify token refresh failed: ${tokenResponse.status} ${await tokenResponse.text()}`);
 const { access_token: accessToken } = await tokenResponse.json();
 
@@ -40,7 +41,7 @@ function renderGenreMenu(items, range) {
 async function getArtistGenres(ids) {
   const genres = {};
   for (let i = 0; i < ids.length; i += 50) {
-    const response = await fetch(`https://api.spotify.com/v1/artists?ids=${ids.slice(i, i + 50).join(',')}`, { headers: { Authorization: `Bearer ${accessToken}` } });
+    const response = await fetchRetry(`https://api.spotify.com/v1/artists?ids=${ids.slice(i, i + 50).join(',')}`, { headers: { Authorization: `Bearer ${accessToken}` } });
     if (!response.ok) continue;
     for (const artist of (await response.json()).artists || []) genres[artist.id] = artist.genres || [];
   }
