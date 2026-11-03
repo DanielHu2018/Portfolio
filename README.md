@@ -7,6 +7,5 @@
 </h3>
 
 <p align="center">
-  A Wii menu crossed with an iPod: glossy white chrome, rounded type and toy-like 3D you can poke at.<br>
   Honors CSE at Ohio State · Statistics minor · Columbus, OH
 </p>
