@@ -4449,6 +4449,30 @@
         "Tiffany Day",
         "slayr"
       ]
+    },
+    {
+      "played_at": "2026-11-03T15:03:16.488Z",
+      "track_id": "00Mb3DuaIH1kjrwOku9CGU",
+      "track_name": "Sk8er Boi",
+      "artist_ids": [
+        "0p4nmQO2msCgU4IF37Wi3j"
+      ],
+      "artists": [
+        "Avril Lavigne"
+      ]
+    },
+    {
+      "played_at": "2026-11-03T16:35:25.545Z",
+      "track_id": "42FM6tM3n06euZCvpJn3dn",
+      "track_name": "Locals (Girls like us) [with gabby start]",
+      "artist_ids": [
+        "7HfUJxeVTgrvhk0eWHFzV7",
+        "33L1klom7IXmoAP8fjrGm9"
+      ],
+      "artists": [
+        "underscores",
+        "gabby start"
+      ]
     }
   ]
 }
