@@ -4,11 +4,11 @@
     "tracks-1m": [
       {
         "name": "The Peace",
-        "secondary": "7 plays"
+        "secondary": "8 plays"
       },
       {
         "name": "How to Pretend",
-        "secondary": "6 plays"
+        "secondary": "7 plays"
       },
       {
         "name": "Easter Pink",
@@ -46,26 +46,26 @@
     "artists-1m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "29 listens"
+        "secondary": "31 listens"
       },
       {
         "name": "PinkPantheress",
         "secondary": "26 listens"
       },
       {
+        "name": "underscores",
+        "secondary": "20 listens"
+      },
+      {
         "name": "fakemink",
-        "secondary": "16 listens"
+        "secondary": "17 listens"
       },
       {
         "name": "Ninajirachi",
-        "secondary": "13 listens"
+        "secondary": "14 listens"
       },
       {
         "name": "After",
-        "secondary": "12 listens"
-      },
-      {
-        "name": "underscores",
         "secondary": "12 listens"
       },
       {
@@ -77,12 +77,12 @@
         "secondary": "11 listens"
       },
       {
-        "name": "The Cranberries",
+        "name": "Feng",
         "secondary": "10 listens"
       },
       {
-        "name": "Feng",
-        "secondary": "9 listens"
+        "name": "The Cranberries",
+        "secondary": "10 listens"
       }
     ],
     "genres-1m": [
@@ -94,11 +94,11 @@
     "tracks-6m": [
       {
         "name": "The Peace",
-        "secondary": "7 plays"
+        "secondary": "8 plays"
       },
       {
         "name": "How to Pretend",
-        "secondary": "6 plays"
+        "secondary": "7 plays"
       },
       {
         "name": "Easter Pink",
@@ -136,26 +136,26 @@
     "artists-6m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "29 listens"
+        "secondary": "31 listens"
       },
       {
         "name": "PinkPantheress",
         "secondary": "26 listens"
       },
       {
+        "name": "underscores",
+        "secondary": "20 listens"
+      },
+      {
         "name": "fakemink",
-        "secondary": "16 listens"
+        "secondary": "17 listens"
       },
       {
         "name": "Ninajirachi",
-        "secondary": "13 listens"
+        "secondary": "14 listens"
       },
       {
         "name": "After",
-        "secondary": "12 listens"
-      },
-      {
-        "name": "underscores",
         "secondary": "12 listens"
       },
       {
@@ -167,12 +167,12 @@
         "secondary": "11 listens"
       },
       {
-        "name": "The Cranberries",
+        "name": "Feng",
         "secondary": "10 listens"
       },
       {
-        "name": "Feng",
-        "secondary": "9 listens"
+        "name": "The Cranberries",
+        "secondary": "10 listens"
       }
     ],
     "genres-6m": [
