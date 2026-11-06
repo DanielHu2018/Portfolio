@@ -4,7 +4,7 @@
     "tracks-1m": [
       {
         "name": "Sunday - Remastered 2026",
-        "secondary": "9 plays"
+        "secondary": "10 plays"
       },
       {
         "name": "How to Pretend",
@@ -31,22 +31,22 @@
         "secondary": "5 plays"
       },
       {
+        "name": "Linger - Remastered 2026",
+        "secondary": "5 plays"
+      },
+      {
         "name": "Girls Just Want to Have Fun",
         "secondary": "4 plays"
       },
       {
         "name": "NOT CUTE ANYMORE",
         "secondary": "4 plays"
-      },
-      {
-        "name": "Stateside",
-        "secondary": "4 plays"
       }
     ],
     "artists-1m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "32 listens"
+        "secondary": "33 listens"
       },
       {
         "name": "PinkPantheress",
@@ -54,7 +54,7 @@
       },
       {
         "name": "The Cranberries",
-        "secondary": "23 listens"
+        "secondary": "25 listens"
       },
       {
         "name": "underscores",
@@ -74,14 +74,14 @@
       },
       {
         "name": "Porter Robinson",
-        "secondary": "11 listens"
+        "secondary": "12 listens"
       },
       {
         "name": "Tiffany Day",
         "secondary": "11 listens"
       },
       {
-        "name": "Paramore",
+        "name": "beabadoobee",
         "secondary": "11 listens"
       }
     ],
@@ -94,7 +94,7 @@
     "tracks-6m": [
       {
         "name": "Sunday - Remastered 2026",
-        "secondary": "9 plays"
+        "secondary": "10 plays"
       },
       {
         "name": "How to Pretend",
@@ -121,22 +121,22 @@
         "secondary": "5 plays"
       },
       {
+        "name": "Linger - Remastered 2026",
+        "secondary": "5 plays"
+      },
+      {
         "name": "Girls Just Want to Have Fun",
         "secondary": "4 plays"
       },
       {
         "name": "NOT CUTE ANYMORE",
         "secondary": "4 plays"
-      },
-      {
-        "name": "Stateside",
-        "secondary": "4 plays"
       }
     ],
     "artists-6m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "32 listens"
+        "secondary": "33 listens"
       },
       {
         "name": "PinkPantheress",
@@ -144,7 +144,7 @@
       },
       {
         "name": "The Cranberries",
-        "secondary": "23 listens"
+        "secondary": "25 listens"
       },
       {
         "name": "underscores",
@@ -164,14 +164,14 @@
       },
       {
         "name": "Porter Robinson",
-        "secondary": "11 listens"
+        "secondary": "12 listens"
       },
       {
         "name": "Tiffany Day",
         "secondary": "11 listens"
       },
       {
-        "name": "Paramore",
+        "name": "beabadoobee",
         "secondary": "11 listens"
       }
     ],
