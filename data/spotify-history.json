@@ -4982,6 +4982,314 @@
       "artists": [
         "The Cranberries"
       ]
+    },
+    {
+      "played_at": "2026-11-05T23:31:24.840Z",
+      "track_id": "3EXrtClWmgsM7dw75Mw2M1",
+      "track_name": "When You're Gone",
+      "artist_ids": [
+        "7t0rwkOPGlDPEhaOcVtOt9"
+      ],
+      "artists": [
+        "The Cranberries"
+      ]
+    },
+    {
+      "played_at": "2026-11-05T23:40:15.190Z",
+      "track_id": "76GlO5H5RT6g7y0gev86Nk",
+      "track_name": "Just like Heaven",
+      "artist_ids": [
+        "7bu3H8JO7d0UbMoVzbo70s"
+      ],
+      "artists": [
+        "The Cure"
+      ]
+    },
+    {
+      "played_at": "2026-11-05T23:43:19.185Z",
+      "track_id": "7hm4HTk9encxT0LYC0J6oI",
+      "track_name": "Someday",
+      "artist_ids": [
+        "0epOFNiUfyON9EYx7Tpr6V"
+      ],
+      "artists": [
+        "The Strokes"
+      ]
+    },
+    {
+      "played_at": "2026-11-05T23:48:50.735Z",
+      "track_id": "3yUcJwYu7fXAfqMj9krY6l",
+      "track_name": "Thank You",
+      "artist_ids": [
+        "2mpeljBig2IXLXRAFO9AAs"
+      ],
+      "artists": [
+        "Dido"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T00:48:35.676Z",
+      "track_id": "57iDDD9N9tTWe75x6qhStw",
+      "track_name": "Bitter Sweet Symphony - Remastered 2016",
+      "artist_ids": [
+        "2cGwlqi3k18jFpUyTrsR84"
+      ],
+      "artists": [
+        "The Verve"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T00:53:25.054Z",
+      "track_id": "2nTcgF0BGEJBI3argOQWps",
+      "track_name": "Sunday - Remastered 2026",
+      "artist_ids": [
+        "7t0rwkOPGlDPEhaOcVtOt9"
+      ],
+      "artists": [
+        "The Cranberries"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T01:16:01.299Z",
+      "track_id": "1WYrTfvKjQYaYfVziGG1ET",
+      "track_name": "Linger - Remastered 2026",
+      "artist_ids": [
+        "7t0rwkOPGlDPEhaOcVtOt9"
+      ],
+      "artists": [
+        "The Cranberries"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T01:19:43.157Z",
+      "track_id": "2nTcgF0BGEJBI3argOQWps",
+      "track_name": "Sunday - Remastered 2026",
+      "artist_ids": [
+        "7t0rwkOPGlDPEhaOcVtOt9"
+      ],
+      "artists": [
+        "The Cranberries"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T01:23:14.361Z",
+      "track_id": "2nTcgF0BGEJBI3argOQWps",
+      "track_name": "Sunday - Remastered 2026",
+      "artist_ids": [
+        "7t0rwkOPGlDPEhaOcVtOt9"
+      ],
+      "artists": [
+        "The Cranberries"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T01:26:45.660Z",
+      "track_id": "2nTcgF0BGEJBI3argOQWps",
+      "track_name": "Sunday - Remastered 2026",
+      "artist_ids": [
+        "7t0rwkOPGlDPEhaOcVtOt9"
+      ],
+      "artists": [
+        "The Cranberries"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T04:08:14.987Z",
+      "track_id": "2IBM7pWht51SaU52GZGiEc",
+      "track_name": "For a Pessimist, I'm Pretty Optimistic",
+      "artist_ids": [
+        "74XFHRwlV6OrjEM0A2NCMF"
+      ],
+      "artists": [
+        "Paramore"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T04:11:55.400Z",
+      "track_id": "0UY4FvG4f9JI6kBR1BlWrZ",
+      "track_name": "That's What You Get",
+      "artist_ids": [
+        "74XFHRwlV6OrjEM0A2NCMF"
+      ],
+      "artists": [
+        "Paramore"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T04:15:19.072Z",
+      "track_id": "0Xo58q108awPXG1QDBGtaf",
+      "track_name": "Hallelujah",
+      "artist_ids": [
+        "74XFHRwlV6OrjEM0A2NCMF"
+      ],
+      "artists": [
+        "Paramore"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T04:18:50.603Z",
+      "track_id": "3l9CW99AHtExIRV4hW2N5m",
+      "track_name": "Misery Business",
+      "artist_ids": [
+        "74XFHRwlV6OrjEM0A2NCMF"
+      ],
+      "artists": [
+        "Paramore"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T04:26:14.809Z",
+      "track_id": "2nTcgF0BGEJBI3argOQWps",
+      "track_name": "Sunday - Remastered 2026",
+      "artist_ids": [
+        "7t0rwkOPGlDPEhaOcVtOt9"
+      ],
+      "artists": [
+        "The Cranberries"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T04:44:58.981Z",
+      "track_id": "3yk7PJnryiJ8mAPqsrujzf",
+      "track_name": "Location",
+      "artist_ids": [
+        "699OTQXzgjhIYAHMy9RyPD"
+      ],
+      "artists": [
+        "Playboi Carti"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T04:54:20.895Z",
+      "track_id": "7eqoqGkKwgOaWNNHx90uEZ",
+      "track_name": "Nights",
+      "artist_ids": [
+        "2h93pZq0e7k5yf4dywlkpM"
+      ],
+      "artists": [
+        "Frank Ocean"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T04:58:11.489Z",
+      "track_id": "1a19jsjG2DvbN1fVJonKUU",
+      "track_name": "Beaches",
+      "artist_ids": [
+        "35l9BRT7MXmM8bv2WDQiyB"
+      ],
+      "artists": [
+        "beabadoobee"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T05:02:21.890Z",
+      "track_id": "2enPRFda84VE2wtI8c86Uf",
+      "track_name": "Always Forever",
+      "artist_ids": [
+        "3Oim8XBPbznAa8Jj8QzNc8"
+      ],
+      "artists": [
+        "Cults"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T05:06:08.200Z",
+      "track_id": "1Bv3h7Vc4AaYA2BcSM3rVd",
+      "track_name": "All I Wanted",
+      "artist_ids": [
+        "74XFHRwlV6OrjEM0A2NCMF"
+      ],
+      "artists": [
+        "Paramore"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T05:11:07.138Z",
+      "track_id": "0AxZUYeQ9bZwSdt1LmZuok",
+      "track_name": "Heaven or Las Vegas",
+      "artist_ids": [
+        "5Wabl1lPdNOeIn0SQ5A1mp"
+      ],
+      "artists": [
+        "Cocteau Twins"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T05:16:16.704Z",
+      "track_id": "5ruzrDWcT0vuJIOMW7gMnW",
+      "track_name": "The Adults Are Talking",
+      "artist_ids": [
+        "0epOFNiUfyON9EYx7Tpr6V"
+      ],
+      "artists": [
+        "The Strokes"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T05:19:35.803Z",
+      "track_id": "1zfPxWc0WSQ2MyVsGTLGtF",
+      "track_name": "blade bird",
+      "artist_ids": [
+        "6fFcUOFcbjeIuEomuUthkw"
+      ],
+      "artists": [
+        "Oklou"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T05:23:32.506Z",
+      "track_id": "0O3TAouZE4vL9dM5SyxgvH",
+      "track_name": "Fashion Killa",
+      "artist_ids": [
+        "13ubrt8QOOCPljQ2FL1Kca"
+      ],
+      "artists": [
+        "A$AP Rocky"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T05:27:59.212Z",
+      "track_id": "5QLHGv0DfpeXLNFo7SFEy1",
+      "track_name": "1979 - Remastered 2012",
+      "artist_ids": [
+        "40Yq4vzPs9VNUrIBG5Jr2i"
+      ],
+      "artists": [
+        "The Smashing Pumpkins"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T05:32:21.702Z",
+      "track_id": "1ZLtE9tSJdaUiIJ9YoKHQe",
+      "track_name": "Decode",
+      "artist_ids": [
+        "74XFHRwlV6OrjEM0A2NCMF"
+      ],
+      "artists": [
+        "Paramore"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T05:37:11.797Z",
+      "track_id": "12dU3vAh6AFoJkisorfoUl",
+      "track_name": "Don't Look Back In Anger - Remastered",
+      "artist_ids": [
+        "2DaxqgrOhkeH0fpeiQq2f4"
+      ],
+      "artists": [
+        "Oasis"
+      ]
+    },
+    {
+      "played_at": "2026-11-06T05:40:56.386Z",
+      "track_id": "0H0eIjcXruQpntK0LuNa5v",
+      "track_name": "How to Pretend",
+      "artist_ids": [
+        "2I8H267eH5va9da4vGt38O"
+      ],
+      "artists": [
+        "Lucy Bedroque"
+      ]
     }
   ]
 }

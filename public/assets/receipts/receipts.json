@@ -3,12 +3,24 @@
   "views": {
     "tracks-1m": [
       {
+        "name": "Sunday - Remastered 2026",
+        "secondary": "9 plays"
+      },
+      {
+        "name": "How to Pretend",
+        "secondary": "8 plays"
+      },
+      {
         "name": "The Peace",
         "secondary": "8 plays"
       },
       {
-        "name": "How to Pretend",
-        "secondary": "7 plays"
+        "name": "Heaven or Las Vegas",
+        "secondary": "6 plays"
+      },
+      {
+        "name": "blade bird",
+        "secondary": "5 plays"
       },
       {
         "name": "Easter Pink",
@@ -17,14 +29,6 @@
       {
         "name": "Be My Angel",
         "secondary": "5 plays"
-      },
-      {
-        "name": "Heaven or Las Vegas",
-        "secondary": "5 plays"
-      },
-      {
-        "name": "blade bird",
-        "secondary": "4 plays"
       },
       {
         "name": "Girls Just Want to Have Fun",
@@ -37,20 +41,20 @@
       {
         "name": "Stateside",
         "secondary": "4 plays"
-      },
-      {
-        "name": "The aisle",
-        "secondary": "4 plays"
       }
     ],
     "artists-1m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "31 listens"
+        "secondary": "32 listens"
       },
       {
         "name": "PinkPantheress",
         "secondary": "27 listens"
+      },
+      {
+        "name": "The Cranberries",
+        "secondary": "23 listens"
       },
       {
         "name": "underscores",
@@ -59,10 +63,6 @@
       {
         "name": "fakemink",
         "secondary": "17 listens"
-      },
-      {
-        "name": "The Cranberries",
-        "secondary": "16 listens"
       },
       {
         "name": "Ninajirachi",
@@ -81,8 +81,8 @@
         "secondary": "11 listens"
       },
       {
-        "name": "Feng",
-        "secondary": "10 listens"
+        "name": "Paramore",
+        "secondary": "11 listens"
       }
     ],
     "genres-1m": [
@@ -93,12 +93,24 @@
     ],
     "tracks-6m": [
       {
+        "name": "Sunday - Remastered 2026",
+        "secondary": "9 plays"
+      },
+      {
+        "name": "How to Pretend",
+        "secondary": "8 plays"
+      },
+      {
         "name": "The Peace",
         "secondary": "8 plays"
       },
       {
-        "name": "How to Pretend",
-        "secondary": "7 plays"
+        "name": "Heaven or Las Vegas",
+        "secondary": "6 plays"
+      },
+      {
+        "name": "blade bird",
+        "secondary": "5 plays"
       },
       {
         "name": "Easter Pink",
@@ -107,14 +119,6 @@
       {
         "name": "Be My Angel",
         "secondary": "5 plays"
-      },
-      {
-        "name": "Heaven or Las Vegas",
-        "secondary": "5 plays"
-      },
-      {
-        "name": "blade bird",
-        "secondary": "4 plays"
       },
       {
         "name": "Girls Just Want to Have Fun",
@@ -127,20 +131,20 @@
       {
         "name": "Stateside",
         "secondary": "4 plays"
-      },
-      {
-        "name": "The aisle",
-        "secondary": "4 plays"
       }
     ],
     "artists-6m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "31 listens"
+        "secondary": "32 listens"
       },
       {
         "name": "PinkPantheress",
         "secondary": "27 listens"
+      },
+      {
+        "name": "The Cranberries",
+        "secondary": "23 listens"
       },
       {
         "name": "underscores",
@@ -149,10 +153,6 @@
       {
         "name": "fakemink",
         "secondary": "17 listens"
-      },
-      {
-        "name": "The Cranberries",
-        "secondary": "16 listens"
       },
       {
         "name": "Ninajirachi",
@@ -171,8 +171,8 @@
         "secondary": "11 listens"
       },
       {
-        "name": "Feng",
-        "secondary": "10 listens"
+        "name": "Paramore",
+        "secondary": "11 listens"
       }
     ],
     "genres-6m": [
