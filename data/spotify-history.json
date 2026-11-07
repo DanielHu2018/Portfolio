@@ -5744,6 +5744,96 @@
       "artists": [
         "The Cranberries"
       ]
+    },
+    {
+      "played_at": "2026-11-07T19:14:13.049Z",
+      "track_id": "3xKsf9qdS1CyvXSMEid6g8",
+      "track_name": "Pink + White",
+      "artist_ids": [
+        "2h93pZq0e7k5yf4dywlkpM"
+      ],
+      "artists": [
+        "Frank Ocean"
+      ]
+    },
+    {
+      "played_at": "2026-11-07T19:18:09.211Z",
+      "track_id": "59J5nzL1KniFHnU120dQzt",
+      "track_name": "wokeuplikethis*",
+      "artist_ids": [
+        "699OTQXzgjhIYAHMy9RyPD",
+        "4O15NlyKLIASxsJ0PrXPfz"
+      ],
+      "artists": [
+        "Playboi Carti",
+        "Lil Uzi Vert"
+      ]
+    },
+    {
+      "played_at": "2026-11-07T19:20:57.816Z",
+      "track_id": "5UBfLYnkImP1RKMMy4TGs8",
+      "track_name": "Stateside",
+      "artist_ids": [
+        "78rUTD7y6Cy67W1RVzYs7t"
+      ],
+      "artists": [
+        "PinkPantheress"
+      ]
+    },
+    {
+      "played_at": "2026-11-07T19:25:57.547Z",
+      "track_id": "4bLCPfBLKlqiONo6TALTh5",
+      "track_name": "Entombed",
+      "artist_ids": [
+        "6Ghvu1VvMGScGpOUJBAHNH"
+      ],
+      "artists": [
+        "Deftones"
+      ]
+    },
+    {
+      "played_at": "2026-11-07T20:18:11.024Z",
+      "track_id": "78Gzxi27GuNHTfkn2BylG4",
+      "track_name": "What Ever Happened?",
+      "artist_ids": [
+        "0epOFNiUfyON9EYx7Tpr6V"
+      ],
+      "artists": [
+        "The Strokes"
+      ]
+    },
+    {
+      "played_at": "2026-11-07T20:21:00.982Z",
+      "track_id": "78Gzxi27GuNHTfkn2BylG4",
+      "track_name": "What Ever Happened?",
+      "artist_ids": [
+        "0epOFNiUfyON9EYx7Tpr6V"
+      ],
+      "artists": [
+        "The Strokes"
+      ]
+    },
+    {
+      "played_at": "2026-11-07T20:26:01.292Z",
+      "track_id": "4Uiw0Sl9yskBaC6P4DcdVD",
+      "track_name": "Be Quiet and Drive (Far Away)",
+      "artist_ids": [
+        "6Ghvu1VvMGScGpOUJBAHNH"
+      ],
+      "artists": [
+        "Deftones"
+      ]
+    },
+    {
+      "played_at": "2026-11-07T20:29:58.088Z",
+      "track_id": "0O3TAouZE4vL9dM5SyxgvH",
+      "track_name": "Fashion Killa",
+      "artist_ids": [
+        "13ubrt8QOOCPljQ2FL1Kca"
+      ],
+      "artists": [
+        "A$AP Rocky"
+      ]
     }
   ]
 }
