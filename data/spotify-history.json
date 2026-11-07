@@ -5700,6 +5700,50 @@
       "artists": [
         "Avril Lavigne"
       ]
+    },
+    {
+      "played_at": "2026-11-07T06:53:10.261Z",
+      "track_id": "7JIuqL4ZqkpfGKQhYlrirs",
+      "track_name": "The Only Exception",
+      "artist_ids": [
+        "74XFHRwlV6OrjEM0A2NCMF"
+      ],
+      "artists": [
+        "Paramore"
+      ]
+    },
+    {
+      "played_at": "2026-11-07T08:53:36.928Z",
+      "track_id": "7JIuqL4ZqkpfGKQhYlrirs",
+      "track_name": "The Only Exception",
+      "artist_ids": [
+        "74XFHRwlV6OrjEM0A2NCMF"
+      ],
+      "artists": [
+        "Paramore"
+      ]
+    },
+    {
+      "played_at": "2026-11-07T08:58:05.927Z",
+      "track_id": "7JIuqL4ZqkpfGKQhYlrirs",
+      "track_name": "The Only Exception",
+      "artist_ids": [
+        "74XFHRwlV6OrjEM0A2NCMF"
+      ],
+      "artists": [
+        "Paramore"
+      ]
+    },
+    {
+      "played_at": "2026-11-07T09:01:37.280Z",
+      "track_id": "2nTcgF0BGEJBI3argOQWps",
+      "track_name": "Sunday - Remastered 2026",
+      "artist_ids": [
+        "7t0rwkOPGlDPEhaOcVtOt9"
+      ],
+      "artists": [
+        "The Cranberries"
+      ]
     }
   ]
 }

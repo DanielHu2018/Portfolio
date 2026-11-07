@@ -4,10 +4,14 @@
     "tracks-1m": [
       {
         "name": "Sunday - Remastered 2026",
-        "secondary": "11 plays"
+        "secondary": "12 plays"
       },
       {
         "name": "How to Pretend",
+        "secondary": "8 plays"
+      },
+      {
+        "name": "The Only Exception",
         "secondary": "8 plays"
       },
       {
@@ -35,10 +39,6 @@
         "secondary": "5 plays"
       },
       {
-        "name": "The Only Exception",
-        "secondary": "5 plays"
-      },
-      {
         "name": "Linger - Remastered 2026",
         "secondary": "5 plays"
       }
@@ -54,7 +54,7 @@
       },
       {
         "name": "The Cranberries",
-        "secondary": "26 listens"
+        "secondary": "27 listens"
       },
       {
         "name": "underscores",
@@ -65,12 +65,12 @@
         "secondary": "17 listens"
       },
       {
-        "name": "Ninajirachi",
-        "secondary": "15 listens"
+        "name": "Paramore",
+        "secondary": "17 listens"
       },
       {
-        "name": "Paramore",
-        "secondary": "14 listens"
+        "name": "Ninajirachi",
+        "secondary": "15 listens"
       },
       {
         "name": "After",
@@ -94,10 +94,14 @@
     "tracks-6m": [
       {
         "name": "Sunday - Remastered 2026",
-        "secondary": "11 plays"
+        "secondary": "12 plays"
       },
       {
         "name": "How to Pretend",
+        "secondary": "8 plays"
+      },
+      {
+        "name": "The Only Exception",
         "secondary": "8 plays"
       },
       {
@@ -125,10 +129,6 @@
         "secondary": "5 plays"
       },
       {
-        "name": "The Only Exception",
-        "secondary": "5 plays"
-      },
-      {
         "name": "Linger - Remastered 2026",
         "secondary": "5 plays"
       }
@@ -144,7 +144,7 @@
       },
       {
         "name": "The Cranberries",
-        "secondary": "26 listens"
+        "secondary": "27 listens"
       },
       {
         "name": "underscores",
@@ -155,12 +155,12 @@
         "secondary": "17 listens"
       },
       {
-        "name": "Ninajirachi",
-        "secondary": "15 listens"
+        "name": "Paramore",
+        "secondary": "17 listens"
       },
       {
-        "name": "Paramore",
-        "secondary": "14 listens"
+        "name": "Ninajirachi",
+        "secondary": "15 listens"
       },
       {
         "name": "After",
