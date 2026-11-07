@@ -33,8 +33,8 @@ It must be served over http (opening the file directly with file:// half-works):
   `<sc-for list="{{x}}" as="y">` loops and `<sc-if value="{{x}}">` conditionals are template tags.
 - `<script type="text/x-dc" data-dc-script>` holds `class Component extends DCLogic`
   (React-like: `this.state`, `this.setState`, `componentDidMount`, `componentWillUnmount`).
-- The `data-props` JSON on that script tag sets the default accent and avatar colors.
-- Canvases are found by id (`stf-*`, `hb-*`, `mii`, `boot-mii`, `hb-focus`), so keep those ids.
+- The `data-props` JSON on that script tag sets the default accent color.
+- Canvases are found by id (`stf-*`, `hb-*`, `mii`, `boot-mii`, `hb-focus`), so keep those ids. The avatar sprite is the `.mii-sprite` img inside `.mii-wrap`.
 
 ## Main pieces (search in index.html)
 
@@ -42,7 +42,7 @@ It must be served over http (opening the file directly with file:// half-works):
 | --- | --- |
 | Boot screen (Wii-style menu bar, clock, loading bar) | `.boot`, `bootGo()` |
 | Animated 3D music staff ribbons behind sections | `initStaffs()`, `drawStaff()` |
-| 3D avatar (portrait on home, walks to clicks, waves, cheers, dances while Daniel is listening) | `buildMii()`, `initMii()`, `miiReact()` |
+| Avatar sprites from `public/assets/avatar/` (portrait on home, walks to clicks in 16 directions, waves, cheers, dances while Daniel is listening) | `initMii()`, `miiReact()`, `.mii-sprite` |
 | Wii-style hand cursor | `initCursor()` |
 | iPod navigator (draggable, click wheel scrolls between sections) | `aside.ipod`, `go(i)` |
 | "Currently listening to" badge | `.np`, `watchNowPlaying()` |

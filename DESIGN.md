@@ -11,7 +11,7 @@ The site looks like a Wii menu crossed with an iPod: a white glossy interface wi
 1. **Recruiter facts first.** Name, role, school, grad date and contact links are on the home screen the moment the boot screen closes.
 2. **Everything is tactile.** Cards tilt toward the cursor, buttons click with a sound, the avatar walks to where you click. Nothing is static that a visitor might want to touch.
 3. **The look is retro-digital; the words are plain.** Copy stays professional (Experience, Projects, Contact) with no animation or console wordplay.
-4. **All code, no downloaded assets.** The avatar, hobby models, music staffs, stickers and sounds are drawn or synthesized in code.
+4. **All code, no downloaded assets.** The hobby models, music staffs, stickers and sounds are drawn or synthesized in code. The avatar is the one exception: its animations are pre-rendered sprites in `public/assets/avatar/`.
 5. **Original, not copied.** The Wii and iPod are inspiration only: no Nintendo or Apple logos, characters, sounds or product designs. The avatar, cursor, headphones and volleyball are original designs.
 
 **Direction history:** started as a sakuga (anime animation) concept, moved to Y2K, then to the Wii and underscores look, then added iPod hardware. Sakuga was dropped.
@@ -126,7 +126,7 @@ These are built and working in the mockup; the backlog at the end lists what cou
 
 **Built**
 
-1. **3D avatar.** A Mii-style figure of Daniel built in code: round head, short dark hair with a fringe, simple dot eyes and smile, slim normal build, blue shirt, silver headphones with rounded-rectangle cups.
+1. **Avatar.** A Mii-style figure of Daniel (dark hair, glasses, headphones, green outfit, a leaf sprouting from his head), played from sprite animations in `public/assets/avatar/`: idle, waving, dancing, and walking in 16 screen directions. `avatar_idle.png` / `avatar_blink.png` are hi-res stills for the boot logo and reduced motion.
     - On Home it sits in a circle portrait; it also appears on the boot screen.
     - Click anywhere and it shrinks to an isometric view, walks there with a ripple at the target, then walks back and grows into the portrait.
     - Reactions: waves when you hover the name, cheers beside a project you open (and idles there until you close it), dances with floating notes while music plays.
@@ -156,7 +156,7 @@ Recommendation: port the mockup to Vite + React + TypeScript and host it statica
 | Layer | Mockup today | Production choice |
 | --- | --- | --- |
 | Page | One HTML file with a template and a component class | Vite + React + TypeScript, one component per section |
-| 3D (avatar, hobby models, staffs) | Hand-written software 3D on Canvas 2D: flat shading, painter's sort, glossy spheres and tubes | Keep the same code as plain modules called from effects; no Three.js needed |
+| 3D (hobby models, staffs) | Hand-written software 3D on Canvas 2D: flat shading, painter's sort, glossy spheres and tubes | Keep the same code as plain modules called from effects; no Three.js needed |
 | iPods, cards, Cover Flow | CSS 3D transforms with stacked edge layers | Same CSS, moved into component styles |
 | Sound | Web Audio oscillators, no files | Same code |
 | Stickers | SVG built in code, used as images | Same code |
@@ -181,7 +181,7 @@ The toy-like 3D only impresses if it stays smooth on a recruiter's mid-range lap
 **Performance tactics (in the mockup)**
 
 - Staff ribbons render at reduced resolution (0.8 × device pixels) and redraw at 30 fps.
-- The avatar redraws at 30 fps when it is standing still.
+- The avatar's position and canvas layer update at 30 fps when it is standing still; the sprite animations play natively as GIFs.
 - 3D side layers on iPods and photos are added only while hovered.
 - Canvas loops pause when their section is off screen.
 
