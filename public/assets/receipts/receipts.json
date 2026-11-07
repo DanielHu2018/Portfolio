@@ -4,7 +4,7 @@
     "tracks-1m": [
       {
         "name": "Sunday - Remastered 2026",
-        "secondary": "10 plays"
+        "secondary": "11 plays"
       },
       {
         "name": "How to Pretend",
@@ -23,6 +23,10 @@
         "secondary": "5 plays"
       },
       {
+        "name": "Stateside",
+        "secondary": "5 plays"
+      },
+      {
         "name": "Easter Pink",
         "secondary": "5 plays"
       },
@@ -31,16 +35,12 @@
         "secondary": "5 plays"
       },
       {
-        "name": "Linger - Remastered 2026",
+        "name": "The Only Exception",
         "secondary": "5 plays"
       },
       {
-        "name": "Girls Just Want to Have Fun",
-        "secondary": "4 plays"
-      },
-      {
-        "name": "NOT CUTE ANYMORE",
-        "secondary": "4 plays"
+        "name": "Linger - Remastered 2026",
+        "secondary": "5 plays"
       }
     ],
     "artists-1m": [
@@ -50,11 +50,11 @@
       },
       {
         "name": "PinkPantheress",
-        "secondary": "27 listens"
+        "secondary": "28 listens"
       },
       {
         "name": "The Cranberries",
-        "secondary": "25 listens"
+        "secondary": "26 listens"
       },
       {
         "name": "underscores",
@@ -69,6 +69,10 @@
         "secondary": "15 listens"
       },
       {
+        "name": "Paramore",
+        "secondary": "14 listens"
+      },
+      {
         "name": "After",
         "secondary": "12 listens"
       },
@@ -77,12 +81,8 @@
         "secondary": "12 listens"
       },
       {
-        "name": "Tiffany Day",
-        "secondary": "11 listens"
-      },
-      {
         "name": "beabadoobee",
-        "secondary": "11 listens"
+        "secondary": "12 listens"
       }
     ],
     "genres-1m": [
@@ -94,7 +94,7 @@
     "tracks-6m": [
       {
         "name": "Sunday - Remastered 2026",
-        "secondary": "10 plays"
+        "secondary": "11 plays"
       },
       {
         "name": "How to Pretend",
@@ -113,6 +113,10 @@
         "secondary": "5 plays"
       },
       {
+        "name": "Stateside",
+        "secondary": "5 plays"
+      },
+      {
         "name": "Easter Pink",
         "secondary": "5 plays"
       },
@@ -121,16 +125,12 @@
         "secondary": "5 plays"
       },
       {
-        "name": "Linger - Remastered 2026",
+        "name": "The Only Exception",
         "secondary": "5 plays"
       },
       {
-        "name": "Girls Just Want to Have Fun",
-        "secondary": "4 plays"
-      },
-      {
-        "name": "NOT CUTE ANYMORE",
-        "secondary": "4 plays"
+        "name": "Linger - Remastered 2026",
+        "secondary": "5 plays"
       }
     ],
     "artists-6m": [
@@ -140,11 +140,11 @@
       },
       {
         "name": "PinkPantheress",
-        "secondary": "27 listens"
+        "secondary": "28 listens"
       },
       {
         "name": "The Cranberries",
-        "secondary": "25 listens"
+        "secondary": "26 listens"
       },
       {
         "name": "underscores",
@@ -159,6 +159,10 @@
         "secondary": "15 listens"
       },
       {
+        "name": "Paramore",
+        "secondary": "14 listens"
+      },
+      {
         "name": "After",
         "secondary": "12 listens"
       },
@@ -167,12 +171,8 @@
         "secondary": "12 listens"
       },
       {
-        "name": "Tiffany Day",
-        "secondary": "11 listens"
-      },
-      {
         "name": "beabadoobee",
-        "secondary": "11 listens"
+        "secondary": "12 listens"
       }
     ],
     "genres-6m": [
