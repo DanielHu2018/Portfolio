@@ -7,6 +7,10 @@
         "secondary": "12 plays"
       },
       {
+        "name": "blade bird",
+        "secondary": "8 plays"
+      },
+      {
         "name": "How to Pretend",
         "secondary": "8 plays"
       },
@@ -19,10 +23,6 @@
         "secondary": "8 plays"
       },
       {
-        "name": "blade bird",
-        "secondary": "6 plays"
-      },
-      {
         "name": "Stateside",
         "secondary": "6 plays"
       },
@@ -31,15 +31,15 @@
         "secondary": "6 plays"
       },
       {
+        "name": "Linger - Remastered 2026",
+        "secondary": "6 plays"
+      },
+      {
         "name": "Easter Pink",
         "secondary": "5 plays"
       },
       {
         "name": "Be My Angel",
-        "secondary": "5 plays"
-      },
-      {
-        "name": "Linger - Remastered 2026",
         "secondary": "5 plays"
       }
     ],
@@ -54,7 +54,7 @@
       },
       {
         "name": "The Cranberries",
-        "secondary": "28 listens"
+        "secondary": "29 listens"
       },
       {
         "name": "underscores",
@@ -70,19 +70,19 @@
       },
       {
         "name": "Ninajirachi",
-        "secondary": "15 listens"
+        "secondary": "17 listens"
       },
       {
         "name": "Oklou",
-        "secondary": "14 listens"
+        "secondary": "16 listens"
       },
       {
         "name": "Porter Robinson",
-        "secondary": "13 listens"
+        "secondary": "15 listens"
       },
       {
         "name": "beabadoobee",
-        "secondary": "13 listens"
+        "secondary": "15 listens"
       }
     ],
     "genres-1m": [
@@ -97,6 +97,10 @@
         "secondary": "12 plays"
       },
       {
+        "name": "blade bird",
+        "secondary": "8 plays"
+      },
+      {
         "name": "How to Pretend",
         "secondary": "8 plays"
       },
@@ -109,10 +113,6 @@
         "secondary": "8 plays"
       },
       {
-        "name": "blade bird",
-        "secondary": "6 plays"
-      },
-      {
         "name": "Stateside",
         "secondary": "6 plays"
       },
@@ -121,15 +121,15 @@
         "secondary": "6 plays"
       },
       {
+        "name": "Linger - Remastered 2026",
+        "secondary": "6 plays"
+      },
+      {
         "name": "Easter Pink",
         "secondary": "5 plays"
       },
       {
         "name": "Be My Angel",
-        "secondary": "5 plays"
-      },
-      {
-        "name": "Linger - Remastered 2026",
         "secondary": "5 plays"
       }
     ],
@@ -144,7 +144,7 @@
       },
       {
         "name": "The Cranberries",
-        "secondary": "28 listens"
+        "secondary": "29 listens"
       },
       {
         "name": "underscores",
@@ -160,19 +160,19 @@
       },
       {
         "name": "Ninajirachi",
-        "secondary": "15 listens"
+        "secondary": "17 listens"
       },
       {
         "name": "Oklou",
-        "secondary": "14 listens"
+        "secondary": "16 listens"
       },
       {
         "name": "Porter Robinson",
-        "secondary": "13 listens"
+        "secondary": "15 listens"
       },
       {
         "name": "beabadoobee",
-        "secondary": "13 listens"
+        "secondary": "15 listens"
       }
     ],
     "genres-6m": [
