@@ -19,16 +19,16 @@
         "secondary": "8 plays"
       },
       {
+        "name": "blade bird",
+        "secondary": "6 plays"
+      },
+      {
         "name": "Stateside",
         "secondary": "6 plays"
       },
       {
         "name": "Heaven or Las Vegas",
         "secondary": "6 plays"
-      },
-      {
-        "name": "blade bird",
-        "secondary": "5 plays"
       },
       {
         "name": "Easter Pink",
@@ -46,19 +46,19 @@
     "artists-1m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "33 listens"
+        "secondary": "34 listens"
       },
       {
         "name": "PinkPantheress",
-        "secondary": "29 listens"
+        "secondary": "30 listens"
       },
       {
         "name": "The Cranberries",
-        "secondary": "27 listens"
+        "secondary": "28 listens"
       },
       {
         "name": "underscores",
-        "secondary": "20 listens"
+        "secondary": "21 listens"
       },
       {
         "name": "fakemink",
@@ -73,16 +73,16 @@
         "secondary": "15 listens"
       },
       {
-        "name": "The Strokes",
-        "secondary": "13 listens"
-      },
-      {
-        "name": "After",
-        "secondary": "12 listens"
+        "name": "Oklou",
+        "secondary": "14 listens"
       },
       {
         "name": "Porter Robinson",
-        "secondary": "12 listens"
+        "secondary": "13 listens"
+      },
+      {
+        "name": "beabadoobee",
+        "secondary": "13 listens"
       }
     ],
     "genres-1m": [
@@ -109,16 +109,16 @@
         "secondary": "8 plays"
       },
       {
+        "name": "blade bird",
+        "secondary": "6 plays"
+      },
+      {
         "name": "Stateside",
         "secondary": "6 plays"
       },
       {
         "name": "Heaven or Las Vegas",
         "secondary": "6 plays"
-      },
-      {
-        "name": "blade bird",
-        "secondary": "5 plays"
       },
       {
         "name": "Easter Pink",
@@ -136,19 +136,19 @@
     "artists-6m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "33 listens"
+        "secondary": "34 listens"
       },
       {
         "name": "PinkPantheress",
-        "secondary": "29 listens"
+        "secondary": "30 listens"
       },
       {
         "name": "The Cranberries",
-        "secondary": "27 listens"
+        "secondary": "28 listens"
       },
       {
         "name": "underscores",
-        "secondary": "20 listens"
+        "secondary": "21 listens"
       },
       {
         "name": "fakemink",
@@ -163,16 +163,16 @@
         "secondary": "15 listens"
       },
       {
-        "name": "The Strokes",
-        "secondary": "13 listens"
-      },
-      {
-        "name": "After",
-        "secondary": "12 listens"
+        "name": "Oklou",
+        "secondary": "14 listens"
       },
       {
         "name": "Porter Robinson",
-        "secondary": "12 listens"
+        "secondary": "13 listens"
+      },
+      {
+        "name": "beabadoobee",
+        "secondary": "13 listens"
       }
     ],
     "genres-6m": [
