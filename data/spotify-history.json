@@ -6136,6 +6136,65 @@
         "Ninajirachi",
         "Porter Robinson"
       ]
+    },
+    {
+      "played_at": "2026-11-08T21:52:04.798Z",
+      "track_id": "1xqT27jSG1Y15vOXfsV0gv",
+      "track_name": "iPod Touch",
+      "artist_ids": [
+        "3MekbRujJg5VZThubOlrkR"
+      ],
+      "artists": [
+        "Ninajirachi"
+      ]
+    },
+    {
+      "played_at": "2026-11-08T21:55:15.458Z",
+      "track_id": "5ZbztTcvj6QWWbeYsL4GTa",
+      "track_name": "Fuck My Computer",
+      "artist_ids": [
+        "3MekbRujJg5VZThubOlrkR"
+      ],
+      "artists": [
+        "Ninajirachi"
+      ]
+    },
+    {
+      "played_at": "2026-11-08T22:00:27.331Z",
+      "track_id": "0CVbCtcdXAIw00YBXXbneu",
+      "track_name": "Delete",
+      "artist_ids": [
+        "3MekbRujJg5VZThubOlrkR"
+      ],
+      "artists": [
+        "Ninajirachi"
+      ]
+    },
+    {
+      "played_at": "2026-11-08T22:03:18.335Z",
+      "track_id": "323YaufZaHurr9qFY93kr7",
+      "track_name": "Perfect Pinterest Garden - Ninajirachi & underscores Remix",
+      "artist_ids": [
+        "3dz0NnIZhtKKeXZxLOxCam",
+        "3MekbRujJg5VZThubOlrkR",
+        "7HfUJxeVTgrvhk0eWHFzV7"
+      ],
+      "artists": [
+        "Porter Robinson",
+        "Ninajirachi",
+        "underscores"
+      ]
+    },
+    {
+      "played_at": "2026-11-09T00:07:57.868Z",
+      "track_id": "3CbF4eluvVhJ9v0axMj2Rk",
+      "track_name": "All I Am",
+      "artist_ids": [
+        "3MekbRujJg5VZThubOlrkR"
+      ],
+      "artists": [
+        "Ninajirachi"
+      ]
     }
   ]
 }
