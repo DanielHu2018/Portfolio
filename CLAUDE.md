@@ -1,58 +1,53 @@
 # Daniel Hu — personal site
 
 Daniel's portfolio site, hosted on Vercel at https://www.dwho.dev (dwho.dev redirects there;
-dwho.vercel.app also works). The whole site lives in `mockup/index.html`, with
-`mockup/support.js` as the small runtime it needs. `src/App.tsx` is a thin Vite + React shell
-that imports both files raw and mounts them, so **edits to the site go in `mockup/index.html`**.
-`DESIGN.md` is the design doc: vision, palette, page structure, content, signature elements and
-open questions. Read it before starting work. Treat the current look and behavior as the spec:
-match it exactly unless Daniel asks for a change.
+dwho.vercel.app also works). It is a Vite + React + TypeScript app. `DESIGN.md` is the design
+doc: vision, palette, page structure, content, signature elements and open questions. Read it
+before starting work. Treat the current look and behavior as the spec: match it exactly unless
+Daniel asks for a change.
 
 ## Run it
 
-It must be served over http (opening the file directly with file:// half-works):
+    npm run dev        # the site via Vite at http://localhost:5173
+    npm run build      # what Vercel builds
 
-    npm run dev        # the site via Vite at http://localhost:5173 (what Vercel builds)
-    npm run mockup     # the same file served raw at http://localhost:3000
-
-`/api/*` routes are Vercel functions and don't run under either command.
+`/api/*` routes are Vercel functions and don't run under Vite.
 
 ## Layout
 
-- `mockup/index.html`: markup, styles and component logic for the whole site.
-- `src/App.tsx`, `src/main.tsx`: mount the mockup; `src/styles/global.css` is its stylesheet.
+- `src/App.tsx`: holds one `SiteController`, re-renders on every state change, renders the components in order.
+- `src/site/controller.ts`: state and behavior (`setState` is synchronous and notifies React).
+- `src/site/renderVals.ts`: turns controller state into the `SiteVals` every component reads, and holds the site's copy.
+- `src/engine/`: canvas and pointer code that runs outside React (`staffs.ts`, `hobbies.ts`, `mii.ts`, `cursor.ts`).
+- `src/components/`: one component per page piece; each takes `{ v }: { v: SiteVals }`.
+- `src/styles/global.css`: the stylesheet.
 - `api/`: Vercel functions: `now-playing.js` (Daniel's live Spotify status),
   `spotify-login.js` / `spotify-callback.js` (one-time flow to mint `SPOTIFY_REFRESH_TOKEN`),
   `stickers.js` + `stickers/[id].js` (guestbook, see `STICKERS.md`), `resume.js`.
 - `scripts/` + `.github/workflows/update-receipts.yml`: every 6 hours, collect Spotify listening
   history into `data/spotify-history.json` and regenerate `public/assets/receipts/`.
 
-## How mockup/index.html is organized
+Canvases are found by id (`stf-*`, `hb-*`, `mii`, `boot-mii`, `hb-focus`), so keep those ids. The
+avatar sprite is the `.mii-sprite` img inside `.mii-wrap`. Inline styles are matched by string in
+places (`initCursor` looks for `[style*="cursor: pointer"]`), so keep them inline.
 
-- `<x-dc>` holds the markup. `{{name}}` holes are filled from `renderVals()`.
-  `<sc-for list="{{x}}" as="y">` loops and `<sc-if value="{{x}}">` conditionals are template tags.
-- `<script type="text/x-dc" data-dc-script>` holds `class Component extends DCLogic`
-  (React-like: `this.state`, `this.setState`, `componentDidMount`, `componentWillUnmount`).
-- The `data-props` JSON on that script tag sets the default accent color.
-- Canvases are found by id (`stf-*`, `hb-*`, `mii`, `boot-mii`, `hb-focus`), so keep those ids. The avatar sprite is the `.mii-sprite` img inside `.mii-wrap`.
-
-## Main pieces (search in index.html)
+## Main pieces
 
 | Feature | Where |
 | --- | --- |
-| Boot screen (Wii-style menu bar, clock, loading bar) | `.boot`, `bootGo()` |
-| Animated 3D music staff ribbons behind sections | `initStaffs()`, `drawStaff()` |
-| Avatar sprites from `public/assets/avatar/` (portrait on home, walks to clicks in 16 directions, waves, cheers, dances while Daniel is listening) | `initMii()`, `miiReact()`, `.mii-sprite` |
-| Wii-style hand cursor | `initCursor()` |
-| iPod navigator (draggable, click wheel scrolls between sections) | `aside.ipod`, `go(i)` |
-| "Currently listening to" badge | `.np`, `watchNowPlaying()` |
-| Spotify receipts iPod (wheel arrows switch views) | `loadReceipts()`, `trackPrev` / `trackNext` |
-| Featured project iPods (3D tilt, VIEW links) | `.slab3d.proj`, `projMove` |
-| Concert Cover Flow (endless loop, reflections) | `flow`, `.photo3d` |
-| Hobby 3D models (guitar, pencil, skis, volleyball) | `buildHobbies()`, `drawHobbies()` |
-| Click-to-focus overlay (Esc / X closes) | `openFocus()`, `closeFocus()` |
-| Synthesized sound effects (Web Audio, no files) | `sfx()`, `initSfx()` |
-| Sticker guestbook | `.gb-board`, `stickerUri()`, `gbAdd()` |
+| Boot screen (Wii-style menu bar, clock, loading bar) | `components/BootScreen.tsx`, `bootGo()` in the controller |
+| Animated 3D music staff ribbons behind sections | `engine/staffs.ts` |
+| Avatar sprites from `public/assets/avatar/` (portrait on home, walks to clicks in 16 directions, waves, cheers, dances while Daniel is listening) | `engine/mii.ts`, `components/Avatar.tsx` |
+| Wii-style hand cursor | `engine/cursor.ts`, `components/WiiCursor.tsx` |
+| iPod navigator (draggable, click wheel scrolls between sections) | `components/IpodNav.tsx`, `go(i)` in the controller |
+| "Currently listening to" badge | `components/NowPlaying.tsx`, `watchNowPlaying()` in the controller |
+| Spotify receipts iPod (wheel arrows switch views) | `components/OffTheClock.tsx`, `loadReceipts()` in the controller |
+| Featured project iPods (3D tilt, VIEW links) | `components/Projects.tsx`, `projMove` |
+| Concert Cover Flow (endless loop, reflections) | `components/OffTheClock.tsx`, `.photo3d` |
+| Hobby 3D models (guitar, pencil, skis, volleyball) | `engine/hobbies.ts` |
+| Click-to-focus overlay (Esc / X closes) | `components/FocusOverlay.tsx`, `openFocus()`, `closeFocus()` |
+| Synthesized sound effects (Web Audio, no files) | `sfx()`, `initSfx()` in the controller |
+| Sticker guestbook | `components/Contact.tsx`, `stickerUri()`, `gbAdd()` in the controller |
 
 The site plays no music itself; the click-wheel play/pause glyphs are decorative.
 
@@ -60,10 +55,11 @@ The site plays no music itself; the click-wheel play/pause glyphs are decorative
 
 The `[NOTE]` sample stickers in the guestbook seed.
 
-## Porting to a production stack
+## Checking a change didn't alter the site
 
-If asked to rebuild in a framework (React/Vite, Next.js, Astro, etc.), keep it pixel-identical:
-port section by section, keep the canvas drawing code as-is in effects/hooks, keep the fonts
-(M PLUS Rounded 1c from Google Fonts), and compare side by side with `npm run mockup`: serve
-both, dismiss the boot screen, freeze animations and hide canvases, then pixel-diff full-page
-screenshots at 390, 824 and 1440px wide.
+`npm run port:baseline` builds a reference copy of the site from a fixed commit (set in
+`tests/port/setup-baseline.mjs`) into `.port-baseline/`. `npm run test:port` then builds nothing but
+compares `dist/` against it, scenario by scenario: DOM, computed styles, sounds, requests, canvases
+and pixels. Run `npm run build` first. The full run takes over an hour and a lot of memory, so use
+`--workers=1` or `2`, and `-g` or `--shard` to run part of it. An intentional change makes the
+affected scenarios fail until the baseline commit is moved to include it.
