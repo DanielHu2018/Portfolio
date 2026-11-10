@@ -90,7 +90,7 @@ export function Experience({ v }: { v: SiteVals }) {
             </div>
             <div style={{ padding: '22px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <h3 style={{ margin: '0', fontWeight: '800', fontSize: '26px' }}>
-                BDAA
+                Big Data &amp; Analytics Association
               </h3>
               <p style={{ margin: '0', fontWeight: '700', fontSize: '15px' }}>
                 Foundations of AI Track Lead

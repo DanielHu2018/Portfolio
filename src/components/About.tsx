@@ -11,13 +11,13 @@ export function About({ v }: { v: SiteVals }) {
             About
           </span>
           <h2 style={{ margin: '0', fontWeight: '800', fontSize: 'clamp(30px, 3.6vw, 44px)', lineHeight: '1.12' }}>
-            Computer Science and Engineering student focused on AI.
+            Hi, I'm Daniel. I like live music and being bad at things until I'm not.
           </h2>
           <p style={{ margin: '0', fontSize: '17px', lineHeight: '1.75', color: '#4A4F57' }}>
-            I'm pursuing a B.S. in Computer Science and Engineering with a Statistics minor at The Ohio State University. I have a 3.8 GPA, am in the Engineering Honors Program, and am a National Merit Scholar.
+            I'm studying Computer Science and Engineering at Ohio State with a Statistics minor, and most of my work so far has been in AI, from research in the DISL robotics lab to leading the Foundations of AI track for the Big Data &amp; Analytics Association. I've also built enterprise software at Nationwide.
           </p>
           <p style={{ margin: '0', fontSize: '17px', lineHeight: '1.75', color: '#4A4F57' }}>
-            My experience includes enterprise software at Nationwide, AI/ML research in Ohio State's DISL robotics lab, and leading the Foundations of AI track for Big Data and Analytics Association.
+            Outside of school and work, I spend my time on sports, live music and art. A few of those are still very much works in progress.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
             <span style={{ fontWeight: '700', fontSize: '13px', borderRadius: '999px', padding: '6px 14px', background: '#FFE58A', color: '#4A3700' }}>
