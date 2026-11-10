@@ -1,0 +1,185 @@
+{
+  "updated": "November 2026",
+  "views": {
+    "tracks-1m": [
+      {
+        "name": "Sunday - Remastered 2026",
+        "secondary": "12 plays"
+      },
+      {
+        "name": "blade bird",
+        "secondary": "8 plays"
+      },
+      {
+        "name": "How to Pretend",
+        "secondary": "8 plays"
+      },
+      {
+        "name": "The Only Exception",
+        "secondary": "8 plays"
+      },
+      {
+        "name": "The Peace",
+        "secondary": "8 plays"
+      },
+      {
+        "name": "Stateside",
+        "secondary": "6 plays"
+      },
+      {
+        "name": "Heaven or Las Vegas",
+        "secondary": "6 plays"
+      },
+      {
+        "name": "Linger - Remastered 2026",
+        "secondary": "6 plays"
+      },
+      {
+        "name": "Easter Pink",
+        "secondary": "5 plays"
+      },
+      {
+        "name": "Be My Angel",
+        "secondary": "5 plays"
+      }
+    ],
+    "artists-1m": [
+      {
+        "name": "Lucy Bedroque",
+        "secondary": "34 listens"
+      },
+      {
+        "name": "PinkPantheress",
+        "secondary": "30 listens"
+      },
+      {
+        "name": "The Cranberries",
+        "secondary": "29 listens"
+      },
+      {
+        "name": "underscores",
+        "secondary": "22 listens"
+      },
+      {
+        "name": "Ninajirachi",
+        "secondary": "22 listens"
+      },
+      {
+        "name": "fakemink",
+        "secondary": "17 listens"
+      },
+      {
+        "name": "Paramore",
+        "secondary": "17 listens"
+      },
+      {
+        "name": "Porter Robinson",
+        "secondary": "16 listens"
+      },
+      {
+        "name": "Oklou",
+        "secondary": "16 listens"
+      },
+      {
+        "name": "beabadoobee",
+        "secondary": "15 listens"
+      }
+    ],
+    "genres-1m": [
+      {
+        "name": "Genre data unavailable",
+        "secondary": "Keep collecting listens"
+      }
+    ],
+    "tracks-6m": [
+      {
+        "name": "Sunday - Remastered 2026",
+        "secondary": "12 plays"
+      },
+      {
+        "name": "blade bird",
+        "secondary": "8 plays"
+      },
+      {
+        "name": "How to Pretend",
+        "secondary": "8 plays"
+      },
+      {
+        "name": "The Only Exception",
+        "secondary": "8 plays"
+      },
+      {
+        "name": "The Peace",
+        "secondary": "8 plays"
+      },
+      {
+        "name": "Stateside",
+        "secondary": "6 plays"
+      },
+      {
+        "name": "Heaven or Las Vegas",
+        "secondary": "6 plays"
+      },
+      {
+        "name": "Linger - Remastered 2026",
+        "secondary": "6 plays"
+      },
+      {
+        "name": "Easter Pink",
+        "secondary": "5 plays"
+      },
+      {
+        "name": "Be My Angel",
+        "secondary": "5 plays"
+      }
+    ],
+    "artists-6m": [
+      {
+        "name": "Lucy Bedroque",
+        "secondary": "34 listens"
+      },
+      {
+        "name": "PinkPantheress",
+        "secondary": "30 listens"
+      },
+      {
+        "name": "The Cranberries",
+        "secondary": "29 listens"
+      },
+      {
+        "name": "underscores",
+        "secondary": "22 listens"
+      },
+      {
+        "name": "Ninajirachi",
+        "secondary": "22 listens"
+      },
+      {
+        "name": "fakemink",
+        "secondary": "17 listens"
+      },
+      {
+        "name": "Paramore",
+        "secondary": "17 listens"
+      },
+      {
+        "name": "Porter Robinson",
+        "secondary": "16 listens"
+      },
+      {
+        "name": "Oklou",
+        "secondary": "16 listens"
+      },
+      {
+        "name": "beabadoobee",
+        "secondary": "15 listens"
+      }
+    ],
+    "genres-6m": [
+      {
+        "name": "Genre data unavailable",
+        "secondary": "Keep collecting listens"
+      }
+    ]
+  }
+}

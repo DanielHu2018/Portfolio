@@ -8,16 +8,21 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "typecheck": "tsc -b",
-    "mockup": "serve mockup -l 3000"
+    "mockup": "serve mockup -l 3000",
+    "port:baseline": "node tests/port/setup-baseline.mjs",
+    "test:port": "playwright test"
   },
   "dependencies": {
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.65.0",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
+    "parse5": "^8.1.1",
+    "pngjs": "^7.0.0",
     "serve": "^14.2.6",
     "typescript": "^7.0.2",
     "vite": "^8.3.5"
