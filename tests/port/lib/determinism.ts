@@ -21,6 +21,21 @@ function initPage(muted: boolean) {
     t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
+  // Each copy of React draws random ids when it loads, and the old site carries two copies.
+  // Restart the sequence when the root element is created, so both sites' own code sees the same numbers.
+  let reseeded = false;
+  const reseed = (value: unknown) => {
+    if (reseeded || !String(value).split(' ').includes('rv-root')) return;
+    reseeded = true;
+    a = 0x5eed;
+  };
+  const setAttribute = Element.prototype.setAttribute;
+  Element.prototype.setAttribute = function (name: string, value: string) {
+    if (name === 'class') reseed(value);
+    setAttribute.call(this, name, value);
+  };
+  const className = Object.getOwnPropertyDescriptor(Element.prototype, 'className')!;
+  Object.defineProperty(Element.prototype, 'className', { ...className, set(value: string) { reseed(value); className.set!.call(this, value); } });
   // The fake clock's performance.now carries a millisecond or two of real startup lag; Date does not.
   const epoch = Date.now();
   performance.now = () => Date.now() - epoch;

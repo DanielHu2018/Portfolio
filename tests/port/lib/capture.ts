@@ -22,6 +22,9 @@ function snapshot() {
       attrs[a.name] = a.name === 'class' ? a.value.split(/\s+/).filter(Boolean).sort().join(' ') : a.value;
     }
     if (attrs.class === '') delete attrs.class;
+    if (attrs.style === '') delete attrs.style;
+    // React updates only the declarations that changed, so a declaration's position can differ. Computed styles are compared below.
+    if (attrs.style) attrs.style = attrs.style.split(';').map((d) => d.trim()).filter(Boolean).sort().join('; ');
     const kids: unknown[] = [];
     const pushText = (s: string) => {
       if (typeof kids[kids.length - 1] === 'string') kids[kids.length - 1] += s;
@@ -103,7 +106,7 @@ function firstDomDiff(a: DomNode | string, b: DomNode | string, path: string): s
   const here = `${path}>${a.tag}`;
   if (a.tag !== b.tag) return `${path}: tag ${a.tag} vs ${b.tag}`;
   const names = new Set([...Object.keys(a.attrs), ...Object.keys(b.attrs)]);
-  for (const name of names) if (a.attrs[name] !== b.attrs[name]) return `${here}: @${name} ${String(a.attrs[name]).slice(0, 400)} vs ${String(b.attrs[name]).slice(0, 400)}`;
+  for (const name of names) if (a.attrs[name] !== b.attrs[name]) return `${here}: @${name} ${String(a.attrs[name]).slice(0, 2000)} vs ${String(b.attrs[name]).slice(0, 2000)}`;
   if (JSON.stringify(a.props) !== JSON.stringify(b.props)) return `${here}: props ${JSON.stringify(a.props)} vs ${JSON.stringify(b.props)}`;
   if (a.canvas !== b.canvas) return `${here}#${a.attrs.id}: canvas bitmap differs`;
   if (a.kids.length !== b.kids.length) return `${here}: ${a.kids.length} vs ${b.kids.length} children`;

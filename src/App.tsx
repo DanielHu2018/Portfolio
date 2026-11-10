@@ -1,40 +1,64 @@
-import { useEffect, useRef } from 'react';
-import mockupDocument from '../mockup/index.html?raw';
-import mockupRuntime from '../mockup/support.js?raw';
+import { useLayoutEffect, useRef, useState } from 'react';
+import { About } from './components/About';
+import { Avatar } from './components/Avatar';
+import { BootScreen } from './components/BootScreen';
+import { Contact } from './components/Contact';
+import { Experience } from './components/Experience';
+import { FocusOverlay } from './components/FocusOverlay';
+import { Hero } from './components/Hero';
+import { IpodNav } from './components/IpodNav';
+import { NowPlaying } from './components/NowPlaying';
+import { OffTheClock } from './components/OffTheClock';
+import { Projects } from './components/Projects';
+import { Ripples } from './components/Ripples';
+import { Skills } from './components/Skills';
+import { SvgDefs } from './components/SvgDefs';
+import { WiiCursor } from './components/WiiCursor';
+import { SiteController } from './site/controller';
+import { renderVals } from './site/renderVals';
 
-function sourceParts() {
-  const doc = new DOMParser().parseFromString(mockupDocument, 'text/html');
-  const template = doc.querySelector('x-dc');
-  const logic = doc.querySelector('script[data-dc-script]');
-  if (!template || !logic) throw new Error('The mockup document is missing its x-dc template or logic script.');
-  return { template: template.cloneNode(true), logic: logic.cloneNode(true) as HTMLScriptElement };
-}
-
-/** Mount the original mockup runtime so localhost matches the mockup exactly. */
 export default function App() {
-  const hostRef = useRef<HTMLDivElement>(null);
+  const siteRef = useRef<SiteController | null>(null);
+  if (!siteRef.current) siteRef.current = new SiteController();
+  const site = siteRef.current;
+  const [, bump] = useState(0);
+  const committed = useRef(false);
 
-  useEffect(() => {
-    const host = hostRef.current;
-    if (!host) return;
-    const { template, logic } = sourceParts();
-    host.replaceChildren(template, logic);
-
-    const runtime = document.createElement('script');
-    runtime.textContent = mockupRuntime;
-    document.body.appendChild(runtime);
-
+  // Layout effects match the class lifecycle the site was written against: they run before first paint.
+  useLayoutEffect(() => {
+    const unsubscribe = site.subscribe(() => bump((n) => n + 1));
+    site.mount();
     return () => {
-      runtime.remove();
-      host.replaceChildren();
-      document.querySelectorAll('style[data-dc-canvas], style#dc-root').forEach(node => node.remove());
-      document.documentElement.removeAttribute('data-wii');
+      site.unmount();
+      unsubscribe();
     };
-  }, []);
+  }, [site]);
 
+  useLayoutEffect(() => {
+    if (committed.current) site.didUpdate();
+    committed.current = true;
+  });
+
+  const v = renderVals(site);
   return (
-    <>
-      <div ref={hostRef} aria-label="Daniel Hu portfolio" />
-    </>
+    <div aria-label="Daniel Hu portfolio">
+      <div className={`rv-root ${v.navCls}`} style={{ width: '100%', overflow: 'hidden', fontFamily: "'M PLUS Rounded 1c', system-ui, sans-serif", color: '#3C4046', backgroundColor: '#FFFFFF', backgroundImage: 'repeating-linear-gradient(0deg, #F3F5F8 0px, #F3F5F8 2px, #FFFFFF 2px, #FFFFFF 6px)' }}>
+        <SvgDefs />
+        <FocusOverlay v={v} />
+        <BootScreen v={v} />
+        <Avatar />
+        <Ripples />
+        <WiiCursor />
+        <IpodNav v={v} />
+        <NowPlaying v={v} />
+        <Hero v={v} />
+        <About v={v} />
+        <Experience v={v} />
+        <Projects v={v} />
+        <Skills v={v} />
+        <OffTheClock v={v} />
+        <Contact v={v} />
+      </div>
+    </div>
   );
 }

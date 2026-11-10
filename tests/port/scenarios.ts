@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import type { Page } from '@playwright/test';
 import type { PageOptions } from './lib/determinism';
 
@@ -384,5 +385,104 @@ for (const f of FOCUS) add(`reduced focus ${f.name}`, DESK, async (p, c) => {
   await settle(p);
   await c.checkpoint('open');
 }, { context: { reducedMotion: true } });
+
+/** Changes what /api/now-playing returns, so the next poll re-renders the whole site. */
+const startPlaying = (p: Page) => p.route('**/api/now-playing', (route) => route.fulfill({ status: 200, contentType: 'application/json', body: readFileSync('tests/port/fixtures/now-playing.json', 'utf8') }));
+
+add('resize stale flow', DESK, async (p, c) => {
+  await enter(p, c);
+  await visit(p, c, 'off');
+  await p.setViewportSize({ width: 690, height: 900 });
+  await settle(p);
+  await c.checkpoint('resized');
+  await clickOn(p, '.flow-arrow', 1, false);
+  await c.checkpoint('next');
+});
+add('api fail', DESK, async (p, c) => {
+  await enter(p, c);
+  await c.checkpoint('hero');
+  await visit(p, c, 'off');
+  await c.checkpoint('off');
+  await visit(p, c, 'contact');
+  await c.checkpoint('contact');
+}, { api: 'fail' });
+add('rerender mid tilt', DESK, async (p, c) => {
+  await enter(p, c);
+  await visit(p, c, 'work');
+  await hover(p, '#work .slab3d.proj', 0.1, 0.1, 1, false);
+  await c.checkpoint('tilted');
+  await startPlaying(p);
+  await c.runFor(20000);
+  await settle(p);
+  await c.checkpoint('after-update');
+});
+add('rerender mid drag', DESK, async (p, c) => {
+  await enter(p, c);
+  const b = await center(p, 'aside.ipod', 0, false);
+  await p.mouse.move(b.x + 6, b.y + b.h * 0.6);
+  await p.mouse.down();
+  await p.mouse.move(120, 140, { steps: 4 });
+  await startPlaying(p);
+  await c.runFor(20000);
+  await settle(p);
+  await c.checkpoint('after-update');
+  await p.mouse.move(200, 220, { steps: 4 });
+  await c.checkpoint('still-dragging');
+  await p.mouse.up();
+  await settle(p);
+  await c.checkpoint('dropped');
+});
+add('touch', PHONE, async (p, c) => {
+  await c.runFor(100);
+  await p.touchscreen.tap(195, 422);
+  await c.runFor(2400);
+  await settle(p);
+  if (await p.evaluate(() => document.documentElement.hasAttribute('data-wii'))) throw new Error('hand cursor is on for a touch device');
+  await p.touchscreen.tap(195, 600);
+  await c.runFor(300);
+  await c.checkpoint('walking');
+  await c.runFor(2000);
+  await visit(p, c, 'work');
+  const b = await center(p, '#work .slab3d.proj', 0);
+  await p.touchscreen.tap(b.x + b.w / 2, b.y + b.h / 2);
+  await settle(p);
+  await c.runFor(800);
+  await settle(p);
+  await c.checkpoint('card-tapped');
+}, { context: { hasTouch: true, isMobile: true } });
+add('focus races', DESK, async (p, c) => {
+  await enter(p, c);
+  await openFocus(p, c, FOCUS[3]);
+  await p.keyboard.press('Escape');
+  await c.runFor(100);
+  await c.checkpoint('esc-during-from');
+  await c.runFor(700);
+  await settle(p);
+  await c.checkpoint('esc-settled');
+
+  await openFocus(p, c, FOCUS[0]);
+  await c.runFor(800);
+  await settle(p);
+  await p.keyboard.press('Escape');
+  await c.runFor(100);
+  await clickOn(p, 'button[aria-label="Close"]', 0, false);
+  await c.checkpoint('x-during-closing');
+  await c.runFor(700);
+  await settle(p);
+  await c.checkpoint('x-settled');
+
+  await openFocus(p, c, FOCUS[3]);
+  await settle(p);
+  await c.runFor(800);
+  await settle(p);
+  await p.keyboard.press('Escape');
+  await c.runFor(100);
+  await FOCUS[4].open(p);
+  await settle(p);
+  await c.checkpoint('reopen-during-closing');
+  await c.runFor(800);
+  await settle(p);
+  await c.checkpoint('reopen-settled');
+});
 
 export const scenarios = out;
