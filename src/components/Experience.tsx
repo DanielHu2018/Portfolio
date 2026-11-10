@@ -14,7 +14,7 @@ export function Experience({ v }: { v: SiteVals }) {
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
           <article className="dots rv-item" style={{ background: '#FFFFFF', border: '4px solid #D5DAE1', borderRadius: '28px', boxShadow: 'inset 0 0 0 4px #FFFFFF', display: 'flex', flexDirection: 'column' }}>
-            <div style={{ borderRadius: '24px 24px 0 0', height: '92px', background: 'linear-gradient(180deg, #E9F8FE, #BDEBFB)', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', padding: '14px 20px' }}>
+            <div style={{ borderRadius: '24px 24px 0 0', height: '92px', backgroundColor: '#FFFFFF', backgroundImage: "url('/assets/nationwide.png')", backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'contain', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', padding: '14px 20px' }}>
               <span style={{ fontWeight: '800', fontSize: '13px', color: '#0B3550' }}>
                 Internship
               </span>
@@ -46,7 +46,7 @@ export function Experience({ v }: { v: SiteVals }) {
             </div>
           </article>
           <article className="dots rv-item" style={{ background: '#FFFFFF', border: '4px solid #D5DAE1', borderRadius: '28px', boxShadow: 'inset 0 0 0 4px #FFFFFF', display: 'flex', flexDirection: 'column' }}>
-            <div style={{ borderRadius: '24px 24px 0 0', height: '92px', background: 'linear-gradient(180deg, #F1ECFF, #CDBDFF)', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', padding: '14px 20px' }}>
+            <div style={{ borderRadius: '24px 24px 0 0', height: '92px', backgroundColor: '#FFFFFF', backgroundImage: "url('/assets/The-Ohio-State-University-Logo.png')", backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'contain', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', padding: '14px 20px' }}>
               <span style={{ fontWeight: '800', fontSize: '13px', color: '#2E1F70' }}>
                 Research
               </span>
@@ -80,7 +80,7 @@ export function Experience({ v }: { v: SiteVals }) {
             </div>
           </article>
           <article className="dots rv-item" style={{ background: '#FFFFFF', border: '4px solid #D5DAE1', borderRadius: '28px', boxShadow: 'inset 0 0 0 4px #FFFFFF', display: 'flex', flexDirection: 'column' }}>
-            <div style={{ borderRadius: '24px 24px 0 0', height: '92px', background: 'linear-gradient(180deg, #E6FAEE, #A9EBC2)', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', padding: '14px 20px' }}>
+            <div style={{ borderRadius: '24px 24px 0 0', height: '92px', backgroundColor: '#A96F5A', backgroundImage: "url('/assets/bdaa.png')", backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', padding: '14px 20px' }}>
               <span style={{ fontWeight: '800', fontSize: '13px', color: '#12452A' }}>
                 Leadership
               </span>
