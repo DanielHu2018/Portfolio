@@ -39,7 +39,7 @@ export function Projects({ v }: { v: SiteVals }) {
                     CLARA
                   </h3>
                   <p style={{ margin: '0', fontWeight: '700', fontSize: '12px', color: '#4A4F57' }}>
-                    1st place · IBM SkillsBuild × OSU FinTech Hackathon
+                    1st place · IBM SkillsBuild × OSU FinTech
                   </p>
                   <p style={{ margin: '0', minHeight: '58.5px', maxHeight: '58.5px', overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: '3', WebkitBoxOrient: 'vertical', fontSize: '13px', lineHeight: '1.5', color: '#3C4046' }}>
                     A decision-support agent that turns live global events into portfolio risk signals, stress-tests positions, and recommends optimized hedges before markets move.
@@ -118,9 +118,6 @@ export function Projects({ v }: { v: SiteVals }) {
                     <span style={{ font: '700 11px \'Helvetica Neue\', Arial, sans-serif', borderRadius: '999px', padding: '3px 9px', background: '#F1F3F6', border: '1px solid #D5DAE1', color: '#3C4046' }}>
                       Claude API
                     </span>
-                    <span style={{ font: '700 11px \'Helvetica Neue\', Arial, sans-serif', borderRadius: '999px', padding: '3px 9px', background: '#F1F3F6', border: '1px solid #D5DAE1', color: '#3C4046' }}>
-                      A* pathfinding
-                    </span>
                   </div>
                 </div>
               </div>
@@ -184,9 +181,6 @@ export function Projects({ v }: { v: SiteVals }) {
                     </span>
                     <span style={{ font: '700 11px \'Helvetica Neue\', Arial, sans-serif', borderRadius: '999px', padding: '3px 9px', background: '#F1F3F6', border: '1px solid #D5DAE1', color: '#3C4046' }}>
                       Gemini API
-                    </span>
-                    <span style={{ font: '700 11px \'Helvetica Neue\', Arial, sans-serif', borderRadius: '999px', padding: '3px 9px', background: '#F1F3F6', border: '1px solid #D5DAE1', color: '#3C4046' }}>
-                      Google Search grounding
                     </span>
                   </div>
                 </div>
