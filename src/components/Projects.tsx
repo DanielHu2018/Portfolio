@@ -39,7 +39,7 @@ export function Projects({ v }: { v: SiteVals }) {
                     CLARA
                   </h3>
                   <p style={{ margin: '0', fontWeight: '700', fontSize: '12px', color: '#4A4F57' }}>
-                    1st place · IBM SkillsBuild × OSU FinTech
+                    1st place · IBM x OSU Hackathon
                   </p>
                   <p style={{ margin: '0', minHeight: '58.5px', maxHeight: '58.5px', overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: '3', WebkitBoxOrient: 'vertical', fontSize: '13px', lineHeight: '1.5', color: '#3C4046' }}>
                     A decision-support agent that turns live global events into portfolio risk signals, stress-tests positions, and recommends optimized hedges before markets move.
@@ -160,9 +160,6 @@ export function Projects({ v }: { v: SiteVals }) {
                   <span>
                     Disco
                   </span>
-                  <span style={{ color: '#12452A', background: '#A9EBC2', borderRadius: '999px', padding: '0 8px' }}>
-                    HackOHI/O 2026
-                  </span>
                 </div>
                 <video src="/assets/disco-demo.mp4" aria-label="Disco demo video" muted loop playsInline controls style={{ display: 'block', width: '100%', height: '150px', objectFit: 'cover', background: 'linear-gradient(180deg, #FFFFFF, #EEF1F5)', borderBottom: '1px solid #D5DAE1' }} />
                 <div style={{ background: '#FFFFFF', padding: '12px 12px 14px', display: 'flex', flexDirection: 'column', gap: '6px', fontFamily: '\'Helvetica Neue\', Arial, sans-serif', color: '#23262B' }}>
@@ -170,7 +167,7 @@ export function Projects({ v }: { v: SiteVals }) {
                     Disco
                   </h3>
                   <p style={{ margin: '0', fontWeight: '700', fontSize: '12px', color: '#4A4F57' }}>
-                    HackOHI/O 2026 · agentic product prototype
+                    Multi-agent social planning platform
                   </p>
                   <p style={{ margin: '0', minHeight: '58.5px', maxHeight: '58.5px', overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: '3', WebkitBoxOrient: 'vertical', fontSize: '13px', lineHeight: '1.5', color: '#3C4046' }}>
                     A multi-agent social planning system that combines friend-vouched recommendations with agent-to-agent negotiation to turn a natural-language idea into an approved group plan that works for everyone.

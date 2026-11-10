@@ -85,7 +85,7 @@ export function Skills({ v }: { v: SiteVals }) {
                   <Fragment key={i0}>
                     <button type="button" className="skill-use" onClick={u.open} style={parseStyle(u.rowStyle)}>
                       {u.isImage ? (
-                        <img src={u.media} alt="" style={{ flexShrink: '0', width: '76px', height: '56px', boxSizing: 'border-box', objectFit: 'cover', borderRadius: '12px', border: '3px solid #D5DAE1', background: '#3C4046' }} />
+                        <img src={u.media} alt="" style={{ flexShrink: '0', width: '76px', height: '56px', boxSizing: 'border-box', objectFit: u.isExperience ? 'contain' : 'cover', borderRadius: '12px', border: '3px solid #D5DAE1', background: u.isExperience ? '#FFFFFF' : '#3C4046' }} />
                       ) : null}
                       {u.isVideo ? (
                         <video src={u.media} muted playsInline preload="metadata" aria-hidden="true" style={{ flexShrink: '0', width: '76px', height: '56px', boxSizing: 'border-box', objectFit: 'cover', borderRadius: '12px', border: '3px solid #D5DAE1', background: '#3C4046' }} />
