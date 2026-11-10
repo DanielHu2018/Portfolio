@@ -159,7 +159,7 @@ export function renderVals(site: SiteController) {
       { proj: 0, line: 'Python agent with VaR/ES monitoring and Black-Scholes hedge optimization.' }] }
   ];
   const expData: any = {
-    nationwide: { title: 'Nationwide Insurance', tag: 'Internship', mono: 'NW', media: '/assets/nationwide.png', isImage: true, band: 'linear-gradient(180deg, #E9F8FE, #BDEBFB)', pill: '#BDEBFB', fg: '#0B3550' },
+    nationwide: { title: 'Nationwide Mutual Insurance Company', tag: 'Internship', mono: 'NW', media: '/assets/nationwide.png', isImage: true, band: 'linear-gradient(180deg, #E9F8FE, #BDEBFB)', pill: '#BDEBFB', fg: '#0B3550' },
     hackathon: { title: 'Nationwide Hackathon', tag: 'Hackathon', mono: 'NW', media: '/assets/nationwide.png', isImage: true, band: 'linear-gradient(180deg, #FFF6D6, #FFE58A)', pill: '#FFE58A', fg: '#4A3700' },
     robotics: { title: 'Design Innovation & Simulation Lab', tag: 'Research', mono: 'OSU', media: '/assets/The-Ohio-State-University-Logo.png', isImage: true, band: 'linear-gradient(180deg, #F1ECFF, #CDBDFF)', pill: '#CDBDFF', fg: '#2E1F70' },
     site: { title: 'This site', tag: 'Project', mono: 'DH', band: 'linear-gradient(180deg, #FFE3F0, #FFB8DA)', pill: '#FFB8DA', fg: '#5C1236', to: 'hero' }

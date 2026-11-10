@@ -18,7 +18,7 @@ export function Experience({ v }: { v: SiteVals }) {
             </div>
             <div style={{ padding: '22px', background: 'linear-gradient(180deg, #E9F8FE, #BDEBFB)', borderRadius: '0 0 24px 24px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <h3 style={{ margin: '0', fontWeight: '800', fontSize: '26px' }}>
-                Nationwide Insurance
+                Nationwide Mutual Insurance Company
               </h3>
               <p style={{ margin: '0', fontWeight: '700', fontSize: '15px' }}>
                 Software Engineering Intern · Nationwide Financial, Project Fulcrum
@@ -62,9 +62,7 @@ export function Experience({ v }: { v: SiteVals }) {
                   Research
                 </span>
                 <span style={{ fontWeight: '700', fontSize: '13px', lineHeight: '1.35', textAlign: 'right' }}>
-                  Mar 2024 — Aug 2024
-                  <br />
-                  May 2025 — May 2026
+                  Mar 2025 — May 2026
                 </span>
               </div>
               <p style={{ margin: '0', fontSize: '15px', lineHeight: '1.65', color: '#4A4F57' }}>
@@ -76,9 +74,6 @@ export function Experience({ v }: { v: SiteVals }) {
                 </span>
                 <span style={{ fontWeight: '700', fontSize: '12px', borderRadius: '999px', padding: '4px 12px', background: '#EEF1F5' }}>
                   Behavior cloning
-                </span>
-                <span style={{ fontWeight: '700', fontSize: '12px', borderRadius: '999px', padding: '4px 12px', background: '#EEF1F5' }}>
-                  {"Weights & Biases"}
                 </span>
               </div>
             </div>
