@@ -1,3 +1,7 @@
+import { initCursor } from '../engine/cursor';
+import { initMii } from '../engine/mii';
+import { initStaffs } from '../engine/staffs';
+
 declare const document: any;
 declare const window: any;
 
@@ -45,9 +49,9 @@ export class SiteController {
     this.listeners.add(listener);
     return () => { this.listeners.delete(listener); };
   }
-  initStaffs() {}
-  initMii() {}
-  initCursor() {}
+  initStaffs() { initStaffs(this); }
+  initMii() { initMii(this); }
+  initCursor() { initCursor(this); }
   sectionIds() {
     return ['hero', 'about', 'experience', 'work', 'skills', 'off', 'contact'];
   }

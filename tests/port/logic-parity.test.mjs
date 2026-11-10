@@ -14,7 +14,7 @@ const ENGINES = {
   initMii: 'src/engine/mii.ts',
   initCursor: 'src/engine/cursor.ts',
 };
-const ENGINES_DONE = false;
+const ENGINES_DONE = true;
 const RENAMED = { componentDidMount: 'mount', componentDidUpdate: 'didUpdate', componentWillUnmount: 'unmount' };
 
 function methods(text, indent) {
