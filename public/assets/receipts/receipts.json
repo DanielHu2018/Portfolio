@@ -4,7 +4,11 @@
     "tracks-1m": [
       {
         "name": "Sunday - Remastered 2026",
-        "secondary": "12 plays"
+        "secondary": "13 plays"
+      },
+      {
+        "name": "The Peace",
+        "secondary": "9 plays"
       },
       {
         "name": "blade bird",
@@ -19,8 +23,8 @@
         "secondary": "8 plays"
       },
       {
-        "name": "The Peace",
-        "secondary": "8 plays"
+        "name": "Linger - Remastered 2026",
+        "secondary": "7 plays"
       },
       {
         "name": "Stateside",
@@ -35,38 +39,34 @@
         "secondary": "6 plays"
       },
       {
-        "name": "Linger - Remastered 2026",
+        "name": "iPod Touch",
         "secondary": "6 plays"
-      },
-      {
-        "name": "Easter Pink",
-        "secondary": "5 plays"
       }
     ],
     "artists-1m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "35 listens"
+        "secondary": "36 listens"
+      },
+      {
+        "name": "The Cranberries",
+        "secondary": "33 listens"
       },
       {
         "name": "PinkPantheress",
         "secondary": "31 listens"
       },
       {
-        "name": "The Cranberries",
-        "secondary": "31 listens"
-      },
-      {
         "name": "underscores",
-        "secondary": "22 listens"
+        "secondary": "23 listens"
       },
       {
         "name": "Ninajirachi",
-        "secondary": "22 listens"
+        "secondary": "23 listens"
       },
       {
         "name": "fakemink",
-        "secondary": "19 listens"
+        "secondary": "20 listens"
       },
       {
         "name": "Porter Robinson",
@@ -94,7 +94,11 @@
     "tracks-6m": [
       {
         "name": "Sunday - Remastered 2026",
-        "secondary": "12 plays"
+        "secondary": "13 plays"
+      },
+      {
+        "name": "The Peace",
+        "secondary": "9 plays"
       },
       {
         "name": "blade bird",
@@ -109,8 +113,8 @@
         "secondary": "8 plays"
       },
       {
-        "name": "The Peace",
-        "secondary": "8 plays"
+        "name": "Linger - Remastered 2026",
+        "secondary": "7 plays"
       },
       {
         "name": "Stateside",
@@ -125,38 +129,34 @@
         "secondary": "6 plays"
       },
       {
-        "name": "Linger - Remastered 2026",
+        "name": "iPod Touch",
         "secondary": "6 plays"
-      },
-      {
-        "name": "Easter Pink",
-        "secondary": "5 plays"
       }
     ],
     "artists-6m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "35 listens"
+        "secondary": "36 listens"
+      },
+      {
+        "name": "The Cranberries",
+        "secondary": "33 listens"
       },
       {
         "name": "PinkPantheress",
         "secondary": "31 listens"
       },
       {
-        "name": "The Cranberries",
-        "secondary": "31 listens"
-      },
-      {
         "name": "underscores",
-        "secondary": "22 listens"
+        "secondary": "23 listens"
       },
       {
         "name": "Ninajirachi",
-        "secondary": "22 listens"
+        "secondary": "23 listens"
       },
       {
         "name": "fakemink",
-        "secondary": "19 listens"
+        "secondary": "20 listens"
       },
       {
         "name": "Porter Robinson",
