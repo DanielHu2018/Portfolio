@@ -66,7 +66,7 @@ export function Experience({ v }: { v: SiteVals }) {
                 </span>
               </div>
               <p style={{ margin: '0', fontSize: '15px', lineHeight: '1.65', color: '#4A4F57' }}>
-                Integrated a VLA policy for autonomous robot manipulation, trained CNN-based behavior cloning for a 6-DOF UR5e arm, and reproduced Stanford's UMI environment.
+                Integrated a VLA policy through OpenCV for autonomous robot manipulation, trained a CNN-based behavior-cloning model from wrist-camera input for a 6-DOF UR5e arm, and reproduced Stanford's UMI environment.
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '4px' }}>
                 <span style={{ fontWeight: '700', fontSize: '12px', borderRadius: '999px', padding: '4px 12px', background: '#EEF1F5' }}>
