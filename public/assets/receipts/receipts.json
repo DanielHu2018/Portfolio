@@ -4,7 +4,7 @@
     "tracks-1m": [
       {
         "name": "Sunday - Remastered 2026",
-        "secondary": "13 plays"
+        "secondary": "14 plays"
       },
       {
         "name": "The Peace",
@@ -23,6 +23,14 @@
         "secondary": "8 plays"
       },
       {
+        "name": "Be My Angel",
+        "secondary": "7 plays"
+      },
+      {
+        "name": "iPod Touch",
+        "secondary": "7 plays"
+      },
+      {
         "name": "Linger - Remastered 2026",
         "secondary": "7 plays"
       },
@@ -31,54 +39,46 @@
         "secondary": "6 plays"
       },
       {
-        "name": "Be My Angel",
-        "secondary": "6 plays"
-      },
-      {
-        "name": "Heaven or Las Vegas",
-        "secondary": "6 plays"
-      },
-      {
-        "name": "iPod Touch",
+        "name": "Easter Pink",
         "secondary": "6 plays"
       }
     ],
     "artists-1m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "36 listens"
+        "secondary": "38 listens"
       },
       {
         "name": "The Cranberries",
-        "secondary": "33 listens"
+        "secondary": "37 listens"
       },
       {
         "name": "PinkPantheress",
-        "secondary": "31 listens"
+        "secondary": "34 listens"
+      },
+      {
+        "name": "Ninajirachi",
+        "secondary": "25 listens"
       },
       {
         "name": "underscores",
         "secondary": "23 listens"
       },
       {
-        "name": "Ninajirachi",
-        "secondary": "23 listens"
-      },
-      {
         "name": "fakemink",
-        "secondary": "20 listens"
+        "secondary": "22 listens"
       },
       {
         "name": "Porter Robinson",
-        "secondary": "18 listens"
+        "secondary": "19 listens"
+      },
+      {
+        "name": "Oklou",
+        "secondary": "17 listens"
       },
       {
         "name": "Paramore",
         "secondary": "17 listens"
-      },
-      {
-        "name": "Oklou",
-        "secondary": "16 listens"
       },
       {
         "name": "beabadoobee",
@@ -94,7 +94,7 @@
     "tracks-6m": [
       {
         "name": "Sunday - Remastered 2026",
-        "secondary": "13 plays"
+        "secondary": "14 plays"
       },
       {
         "name": "The Peace",
@@ -113,6 +113,14 @@
         "secondary": "8 plays"
       },
       {
+        "name": "Be My Angel",
+        "secondary": "7 plays"
+      },
+      {
+        "name": "iPod Touch",
+        "secondary": "7 plays"
+      },
+      {
         "name": "Linger - Remastered 2026",
         "secondary": "7 plays"
       },
@@ -121,54 +129,46 @@
         "secondary": "6 plays"
       },
       {
-        "name": "Be My Angel",
-        "secondary": "6 plays"
-      },
-      {
-        "name": "Heaven or Las Vegas",
-        "secondary": "6 plays"
-      },
-      {
-        "name": "iPod Touch",
+        "name": "Easter Pink",
         "secondary": "6 plays"
       }
     ],
     "artists-6m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "36 listens"
+        "secondary": "38 listens"
       },
       {
         "name": "The Cranberries",
-        "secondary": "33 listens"
+        "secondary": "37 listens"
       },
       {
         "name": "PinkPantheress",
-        "secondary": "31 listens"
+        "secondary": "34 listens"
+      },
+      {
+        "name": "Ninajirachi",
+        "secondary": "25 listens"
       },
       {
         "name": "underscores",
         "secondary": "23 listens"
       },
       {
-        "name": "Ninajirachi",
-        "secondary": "23 listens"
-      },
-      {
         "name": "fakemink",
-        "secondary": "20 listens"
+        "secondary": "22 listens"
       },
       {
         "name": "Porter Robinson",
-        "secondary": "18 listens"
+        "secondary": "19 listens"
+      },
+      {
+        "name": "Oklou",
+        "secondary": "17 listens"
       },
       {
         "name": "Paramore",
         "secondary": "17 listens"
-      },
-      {
-        "name": "Oklou",
-        "secondary": "16 listens"
       },
       {
         "name": "beabadoobee",
