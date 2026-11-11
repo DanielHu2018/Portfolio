@@ -470,7 +470,9 @@ export class SiteController {
     if (kind !== 'concert' && tgt && tgt.closest && tgt.closest('button')) return;
     const link = tgt && tgt.closest ? tgt.closest('a') : null;
     if (link) { if (kind === 'proj' || kind === 'resume') e.preventDefault(); else return; }
-    const r = e.currentTarget.getBoundingClientRect();
+    // Opened from something that isn't the card itself (a skill row): size the overlay like the real card.
+    this.focusSizeEl = e.sizeFrom || null;
+    const r = this.focusRect(e.currentTarget);
     if (e.stopPropagation) e.stopPropagation();
     this.focusEl = e.currentTarget;
     this.sfx('open');
@@ -495,6 +497,7 @@ export class SiteController {
     if (!cards.length) return;
     const idx = ((f.idx + d) % cards.length + cards.length) % cards.length;
     this.focusEl = cards[idx];
+    this.focusSizeEl = null;
     this.setState({ focus: Object.assign({}, f, { idx: idx }) });
   }
   expStep(d: any) {
@@ -504,16 +507,28 @@ export class SiteController {
     if (!cards.length) return;
     const idx = ((f.idx + d) % cards.length + cards.length) % cards.length;
     this.focusEl = cards[idx];
+    this.focusSizeEl = null;
     // Cards can differ in height on narrow screens, so size the overlay from the card being shown.
     const r = cards[idx].getBoundingClientRect();
     this.setState({ focus: Object.assign({}, f, { idx: idx, rect: { x: r.left, y: r.top, w: r.width, h: r.height } }) });
+  }
+  // Where the focus overlay zooms from/to: the element's box, or, with focusSizeEl set, a box the size of
+  // that element centered on this one (so a project opened from a skill row still looks like its iPod).
+  focusRect(el: any) {
+    const r = el.getBoundingClientRect();
+    const sz = this.focusSizeEl;
+    // Layout size (ignores the card's reveal/tilt transforms), scaled by the page zoom like client rects are.
+    const z = this.pageZoom || 1;
+    const w = sz && sz.offsetWidth ? sz.offsetWidth * z : 0; const h = sz && sz.offsetHeight ? sz.offsetHeight * z : 0;
+    if (!w || !h) return r;
+    return { left: r.left + r.width / 2 - w / 2, top: r.top + r.height / 2 - h / 2, width: w, height: h };
   }
   closeFocus() {
     const f = this.st().focus;
     if (!f || this.st().fPhase === 'closing') return;
     this.sfx('close');
     if (this.focusEl && this.focusEl.getBoundingClientRect) {
-      const r = this.focusEl.getBoundingClientRect();
+      const r = this.focusRect(this.focusEl);
       f.rect = { x: r.left, y: r.top, w: r.width, h: r.height };
     }
     this.setState({ focus: f, fPhase: 'closing' });

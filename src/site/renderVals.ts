@@ -209,7 +209,7 @@ export function renderVals(site: SiteController) {
     if (u.proj !== undefined) {
       const pd = projData[u.proj];
       return { title: pd.name, tag: 'Project', tagStyle: tagStyle('#FFB8DA', '#5C1236'), rowStyle: rowStyle, line: u.line, media: pd.media, isImage: !!pd.isImage, isVideo: !!pd.isVideo, isMono: false, mono: '', monoStyle: '',
-        open: (e: any) => site.openFocus('proj', u.proj, { currentTarget: e.currentTarget, target: null, stopPropagation: () => e.stopPropagation() }) };
+        open: (e: any) => site.openFocus('proj', u.proj, { currentTarget: e.currentTarget, target: null, stopPropagation: () => e.stopPropagation(), sizeFrom: document.querySelectorAll('#work .slab3d.proj')[u.proj] }) };
     }
     const ed = expData[u.exp];
     return { title: ed.title, tag: ed.tag, tagStyle: tagStyle(ed.pill, ed.fg), rowStyle: rowStyle, line: u.line, media: ed.media || '', isImage: !!ed.isImage, isVideo: false, isMono: !ed.isImage, isExperience: !!ed.isImage, mono: ed.mono,
