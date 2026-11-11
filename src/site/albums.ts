@@ -31,9 +31,11 @@ const ALBUMS: [number, string, string, string, string][] = [
   [0, 'introvert', 'Sometimes I Might Be Introvert', 'Little Simz', `Introvert ★ | Woman ☆ | Two Worlds Apart ♥ | I Love You, I Hate You ♥ | Little Q, Pt. 1 (Interlude) | Little Q, Pt. 2 | Gems (Interlude) | Speed | Standing Ovation ♥ | I See You | The Rapper That Came To Tea (Interlude) | Rollin Stone | Protect My Energy | Never Make Promises (Interlude) | Point and Kill ♥ | Fear No Man ♥ | The Garden (Interlude) | How Did You Get Here ♥ | Miss Understood ♥`]
 ];
 
+import { censor } from './censor';
+
 export type Album = { rank: number; title: string; artist: string; cover: string; songs: { name: string; fav: 0 | 1 | 2 | 3 }[] }; // fav: 1 favorite, 2 second favorite, 3 loved, 0 not picked
 
 export const albums: Album[] = ALBUMS.map(([rank, slug, title, artist, songs]) => ({
-  rank, title, artist, cover: '/assets/albums/' + slug + '.jpg',
-  songs: songs.split('|').map((t) => t.trim()).map((t) => ({ name: t.replace(/\s*[★☆♥]$/, ''), fav: t.endsWith('★') ? 1 : t.endsWith('☆') ? 2 : t.endsWith('♥') ? 3 : 0 }))
+  rank, title: censor(title), artist: censor(artist), cover: '/assets/albums/' + slug + '.jpg',
+  songs: songs.split('|').map((t) => t.trim()).map((t) => ({ name: censor(t.replace(/\s*[★☆♥]$/, '')), fav: t.endsWith('★') ? 1 : t.endsWith('☆') ? 2 : t.endsWith('♥') ? 3 : 0 }))
 }));

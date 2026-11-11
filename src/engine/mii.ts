@@ -153,7 +153,7 @@ export function initMii(site: SiteController) {
     const rAge = now - st.reactT;
     const react = !rm && st.react && rAge < (st.react === 'cheer' ? 2.2 : 1.9) ? st.react : null;
     if (!react) st.react = null;
-    const dancing = !rm && !react && !st.walking && !!site.st().np;
+    const dancing = !rm && !react && !st.walking && !!(site.st().np && site.st().np.playing);
     const hopLift = Math.sin(Math.PI * st.hop);
     let bob = rm ? 0 : hopLift * 9;
     if (dancing && now > st.nextNote) {

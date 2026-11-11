@@ -1,6 +1,7 @@
 import type { SiteController } from './controller';
 import { albums } from './albums';
 import { experience } from './experience';
+import { censor } from './censor';
 
 declare const window: any;
 declare const document: any;
@@ -273,7 +274,7 @@ export function renderVals(site: SiteController) {
     const on = i === receiptSel;
     return {
       num: String(i + 1).padStart(2, '0'),
-      name: item.name,
+      name: censor(item.name),
       meta: item.secondary,
       pick: () => { if (site.st().receiptSel !== i) site.setState({ receiptSel: i }); },
       style: "display: flex; align-items: center; gap: 7px; min-height: 26px; padding: 0 8px; font: 600 12px 'Helvetica Neue', Arial, sans-serif; " + (on ? 'color: #FFFFFF; background: linear-gradient(180deg, #6EC3F5 0%, #2A8BD8 100%)' : 'color: #23262B; background: #FFFFFF'),
@@ -354,8 +355,10 @@ export function renderVals(site: SiteController) {
     rcCenter: (e: any) => { if (isAlbums && !openAlbum) { e.preventDefault(); showAlbum(receiptSel, e); } },
     spotifyProfile: 'https://open.spotify.com/user/rudda_rudda',
     npShow: !!s.np,
-    npTitle: s.np ? s.np.title : '',
-    npArtist: s.np ? s.np.artist : '',
+    npLive: !!(s.np && s.np.playing),
+    npLabel: s.np && s.np.playing ? 'Currently listening to' : 'Last listened to',
+    npTitle: s.np ? censor(s.np.title) : '',
+    npArtist: s.np ? censor(s.np.artist) : '',
     npArt: s.np ? s.np.art : '',
     npUrl: s.np ? s.np.url : '',
     skillRows: skillRows,

@@ -430,7 +430,8 @@ export class SiteController {
       try {
         const response = await fetch('/api/now-playing', { cache: 'no-cache' });
         const np = response.ok ? await response.json() : null;
-        this.setState({ np: np && np.playing ? np : null });
+        // Playing now, or (when nothing is) the last track Daniel listened to.
+        this.setState({ np: np && np.title ? np : null });
       } catch (e) { this.setState({ np: null }); }
     };
     load();
