@@ -182,18 +182,56 @@ export class SiteController {
       const response = await fetch('/api/stickers');
       if (!response.ok) return;
       const data = await response.json();
-      if (Array.isArray(data)) this.setState({ gb: data.map((g) => ({ x: Number(g.x), y: Number(g.y), k: Number(g.k), r: Number(g.r), n: String(g.n || '') })) });
+      const mine = this.gbTokens();
+      if (Array.isArray(data)) this.setState({ gb: data.map((g) => ({ id: g.id, x: Number(g.x), y: Number(g.y), k: Number(g.k), r: Number(g.r), n: String(g.n || ''), mine: !!(g.id && mine[g.id]) })) });
     } catch (e) { /* local seed remains available if the API is unavailable */ }
   }
   gbAdd(x: any, y: any) {
     const inp = document.getElementById('gb-name');
     const name = inp ? inp.value.replace(/\s+/g, ' ').trim().slice(0, 40) : '';
     if (inp) inp.value = '';
-    const sticker = { x: x, y: y, k: this.st().gbSk || 0, r: Math.round(Math.random() * 30 - 15), n: name };
+    const sticker: any = { x: x, y: y, k: this.st().gbSk || 0, r: Math.round(Math.random() * 30 - 15), n: name };
     const list = (this.st().gb || this.gbSeed()).concat([sticker]).slice(-80);
     this.setState({ gb: list, gbStatus: 'Thanks for stopping by!', gbErr: false });
-    fetch('/api/stickers', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(sticker) }).catch(() => { /* keep the local sticker visible if saving is unavailable */ });
+    const body = JSON.stringify({ x: sticker.x, y: sticker.y, k: sticker.k, r: sticker.r, n: sticker.n });
+    // Once saved, the server hands back a token that lets this browser (and only it) remove the sticker.
+    const settle = (patch: any) => this.setState({ gb: (this.st().gb || []).map((g: any) => g === sticker ? Object.assign(sticker, patch) : g) });
+    fetch('/api/stickers', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: body })
+      .then((r) => r.ok ? r.json() : null)
+      .then((saved) => {
+        if (saved && saved.id && saved.token) { this.gbTokens({ [saved.id]: saved.token }); settle({ id: saved.id, mine: true }); }
+        else if (!saved) settle({ mine: true, local: true });
+      })
+      .catch(() => settle({ mine: true, local: true })); // not saved anywhere, so it can just be taken back off the board
     this.sfx('sign');
+  }
+  // Tokens for stickers this browser placed, by sticker id. Pass entries to add; null values remove.
+  gbTokens(patch?: Record<string, string | null>) {
+    let all: Record<string, string> = {};
+    try { all = JSON.parse(window.localStorage.getItem('dh-stickers') || '{}') || {}; } catch (e) { all = {}; }
+    if (patch) {
+      Object.keys(patch).forEach((id) => { if (patch[id]) all[id] = patch[id] as string; else delete all[id]; });
+      try { window.localStorage.setItem('dh-stickers', JSON.stringify(all)); } catch (e) { /* storage unavailable */ }
+    }
+    return all;
+  }
+  async gbRemove(sticker: any) {
+    const before = this.st().gb || [];
+    this.setState({ gb: before.filter((g: any) => g !== sticker), gbStatus: 'Sticker removed.', gbErr: false });
+    if (sticker.local || !sticker.id) return;
+    const token = this.gbTokens()[sticker.id];
+    try {
+      const r = await fetch('/api/stickers/' + encodeURIComponent(sticker.id), { method: 'DELETE', headers: { 'x-sticker-token': token || '' } });
+      if (r.ok || r.status === 403 || r.status === 404) this.gbTokens({ [sticker.id]: null });
+      if (r.ok || r.status === 404) return; // removed, or already gone
+      if (r.status === 403) sticker.mine = false; // the stored token doesn't match, so stop offering to remove it
+      throw new Error(String(r.status));
+    } catch (e) {
+      // Put it back where it was if the server didn't remove it.
+      const now = this.st().gb || [];
+      if (now.indexOf(sticker) === -1) this.setState({ gb: before.filter((g: any) => now.indexOf(g) !== -1 || g === sticker) });
+      this.setState({ gbStatus: "Couldn't remove that sticker. Try again in a bit.", gbErr: true });
+    }
   }
   // Scale the 1440x900 design up to fill bigger screens (never down); sets --z for the CSS zoom rules.
   fitZoom() {

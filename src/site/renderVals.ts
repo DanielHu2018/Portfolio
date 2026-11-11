@@ -309,6 +309,11 @@ export function renderVals(site: SiteController) {
       const D = site.gbStickerDefs()[g.k] || site.gbStickerDefs()[0];
       return {
         ch: D[0], name: g.n || '', hasNote: !!(g.n && g.n.trim()),
+        mine: !!g.mine,
+        removeLabel: 'Remove your ' + String(D[2]).toLowerCase() + ' sticker' + (g.n && g.n.trim() ? ' that says ' + g.n.trim() : ''),
+        // The board itself places a sticker on click and Enter, so keep these from reaching it.
+        remove: (e: any) => { e.stopPropagation(); site.gbRemove(g); },
+        removeKey: (e: any) => { e.stopPropagation(); },
         wrap: 'position: absolute; left: ' + g.x + '%; top: ' + g.y + '%; display: flex; flex-direction: column; align-items: center; gap: 4px; transform: translate(-50%, -32%); pointer-events: none',
         tag: 'display: block; max-width: 130px; text-align: center; overflow-wrap: anywhere; font-weight: 700; font-size: 11px; line-height: 1.3; color: #3C4046; background: #FFFFFF; border: 2px solid #D5DAE1; border-radius: 10px; padding: 3px 8px',
         style: 'position: relative; display: block; width: clamp(48px, 13vw, 66px); height: clamp(48px, 13vw, 66px); background: ' + site.stickerUri(g.k) + ' center / contain no-repeat; filter: drop-shadow(0 2px 0 rgba(60, 64, 70, 0.1)) drop-shadow(0 5px 6px rgba(60, 64, 70, 0.18)); transform: rotate(' + g.r + 'deg)'

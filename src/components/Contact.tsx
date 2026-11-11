@@ -51,7 +51,14 @@ export function Contact({ v }: { v: SiteVals }) {
               {v.gbList.map((g: any, i0: number) => (
                 <Fragment key={i0}>
                   <span className="gb-stk" style={parseStyle(g.wrap)}>
-                    <span aria-hidden="true" style={parseStyle(g.style)} />
+                    <span style={{ position: 'relative', display: 'block' }}>
+                      <span aria-hidden="true" style={parseStyle(g.style)} />
+                      {g.mine ? (
+                        <button type="button" className="gb-del" aria-label={g.removeLabel} title="Remove your sticker" onClick={g.remove} onKeyDown={g.removeKey}>
+                          <svg aria-hidden="true" viewBox="0 0 24 24" width="10" height="10"><path d="M6 6l12 12M18 6L6 18" stroke="#4A4F57" strokeWidth="3.2" strokeLinecap="round" /></svg>
+                        </button>
+                      ) : null}
+                    </span>
                     {g.hasNote ? (
                       <span style={parseStyle(g.tag)}>
                         {g.name}
