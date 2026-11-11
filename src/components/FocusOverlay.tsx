@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import type { SiteVals } from '../site/renderVals';
 import { parseStyle } from '../site/style';
+import { ReceiptScreen } from './ReceiptScreen';
 
 export function FocusOverlay({ v }: { v: SiteVals }) {
   return (
@@ -16,7 +17,7 @@ export function FocusOverlay({ v }: { v: SiteVals }) {
           {v.fIsPhoto ? (
             <div style={parseStyle(v.fCard)}>
               <div style={{ position: 'relative', background: '#FFFFFF', border: '3px solid #D5DAE1', borderRadius: '12px', padding: '22px 22px 0' }}>
-                <img src="/assets/photo_of_me.jpg" alt="Photo of Daniel" style={{ display: 'block', width: '100%', aspectRatio: '1 / 1', objectFit: 'cover', background: 'linear-gradient(180deg, #E9F8FE, #BDEBFB)', border: '2px solid #D5DAE1', borderRadius: '6px' }} />
+                <img src="/assets/web/photo_of_me.jpg" alt="Photo of Daniel" style={{ display: 'block', width: '100%', aspectRatio: '1 / 1', objectFit: 'cover', background: 'linear-gradient(180deg, #E9F8FE, #BDEBFB)', border: '2px solid #D5DAE1', borderRadius: '6px' }} />
                 <p style={{ margin: '18px 0 24px', fontFamily: '\'Permanent Marker\', cursive', fontSize: '32px', textAlign: 'center', color: '#3C4046' }}>
                   hi, I'm Daniel
                 </p>
@@ -74,7 +75,7 @@ export function FocusOverlay({ v }: { v: SiteVals }) {
                     ) : null}
                   </div>
                   {v.fp.isVideo ? (
-                    <video src={v.fp.media} aria-label={`${v.fp.name} demo video`} muted loop playsInline controls style={{ display: 'block', width: '100%', height: '150px', objectFit: 'cover', background: 'linear-gradient(180deg, #FFFFFF, #EEF1F5)', borderBottom: '1px solid #D5DAE1' }} />
+                    <video src={v.fp.media} aria-label={`${v.fp.name} demo video`} muted loop playsInline controls preload="metadata" style={{ display: 'block', width: '100%', height: '150px', objectFit: 'cover', background: 'linear-gradient(180deg, #FFFFFF, #EEF1F5)', borderBottom: '1px solid #D5DAE1' }} />
                   ) : null}
                   {v.fp.isImage ? (
                     <img src={v.fp.media} alt={`${v.fp.name} screenshot`} style={{ display: 'block', width: '100%', height: '150px', objectFit: 'cover', background: 'linear-gradient(180deg, #FFFFFF, #EEF1F5)', borderBottom: '1px solid #D5DAE1' }} />
@@ -136,41 +137,12 @@ export function FocusOverlay({ v }: { v: SiteVals }) {
                   </Fragment>
                 ))}
                 <div className="slab-layer slab-face" aria-hidden="true" />
-                <div style={{ width: '100%', boxSizing: 'border-box', border: '8px solid #23262B', borderRadius: '12px', background: '#23262B', overflow: 'hidden' }}>
-                  <div style={{ background: 'linear-gradient(180deg, #FAFBFC, #E7EAEE)', borderBottom: '1px solid #B9BFC8', padding: '3px 8px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', font: '700 12px \'Helvetica Neue\', Arial, sans-serif', color: '#23262B' }}>
-                    <span>
-                      {v.receiptTitle}
-                    </span>
-                    <span style={{ fontWeight: '600', fontSize: '11px', color: '#4A4F57' }}>
-                      {v.receiptRange}
-                    </span>
-                  </div>
-                  <div role="list" aria-label={`Daniel's ${v.receiptTitle}, last ${v.receiptRange}`} style={{ height: '260px', overflow: 'hidden', background: '#FFFFFF', display: 'flex', flexDirection: 'column' }}>
-                    {v.receiptRows.map((m: any, i0: number) => (
-                      <Fragment key={i0}>
-                        <div role="listitem" onPointerEnter={m.pick} style={parseStyle(m.style)}>
-                          <span style={parseStyle(m.numStyle)}>
-                            {m.num}
-                          </span>
-                          <span style={{ flex: '1', minWidth: '0', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                            {m.name}
-                          </span>
-                          <span style={parseStyle(m.metaStyle)}>
-                            {m.meta}
-                          </span>
-                          <span aria-hidden="true">
-                            ›
-                          </span>
-                        </div>
-                      </Fragment>
-                    ))}
-                  </div>
-                </div>
+                <ReceiptScreen v={v} />
                 <div style={{ position: 'relative', width: '160px', height: '160px', borderRadius: '50%', background: 'linear-gradient(180deg, #FFFFFF, #EDF0F4)', border: '3px solid #D5DAE1', boxShadow: 'inset 0 2px 6px rgba(60, 64, 70, 0.08)' }}>
-                  <button type="button" aria-label="Menu: back to top" onClick={v.menu} style={{ position: 'absolute', top: '2px', left: '50%', transform: 'translateX(-50%)', minWidth: '60px', minHeight: '44px', border: '0', background: 'transparent', font: '800 12px \'Helvetica Neue\', Arial, sans-serif', letterSpacing: '0.06em', color: '#7E848D', cursor: 'pointer' }}>
+                  <button type="button" aria-label={v.rcMenuLabel} onClick={v.rcMenu} style={{ position: 'absolute', top: '2px', left: '50%', transform: 'translateX(-50%)', minWidth: '60px', minHeight: '44px', border: '0', background: 'transparent', font: '800 12px \'Helvetica Neue\', Arial, sans-serif', letterSpacing: '0.06em', color: '#7E848D', cursor: 'pointer' }}>
                     MENU
                   </button>
-                  <button type="button" aria-label="Previous receipt" onClick={v.trackPrev} style={{ position: 'absolute', left: '0', top: '50%', transform: 'translateY(-50%)', width: '44px', height: '44px', border: '0', background: 'transparent', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <button type="button" aria-label={v.rcPrevLabel} onClick={v.trackPrev} style={{ position: 'absolute', left: '0', top: '50%', transform: 'translateY(-50%)', width: '44px', height: '44px', border: '0', background: 'transparent', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
                     <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
                       <path d="M6 6v12M18 6l-9 6 9 6z" fill="#7E848D" stroke="#7E848D" strokeWidth="2" strokeLinejoin="round" />
                     </svg>
@@ -186,7 +158,7 @@ export function FocusOverlay({ v }: { v: SiteVals }) {
                       <path d="M15 6v12M19 6v12" stroke="#7E848D" strokeWidth="2.5" />
                     </svg>
                   </span>
-                  <a className="proj-cta sp-btn" href={v.spotifyProfile} target="_blank" rel="noopener noreferrer" aria-label="Daniel on Spotify" style={{ position: 'absolute', left: '50%', top: '50%', width: '62px', height: '62px', margin: '-31px 0 0 -31px', boxSizing: 'border-box', borderRadius: '50%', background: 'linear-gradient(180deg, #F4F6F9, #DDE1E7)', border: '3px solid #D5DAE1', boxShadow: 'inset 0 2px 0 #FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <a className="proj-cta sp-btn" href={v.spotifyProfile} onClick={v.rcCenter} target="_blank" rel="noopener noreferrer" aria-label={v.rcCenterLabel} style={{ position: 'absolute', left: '50%', top: '50%', width: '62px', height: '62px', margin: '-31px 0 0 -31px', boxSizing: 'border-box', borderRadius: '50%', background: 'linear-gradient(180deg, #F4F6F9, #DDE1E7)', border: '3px solid #D5DAE1', boxShadow: 'inset 0 2px 0 #FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#4A4F57" strokeLinecap="round">
                       <path d="M3.6 8.7c5.4-1.8 11.6-1.3 16.6 1.4" strokeWidth="2.7" />
                       <path d="M5 12.7c4.5-1.4 9.6-1 13.6 1.2" strokeWidth="2.3" />

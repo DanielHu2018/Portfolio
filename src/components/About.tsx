@@ -41,7 +41,7 @@ export function About({ v }: { v: SiteVals }) {
                     <div className="slab-layer" aria-hidden="true" style={parseStyle(L.style)} />
                   </Fragment>
                 ))}
-                <img src="/assets/photo_of_me.jpg" alt="Photo of Daniel" style={{ display: 'block', width: '100%', aspectRatio: '1 / 1', objectFit: 'cover', background: 'linear-gradient(180deg, #E9F8FE, #BDEBFB)', border: '2px solid #D5DAE1', borderRadius: '4px' }} />
+                <img src="/assets/web/photo_of_me.jpg" alt="Photo of Daniel" style={{ display: 'block', width: '100%', aspectRatio: '1 / 1', objectFit: 'cover', background: 'linear-gradient(180deg, #E9F8FE, #BDEBFB)', border: '2px solid #D5DAE1', borderRadius: '4px' }} />
                 <p style={{ margin: '14px 0 18px', fontFamily: '\'Permanent Marker\', cursive', fontSize: '24px', textAlign: 'center', color: '#3C4046' }}>
                   hi, I'm Daniel
                 </p>

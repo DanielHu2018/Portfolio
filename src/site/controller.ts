@@ -22,6 +22,8 @@ export type SiteState = {
   receipts?: any;
   receiptView?: number;
   receiptSel?: number;
+  album?: number | null;
+  songSel?: number;
   skillSel?: number;
   flow?: number;
   navOpen?: boolean;

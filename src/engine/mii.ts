@@ -16,12 +16,12 @@ export function initMii(site: SiteController) {
   const CW = 240; const CH = 240;
   const dpr = Math.min(3, (window.devicePixelRatio || 1) * (site.pageZoom || 1));
   cv.width = CW * dpr; cv.height = CH * dpr;
-  // Sprites live in public/assets/avatar: 512px frames (the PNGs are the same framing at 1194px).
+  // Sprites: PNGs in public/assets/avatar, animations as lossless WebP in public/assets/web/avatar (scripts/optimize-images.py); 512px frames (the PNGs are the same framing at 1194px).
   // fb is the feet baseline in 512px frame units, so each animation stands on the same spot.
-  const BASE = '/assets/avatar/';
-  const SPR: any = { still: ['avatar_idle.png', 481], blink: ['avatar_blink.png', 481], idle: ['avatar_idle.gif', 481], wave: ['avatar_waving.gif', 481], dance: ['avatar_dancing.gif', 496], cheer: ['avatar_celebration.gif', 493] };
+  const BASE = '/assets/';
+  const SPR: any = { still: ['avatar/avatar_idle.png', 481], blink: ['avatar/avatar_blink.png', 481], idle: ['web/avatar/avatar_idle.webp', 481], wave: ['web/avatar/avatar_waving.webp', 481], dance: ['web/avatar/avatar_dancing.webp', 496], cheer: ['web/avatar/avatar_celebration.webp', 493] };
   const DIRS: any = [[0, '12'], [30, '1'], [60, '2'], [75, '230'], [90, '3'], [105, '330'], [120, '4'], [150, '5'], [180, '6'], [210, '7'], [240, '8'], [255, '830'], [270, '9'], [285, '930'], [300, '10'], [330, '11']];
-  DIRS.forEach((d: any) => { SPR['walk' + d[1]] = ['avatar_walking_' + d[1] + 'oclock.gif', 461]; });
+  DIRS.forEach((d: any) => { SPR['walk' + d[1]] = ['web/avatar/avatar_walking_' + d[1] + 'oclock.webp', 461]; });
   const imgs: any = {};
   const load = (k: any) => { if (!imgs[k]) { const im = new Image(); im.decoding = 'async'; im.src = BASE + SPR[k][0]; imgs[k] = im; } return imgs[k]; };
   ['still', 'blink', 'idle', 'wave', 'cheer'].forEach(load);

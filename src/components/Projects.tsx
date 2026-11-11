@@ -94,7 +94,7 @@ export function Projects({ v }: { v: SiteVals }) {
                     Sierra
                   </span>
                 </div>
-                <img src="/assets/sierra.png" alt="Sierra screenshot" style={{ display: 'block', width: '100%', height: '150px', objectFit: 'cover', background: 'linear-gradient(180deg, #FFFFFF, #EEF1F5)', borderBottom: '1px solid #D5DAE1' }} />
+                <img src="/assets/web/sierra.jpg" alt="Sierra screenshot" style={{ display: 'block', width: '100%', height: '150px', objectFit: 'cover', background: 'linear-gradient(180deg, #FFFFFF, #EEF1F5)', borderBottom: '1px solid #D5DAE1' }} />
                 <div style={{ background: '#FFFFFF', padding: '12px 12px 14px', display: 'flex', flexDirection: 'column', gap: '6px', fontFamily: '\'Helvetica Neue\', Arial, sans-serif', color: '#23262B' }}>
                   <h3 style={{ margin: '0', font: '800 24px \'M PLUS Rounded 1c\', sans-serif', color: '#3C4046' }}>
                     Sierra
@@ -161,7 +161,7 @@ export function Projects({ v }: { v: SiteVals }) {
                     Disco
                   </span>
                 </div>
-                <video src="/assets/disco-demo.mp4" aria-label="Disco demo video" muted loop playsInline controls style={{ display: 'block', width: '100%', height: '150px', objectFit: 'cover', background: 'linear-gradient(180deg, #FFFFFF, #EEF1F5)', borderBottom: '1px solid #D5DAE1' }} />
+                <video src="/assets/disco-demo.mp4" aria-label="Disco demo video" muted loop playsInline controls preload="metadata" style={{ display: 'block', width: '100%', height: '150px', objectFit: 'cover', background: 'linear-gradient(180deg, #FFFFFF, #EEF1F5)', borderBottom: '1px solid #D5DAE1' }} />
                 <div style={{ background: '#FFFFFF', padding: '12px 12px 14px', display: 'flex', flexDirection: 'column', gap: '6px', fontFamily: '\'Helvetica Neue\', Arial, sans-serif', color: '#23262B' }}>
                   <h3 style={{ margin: '0', font: '800 24px \'M PLUS Rounded 1c\', sans-serif', color: '#3C4046' }}>
                     Disco

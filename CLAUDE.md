@@ -26,6 +26,8 @@ Daniel asks for a change.
   `stickers.js` + `stickers/[id].js` (guestbook, see `STICKERS.md`), `resume.js`.
 - `scripts/` + `.github/workflows/update-receipts.yml`: every 6 hours, collect Spotify listening
   history into `data/spotify-history.json` and regenerate `public/assets/receipts/`.
+- `scripts/optimize-images.py`: makes the web-sized photos in `public/assets/web/` and the WebP avatar
+  sprites the site loads (originals stay in `public/assets/`). Re-run after adding a photo.
 
 Canvases are found by id (`stf-*`, `hb-*`, `mii`, `boot-mii`, `hb-focus`), so keep those ids. The
 avatar sprite is the `.mii-sprite` img inside `.mii-wrap`. Inline styles are matched by string in
@@ -41,7 +43,7 @@ places (`initCursor` looks for `[style*="cursor: pointer"]`), so keep them inlin
 | Wii-style hand cursor | `engine/cursor.ts`, `components/WiiCursor.tsx` |
 | iPod navigator (draggable, click wheel scrolls between sections) | `components/IpodNav.tsx`, `go(i)` in the controller |
 | "Currently listening to" badge | `components/NowPlaying.tsx`, `watchNowPlaying()` in the controller |
-| Spotify receipts iPod (wheel arrows switch views) | `components/OffTheClock.tsx`, `loadReceipts()` in the controller |
+| Spotify receipts iPod (wheel arrows switch Top Tracks / Top Artists / Favorite Albums; an album opens its favorite songs) | `components/ReceiptScreen.tsx` (screen, shared by `OffTheClock.tsx` and `FocusOverlay.tsx`), `site/albums.ts` (album list), `loadReceipts()` in the controller |
 | Featured project iPods (3D tilt, VIEW links) | `components/Projects.tsx`, `projMove` |
 | Concert Cover Flow (endless loop, reflections) | `components/OffTheClock.tsx`, `.photo3d` |
 | Hobby 3D models (guitar, pencil, skis, volleyball) | `engine/hobbies.ts` |

@@ -1,6 +1,8 @@
 import type { SiteController } from './controller';
+import { albums } from './albums';
 
 declare const window: any;
+declare const document: any;
 
 export function renderVals(site: SiteController) {
   const accent = site.props.accent ?? '#34BEED';
@@ -13,7 +15,7 @@ export function renderVals(site: SiteController) {
   const bootState = s.boot || site._bootInit;
   const projData = [
     { name: 'CLARA', href: 'https://github.com/DanielHu2018/CLARA', media: '/assets/clara.jpeg', isVideo: false, isImage: true, hasBadge: true, badge: '1st place', badgeStyle: 'color: #4A3700; background: #FFD23F; border-radius: 999px; padding: 0 9px', sub: '1st place · IBM x OSU Hackathon', desc: 'A decision-support agent that turns live global events into portfolio risk signals, stress-tests positions, and recommends optimized hedges before markets move.', chips: [{ ch: 'IBM Granite' }, { ch: 'Black-Scholes' }] },
-    { name: 'Sierra', href: 'https://github.com/DanielHu2018/Sierra', media: '/assets/sierra.png', isVideo: false, isImage: true, hasBadge: false, badge: '', badgeStyle: '', sub: 'AI platform for transmission planning', desc: 'Routes transmission lines with multi-objective pathfinding and answers regulatory questions with RAG.', chips: [{ ch: 'TypeScript' }, { ch: 'React' }, { ch: 'Node.js' }, { ch: 'Claude API' }] },
+    { name: 'Sierra', href: 'https://github.com/DanielHu2018/Sierra', media: '/assets/web/sierra.jpg', isVideo: false, isImage: true, hasBadge: false, badge: '', badgeStyle: '', sub: 'AI platform for transmission planning', desc: 'Routes transmission lines with multi-objective pathfinding and answers regulatory questions with RAG.', chips: [{ ch: 'TypeScript' }, { ch: 'React' }, { ch: 'Node.js' }, { ch: 'Claude API' }] },
     { name: 'Disco', href: 'https://github.com/ricky-he2006/hackio', media: '/assets/disco-demo.mp4', isVideo: true, isImage: false, hasBadge: false, badge: '', badgeStyle: '', sub: 'Multi-agent social planning platform', desc: 'A multi-agent social planning system that combines friend-vouched recommendations with agent-to-agent negotiation to turn a natural-language idea into an approved group plan that works for everyone.', chips: [{ ch: 'Multi-agent systems' }, { ch: 'Friend-powered recommendations' }] }
   ];
   const hobData: any = {
@@ -23,16 +25,16 @@ export function renderVals(site: SiteController) {
     'hb-volley': { title: 'Volleyball', label: '3D model of a volleyball', blurb: 'When I first started playing volleyball, I was incredibly bad, but I stuck with it and gradually got a lot better. I typically play 2 or 3 times a week, both indoor and sand. I would definitely say I prefer indoor over sand, but sand is still really fun. Right now, my goal is to learn how to play in a rotation before indoor intramural starts.' }
   };
   const concertData = [
-    { artist: 'Baby Keem', date: 'June 10, 2026', city: 'Columbus', src: '/assets/Baby_Keem_06102026_Columbus.jpeg' },
-    { artist: 'Glaive', date: 'October 4, 2026', city: 'Columbus', src: '/assets/Glaive_10042026_Columbus.JPG' },
-    { artist: 'Jane Remover', date: 'September 18, 2026', city: 'Columbus', src: '/assets/Jane_Remover_09182026_Columbus.JPEG' },
-    { artist: 'JPEGMAFIA', date: 'September 20, 2024', city: 'Columbus', src: '/assets/jpegmafia_9202024_Columbus.JPEG' },
-    { artist: 'Kid Cudi', date: 'September 17, 2022', city: 'Cleveland', src: '/assets/Kid_Cudi_09172022_Cleveland.JPG' },
-    { artist: 'Ninajirachi', date: 'September 22, 2026', city: 'Columbus', src: '/assets/Ninajirachi_099222026_Columbus.JPG' },
-    { artist: 'Slayr', date: 'September 5, 2026', city: 'Columbus', src: '/assets/slayr_09052026_Columbus.jpg' },
-    { artist: 'The Strokes', date: 'July 14, 2026', city: 'Cincinnati', src: '/assets/The_Strokes_07142026_Cincinnati.jpg' },
-    { artist: 'Tiffany Day', date: 'October 4, 2026', city: 'Columbus', src: '/assets/Tiffany_Day_10042026_Columbus.JPEG' },
-    { artist: 'Wynton Marsalis', date: 'October 6, 2026', city: 'Columbus', src: '/assets/Wynton_Marsalis_10062026_Columbus.jpeg' }
+    { artist: 'Baby Keem', date: 'June 10, 2026', city: 'Columbus', src: '/assets/web/Baby_Keem_06102026_Columbus.jpg' },
+    { artist: 'Glaive', date: 'October 4, 2026', city: 'Columbus', src: '/assets/web/Glaive_10042026_Columbus.jpg' },
+    { artist: 'Jane Remover', date: 'September 18, 2026', city: 'Columbus', src: '/assets/web/Jane_Remover_09182026_Columbus.jpg' },
+    { artist: 'JPEGMAFIA', date: 'September 20, 2024', city: 'Columbus', src: '/assets/web/jpegmafia_9202024_Columbus.jpg' },
+    { artist: 'Kid Cudi', date: 'September 17, 2022', city: 'Cleveland', src: '/assets/web/Kid_Cudi_09172022_Cleveland.jpg' },
+    { artist: 'Ninajirachi', date: 'September 22, 2026', city: 'Columbus', src: '/assets/web/Ninajirachi_099222026_Columbus.jpg' },
+    { artist: 'Slayr', date: 'September 5, 2026', city: 'Columbus', src: '/assets/web/slayr_09052026_Columbus.jpg' },
+    { artist: 'The Strokes', date: 'July 14, 2026', city: 'Cincinnati', src: '/assets/web/The_Strokes_07142026_Cincinnati.jpg' },
+    { artist: 'Tiffany Day', date: 'October 4, 2026', city: 'Columbus', src: '/assets/web/Tiffany_Day_10042026_Columbus.jpg' },
+    { artist: 'Wynton Marsalis', date: 'October 6, 2026', city: 'Columbus', src: '/assets/web/Wynton_Marsalis_10062026_Columbus.jpg' }
   ];
   const f = s.focus;
   const ph = s.fPhase;
@@ -195,14 +197,56 @@ export function renderVals(site: SiteController) {
     { type: 'tracks', range: '6m' },
     { type: 'artists', range: '1m' },
     { type: 'artists', range: '6m' },
-    { type: 'genres', range: '1m' },
-    { type: 'genres', range: '6m' }
+    { type: 'albums', range: '' }
   ];
   const receiptIndex = ((s.receiptView || 0) % receiptViews.length + receiptViews.length) % receiptViews.length;
   const receiptView = receiptViews[receiptIndex];
-  const receiptItems = (s.receipts && s.receipts.views && s.receipts.views[receiptView.type + '-' + receiptView.range]) || [{ name: s.receipts ? 'Nothing here yet' : 'Loading…', secondary: '' }];
+  const isAlbums = receiptView.type === 'albums';
+  const openAlbum = isAlbums && s.album != null ? albums[s.album] : null;
+  const receiptItems = isAlbums ? albums : (s.receipts && s.receipts.views && s.receipts.views[receiptView.type + '-' + receiptView.range]) || [{ name: s.receipts ? 'Nothing here yet' : 'Loading…', secondary: '' }];
   const receiptSel = Math.min(s.receiptSel || 0, receiptItems.length - 1);
-  const receiptRows = receiptItems.map((item: any, i: any) => {
+  // Opening an album remembers the list's scroll position; going back restores it.
+  const showAlbum = (i: number, e: any) => {
+    const host = e && e.currentTarget && e.currentTarget.closest ? e.currentTarget.closest('.slab3d') : null;
+    const list = host ? host.querySelector('.rc-scroll') : null;
+    site.rcScroll = list ? list.scrollTop : 0;
+    site.setState({ album: i, receiptSel: i, songSel: 0 });
+  };
+  const closeAlbum = () => {
+    site.setState({ album: null });
+    const top = site.rcScroll || 0;
+    requestAnimationFrame(() => document.querySelectorAll('.rc-scroll').forEach((el: any) => { el.scrollTop = top; }));
+  };
+  const rowFont = "font: 600 12px 'Helvetica Neue', Arial, sans-serif; ";
+  const rowColors = (on: boolean) => on ? 'color: #FFFFFF; background: linear-gradient(180deg, #6EC3F5 0%, #2A8BD8 100%)' : 'color: #23262B; background: #FFFFFF';
+  const albumRows = isAlbums ? albums.map((al, i) => {
+    const on = i === receiptSel;
+    return {
+      cover: al.cover,
+      title: al.title,
+      artist: al.artist,
+      label: al.title + ' by ' + al.artist,
+      open: (e: any) => showAlbum(i, e),
+      pick: () => { if (site.st().receiptSel !== i) site.setState({ receiptSel: i }); },
+      style: 'display: flex; align-items: center; gap: 8px; width: 100%; min-height: 36px; padding: 3px 8px; box-sizing: border-box; border: 0; border-radius: 0; cursor: pointer; ' + rowFont + rowColors(on),
+      artistStyle: 'overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; font-size: 10px; color: ' + (on ? 'rgba(255, 255, 255, 0.9)' : '#5A5F67')
+    };
+  }) : [];
+  const songSel = openAlbum ? Math.min(s.songSel || 0, openAlbum.songs.length - 1) : 0;
+  const songRows = openAlbum ? openAlbum.songs.map((sg, i) => {
+    const on = i === songSel;
+    return {
+      num: String(i + 1).padStart(2, '0'),
+      name: sg.name,
+      star: sg.fav ? '★' : '',
+      label: sg.name + (sg.fav === 1 ? ', favorite' : sg.fav === 2 ? ', second favorite' : ''),
+      pick: () => { if (site.st().songSel !== i) site.setState({ songSel: i }); },
+      style: 'display: flex; align-items: center; gap: 7px; min-height: 26px; padding: 0 8px; ' + rowFont + rowColors(on),
+      numStyle: 'flex-shrink: 0; width: 15px; font-weight: 700; font-size: 10px; color: ' + (on ? 'rgba(255, 255, 255, 0.85)' : '#7E848D'),
+      starStyle: 'flex-shrink: 0; font-size: 12px; color: ' + (sg.fav === 1 ? (on ? '#FFE58A' : '#E8A800') : (on ? '#FFFFFF' : '#A9B0BA'))
+    };
+  }) : [];
+  const receiptRows = (isAlbums ? [] : receiptItems).map((item: any, i: any) => {
     const on = i === receiptSel;
     return {
       num: String(i + 1).padStart(2, '0'),
@@ -267,9 +311,19 @@ export function renderVals(site: SiteController) {
       };
     }),
     ...focusVals,
-    receiptTitle: receiptView.type === 'artists' ? 'Top Artists' : receiptView.type === 'genres' ? 'Top Genres' : 'Top Tracks',
-    receiptRange: receiptView.range === '6m' ? '6 months' : '4 weeks',
+    receiptTitle: openAlbum ? openAlbum.title : isAlbums ? 'Favorite Albums' : receiptView.type === 'artists' ? 'Top Artists' : 'Top Tracks',
+    receiptRange: openAlbum ? (s.album! + 1) + ' of ' + albums.length : isAlbums ? albums.length + ' albums' : receiptView.range === '6m' ? '6 months' : '4 weeks',
     receiptRows: receiptRows,
+    rcRanked: !isAlbums,
+    rcAlbums: isAlbums && !openAlbum,
+    albumRows: albumRows,
+    songRows: songRows,
+    alb: openAlbum ? { title: openAlbum.title, artist: openAlbum.artist, cover: openAlbum.cover } : null,
+    rcPrevLabel: openAlbum ? 'Previous: back to albums' : 'Previous receipt',
+    rcMenuLabel: openAlbum ? 'Menu: back to albums' : 'Menu: back to top',
+    rcMenu: () => { if (site.st().album != null) closeAlbum(); else { site.setState({ receiptView: 0, receiptSel: 0, album: null }); site.go(0); } },
+    rcCenterLabel: isAlbums && !openAlbum ? 'Open ' + albums[receiptSel].title : 'Daniel on Spotify',
+    rcCenter: (e: any) => { if (isAlbums && !openAlbum) { e.preventDefault(); showAlbum(receiptSel, e); } },
     spotifyProfile: 'https://open.spotify.com/user/rudda_rudda',
     npShow: !!s.np,
     npTitle: s.np ? s.np.title : '',
@@ -282,8 +336,8 @@ export function renderVals(site: SiteController) {
     skillUses: skillUses,
     skillPrev: () => site.setState({ skillSel: skillSel - 1 }),
     skillNext: () => site.setState({ skillSel: skillSel + 1 }),
-    trackPrev: () => site.setState({ receiptView: receiptIndex - 1, receiptSel: 0 }),
-    trackNext: () => site.setState({ receiptView: receiptIndex + 1, receiptSel: 0 }),
+    trackPrev: () => { if (openAlbum) closeAlbum(); else site.setState({ receiptView: receiptIndex - 1, receiptSel: 0, album: null }); },
+    trackNext: () => site.setState({ receiptView: receiptIndex + 1, receiptSel: 0, album: null }),
     flowPrev: () => site.setState({ flow: center - 1 }),
     flowNext: () => site.setState({ flow: center + 1 }),
     flowCurrent: flowCurrent,
@@ -303,7 +357,7 @@ export function renderVals(site: SiteController) {
     dragStart: (e: any) => site.dragStart(e),
     resetPos: (e: any) => site.resetPos(e),
     anim: !s.rm,
-    menu: () => { site.setState({ receiptView: 0, receiptSel: 0 }); site.go(0); },
+    menu: () => { site.setState({ receiptView: 0, receiptSel: 0, album: null }); site.go(0); },
     prev: () => site.go(sel - 1),
     next: () => site.go(sel + 1),
     center: () => site.go(sel),

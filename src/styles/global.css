@@ -9,6 +9,7 @@ a{color:#1677A8}a:hover{color:#0E5A82}
 @keyframes noteHop{from{transform:translateY(0)}to{transform:translateY(-9px)}}
 @keyframes noteSpin{from{transform:rotateY(0deg)}to{transform:rotateY(360deg)}}
 @media (prefers-reduced-motion: reduce){.sway,.drift,.hop{animation:none}}
+@supports not selector(::-webkit-scrollbar){.rc-scroll{scrollbar-width:thin;scrollbar-color:#8E959F #E7EAEE}}.rc-scroll::-webkit-scrollbar{width:7px}.rc-scroll::-webkit-scrollbar-track{background:#E7EAEE;border-left:1px solid #D5DAE1}.rc-scroll::-webkit-scrollbar-thumb{background:linear-gradient(90deg,#A9B0BA,#7E848D);border-radius:4px}
 html{scroll-behavior:smooth}
 html[data-wii],html[data-wii] *{cursor:none !important}
 .rip{position:fixed;left:0;top:0;width:0;height:0;z-index:9998;pointer-events:none}
