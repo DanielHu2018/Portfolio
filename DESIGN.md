@@ -122,11 +122,11 @@ Clicking any hobby model opens it in focus with a one-sentence blurb in Daniel's
 
 ## Signature elements
 
-These are built and working in the mockup; the backlog at the end lists what could come next.
+These are built and live on the site; the backlog at the end lists what could come next.
 
 **Built**
 
-1. **Avatar.** A Mii-style figure of Daniel (dark hair, glasses, headphones, green outfit, a leaf sprouting from his head), played from sprite animations in `public/assets/avatar/`: idle, waving, dancing, and walking in 16 screen directions. `avatar_idle.png` / `avatar_blink.png` are hi-res stills for the boot logo and reduced motion.
+1. **Avatar.** A Mii-style figure of Daniel (dark hair, glasses, headphones, green outfit, a leaf sprouting from his head), played from sprite animations: idle, waving, dancing, and walking in 16 screen directions, served as lossless animated WebP from `public/assets/web/avatar/` (the source GIFs are in `assets-src/avatar/`). `public/assets/avatar/avatar_idle.png` / `avatar_blink.png` are hi-res stills for the boot logo and reduced motion.
     - On Home it sits in a circle portrait; it also appears on the boot screen.
     - Click anywhere and it shrinks to an isometric view, walks there with a ripple at the target, then walks back and grows into the portrait.
     - Reactions: waves when you hover the name, cheers beside a project you open (and idles there until you close it), dances with floating notes while music plays.
@@ -135,11 +135,13 @@ These are built and working in the mockup; the backlog at the end lists what cou
 4. **Project iPods.** Each project is a 3D iPod you can see the sides of; it tilts toward the cursor and springs back. The screen shows the project; VIEW opens it.
 5. **Concert Cover Flow.** Photo cards in an endless loop with solid mirrored reflections. iPod-style skip buttons or a drag spin the carousel; cards tilt on hover and glide back.
 6. **Hobby models.** Guitar, pencil, skis and volleyball idle-spin on their own; click one to focus it with its blurb.
-7. **Focus mode.** Clicking the photo of Daniel, a project iPod, a concert photo, the Spotify iPod or a hobby model flies it to the center over a dimmed page; Esc, the X or a click outside closes it.
+7. **Focus mode.** Clicking the photo of Daniel, a project iPod, an experience card, a concert photo, the Spotify iPod or a hobby model flies it to the center over a dimmed page; Esc, the X or a click outside closes it. Experience cards cycle with prev/next buttons or the arrow keys, and the project and experience rows under the Skills section's "Where I've used it" open the same focus views.
 8. **Mini player.** A small bar on every page with track, progress, skip back, play or pause and skip forward, kept in sync with the navigator and the Spotify iPod.
 9. **Wii-style cursor.** An original white pointing-hand cursor that tilts as it moves, grows over clickable things and presses on click. Mouse only.
 10. **Sound effects.** Soft ticks on hover, blips on click, a swipe on skip, chimes for focus open and close, a startup chime and a sticker jingle. All synthesized in the browser; a speaker button in the mini player mutes them and is remembered.
-11. **Sticker guestbook.** "Leave a sticker :)": pick one of 8 die-cut stickers (music note, star, heart, flower, snowflake, sun, double note, sparkle), add an optional note ("Say hi!", up to 40 characters), then tap the board to stick it. Stickers land tilted with a pop; notes show as small tags underneath.
+11. **Experience cards.** The "Where I've worked" cards tilt toward the cursor like the project iPods, each with a dotted shadow in its own color.
+12. **Spotify iPod.** Top Tracks and Top Artists (last 4 weeks and 6 months, refreshed every 6 hours from Daniel's listening history) and Favorite Albums: a scrolling list of album covers; picking one shows its cover and full tracklist, with Daniel's picks hearted and his favorite and second favorite starred. Slurs and strong profanity in titles are masked.
+13. **Sticker guestbook.** "Leave a sticker :)": pick one of 8 die-cut stickers (music note, star, heart, flower, snowflake, sun, double note, sparkle), add an optional note ("Say hi!", up to 40 characters), then tap the board to stick it. Stickers land tilted with a pop; notes show as small tags underneath. Visitors can remove stickers they placed (an × shows on those, in the browser that placed them); see `STICKERS.md`.
 
 **Backlog (ideas, not built)**
 
@@ -151,21 +153,18 @@ These are built and working in the mockup; the backlog at the end lists what cou
 
 ## Tech stack
 
-Recommendation: port the mockup to Vite + React + TypeScript and host it statically. The mockup already runs on a small React-based runtime, so a React port is the shortest path to a pixel-identical site, and nothing in it needs a 3D library.
+The original single-file mockup was ported to Vite + React + TypeScript (the mockup itself was removed afterwards) and is hosted on Vercel at dwho.dev. Nothing needs a 3D library.
 
-| Layer | Mockup today | Production choice |
-| --- | --- | --- |
-| Page | One HTML file with a template and a component class | Vite + React + TypeScript, one component per section |
-| 3D (hobby models, staffs) | Hand-written software 3D on Canvas 2D: flat shading, painter's sort, glossy spheres and tubes | Keep the same code as plain modules called from effects; no Three.js needed |
-| iPods, cards, Cover Flow | CSS 3D transforms with stacked edge layers | Same CSS, moved into component styles |
-| Sound | Web Audio oscillators, no files | Same code |
-| Stickers | SVG built in code, used as images | Same code |
-| Guestbook storage | In memory only (resets on reload) | Serverless function + small database (for example Cloudflare D1 or Supabase), with rate limiting and a way to remove stickers |
-| Music | Simulated playlist; Spotify embed placeholder | Spotify playlist embed; mini player shows the playlist's tracks |
-| Photos | Placeholders | AVIF/WebP, resized and lazy-loaded |
-| Hosting | Claude artifact | Vercel at dwho.dev |
-
-The handoff package (below) includes the mockup files, so the port can be compared side by side as it is built.
+| Layer | As built |
+| --- | --- |
+| Page | Vite + React + TypeScript, one component per section (`src/components/`), state in `src/site/controller.ts` |
+| 3D (hobby models, staffs) | Hand-written software 3D on Canvas 2D (`src/engine/`): flat shading, painter's sort, glossy spheres and tubes |
+| iPods, cards, Cover Flow | CSS 3D transforms with stacked edge layers |
+| Sound | Web Audio oscillators, no files |
+| Stickers | SVG built in code; stored in Supabase through Vercel functions (`api/stickers*`) |
+| Music | Live "currently / last listened to" badge from Spotify (`api/now-playing.js`); Top Tracks / Artists from a GitHub Actions job every 6 hours |
+| Photos | Web-sized JPEGs and WebP sprites generated by `scripts/optimize-images.py` |
+| Hosting | Vercel at dwho.dev, with static assets cached (see `vercel.json`) and Vercel Web Analytics |
 
 ## Performance and accessibility
 
@@ -178,10 +177,11 @@ The toy-like 3D only impresses if it stays smooth on a recruiter's mid-range lap
 | Lighthouse | 90+ on Performance, Accessibility, Best Practices, SEO |
 | Cumulative Layout Shift | under 0.05 |
 
-**Performance tactics (in the mockup)**
+**Performance tactics**
 
 - Staff ribbons render at reduced resolution (0.8 × device pixels) and redraw at 30 fps.
-- The avatar's position and canvas layer update at 30 fps when it is standing still; the sprite animations play natively as GIFs.
+- The avatar's position and canvas layer update at 30 fps when it is standing still; the sprite animations play natively as lossless animated WebP.
+- Photos are served resized for 3× screens (about 3 MB total instead of 21 MB of camera originals); static assets are cached by the browser.
 - 3D side layers on iPods and photos are added only while hovered.
 - Canvas loops pause when their section is off screen.
 
@@ -195,7 +195,7 @@ The toy-like 3D only impresses if it stays smooth on a recruiter's mid-range lap
 
 ## Build plan
 
-The design is done; what is left is real content, a production port and two small backends. The site can ship after step 3 with the guestbook hidden.
+The repo, the port (step 3), the guestbook backend (step 4) and the deploy (step 7) are done; the site is live at dwho.dev. Step 5 went a different way: the Spotify iPod shows live listening data and favorite albums rather than a playlist embed. Still open: the last placeholders (the `[NOTE]` sample stickers), the audit (step 6) and the backlog.
 
 1. **Fill the placeholders.** Photos, project screenshots and roles, Disco details, experience dates, skills, hobby blurbs, playlist and song names (see Open questions).
 2. **Set up the repo in Claude Code** from the handoff package and put it under git.
@@ -206,32 +206,17 @@ The design is done; what is left is real content, a production port and two smal
 7. **Deploy** to Vercel at dwho.dev.
 8. **Backlog** items as time allows, starting with project detail pages.
 
-## Handoff to Claude Code
-
-The mockup is exported as **daniel-hu-site.zip**, which runs exactly like the mockup when served locally.
-
-| File | What it is |
-| --- | --- |
-| `index.html` | The whole site: markup, styles and logic in one file |
-| `support.js` | The small runtime the page needs (bundles React and the template engine) |
-| `CLAUDE.md` | Guide Claude Code reads automatically: where each feature lives, what is placeholder, how to port |
-| `DESIGN.md` | This design doc |
-
-1. Unzip it, `cd` into the folder and run `claude`.
-2. Preview with `npx serve .` and open http://localhost:3000 (opening the file directly does not fully work).
-3. Ask Claude Code to set up git and start the port, or to swap in real content.
-
 ## Open questions
 
 - [x] Domain URL: dwho.dev (bought through Vercel).
-- [ ] Photos: a few of Daniel (About) and concert photos with artist, venue and date for each.
+- [x] Photos: a few of Daniel (About) and concert photos with artist, venue and date for each.
 - [ ] Spotify playlist link and the real song names for the mini player.
 - [ ] Disco: one-liner, role, stack and demo link.
 - [ ] Role, stack and screenshot for CLARA and Sierra; links for each VIEW button.
 - [ ] Experience dates and the skills list from the resume; the resume PDF itself.
 - [ ] One-sentence blurbs for guitar, drawing, skiing and volleyball.
 - [ ] Boot screen shows on every visit and waits for a press; keep it, or auto-continue for returning visitors?
-- [ ] Guestbook moderation: who can remove stickers, and is there a word filter on notes?
+- [ ] Guestbook moderation: visitors can remove their own stickers and Daniel can remove any (admin token or the Supabase table); still no word filter on notes.
 - [x] OSU robotics research stays in Experience, not Projects.
 - [x] Links: LinkedIn, GitHub, email shown as plain text.
 - [x] No animation wording in the copy.

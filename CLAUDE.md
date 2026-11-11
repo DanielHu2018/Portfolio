@@ -26,6 +26,8 @@ Daniel asks for a change.
   `stickers.js` + `stickers/[id].js` (guestbook, see `STICKERS.md`), `resume.js`.
 - `scripts/` + `.github/workflows/update-receipts.yml`: every 6 hours, collect Spotify listening
   history into `data/spotify-history.json` and regenerate `public/assets/receipts/`.
+- `index.html`: link-preview tags (Open Graph / Twitter). `public/og-image.jpg` is a 1200x630 snapshot of the
+  hero; retake it if the hero changes. `src/main.tsx` mounts Vercel Web Analytics.
 - `scripts/optimize-images.py`: makes the web-sized photos in `public/assets/web/` and the WebP avatar
   sprites the site loads, from the full-size originals in `assets-src/` (not deployed). To add a photo,
   put it in `assets-src/`, add it to `PHOTOS` in the script, and run it.

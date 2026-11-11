@@ -78,14 +78,19 @@ function snapshot() {
 }
 
 export async function capture(page: Page, fullPage = false): Promise<Capture> {
-  const data = (await page.evaluate(snapshot)) as Omit<Capture, 'png'>;
+  const raw = (await page.evaluate(snapshot)) as Omit<Capture, 'png'>;
+  // The baseline and target are served from different ports, and computed styles resolve url() to absolute
+  // URLs (e.g. CSS background images), so drop the page's own origin before comparing.
+  const origin = new URL(page.url()).origin;
+  const data = JSON.parse(JSON.stringify(raw).split(origin).join('')) as Omit<Capture, 'png'>;
   const shoot = () => page.screenshot({ animations: 'disabled', fullPage, mask: [page.locator('video'), page.locator('iframe')], maskColor: '#FF00FF' });
-  // The Cover Flow photos are large images under 3D rotation, which Chrome never rasters the same way twice.
-  // Their markup, geometry and styles are compared above; only their pixels are left out.
+  // The Cover Flow photos are large images under 3D rotation, which Chrome never rasters the same way twice,
+  // and the avatar sprite is an animated WebP whose frame can't be paused. Their markup, geometry and styles
+  // are compared above; only their pixels are left out.
   await page.evaluate(() => {
     const style = document.createElement('style');
     style.id = '__port-hide';
-    style.textContent = '.photo3d, [style*="scaleY(-1)"] { visibility: hidden !important; } .photo3d * { visibility: hidden !important; }';
+    style.textContent = '.photo3d, [style*="scaleY(-1)"], .mii-sprite { visibility: hidden !important; } .photo3d * { visibility: hidden !important; }';
     document.head.appendChild(style);
   });
   // Chrome decodes and rasters large images off the main thread; wait until two frames agree.
