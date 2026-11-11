@@ -1,37 +1,38 @@
 // Daniel's favorite albums for the Spotify iPod, in display order (rank 1-5 are the top five).
-// Songs are separated by | and marked ★ (favorite) or ☆ (second favorite).
+// Each album lists every track, separated by |. Songs Daniel picked are marked ♥, his favorite ★ and second favorite ☆.
+// Tracklists are the standard editions (from Deezer / iTunes), with features and remaster tags trimmed from titles.
 // Covers are 300px JPEGs in public/assets/albums/<slug>.jpg.
 const ALBUMS: [number, string, string, string, string][] = [
-  [1, 'miseducation', 'The Miseducation of Lauryn Hill', 'Ms. Lauryn Hill', `Tell Him | Can't Take My Eyes Off of You ★ | Forgive Them Father | I Used to Love Him | Superstar | To Zion ☆ | Ex-Factor`],
-  [2, 'is-this-it', 'Is This It', 'The Strokes', `Is This It ☆ | Barely Legal | Someday | Last Nite | Hard to Explain ★ | Take It or Leave It`],
-  [3, 'i-love-my-computer', 'I Love My Computer', 'Ninajirachi', `iPod Touch ★ | Fuck My Computer | CSIRAC | Delete ☆ | All I Am | Infohazard | It's You`],
-  [4, 'fete-de-la-vanille', 'Fête de la Vanille', 'Lucy Bedroque', `I Am, She Is, We Are | How to Pretend ☆ | Mimosa | Knot Me ★ | Pretty Peach`],
-  [5, 'gkmc', 'good kid, m.A.A.d city', 'Kendrick Lamar', `Bitch, Don't Kill My Vibe | Backseat Freestyle | Money Trees ★ | good kid | m.A.A.d city ☆ | Swimming Pools (Drank) | Sing About Me, I'm Dying of Thirst`],
-  [0, 'everybody-else', "Everybody Else Is Doing It, So Why Can't We?", 'The Cranberries', `Dreams | Sunday ★ | Linger ☆`],
-  [0, 'live-love-asap', 'LIVE.LOVE.A$AP', 'A$AP Rocky', `Palace | Peso ★ | Wassup | Purple Swag | Houston Old Head | Demons | Sandman ☆`],
-  [0, 'blonde', 'Blonde', 'Frank Ocean', `Nikes | Ivy | Pink + White | Solo | Self Control ★ | Nights | White Ferrari | Godspeed ☆`],
-  [0, 'room-on-fire', 'Room on Fire', 'The Strokes', `What Ever Happened? ☆ | Reptilia ★ | 12:51 | I Can't Win`],
-  [0, 'u', 'U', 'underscores', `Tell Me | Music | The Peace ★ | Innuendo (I Get U) | Lovefield | Do It | Bodyfeeling | Wish U Well ☆`],
-  [0, 'heaven-or-las-vegas', 'Heaven or Las Vegas', 'Cocteau Twins', `Cherry-coloured Funk ☆ | Heaven or Las Vegas ★ | Frou-frou Foxes in Midsummer Fires`],
-  [0, 'channel-orange', 'channel ORANGE', 'Frank Ocean', `Thinkin Bout You | Sweet Life | Super Rich Kids | Pyramids ☆ | Lost | Bad Religion ★ | Pink Matter | Forrest Gump`],
-  [0, 'playboi-carti', 'Playboi Carti', 'Playboi Carti', `Location ☆ | Magnolia | wokeuplikethis* ★ | New Choppa | Flex | Had 2 | Kelly K`],
-  [0, 'brand-new-eyes', 'Brand New Eyes', 'Paramore', `Ignorance | The Only Exception ★ | All I Wanted ☆`],
-  [0, 'submarine', 'Submarine', 'The Marías', `Echo | Run Your Mouth | Real Life | Paranoia ☆ | Lejos de Ti | Love You Anyway | No One Noticed | Sienna ★`],
-  [0, 'man-on-the-moon', 'Man on the Moon: The End of Day', 'Kid Cudi', `Soundtrack 2 My Life ☆ | Solo Dolo (Nightmare) | Day 'n' Nite (Nightmare) | Cudi Zone | Make Her Say | Pursuit of Happiness ★ | Up Up & Away`],
-  [0, 'die-lit', 'Die Lit', 'Playboi Carti', `Long Time ☆ | R.I.P. | Shoota ★ | Fell In Luv | Foreign | FlatBed Freestyle | R.I.P. Fredo`],
-  [0, 'igor', 'IGOR', 'Tyler, The Creator', `IGOR'S THEME | EARFQUAKE | I THINK | RUNNING OUT OF TIME | NEW MAGIC WAND | PUPPET | WHAT'S GOOD | GONE, GONE / THANK YOU ★ | ARE WE STILL FRIENDS? ☆`],
-  [0, 'long-live-asap', 'LONG.LIVE.A$AP', 'A$AP Rocky', `Goldie | PMW (All I Really Need) | LVL ☆ | Fuckin' Problems | 1Train | Fashion Killa ★`],
-  [0, 'madvillainy', 'Madvillainy', 'MF DOOM, Madlib', `Accordion | Meat Grinder | Raid | Curls | Figaro ★ | Fancy Clown | All Caps ☆`],
-  [0, 'ctrl', 'Ctrl', 'SZA', `Supermodel | Love Galore | Doves in the Wind | Drew Barrymore | The Weekend | Broken Clocks ★ | Normal Girl ☆`],
-  [0, 'choke-enough', 'choke enough', 'Oklou', `endless | family and friends | choke enough | take me by the hand | harvest sky ☆ | blade bird ★`],
-  [0, 'nostylist', 'NOSTYLIST', 'Destroy Lonely', `JETLGGD ★ | BERGDORF | NOSTYLIST ☆ | VTMNTSCOAT | TURNINUP | VETERAN`],
-  [0, 'stankonia', 'Stankonia', 'OutKast', `Gasoline Dreams | So Fresh, So Clean | Ms. Jackson ★ | B.O.B. (Bombs Over Baghdad) ☆`],
-  [0, 'introvert', 'Sometimes I Might Be Introvert', 'Little Simz', `Introvert ★ | Woman ☆ | Two Worlds Apart | I Love You, I Hate You | Standing Ovation | Point and Kill | Fear No Man | How Did You Get Here | Miss Understood`]
+  [1, 'miseducation', 'The Miseducation of Lauryn Hill', 'Ms. Lauryn Hill', `Intro | Lost Ones | Ex-Factor ♥ | To Zion ☆ | Doo Wop (That Thing) | Superstar ♥ | Final Hour | When It Hurts so Bad | I Used to Love Him ♥ | Forgive Them Father ♥ | Every Ghetto, Every City | Nothing Even Matters | Everything Is Everything | The Miseducation of Lauryn Hill | Can't Take My Eyes Off of You (I Love You Baby) ★ | Tell Him ♥`],
+  [2, 'is-this-it', 'Is This It', 'The Strokes', `Is This It ☆ | The Modern Age | Soma | Barely Legal ♥ | Someday ♥ | Alone, Together | Last Nite ♥ | Hard To Explain ★ | When It Started | Trying Your Luck | Take It Or Leave It ♥`],
+  [3, 'i-love-my-computer', 'I Love My Computer', 'Ninajirachi', `London Song | iPod Touch ★ | Fuck My Computer ♥ | CSIRAC ♥ | Delete ☆ | ฅ^•ﻌ•^ฅ | All I Am ♥ | Infohazard ♥ | Battery Death | Sing Good | It's You ♥ | All At Once`],
+  [4, 'fete-de-la-vanille', 'Fête de la Vanille', 'Lucy Bedroque', `I Am, She Is, We Are ♥ | How to Pretend ☆ | Mimosa ♥ | Hot Boy | Knot Me ★ | Pretty Peach ♥`],
+  [5, 'gkmc', 'good kid, m.A.A.d city', 'Kendrick Lamar', `Sherane a.k.a Master Splinter's Daughter | Bitch, Don't Kill My Vibe ♥ | Backseat Freestyle ♥ | The Art of Peer Pressure | Money Trees ★ | Poetic Justice | good kid ♥ | m.A.A.d city ☆ | Swimming Pools (Drank) ♥ | Sing About Me, I'm Dying Of Thirst ♥ | Real | Compton`],
+  [0, 'everybody-else', "Everybody Else Is Doing It, So Why Can't We?", 'The Cranberries', `I Still Do | Dreams ♥ | Sunday ★ | Pretty | Waltzing Back | Not Sorry | Linger ☆ | Wanted | Still Can't... | I Will Always | How | Put Me Down`],
+  [0, 'live-love-asap', 'LIVE.LOVE.A$AP', 'A$AP Rocky', `Palace ♥ | Peso ★ | Bass | Wassup ♥ | Brand New Guy | Purple Swag ♥ | Get Lit | Trilla | Keep It G | Houston Old Head ♥ | Acid Drip | Leaf | Roll One Up | Demons ♥ | Sandman ☆`],
+  [0, 'blonde', 'Blonde', 'Frank Ocean', `Nikes ♥ | Ivy ♥ | Pink + White ♥ | Be Yourself | Solo ♥ | Skyline To | Self Control ★ | Good Guy | Nights ♥ | Solo (Reprise) | Pretty Sweet | Facebook Story | Close to You | White Ferrari ♥ | Seigfried | Godspeed ☆ | Futura Free`],
+  [0, 'room-on-fire', 'Room on Fire', 'The Strokes', `What Ever Happened? ☆ | Reptilia ★ | Automatic Stop | 12:51 ♥ | You Talk Way Too Much | Between Love & Hate | Meet Me in the Bathroom | Under Control | The Way It Is | The End Has No End | I Can't Win ♥`],
+  [0, 'u', 'U', 'underscores', `Tell Me (U Want It) ♥ | Music ♥ | Hollywood Forever | The Peace ★ | Innuendo (I Get U) ♥ | Lovefield ♥ | Do It ♥ | Bodyfeeling ♥ | Wish U Well ☆`],
+  [0, 'heaven-or-las-vegas', 'Heaven or Las Vegas', 'Cocteau Twins', `Cherry-coloured Funk ☆ | Pitch the Baby | Iceblink Luck | Fifty-fifty Clown | Heaven or Las Vegas ★ | I Wear Your Ring | Fotzepolitic | Wolf in the Breast | Road, River and Rail | Frou-frou Foxes in Midsummer Fires ♥`],
+  [0, 'channel-orange', 'channel ORANGE', 'Frank Ocean', `Start | Thinkin Bout You ♥ | Fertilizer | Sierra Leone | Sweet Life ♥ | Not Just Money | Super Rich Kids ♥ | Pilot Jones | Crack Rock | Pyramids ☆ | Lost ♥ | White | Monks | Bad Religion ★ | Pink Matter ♥ | Forrest Gump ♥ | End`],
+  [0, 'playboi-carti', 'Playboi Carti', 'Playboi Carti', `Location ☆ | Magnolia ♥ | Lookin | wokeuplikethis* ★ | Let It Go | Half & Half | New Choppa ♥ | Other Shit | NO. 9 | dothatshit! | Lame Niggaz | Yah Mean | Flex ♥ | Kelly K ♥ | Had 2 ♥`],
+  [0, 'brand-new-eyes', 'Brand New Eyes', 'Paramore', `Careful | Ignorance ♥ | Playing God | Brick by Boring Brick | Turn It Off | The Only Exception ★ | Feeling Sorry | Looking Up | Where the Lines Overlap | Misguided Ghosts | All I Wanted ☆`],
+  [0, 'submarine', 'Submarine', 'The Marías', `Ride | Hamptons | Echo ♥ | Run Your Mouth ♥ | Real Life ♥ | Blur | Paranoia ☆ | Lejos de Ti ♥ | Love You Anyway ♥ | Ay No Puedo | No One Noticed ♥ | Vicious Sensitive Robot | If Only | Sienna ★`],
+  [0, 'man-on-the-moon', 'Man on the Moon: The End of Day', 'Kid Cudi', `In My Dreams (Cudder Anthem) | Soundtrack 2 My Life ☆ | Simple As... | Solo Dolo (Nightmare) ♥ | Heart Of A Lion (Kid Cudi Theme Music) | My World | Day 'N' Nite (nightmare) ♥ | Sky Might Fall | Enter Galactic (Love Connection Part I) | Alive (Nightmare) | Cudi Zone ♥ | Make Her Say ♥ | Pursuit Of Happiness (Nightmare) ★ | Hyyerr | Up Up & Away ♥`],
+  [0, 'die-lit', 'Die Lit', 'Playboi Carti', `Long Time (Intro) ☆ | R.I.P. ♥ | Lean 4 Real | Old Money | Love Hurts | Shoota ★ | Right Now | Poke It Out | Home (KOD) | Fell In Luv ♥ | Foreign ♥ | Pull Up | Mileage | FlatBed Freestyle ♥ | No Time | Middle Of The Summer | Choppa Won't Miss | R.I.P. Fredo (Notice Me) ♥ | Top`],
+  [0, 'igor', 'IGOR', 'Tyler, The Creator', `IGOR'S THEME ♥ | EARFQUAKE ♥ | I THINK ♥ | EXACTLY WHAT YOU RUN FROM YOU END UP CHASING | RUNNING OUT OF TIME ♥ | NEW MAGIC WAND ♥ | A BOY IS A GUN* | PUPPET ♥ | WHAT'S GOOD ♥ | GONE, GONE / THANK YOU ★ | I DON'T LOVE YOU ANYMORE | ARE WE STILL FRIENDS? ☆`],
+  [0, 'long-live-asap', 'LONG.LIVE.A$AP', 'A$AP Rocky', `Long Live A$AP | Goldie ♥ | PMW (All I Really Need) ♥ | LVL ☆ | Hell | Pain | Fuckin' Problems ♥ | Wild for the Night | 1Train ♥ | Fashion Killa ★ | Phoenix | Suddenly`],
+  [0, 'madvillainy', 'Madvillainy', 'MF DOOM, Madlib', `The Illest Villains | Accordion ♥ | Meat Grinder ♥ | Bistro | Raid ♥ | America's Most Blunted | Sickfit (Instrumental) | Rainbows | Curls ♥ | Do Not Fire! (Instrumental) | Money Folder | Shadows of Tomorrow | Operation Lifesaver aka Mint Test | Figaro ★ | Hardcore Hustle | Strange Ways | Fancy Clown ♥ | Eye | Supervillain Theme (Instrumental) | All Caps ☆ | Great Day | Rhinestone Cowboy`],
+  [0, 'ctrl', 'Ctrl', 'SZA', `Supermodel ♥ | Love Galore ♥ | Doves In The Wind ♥ | Drew Barrymore ♥ | Prom | The Weekend ♥ | Go Gina | Garden (Say It Like Dat) | Broken Clocks ★ | Anything | Wavy (Interlude) | Normal Girl ☆ | Pretty Little Birds | 20 Something`],
+  [0, 'choke-enough', 'choke enough', 'Oklou', `endless ♥ | thank you for recording | family and friends ♥ | obvious | ict | choke enough ♥ | (;'༎ຶٹ༎ຶ') | take me by the hand ♥ | plague dogs | forces | harvest sky ☆ | want to wanna come back | blade bird ★`],
+  [0, 'nostylist', 'NOSTYLIST', 'Destroy Lonely', `JETLGGD ★ | BERGDORF ♥ | <3MYGNG | VTMNTSCOAT ♥ | NOSTYLIST ☆ | FAKENGGAS | SOARIN | TURNINUP ♥ | LNLY | PRSSURE | ONTHETABLE | SWGSKOOL | CRYSTLCSTLES | DANGEROUS | MKEITSTOP | ONTHEFLOOR | PASSAROUND | OTW | VETERAN ♥`],
+  [0, 'stankonia', 'Stankonia', 'OutKast', `Intro | Gasoline Dreams ♥ | I'm Cool (Interlude) | So Fresh, So Clean ♥ | Ms. Jackson ★ | Snappin' & Trappin' | D.F. (Interlude) | Spaghetti Junction | Kim & Cookie (Interlude) | I'll Call B4 I Cum | B.O.B. (Bombs Over Baghdad) ☆ | Xplosion | Good Hair (Interlude) | We Luv Deez Hoez | Humble Mumble | Drinkin' Again (Interlude) | ? | Red Velvet | Cruisin' In The ATL (Interlude) | Gangsta Shit | Toilet Tisha | Slum Beautiful | Pre-Nump (Interlude) | Stankonia (Stanklove)`],
+  [0, 'introvert', 'Sometimes I Might Be Introvert', 'Little Simz', `Introvert ★ | Woman ☆ | Two Worlds Apart ♥ | I Love You, I Hate You ♥ | Little Q, Pt. 1 (Interlude) | Little Q, Pt. 2 | Gems (Interlude) | Speed | Standing Ovation ♥ | I See You | The Rapper That Came To Tea (Interlude) | Rollin Stone | Protect My Energy | Never Make Promises (Interlude) | Point and Kill ♥ | Fear No Man ♥ | The Garden (Interlude) | How Did You Get Here ♥ | Miss Understood ♥`]
 ];
 
-export type Album = { rank: number; title: string; artist: string; cover: string; songs: { name: string; fav: 0 | 1 | 2 }[] };
+export type Album = { rank: number; title: string; artist: string; cover: string; songs: { name: string; fav: 0 | 1 | 2 | 3 }[] }; // fav: 1 favorite, 2 second favorite, 3 loved, 0 not picked
 
 export const albums: Album[] = ALBUMS.map(([rank, slug, title, artist, songs]) => ({
   rank, title, artist, cover: '/assets/albums/' + slug + '.jpg',
-  songs: songs.split('|').map((t) => t.trim()).map((t) => ({ name: t.replace(/\s*[★☆]$/, ''), fav: t.endsWith('★') ? 1 : t.endsWith('☆') ? 2 : 0 }))
+  songs: songs.split('|').map((t) => t.trim()).map((t) => ({ name: t.replace(/\s*[★☆♥]$/, ''), fav: t.endsWith('★') ? 1 : t.endsWith('☆') ? 2 : t.endsWith('♥') ? 3 : 0 }))
 }));

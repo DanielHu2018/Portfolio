@@ -261,12 +261,12 @@ export function renderVals(site: SiteController) {
     return {
       num: String(i + 1).padStart(2, '0'),
       name: sg.name,
-      star: sg.fav ? '★' : '',
-      label: sg.name + (sg.fav === 1 ? ', favorite' : sg.fav === 2 ? ', second favorite' : ''),
+      star: sg.fav === 3 ? '♥' : sg.fav ? '★' : '',
+      label: sg.name + (sg.fav === 1 ? ', favorite' : sg.fav === 2 ? ', second favorite' : sg.fav === 3 ? ', loved' : ''),
       pick: () => { if (site.st().songSel !== i) site.setState({ songSel: i }); },
       style: 'display: flex; align-items: center; gap: 7px; min-height: 26px; padding: 0 8px; ' + rowFont + rowColors(on),
       numStyle: 'flex-shrink: 0; width: 15px; font-weight: 700; font-size: 10px; color: ' + (on ? 'rgba(255, 255, 255, 0.85)' : '#7E848D'),
-      starStyle: 'flex-shrink: 0; font-size: 12px; color: ' + (sg.fav === 1 ? (on ? '#FFE58A' : '#E8A800') : (on ? '#FFFFFF' : '#A9B0BA'))
+      starStyle: 'flex-shrink: 0; font-size: 12px; color: ' + (sg.fav === 1 ? (on ? '#FFE58A' : '#E8A800') : sg.fav === 3 ? (on ? '#FFD1E8' : '#FF6FB5') : (on ? '#FFFFFF' : '#A9B0BA'))
     };
   }) : [];
   const receiptRows = (isAlbums ? [] : receiptItems).map((item: any, i: any) => {
