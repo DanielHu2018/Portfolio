@@ -507,9 +507,10 @@ export class SiteController {
     if (!cards.length) return;
     const idx = ((f.idx + d) % cards.length + cards.length) % cards.length;
     this.focusEl = cards[idx];
-    this.focusSizeEl = null;
-    // Cards can differ in height on narrow screens, so size the overlay from the card being shown.
-    const r = cards[idx].getBoundingClientRect();
+    // Cards can differ in height on narrow screens, so size the overlay from the card being shown, using its
+    // layout size so a card still mid reveal-animation (scaled down) doesn't shrink the overlay.
+    this.focusSizeEl = cards[idx];
+    const r = this.focusRect(cards[idx]);
     this.setState({ focus: Object.assign({}, f, { idx: idx, rect: { x: r.left, y: r.top, w: r.width, h: r.height } }) });
   }
   // Where the focus overlay zooms from/to: the element's box, or, with focusSizeEl set, a box the size of
