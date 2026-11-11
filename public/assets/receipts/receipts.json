@@ -85,12 +85,6 @@
         "secondary": "16 listens"
       }
     ],
-    "genres-1m": [
-      {
-        "name": "Genre data unavailable",
-        "secondary": "Keep collecting listens"
-      }
-    ],
     "tracks-6m": [
       {
         "name": "Sunday - Remastered 2026",
@@ -173,12 +167,6 @@
       {
         "name": "beabadoobee",
         "secondary": "16 listens"
-      }
-    ],
-    "genres-6m": [
-      {
-        "name": "Genre data unavailable",
-        "secondary": "Keep collecting listens"
       }
     ]
   }

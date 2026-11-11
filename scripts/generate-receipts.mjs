@@ -22,30 +22,11 @@ function textLine(text, x, y, size, weight = 400, anchor = 'start') { return `<t
 function renderReceipt(items, type, range) {
   const width = 720;
   const height = 190 + items.length * 58 + 120;
-  const title = type === 'artists' ? 'TOP ARTISTS' : type === 'genres' ? 'TOP GENRES' : 'TOP TRACKS';
+  const title = type === 'artists' ? 'TOP ARTISTS' : 'TOP TRACKS';
   const rangeLabel = range === 'medium_term' ? 'LAST 6 MONTHS' : 'LAST 4 WEEKS';
   const month = new Date().toLocaleString('en-US', { month: 'long', year: 'numeric', timeZone: 'America/New_York' });
   const rows = items.map((item, index) => { const name = item.name.length > 30 ? `${item.name.slice(0, 29)}…` : item.name; const secondary = item.secondary.length > 34 ? `${item.secondary.slice(0, 33)}…` : item.secondary; const y = 190 + index * 58; return [textLine(String(index + 1).padStart(2, '0'), 52, y, 22, 700), textLine(name, 100, y, 22, 700), textLine(secondary, 100, y + 25, 16), textLine('PLAYS', width - 52, y, 13, 700, 'end')].join(''); }).join('');
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><rect width="100%" height="100%" fill="#fffdf5"/><rect x="16" y="16" width="${width - 32}" height="${height - 32}" rx="4" fill="none" stroke="#111" stroke-width="4"/>${textLine('DANIEL HU', 52, 58, 34, 800)}${textLine(`${title} RECEIPT`, 52, 92, 18, 700)}${textLine(month.toUpperCase(), width - 52, 58, 18, 700, 'end')}${textLine(rangeLabel, width - 52, 92, 14, 400, 'end')}<path d="M52 120 H${width - 52}" stroke="#111" stroke-width="3" stroke-dasharray="10 8"/>${rows}<path d="M52 ${height - 88} H${width - 52}" stroke="#111" stroke-width="3" stroke-dasharray="10 8"/>${textLine(`${items.length} ${type.toUpperCase()}`, 52, height - 48, 18, 700)}${textLine('THANKS FOR LISTENING', width - 52, height - 48, 18, 700, 'end')}</svg>`;
-}
-function renderGenreMenu(items, range) {
-  const width = 720;
-  const height = 190 + items.length * 58 + 90;
-  const rangeLabel = range === 'medium_term' ? 'LAST 6 MONTHS' : 'LAST 4 WEEKS';
-  const rows = items.map((item, index) => {
-    const y = 150 + index * 58;
-    return `<rect x="62" y="${y - 34}" width="596" height="48" rx="6" fill="${index === 0 ? '#DDF3FC' : '#FFFFFF'}" stroke="#D5DAE1" stroke-width="2"/>${textLine(String(index + 1).padStart(2, '0'), 82, y - 2, 16, 700)}${textLine(item.name, 122, y - 2, 19, 700)}${textLine(item.secondary, 620, y - 2, 14, 700, 'end')}<path d="M636 ${y - 10} l8 8 -8 8" fill="none" stroke="#7E848D" stroke-width="2"/>`;
-  }).join('');
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><rect width="100%" height="100%" fill="#fffdf5"/><rect x="16" y="16" width="${width - 32}" height="${height - 32}" rx="18" fill="#F2F4F7" stroke="#D5DAE1" stroke-width="4"/><rect x="42" y="42" width="636" height="68" rx="12" fill="#FFFFFF" stroke="#C3CBD5" stroke-width="3"/><text x="360" y="86" font-family="sans-serif" font-size="26px" font-weight="800" text-anchor="middle" fill="#3C4046">GENRES</text>${textLine(rangeLabel, 360, height - 38, 14, 700, 'middle')}${rows}</svg>`;
-}
-async function getArtistGenres(ids) {
-  const genres = {};
-  for (let i = 0; i < ids.length; i += 50) {
-    const response = await fetchRetry(`https://api.spotify.com/v1/artists?ids=${ids.slice(i, i + 50).join(',')}`, { headers: { Authorization: `Bearer ${accessToken}` } });
-    if (!response.ok) continue;
-    for (const artist of (await response.json()).artists || []) genres[artist.id] = artist.genres || [];
-  }
-  return genres;
 }
 function countItems(plays, field) {
   const counts = new Map();
@@ -56,8 +37,6 @@ function countItems(plays, field) {
   return [...counts].sort((a, b) => b[1] - a[1]).slice(0, 10).map(([name, count]) => ({ name, secondary: `${count} ${field === 'artists' ? 'listens' : 'plays'}` }));
 }
 
-const allArtistIds = [...new Set(history.plays.flatMap((play) => play.artist_ids || []))];
-const artistGenres = await getArtistGenres(allArtistIds);
 const menuViews = {};
 for (const range of ['short_term', 'medium_term']) {
   const days = range === 'short_term' ? 30 : 180;
@@ -68,12 +47,6 @@ for (const range of ['short_term', 'medium_term']) {
   menuViews[`artists-${suffix}`] = countItems(plays, 'artists');
   fs.writeFileSync(path.join(outputDir, `tracks-${suffix}.svg`), renderReceipt(menuViews[`tracks-${suffix}`], 'tracks', range));
   fs.writeFileSync(path.join(outputDir, `artists-${suffix}.svg`), renderReceipt(menuViews[`artists-${suffix}`], 'artists', range));
-  const genreCounts = new Map();
-  for (const play of plays) for (const id of play.artist_ids || []) for (const genre of artistGenres[id] || []) genreCounts.set(genre, (genreCounts.get(genre) || 0) + 1);
-  const genres = [...genreCounts].sort((a, b) => b[1] - a[1]).slice(0, 10).map(([name, count]) => ({ name, secondary: `${count} listens` }));
-  if (!genres.length) genres.push({ name: 'Genre data unavailable', secondary: 'Keep collecting listens' });
-  menuViews[`genres-${suffix}`] = genres;
-  fs.writeFileSync(path.join(outputDir, `genres-${suffix}.svg`), renderGenreMenu(genres, range));
 }
 // The site's iPod menu reads this; the SVGs above are kept as standalone receipts.
 const updated = new Date().toLocaleString('en-US', { month: 'long', year: 'numeric', timeZone: 'America/New_York' });

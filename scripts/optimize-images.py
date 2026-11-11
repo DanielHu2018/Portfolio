@@ -1,9 +1,10 @@
 """Make web-sized copies of the site's photos and avatar sprites.
 
-The originals in public/assets/ are full-resolution camera files (1-5 MB each). The site
-displays them at most ~440 CSS px wide, so this writes copies sized for 3x retina screens to
-public/assets/web/ and converts the avatar GIFs to lossless animated WebP (pixel-identical,
-much smaller). Re-run it after adding or replacing a photo:
+The originals live in assets-src/ (not deployed): full-resolution camera files (1-5 MB each) and
+the avatar GIFs. The site displays photos at most ~440 CSS px wide, so this writes copies sized for
+3x retina screens to public/assets/web/ and converts the avatar GIFs to lossless animated WebP
+(pixel-identical, much smaller). To add or replace a photo, put the original in assets-src/, add it
+to PHOTOS below, and run:
 
     python scripts/optimize-images.py            # only missing / outdated outputs
     python scripts/optimize-images.py --force    # rebuild everything
@@ -14,8 +15,9 @@ import os
 import sys
 from PIL import Image, ImageOps, ImageSequence
 
-ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'public', 'assets')
-OUT = os.path.join(ROOT, 'web')
+HERE = os.path.dirname(os.path.abspath(__file__))
+SRC = os.path.join(HERE, '..', 'assets-src')
+OUT = os.path.join(HERE, '..', 'public', 'assets', 'web')
 FORCE = '--force' in sys.argv
 
 # Photos: (source file, shortest edge in px, JPEG quality)
@@ -40,7 +42,7 @@ def stale(src, dst):
 
 
 def photo(name, short, quality):
-    src = os.path.join(ROOT, name)
+    src = os.path.join(SRC, name)
     dst = os.path.join(OUT, os.path.splitext(name)[0] + '.jpg')
     if not stale(src, dst):
         return
@@ -56,7 +58,7 @@ def photo(name, short, quality):
 
 
 def sprite(name):
-    src = os.path.join(ROOT, 'avatar', name)
+    src = os.path.join(SRC, 'avatar', name)
     dst = os.path.join(OUT, 'avatar', os.path.splitext(name)[0] + '.webp')
     if not stale(src, dst):
         return
@@ -72,13 +74,13 @@ def sprite(name):
 
 def report(src, dst):
     a, b = os.path.getsize(src), os.path.getsize(dst)
-    print(f'{os.path.relpath(dst, ROOT):48s} {a / 1024:7.0f} KB -> {b / 1024:6.0f} KB')
+    print(f'{os.path.relpath(dst, OUT):48s} {a / 1024:7.0f} KB -> {b / 1024:6.0f} KB')
 
 
 if __name__ == '__main__':
     os.makedirs(os.path.join(OUT, 'avatar'), exist_ok=True)
     for args in PHOTOS:
         photo(*args)
-    for n in sorted(os.listdir(os.path.join(ROOT, 'avatar'))):
+    for n in sorted(os.listdir(os.path.join(SRC, 'avatar'))):
         if n.endswith('.gif'):
             sprite(n)

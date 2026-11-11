@@ -19,7 +19,10 @@ import { renderVals } from './site/renderVals';
 
 export default function App() {
   const siteRef = useRef<SiteController | null>(null);
-  if (!siteRef.current) siteRef.current = new SiteController();
+  // In development, a hot update to the controller module brings a new SiteController class; replace the
+  // running instance so the page never mixes old controller code with new components. (Always the same
+  // class in production.) The layout effect below unmounts the old one and mounts the new one.
+  if (!(siteRef.current instanceof SiteController)) siteRef.current = new SiteController();
   const site = siteRef.current;
   const [, bump] = useState(0);
   const committed = useRef(false);

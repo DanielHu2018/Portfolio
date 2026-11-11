@@ -27,7 +27,8 @@ Daniel asks for a change.
 - `scripts/` + `.github/workflows/update-receipts.yml`: every 6 hours, collect Spotify listening
   history into `data/spotify-history.json` and regenerate `public/assets/receipts/`.
 - `scripts/optimize-images.py`: makes the web-sized photos in `public/assets/web/` and the WebP avatar
-  sprites the site loads (originals stay in `public/assets/`). Re-run after adding a photo.
+  sprites the site loads, from the full-size originals in `assets-src/` (not deployed). To add a photo,
+  put it in `assets-src/`, add it to `PHOTOS` in the script, and run it.
 
 Canvases are found by id (`stf-*`, `hb-*`, `mii`, `boot-mii`, `hb-focus`), so keep those ids. The
 avatar sprite is the `.mii-sprite` img inside `.mii-wrap`. Inline styles are matched by string in
