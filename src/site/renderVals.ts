@@ -1,5 +1,6 @@
 import type { SiteController } from './controller';
 import { albums } from './albums';
+import { experience } from './experience';
 
 declare const window: any;
 declare const document: any;
@@ -41,16 +42,27 @@ export function renderVals(site: SiteController) {
   const shown = f && ph === 'open';
   let fCard = '';
   let fBlurb = '';
+  let fExpPrev = '';
+  let fExpNext = '';
   const Z = site.pageZoom || 1;
   const fr: any = f ? { x: f.rect.x / Z, y: f.rect.y / Z, w: f.rect.w / Z, h: f.rect.h / Z } : null;
-  if (f && (f.kind === 'proj' || f.kind === 'skills' || f.kind === 'spotify')) {
+  if (f && (f.kind === 'proj' || f.kind === 'skills' || f.kind === 'spotify' || f.kind === 'exp')) {
     const vw0 = typeof window !== 'undefined' ? window.innerWidth / Z : 1440;
     const vh0 = typeof window !== 'undefined' ? window.innerHeight / Z : 900;
-    const k = Math.max(0.5, Math.min(1.5, (vh0 - 110) / fr.h, (vw0 - 48) / fr.w));
-    const ccx = vw0 / 2; const ccy = vh0 / 2;
+    let k = Math.max(0.5, Math.min(1.5, (vh0 - 110) / fr.h, (vw0 - 48) / fr.w));
+    const ccx = vw0 / 2; let ccy = vh0 / 2;
+    if (f.kind === 'exp') {
+      // Prev/next arrows sit beside the card, or below it when the screen is too narrow.
+      const side = (vw0 - fr.w * k) / 2 >= 84;
+      if (!side) { k = Math.max(0.5, Math.min(1.5, (vh0 - 180) / fr.h, (vw0 - 48) / fr.w)); ccy = vh0 / 2 - 36; }
+      const hw = fr.w * k / 2; const hh = fr.h * k / 2;
+      const arrow = (x: number, y: number) => 'position: fixed; z-index: 3; left: ' + x.toFixed(1) + 'px; top: ' + y.toFixed(1) + 'px; width: 52px; height: 52px; border-radius: 50%; border: 3px solid #D5DAE1; background: linear-gradient(180deg, #FFFFFF, #EDF0F4); box-shadow: inset 0 2px 0 #FFFFFF; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; opacity: ' + (shown ? 1 : 0) + '; transition: opacity 0.3s ease';
+      fExpPrev = side ? arrow(ccx - hw - 24 - 52, ccy - 26) : arrow(ccx - 52 - 10, ccy + hh + 14);
+      fExpNext = side ? arrow(ccx + hw + 24, ccy - 26) : arrow(ccx + 10, ccy + hh + 14);
+    }
     const dx0 = fr.x + fr.w / 2 - ccx; const dy0 = fr.y + fr.h / 2 - ccy;
     const xf0 = shown ? 'translate(-50%, -50%) scale(' + k.toFixed(3) + ')' : 'translate(-50%, -50%) translate(' + dx0.toFixed(1) + 'px, ' + dy0.toFixed(1) + 'px)';
-    fCard = 'position: fixed; z-index: 2; left: ' + ccx.toFixed(1) + 'px; top: ' + ccy.toFixed(1) + 'px; width: ' + fr.w.toFixed(1) + 'px; height: ' + (f.kind === 'proj' || f.kind === 'skills' ? fr.h.toFixed(1) + 'px' : 'auto') + '; transform: ' + xf0 + '; opacity: ' + (shown ? 1 : (ph === 'from' ? 0.6 : 0)) + '; transition: transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1), opacity ' + (ph === 'closing' ? '0.5s ease-in' : '0.25s ease');
+    fCard = 'position: fixed; z-index: 2; left: ' + ccx.toFixed(1) + 'px; top: ' + ccy.toFixed(1) + 'px; width: ' + fr.w.toFixed(1) + 'px; height: ' + (f.kind === 'proj' || f.kind === 'skills' || f.kind === 'exp' ? fr.h.toFixed(1) + 'px' : 'auto') + '; transform: ' + xf0 + '; opacity: ' + (shown ? 1 : (ph === 'from' ? 0.6 : 0)) + '; transition: transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1), opacity ' + (ph === 'closing' ? '0.5s ease-in' : '0.25s ease');
   } else if (f) {
     const T = site.focusTarget(f.kind);
     const rcx = fr.x + fr.w / 2;
@@ -65,6 +77,7 @@ export function renderVals(site: SiteController) {
   const fh = f && f.kind === 'hobby' ? hobData[f.idx] : { title: '', label: '', blurb: '' };
   const fp = f && f.kind === 'proj' ? projData[f.idx] : projData[0];
   const fc = f && f.kind === 'concert' ? concertData[f.idx] : concertData[0];
+  const fe = f && f.kind === 'exp' ? experience[f.idx] : experience[0];
   const opener = (kind: any, idx: any) => (e: any) => site.openFocus(kind, idx, e);
   const focusVals = {
     fOpen: !!f,
@@ -75,7 +88,14 @@ export function renderVals(site: SiteController) {
     fIsSpotify: !!f && f.kind === 'spotify',
     fIsSkills: !!f && f.kind === 'skills',
     fIsHobby: !!f && f.kind === 'hobby',
-    fLabel: f ? (f.kind === 'hobby' ? fh.title : (f.kind === 'proj' ? fp.name : (f.kind === 'resume' ? 'Resume' : (f.kind === 'spotify' ? 'Music player' : f.kind === 'skills' ? 'Skills' : (f.kind === 'concert' ? 'Concert photo' : 'Photo of Daniel'))))) : '',
+    fIsExp: !!f && f.kind === 'exp',
+    fe: fe,
+    fExpPrev: fExpPrev,
+    fExpNext: fExpNext,
+    expPrev: () => site.expStep(-1),
+    expNext: () => site.expStep(1),
+    openExp: experience.map((_, i) => opener('exp', i)),
+    fLabel: f ? (f.kind === 'exp' ? fe.company : f.kind === 'hobby' ? fh.title : (f.kind === 'proj' ? fp.name : (f.kind === 'resume' ? 'Resume' : (f.kind === 'spotify' ? 'Music player' : f.kind === 'skills' ? 'Skills' : (f.kind === 'concert' ? 'Concert photo' : 'Photo of Daniel'))))) : '',
     fp: fp,
     fc: fc,
     fh: fh,
@@ -84,7 +104,10 @@ export function renderVals(site: SiteController) {
     fBackdrop: 'position: absolute; inset: 0; background: rgba(244, 247, 251, 0.72); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: ' + (shown ? 1 : 0) + '; transition: opacity 0.4s ease; cursor: zoom-out',
     fCloseBtn: 'position: fixed; z-index: 3; top: 20px; right: 20px; width: 52px; height: 52px; border-radius: 50%; border: 3px solid #D5DAE1; background: linear-gradient(180deg, #FFFFFF, #EDF0F4); box-shadow: inset 0 2px 0 #FFFFFF; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; opacity: ' + (shown ? 1 : 0) + '; transform: scale(' + (shown ? 1 : 0.7) + '); transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1)',
     fClose: () => site.closeFocus(),
-    fKey: (e: any) => { if (e.key === 'Escape') { e.preventDefault(); site.closeFocus(); } },
+    fKey: (e: any) => {
+      if (e.key === 'Escape') { e.preventDefault(); site.closeFocus(); }
+      else if (f && f.kind === 'exp' && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) { e.preventDefault(); site.sfx('skip'); site.expStep(e.key === 'ArrowLeft' ? -1 : 1); }
+    },
     openPhoto: opener('photo', 0),
     openResume: (e: any) => { if (e && e.preventDefault) e.preventDefault(); site.openFocus('resume', 0, e); },
     projectRepo: (e: any) => { if (e && e.stopPropagation) e.stopPropagation(); },

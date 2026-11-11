@@ -83,6 +83,8 @@ footer.shift{padding-bottom:140px !important}
 @media (prefers-reduced-motion: reduce){.flap{animation:none}[data-armed] .rv-item:not([data-in]){opacity:1;translate:none;scale:none}}
 .dots{position:relative}
 .dots::before{content:'';position:absolute;inset:0;transform:translate(var(--dx,14px),var(--dy,14px));background-image:radial-gradient(var(--dot,#9AD9F0) 1.6px,transparent 1.9px);background-size:7px 7px;border-radius:inherit;z-index:-1;pointer-events:none}
+/* Experience cards: the border lives on the tilting face, so inset the shadow by it to keep the dots where they were. */
+.dots.exp-dots::before{inset:4px}
 .dots-sm::before{transform:translate(5px,5px);background-image:radial-gradient(var(--dot,#9AD9F0) 1.3px,transparent 1.6px);background-size:5px 5px}
 .ipod{position:fixed;right:24px;top:50%;transform:translateY(-50%) scale(0.84);transform-origin:right center;z-index:50}
 @media (max-width:1099px){.ipod{top:auto;bottom:12px;right:12px;transform:scale(0.54);transform-origin:bottom right}}

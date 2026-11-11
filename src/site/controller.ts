@@ -436,7 +436,7 @@ export class SiteController {
     this.focusEl = e.currentTarget;
     this.sfx('open');
     this.setState({ focus: { kind: kind, idx: idx, rect: { x: r.left, y: r.top, w: r.width, h: r.height } }, fPhase: 'from' });
-    if (kind === 'proj' && this.miiReact) {
+    if ((kind === 'proj' || kind === 'exp') && this.miiReact) {
       const vw = window.innerWidth; const vh = window.innerHeight;
       const k = Math.max(0.5, Math.min(1.5, (vh - 110) / r.height, (vw - 48) / r.width));
       const ax = vw / 2 - r.width * k / 2 - 70;
@@ -457,6 +457,17 @@ export class SiteController {
     const idx = ((f.idx + d) % cards.length + cards.length) % cards.length;
     this.focusEl = cards[idx];
     this.setState({ focus: Object.assign({}, f, { idx: idx }) });
+  }
+  expStep(d: any) {
+    const f = this.st().focus;
+    if (!f || f.kind !== 'exp') return;
+    const cards = document.querySelectorAll('#experience .proj');
+    if (!cards.length) return;
+    const idx = ((f.idx + d) % cards.length + cards.length) % cards.length;
+    this.focusEl = cards[idx];
+    // Cards can differ in height on narrow screens, so size the overlay from the card being shown.
+    const r = cards[idx].getBoundingClientRect();
+    this.setState({ focus: Object.assign({}, f, { idx: idx, rect: { x: r.left, y: r.top, w: r.width, h: r.height } }) });
   }
   closeFocus() {
     const f = this.st().focus;

@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import type { SiteVals } from '../site/renderVals';
 import { parseStyle } from '../site/style';
 import { ReceiptScreen } from './ReceiptScreen';
+import { ExperienceCard } from './ExperienceCard';
 
 export function FocusOverlay({ v }: { v: SiteVals }) {
   return (
@@ -59,6 +60,23 @@ export function FocusOverlay({ v }: { v: SiteVals }) {
                 </p>
               </div>
             </div>
+          ) : null}
+          {v.fIsExp ? (
+            <>
+              <div style={parseStyle(v.fCard)}>
+                <ExperienceCard e={v.fe} style={{ height: '100%' }} />
+              </div>
+              <button type="button" aria-label="Previous experience" onClick={v.expPrev} style={parseStyle(v.fExpPrev)}>
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+                  <path d="M6 6v12M18 6l-9 6 9 6z" fill="#7E848D" stroke="#7E848D" strokeWidth="2" strokeLinejoin="round" />
+                </svg>
+              </button>
+              <button type="button" aria-label="Next experience" onClick={v.expNext} style={parseStyle(v.fExpNext)}>
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+                  <path d="M18 6v12M6 6l9 6-9 6z" fill="#7E848D" stroke="#7E848D" strokeWidth="2" strokeLinejoin="round" />
+                </svg>
+              </button>
+            </>
           ) : null}
           {v.fIsProj ? (
             <div style={parseStyle(v.fCard)}>
