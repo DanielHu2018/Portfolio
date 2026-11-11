@@ -72,7 +72,6 @@ export function ReceiptScreen({ v }: { v: SiteVals }) {
               <span style={{ display: 'flex', flexWrap: 'wrap', columnGap: '8px', fontWeight: '500', fontSize: '10px', color: '#5A5F67' }}>
                 <span style={{ whiteSpace: 'nowrap' }}><span style={{ color: '#E8A800' }}>★</span> favorite</span>
                 <span style={{ whiteSpace: 'nowrap' }}><span style={{ color: '#A9B0BA' }}>★</span> second favorite</span>
-                <span style={{ whiteSpace: 'nowrap' }}><span style={{ color: '#FF6FB5' }}>♥</span> loved</span>
               </span>
             </div>
           </div>
