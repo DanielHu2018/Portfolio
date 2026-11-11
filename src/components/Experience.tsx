@@ -16,7 +16,7 @@ export function Experience({ v }: { v: SiteVals }) {
           <article className="dots rv-item" style={{ background: '#FFFFFF', border: '4px solid #D5DAE1', borderRadius: '28px', boxShadow: 'inset 0 0 0 4px #FFFFFF', display: 'flex', flexDirection: 'column' }}>
             <div style={{ borderRadius: '24px 24px 0 0', height: '92px', backgroundColor: '#FFFFFF', backgroundImage: "url('/assets/nationwide.png')", backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'contain', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', padding: '14px 20px' }}>
             </div>
-            <div style={{ padding: '22px', background: 'linear-gradient(180deg, #E9F8FE, #BDEBFB)', borderRadius: '0 0 24px 24px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <div style={{ padding: '22px', background: 'linear-gradient(180deg, #E9F8FE, #BDEBFB)', borderRadius: '0 0 24px 24px', display: 'flex', flexGrow: '1', flexDirection: 'column', gap: '10px' }}>
               <h3 style={{ margin: '0', fontWeight: '800', fontSize: '26px' }}>
                 Nationwide Mutual Insurance Company
               </h3>
@@ -50,7 +50,7 @@ export function Experience({ v }: { v: SiteVals }) {
           <article className="dots rv-item" style={{ background: '#FFFFFF', border: '4px solid #D5DAE1', borderRadius: '28px', boxShadow: 'inset 0 0 0 4px #FFFFFF', display: 'flex', flexDirection: 'column' }}>
             <div style={{ borderRadius: '24px 24px 0 0', height: '92px', backgroundColor: '#FFFFFF', backgroundImage: "url('/assets/The-Ohio-State-University-Logo.png')", backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'contain', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', padding: '14px 20px' }}>
             </div>
-            <div style={{ padding: '22px', background: 'linear-gradient(180deg, #F1ECFF, #CDBDFF)', borderRadius: '0 0 24px 24px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <div style={{ padding: '22px', background: 'linear-gradient(180deg, #F1ECFF, #CDBDFF)', borderRadius: '0 0 24px 24px', display: 'flex', flexGrow: '1', flexDirection: 'column', gap: '10px' }}>
               <h3 style={{ margin: '0', fontWeight: '800', fontSize: '26px' }}>
                 Design Innovation &amp; Simulation Lab
               </h3>
@@ -81,7 +81,7 @@ export function Experience({ v }: { v: SiteVals }) {
           <article className="dots rv-item" style={{ background: '#FFFFFF', border: '4px solid #D5DAE1', borderRadius: '28px', boxShadow: 'inset 0 0 0 4px #FFFFFF', display: 'flex', flexDirection: 'column' }}>
             <div style={{ borderRadius: '24px 24px 0 0', height: '92px', backgroundColor: '#A96F5A', backgroundImage: "url('/assets/bdaa.png')", backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', padding: '14px 20px' }}>
             </div>
-            <div style={{ padding: '22px', background: 'linear-gradient(180deg, #E6FAEE, #A9EBC2)', borderRadius: '0 0 24px 24px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <div style={{ padding: '22px', background: 'linear-gradient(180deg, #E6FAEE, #A9EBC2)', borderRadius: '0 0 24px 24px', display: 'flex', flexGrow: '1', flexDirection: 'column', gap: '10px' }}>
               <h3 style={{ margin: '0', fontWeight: '800', fontSize: '26px' }}>
                 Big Data &amp; Analytics Association
               </h3>
