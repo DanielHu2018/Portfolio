@@ -46,7 +46,7 @@ export function ReceiptScreen({ v }: { v: SiteVals }) {
           {v.artistRows.map((a: any, i0: number) => (
             <div key={i0} role="listitem">
               <button type="button" onClick={a.open} onPointerEnter={a.pick} aria-label={a.label} style={parseStyle(a.style)}>
-                <img src={a.cover} alt="" loading="lazy" decoding="async" width="30" height="30" style={{ flexShrink: '0', width: '30px', height: '30px', objectFit: 'cover', borderRadius: '50%', background: '#3C4046', boxShadow: '0 1px 2px rgba(35, 38, 43, 0.3)' }} />
+                <img src={a.cover} alt="" loading="lazy" decoding="async" width="30" height="30" style={{ flexShrink: '0', width: '30px', height: '30px', objectFit: 'cover', borderRadius: '2px', background: '#3C4046', boxShadow: '0 1px 2px rgba(35, 38, 43, 0.3)' }} />
                 <span style={{ flex: '1', minWidth: '0', display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
                   <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                     {a.title}
@@ -66,7 +66,7 @@ export function ReceiptScreen({ v }: { v: SiteVals }) {
       {v.art ? (
         <div style={{ height: '260px', background: '#FFFFFF', display: 'flex', flexDirection: 'column' }}>
           <div style={{ flexShrink: '0', display: 'flex', alignItems: 'center', gap: '10px', padding: '9px 10px', background: 'linear-gradient(180deg, #FFFFFF, #EEF1F5)' }}>
-            <img src={v.art.pic} alt={`${v.art.name} on Spotify`} width="88" height="88" style={{ flexShrink: '0', width: '88px', height: '88px', objectFit: 'cover', borderRadius: '50%', background: '#3C4046', boxShadow: '0 2px 5px rgba(35, 38, 43, 0.35)' }} />
+            <img src={v.art.pic} alt={`${v.art.name} on Spotify`} width="88" height="88" style={{ flexShrink: '0', width: '88px', height: '88px', objectFit: 'cover', borderRadius: '3px', background: '#3C4046', boxShadow: '0 2px 5px rgba(35, 38, 43, 0.35)' }} />
             <div style={{ minWidth: '0', display: 'flex', flexDirection: 'column', gap: '3px', fontFamily: '\'Helvetica Neue\', Arial, sans-serif', color: '#23262B' }}>
               <span style={{ fontWeight: '700', fontSize: '13px', lineHeight: '1.2', display: '-webkit-box', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                 {v.art.name}
