@@ -4,26 +4,34 @@
     "tracks-1m": [
       {
         "name": "Sunday - Remastered 2026",
-        "secondary": "14 plays"
+        "secondary": "17 plays"
       },
       {
         "name": "How to Pretend",
-        "secondary": "10 plays"
+        "secondary": "11 plays"
       },
       {
         "name": "The Peace",
         "secondary": "10 plays"
       },
       {
+        "name": "blade bird",
+        "secondary": "9 plays"
+      },
+      {
         "name": "The Only Exception",
         "secondary": "9 plays"
       },
       {
-        "name": "blade bird",
+        "name": "Linger - Remastered 2026",
+        "secondary": "9 plays"
+      },
+      {
+        "name": "Iris",
         "secondary": "8 plays"
       },
       {
-        "name": "Linger - Remastered 2026",
+        "name": "iPod Touch",
         "secondary": "8 plays"
       },
       {
@@ -33,36 +41,28 @@
       {
         "name": "Heaven or Las Vegas",
         "secondary": "7 plays"
-      },
-      {
-        "name": "iPod Touch",
-        "secondary": "7 plays"
-      },
-      {
-        "name": "Stateside",
-        "secondary": "6 plays"
       }
     ],
     "artists-1m": [
       {
-        "name": "Lucy Bedroque",
-        "secondary": "45 listens"
+        "name": "The Cranberries",
+        "secondary": "52 listens"
       },
       {
-        "name": "The Cranberries",
-        "secondary": "40 listens"
+        "name": "Lucy Bedroque",
+        "secondary": "46 listens"
       },
       {
         "name": "PinkPantheress",
-        "secondary": "34 listens"
+        "secondary": "35 listens"
       },
       {
         "name": "underscores",
-        "secondary": "33 listens"
+        "secondary": "35 listens"
       },
       {
         "name": "Ninajirachi",
-        "secondary": "26 listens"
+        "secondary": "27 listens"
       },
       {
         "name": "fakemink",
@@ -77,37 +77,45 @@
         "secondary": "20 listens"
       },
       {
-        "name": "Oklou",
-        "secondary": "17 listens"
+        "name": "2hollis",
+        "secondary": "19 listens"
       },
       {
-        "name": "beabadoobee",
-        "secondary": "17 listens"
+        "name": "Oklou",
+        "secondary": "18 listens"
       }
     ],
     "tracks-6m": [
       {
         "name": "Sunday - Remastered 2026",
-        "secondary": "14 plays"
+        "secondary": "17 plays"
       },
       {
         "name": "How to Pretend",
-        "secondary": "10 plays"
+        "secondary": "11 plays"
       },
       {
         "name": "The Peace",
         "secondary": "10 plays"
       },
       {
+        "name": "blade bird",
+        "secondary": "9 plays"
+      },
+      {
         "name": "The Only Exception",
         "secondary": "9 plays"
       },
       {
-        "name": "blade bird",
+        "name": "Linger - Remastered 2026",
+        "secondary": "9 plays"
+      },
+      {
+        "name": "Iris",
         "secondary": "8 plays"
       },
       {
-        "name": "Linger - Remastered 2026",
+        "name": "iPod Touch",
         "secondary": "8 plays"
       },
       {
@@ -117,36 +125,28 @@
       {
         "name": "Heaven or Las Vegas",
         "secondary": "7 plays"
-      },
-      {
-        "name": "iPod Touch",
-        "secondary": "7 plays"
-      },
-      {
-        "name": "Stateside",
-        "secondary": "6 plays"
       }
     ],
     "artists-6m": [
       {
-        "name": "Lucy Bedroque",
-        "secondary": "45 listens"
+        "name": "The Cranberries",
+        "secondary": "52 listens"
       },
       {
-        "name": "The Cranberries",
-        "secondary": "40 listens"
+        "name": "Lucy Bedroque",
+        "secondary": "46 listens"
       },
       {
         "name": "PinkPantheress",
-        "secondary": "34 listens"
+        "secondary": "35 listens"
       },
       {
         "name": "underscores",
-        "secondary": "33 listens"
+        "secondary": "35 listens"
       },
       {
         "name": "Ninajirachi",
-        "secondary": "26 listens"
+        "secondary": "27 listens"
       },
       {
         "name": "fakemink",
@@ -161,12 +161,12 @@
         "secondary": "20 listens"
       },
       {
-        "name": "Oklou",
-        "secondary": "17 listens"
+        "name": "2hollis",
+        "secondary": "19 listens"
       },
       {
-        "name": "beabadoobee",
-        "secondary": "17 listens"
+        "name": "Oklou",
+        "secondary": "18 listens"
       }
     ]
   }
