@@ -23,6 +23,7 @@ export type SiteState = {
   receiptView?: number;
   receiptSel?: number;
   album?: number | null;
+  artist?: number | null;
   songSel?: number;
   skillSel?: number;
   flow?: number;

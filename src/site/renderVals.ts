@@ -1,5 +1,6 @@
 import type { SiteController } from './controller';
 import { albums } from './albums';
+import { artists } from './artists';
 import { experience } from './experience';
 import { censor } from './censor';
 
@@ -225,23 +226,29 @@ export function renderVals(site: SiteController) {
     { type: 'tracks', range: '6m' },
     { type: 'artists', range: '1m' },
     { type: 'artists', range: '6m' },
+    { type: 'favArtists', range: '' },
     { type: 'albums', range: '' }
   ];
   const receiptIndex = ((s.receiptView || 0) % receiptViews.length + receiptViews.length) % receiptViews.length;
   const receiptView = receiptViews[receiptIndex];
   const isAlbums = receiptView.type === 'albums';
+  const isFavArtists = receiptView.type === 'favArtists';
+  const isFavList = isAlbums || isFavArtists;
   const openAlbum = isAlbums && s.album != null ? albums[s.album] : null;
-  const receiptItems = isAlbums ? albums : (s.receipts && s.receipts.views && s.receipts.views[receiptView.type + '-' + receiptView.range]) || [{ name: s.receipts ? 'Nothing here yet' : 'Loading…', secondary: '' }];
+  const openArtist = isFavArtists && s.artist != null ? artists[s.artist] || null : null;
+  const openFav = openAlbum || openArtist;
+  const receiptItems = isAlbums ? albums : isFavArtists ? (artists.length ? artists : [{ name: 'Coming soon' }]) : (s.receipts && s.receipts.views && s.receipts.views[receiptView.type + '-' + receiptView.range]) || [{ name: s.receipts ? 'Nothing here yet' : 'Loading…', secondary: '' }];
   const receiptSel = Math.min(s.receiptSel || 0, receiptItems.length - 1);
   // Opening an album remembers the list's scroll position; going back restores it.
   const showAlbum = (i: number, e: any) => {
+    if (isFavArtists && !artists.length) return;
     const host = e && e.currentTarget && e.currentTarget.closest ? e.currentTarget.closest('.slab3d') : null;
     const list = host ? host.querySelector('.rc-scroll') : null;
     site.rcScroll = list ? list.scrollTop : 0;
-    site.setState({ album: i, receiptSel: i, songSel: 0 });
+    site.setState(isFavArtists ? { artist: i, receiptSel: i, songSel: 0 } : { album: i, receiptSel: i, songSel: 0 });
   };
   const closeAlbum = () => {
-    site.setState({ album: null });
+    site.setState({ album: null, artist: null });
     const top = site.rcScroll || 0;
     requestAnimationFrame(() => document.querySelectorAll('.rc-scroll').forEach((el: any) => { el.scrollTop = top; }));
   };
@@ -260,7 +267,29 @@ export function renderVals(site: SiteController) {
       artistStyle: 'overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; font-size: 10px; color: ' + (on ? 'rgba(255, 255, 255, 0.9)' : '#5A5F67')
     };
   }) : [];
-  const songSel = openAlbum ? Math.min(s.songSel || 0, openAlbum.songs.length - 1) : 0;
+  const artistRows = isFavArtists ? artists.map((ar, i) => {
+    const on = i === receiptSel;
+    return {
+      cover: ar.pic,
+      title: ar.name,
+      artist: ar.songs.length + (ar.songs.length === 1 ? ' favorite track' : ' favorite tracks'),
+      label: ar.name,
+      open: (e: any) => showAlbum(i, e),
+      pick: () => { if (site.st().receiptSel !== i) site.setState({ receiptSel: i }); },
+      style: 'display: flex; align-items: center; gap: 8px; width: 100%; min-height: 36px; padding: 3px 8px; box-sizing: border-box; border: 0; border-radius: 0; cursor: pointer; ' + rowFont + rowColors(on),
+      artistStyle: 'overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; font-size: 10px; color: ' + (on ? 'rgba(255, 255, 255, 0.9)' : '#5A5F67')
+    };
+  }) : [];
+  const songSel = openFav ? Math.min(s.songSel || 0, openFav.songs.length - 1) : 0;
+  const artistSongRows = openArtist ? openArtist.songs.map((sg, i) => {
+    const on = i === songSel;
+    return {
+      cover: sg.cover,
+      name: sg.name,
+      pick: () => { if (site.st().songSel !== i) site.setState({ songSel: i }); },
+      style: 'display: flex; align-items: center; gap: 7px; min-height: 26px; padding: 2px 8px; ' + rowFont + rowColors(on)
+    };
+  }) : [];
   const songRows = openAlbum ? openAlbum.songs.map((sg, i) => {
     const on = i === songSel;
     return {
@@ -274,7 +303,7 @@ export function renderVals(site: SiteController) {
       starStyle: 'flex-shrink: 0; font-size: 12px; color: ' + (sg.fav === 1 ? (on ? '#FFE58A' : '#E8A800') : sg.fav === 3 ? (on ? '#FFD1E8' : '#FF6FB5') : (on ? '#FFFFFF' : '#A9B0BA'))
     };
   }) : [];
-  const receiptRows = (isAlbums ? [] : receiptItems).map((item: any, i: any) => {
+  const receiptRows = (isFavList ? [] : receiptItems).map((item: any, i: any) => {
     const on = i === receiptSel;
     return {
       num: String(i + 1).padStart(2, '0'),
@@ -344,19 +373,24 @@ export function renderVals(site: SiteController) {
       };
     }),
     ...focusVals,
-    receiptTitle: openAlbum ? openAlbum.title : isAlbums ? 'Favorite Albums' : receiptView.type === 'artists' ? 'Top Artists' : 'Top Tracks',
-    receiptRange: openAlbum ? (s.album! + 1) + ' of ' + albums.length : isAlbums ? albums.length + ' albums' : receiptView.range === '6m' ? '6 months' : '4 weeks',
+    receiptTitle: openAlbum ? openAlbum.title : openArtist ? openArtist.name : isAlbums ? 'Favorite Albums' : isFavArtists ? 'Favorite Artists' : receiptView.type === 'artists' ? 'Top Artists' : 'Top Tracks',
+    receiptRange: openAlbum ? (s.album! + 1) + ' of ' + albums.length : openArtist ? (s.artist! + 1) + ' of ' + artists.length : isAlbums ? albums.length + ' albums' : isFavArtists ? artists.length + ' artists' : receiptView.range === '6m' ? '6 months' : '4 weeks',
     receiptRows: receiptRows,
-    rcRanked: !isAlbums,
+    rcRanked: !isFavList,
     rcAlbums: isAlbums && !openAlbum,
+    rcArtists: isFavArtists && !openArtist,
+    artistRows: artistRows,
+    artistEmpty: isFavArtists && !artists.length,
+    artistSongRows: artistSongRows,
+    art: openArtist ? { name: openArtist.name, pic: openArtist.pic, count: openArtist.songs.length + (openArtist.songs.length === 1 ? ' favorite track' : ' favorite tracks') } : null,
     albumRows: albumRows,
     songRows: songRows,
     alb: openAlbum ? { title: openAlbum.title, artist: openAlbum.artist, cover: openAlbum.cover } : null,
-    rcPrevLabel: openAlbum ? 'Previous: back to albums' : 'Previous receipt',
-    rcMenuLabel: openAlbum ? 'Menu: back to albums' : 'Menu: back to top',
-    rcMenu: () => { if (site.st().album != null) closeAlbum(); else { site.setState({ receiptView: 0, receiptSel: 0, album: null }); site.go(0); } },
-    rcCenterLabel: isAlbums && !openAlbum ? 'Open ' + albums[receiptSel].title : 'Daniel on Spotify',
-    rcCenter: (e: any) => { if (isAlbums && !openAlbum) { e.preventDefault(); showAlbum(receiptSel, e); } },
+    rcPrevLabel: openAlbum ? 'Previous: back to albums' : openArtist ? 'Previous: back to artists' : 'Previous receipt',
+    rcMenuLabel: openAlbum ? 'Menu: back to albums' : openArtist ? 'Menu: back to artists' : 'Menu: back to top',
+    rcMenu: () => { if (site.st().album != null || site.st().artist != null) closeAlbum(); else { site.setState({ receiptView: 0, receiptSel: 0, album: null, artist: null }); site.go(0); } },
+    rcCenterLabel: isAlbums && !openAlbum ? 'Open ' + albums[receiptSel].title : isFavArtists && !openArtist && artists.length ? 'Open ' + artists[receiptSel].name : 'Daniel on Spotify',
+    rcCenter: (e: any) => { if ((isAlbums && !openAlbum) || (isFavArtists && !openArtist && artists.length)) { e.preventDefault(); showAlbum(receiptSel, e); } },
     spotifyProfile: 'https://open.spotify.com/user/rudda_rudda',
     npShow: !!s.np,
     npLive: !!(s.np && s.np.playing),
@@ -371,8 +405,8 @@ export function renderVals(site: SiteController) {
     skillUses: skillUses,
     skillPrev: () => site.setState({ skillSel: skillSel - 1 }),
     skillNext: () => site.setState({ skillSel: skillSel + 1 }),
-    trackPrev: () => { if (openAlbum) closeAlbum(); else site.setState({ receiptView: receiptIndex - 1, receiptSel: 0, album: null }); },
-    trackNext: () => site.setState({ receiptView: receiptIndex + 1, receiptSel: 0, album: null }),
+    trackPrev: () => { if (openFav) closeAlbum(); else site.setState({ receiptView: receiptIndex - 1, receiptSel: 0, album: null, artist: null }); },
+    trackNext: () => site.setState({ receiptView: receiptIndex + 1, receiptSel: 0, album: null, artist: null }),
     flowPrev: () => site.setState({ flow: center - 1 }),
     flowNext: () => site.setState({ flow: center + 1 }),
     flowCurrent: flowCurrent,
@@ -392,7 +426,7 @@ export function renderVals(site: SiteController) {
     dragStart: (e: any) => site.dragStart(e),
     resetPos: (e: any) => site.resetPos(e),
     anim: !s.rm,
-    menu: () => { site.setState({ receiptView: 0, receiptSel: 0, album: null }); site.go(0); },
+    menu: () => { site.setState({ receiptView: 0, receiptSel: 0, album: null, artist: null }); site.go(0); },
     prev: () => site.go(sel - 1),
     next: () => site.go(sel + 1),
     center: () => site.go(sel),
