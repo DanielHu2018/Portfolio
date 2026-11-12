@@ -8203,6 +8203,129 @@
         "Rihanna",
         "JAŸ-Z"
       ]
+    },
+    {
+      "played_at": "2026-11-12T01:41:46.092Z",
+      "track_id": "2VjXGuPVVxyhMgER3Uz2Fe",
+      "track_name": "Ex-Factor",
+      "artist_ids": [
+        "2Mu5NfyYm8n5iTomuKAEHl"
+      ],
+      "artists": [
+        "Ms. Lauryn Hill"
+      ]
+    },
+    {
+      "played_at": "2026-11-12T02:09:39.178Z",
+      "track_id": "4tE4iGWd1caBYesdo4cHFr",
+      "track_name": "chlorine",
+      "artist_ids": [
+        "1BBEzOfPYEGI2AgA7Yqqv9"
+      ],
+      "artists": [
+        "yeongseo"
+      ]
+    },
+    {
+      "played_at": "2026-11-12T02:13:06.284Z",
+      "track_id": "5DCRjNEgKHdOFxMLEeXDTs",
+      "track_name": "just bc it's broken doesn't mean you know how to fix it",
+      "artist_ids": [
+        "1BBEzOfPYEGI2AgA7Yqqv9"
+      ],
+      "artists": [
+        "yeongseo"
+      ]
+    },
+    {
+      "played_at": "2026-11-12T02:15:38.183Z",
+      "track_id": "1fCJfXJrCCBGnM2qFpg7Xi",
+      "track_name": "it gets old and i get older",
+      "artist_ids": [
+        "1BBEzOfPYEGI2AgA7Yqqv9"
+      ],
+      "artists": [
+        "yeongseo"
+      ]
+    },
+    {
+      "played_at": "2026-11-12T02:18:11.679Z",
+      "track_id": "2C7fe0Vo2qM6rAOZ2If8Cz",
+      "track_name": "violent",
+      "artist_ids": [
+        "1BBEzOfPYEGI2AgA7Yqqv9"
+      ],
+      "artists": [
+        "yeongseo"
+      ]
+    },
+    {
+      "played_at": "2026-11-12T02:23:13.778Z",
+      "track_id": "5GUYJTQap5F3RDQiCOJhrS",
+      "track_name": "Self Control",
+      "artist_ids": [
+        "2h93pZq0e7k5yf4dywlkpM"
+      ],
+      "artists": [
+        "Frank Ocean"
+      ]
+    },
+    {
+      "played_at": "2026-11-12T02:26:54.163Z",
+      "track_id": "57Xjny5yNzAcsxnusKmAfA",
+      "track_name": "Reptilia",
+      "artist_ids": [
+        "0epOFNiUfyON9EYx7Tpr6V"
+      ],
+      "artists": [
+        "The Strokes"
+      ]
+    },
+    {
+      "played_at": "2026-11-12T02:32:07.131Z",
+      "track_id": "0O3TAouZE4vL9dM5SyxgvH",
+      "track_name": "Fashion Killa",
+      "artist_ids": [
+        "13ubrt8QOOCPljQ2FL1Kca"
+      ],
+      "artists": [
+        "A$AP Rocky"
+      ]
+    },
+    {
+      "played_at": "2026-11-12T02:35:47.726Z",
+      "track_id": "787rCZF9i4L1cXGMkdyIk4",
+      "track_name": "LVL",
+      "artist_ids": [
+        "13ubrt8QOOCPljQ2FL1Kca"
+      ],
+      "artists": [
+        "A$AP Rocky"
+      ]
+    },
+    {
+      "played_at": "2026-11-12T02:45:53.734Z",
+      "track_id": "4YccU60IxsxtJhUUxbuCIg",
+      "track_name": "Don’t make me cry",
+      "artist_ids": [
+        "6R1kfr0GIWnwxY4zW11Vag"
+      ],
+      "artists": [
+        "Frost Children"
+      ]
+    },
+    {
+      "played_at": "2026-11-12T02:53:28.485Z",
+      "track_id": "2HbKqm4o0w5wEeEFXm2sD4",
+      "track_name": "Money Trees",
+      "artist_ids": [
+        "2YZyLoL8N0Wb9xBt1NhZWg",
+        "28ExwzUQsvgJooOI0X1mr3"
+      ],
+      "artists": [
+        "Kendrick Lamar",
+        "Jay Rock"
+      ]
     }
   ]
 }
