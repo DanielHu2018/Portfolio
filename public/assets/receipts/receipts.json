@@ -7,19 +7,23 @@
         "secondary": "14 plays"
       },
       {
+        "name": "How to Pretend",
+        "secondary": "10 plays"
+      },
+      {
         "name": "The Peace",
         "secondary": "10 plays"
+      },
+      {
+        "name": "The Only Exception",
+        "secondary": "9 plays"
       },
       {
         "name": "blade bird",
         "secondary": "8 plays"
       },
       {
-        "name": "How to Pretend",
-        "secondary": "8 plays"
-      },
-      {
-        "name": "The Only Exception",
+        "name": "Linger - Remastered 2026",
         "secondary": "8 plays"
       },
       {
@@ -27,30 +31,26 @@
         "secondary": "7 plays"
       },
       {
+        "name": "Heaven or Las Vegas",
+        "secondary": "7 plays"
+      },
+      {
         "name": "iPod Touch",
         "secondary": "7 plays"
       },
       {
-        "name": "Linger - Remastered 2026",
-        "secondary": "7 plays"
-      },
-      {
         "name": "Stateside",
-        "secondary": "6 plays"
-      },
-      {
-        "name": "Easter Pink",
         "secondary": "6 plays"
       }
     ],
     "artists-1m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "38 listens"
+        "secondary": "45 listens"
       },
       {
         "name": "The Cranberries",
-        "secondary": "37 listens"
+        "secondary": "40 listens"
       },
       {
         "name": "PinkPantheress",
@@ -73,15 +73,15 @@
         "secondary": "20 listens"
       },
       {
+        "name": "Paramore",
+        "secondary": "20 listens"
+      },
+      {
         "name": "Oklou",
         "secondary": "17 listens"
       },
       {
-        "name": "Paramore",
-        "secondary": "17 listens"
-      },
-      {
-        "name": "2hollis",
+        "name": "beabadoobee",
         "secondary": "17 listens"
       }
     ],
@@ -91,19 +91,23 @@
         "secondary": "14 plays"
       },
       {
+        "name": "How to Pretend",
+        "secondary": "10 plays"
+      },
+      {
         "name": "The Peace",
         "secondary": "10 plays"
+      },
+      {
+        "name": "The Only Exception",
+        "secondary": "9 plays"
       },
       {
         "name": "blade bird",
         "secondary": "8 plays"
       },
       {
-        "name": "How to Pretend",
-        "secondary": "8 plays"
-      },
-      {
-        "name": "The Only Exception",
+        "name": "Linger - Remastered 2026",
         "secondary": "8 plays"
       },
       {
@@ -111,30 +115,26 @@
         "secondary": "7 plays"
       },
       {
+        "name": "Heaven or Las Vegas",
+        "secondary": "7 plays"
+      },
+      {
         "name": "iPod Touch",
         "secondary": "7 plays"
       },
       {
-        "name": "Linger - Remastered 2026",
-        "secondary": "7 plays"
-      },
-      {
         "name": "Stateside",
-        "secondary": "6 plays"
-      },
-      {
-        "name": "Easter Pink",
         "secondary": "6 plays"
       }
     ],
     "artists-6m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "38 listens"
+        "secondary": "45 listens"
       },
       {
         "name": "The Cranberries",
-        "secondary": "37 listens"
+        "secondary": "40 listens"
       },
       {
         "name": "PinkPantheress",
@@ -157,15 +157,15 @@
         "secondary": "20 listens"
       },
       {
+        "name": "Paramore",
+        "secondary": "20 listens"
+      },
+      {
         "name": "Oklou",
         "secondary": "17 listens"
       },
       {
-        "name": "Paramore",
-        "secondary": "17 listens"
-      },
-      {
-        "name": "2hollis",
+        "name": "beabadoobee",
         "secondary": "17 listens"
       }
     ]
