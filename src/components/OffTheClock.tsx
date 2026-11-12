@@ -91,7 +91,7 @@ export function OffTheClock({ v }: { v: SiteVals }) {
                       <path d="M6 6v12M18 6l-9 6 9 6z" fill="#7E848D" stroke="#7E848D" strokeWidth="2" strokeLinejoin="round" />
                     </svg>
                   </button>
-                  <button type="button" aria-label="Next receipt" onClick={v.trackNext} style={{ position: 'absolute', right: '0', top: '50%', transform: 'translateY(-50%)', width: '44px', height: '44px', border: '0', background: 'transparent', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <button type="button" aria-label={v.rcNextLabel} onClick={v.trackNext} style={{ position: 'absolute', right: '0', top: '50%', transform: 'translateY(-50%)', width: '44px', height: '44px', border: '0', background: 'transparent', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
                     <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
                       <path d="M18 6v12M6 6l9 6-9 6z" fill="#7E848D" stroke="#7E848D" strokeWidth="2" strokeLinejoin="round" />
                     </svg>
