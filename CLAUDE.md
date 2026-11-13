@@ -47,7 +47,7 @@ places (`initCursor` looks for `[style*="cursor: pointer"]`), so keep them inlin
 | Wii-style hand cursor | `engine/cursor.ts`, `components/WiiCursor.tsx` |
 | iPod navigator (draggable, click wheel scrolls between sections) | `components/IpodNav.tsx`, `go(i)` in the controller |
 | "Currently listening to" badge | `components/NowPlaying.tsx`, `watchNowPlaying()` in the controller |
-| Spotify receipts iPod (wheel arrows switch Top Tracks / Top Artists / Favorite Artists / Favorite Albums; an artist or album opens its favorite songs) | `components/ReceiptScreen.tsx` (screen, shared by `OffTheClock.tsx` and `FocusOverlay.tsx`), `site/artists.ts` (artist list), `site/albums.ts` (album list), `loadReceipts()` in the controller |
+| Spotify receipts iPod (wheel arrows switch Top Tracks / Top Artists / Favorite Artists / Favorite Albums; a top track or artist opens its page (cover or photo, details, most-played tracks; data from `scripts/generate-receipts.mjs`); a favorite artist or album opens its favorite songs) | `components/ReceiptScreen.tsx` (screen, shared by `OffTheClock.tsx` and `FocusOverlay.tsx`), `site/artists.ts` (artist list), `site/albums.ts` (album list), `loadReceipts()` in the controller |
 | Featured project iPods (3D tilt, VIEW links) | `components/Projects.tsx`, `projMove` |
 | Concert Cover Flow (endless loop, reflections) | `components/OffTheClock.tsx`, `.photo3d` |
 | Hobby 3D models (guitar, pencil, skis, volleyball) | `engine/hobbies.ts` |

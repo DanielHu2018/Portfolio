@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import type { SiteVals } from '../site/renderVals';
 import { parseStyle } from '../site/style';
 
-/** The Spotify iPod's screen: Top Tracks / Top Artists lists, the Favorite Artists or Favorite Albums list, or one artist or album. */
+/** The Spotify iPod's screen: Top Tracks / Top Artists lists (a row opens that track or artist), the Favorite Artists or Favorite Albums list, or one artist or album. */
 export function ReceiptScreen({ v }: { v: SiteVals }) {
   return (
     <div style={{ width: '100%', boxSizing: 'border-box', border: '8px solid #23262B', borderRadius: '12px', background: '#23262B', overflow: 'hidden' }}>
@@ -18,22 +18,85 @@ export function ReceiptScreen({ v }: { v: SiteVals }) {
         <div role="list" aria-label={`Daniel's ${v.receiptTitle}, last ${v.receiptRange}`} style={{ height: '260px', overflow: 'hidden', background: '#FFFFFF', display: 'flex', flexDirection: 'column' }}>
           {v.receiptRows.map((m: any, i0: number) => (
             <Fragment key={i0}>
-              <div role="listitem" onPointerEnter={m.pick} style={parseStyle(m.style)}>
-                <span style={parseStyle(m.numStyle)}>
-                  {m.num}
-                </span>
-                <span style={{ flex: '1', minWidth: '0', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                  {m.name}
-                </span>
-                <span style={parseStyle(m.metaStyle)}>
-                  {m.meta}
-                </span>
-                <span aria-hidden="true">
-                  ›
-                </span>
+              <div role="listitem">
+                <button type="button" onClick={m.open} onPointerEnter={m.pick} disabled={!m.open} aria-label={m.label} style={parseStyle(m.style)}>
+                  <span style={parseStyle(m.numStyle)}>
+                    {m.num}
+                  </span>
+                  <span style={{ flex: '1', minWidth: '0', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    {m.name}
+                  </span>
+                  <span style={parseStyle(m.metaStyle)}>
+                    {m.meta}
+                  </span>
+                  <span aria-hidden="true">
+                    ›
+                  </span>
+                </button>
               </div>
             </Fragment>
           ))}
+        </div>
+      ) : null}
+      {v.topHead ? (
+        <div style={{ height: '260px', background: '#FFFFFF', display: 'flex', flexDirection: 'column' }}>
+          <div style={{ flexShrink: '0', display: 'flex', alignItems: 'center', gap: '10px', padding: '9px 10px', background: 'linear-gradient(180deg, #FFFFFF, #EEF1F5)' }}>
+            {v.topHead.pic ? (
+              <img src={v.topHead.pic} alt={v.topHead.alt} width="88" height="88" style={{ flexShrink: '0', width: '88px', height: '88px', objectFit: 'cover', borderRadius: '3px', background: '#3C4046', boxShadow: '0 2px 5px rgba(35, 38, 43, 0.35)' }} />
+            ) : (
+              <div aria-hidden="true" style={{ flexShrink: '0', width: '88px', height: '88px', borderRadius: '3px', background: '#3C4046', boxShadow: '0 2px 5px rgba(35, 38, 43, 0.35)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#A9B0BA', fontSize: '34px' }}>
+                ♪
+              </div>
+            )}
+            <div style={{ minWidth: '0', display: 'flex', flexDirection: 'column', gap: '3px', fontFamily: '\'Helvetica Neue\', Arial, sans-serif', color: '#23262B' }}>
+              <span style={{ fontWeight: '700', fontSize: '13px', lineHeight: '1.2', display: '-webkit-box', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                {v.topHead.name}
+              </span>
+              {v.topHead.sub ? (
+                <span style={{ fontWeight: '600', fontSize: '11px', color: '#4A4F57', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                  {v.topHead.sub}
+                </span>
+              ) : null}
+              <span style={{ fontWeight: '500', fontSize: '10px', color: '#5A5F67', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                {v.topHead.count}
+              </span>
+            </div>
+          </div>
+          <div style={{ flexShrink: '0', padding: '3px 8px', background: 'linear-gradient(180deg, #F4F6F9, #E3E7EC)', borderTop: '1px solid #D5DAE1', borderBottom: '1px solid #D5DAE1', font: '800 10px \'Helvetica Neue\', Arial, sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: '#5A5F67' }}>
+            {v.topTrack ? 'Track Info' : 'Most Played'}
+          </div>
+          {v.topTrack ? (
+            <div className="rc-scroll" role="list" aria-label={`About ${v.topHead.name}`} style={{ flex: '1', minHeight: '0', overflowY: 'auto' }}>
+              {v.topInfo.map((r: any, i0: number) => (
+                <div key={i0} role="listitem" style={{ display: 'flex', alignItems: 'center', gap: '8px', minHeight: '26px', padding: '0 8px', borderBottom: '1px solid #EEF1F5', font: '600 12px \'Helvetica Neue\', Arial, sans-serif', color: '#23262B' }}>
+                  <span style={{ flexShrink: '0', fontWeight: '700', fontSize: '10px', color: '#7E848D' }}>
+                    {r.label}
+                  </span>
+                  <span style={{ flex: '1', minWidth: '0', textAlign: 'right', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    {r.value}
+                  </span>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="rc-scroll" role="list" aria-label={`Daniel's most played tracks by ${v.topHead.name}`} style={{ flex: '1', minHeight: '0', overflowY: 'auto' }}>
+              {v.topSongRows.map((t: any, i0: number) => (
+                <div key={i0} role="listitem" onPointerEnter={t.pick} style={parseStyle(t.style)}>
+                  {t.cover ? (
+                    <img src={t.cover} alt="" loading="lazy" decoding="async" width="22" height="22" style={{ flexShrink: '0', width: '22px', height: '22px', objectFit: 'cover', borderRadius: '2px', background: '#3C4046', boxShadow: '0 1px 2px rgba(35, 38, 43, 0.3)' }} />
+                  ) : (
+                    <span aria-hidden="true" style={{ flexShrink: '0', width: '22px', height: '22px', borderRadius: '2px', background: '#3C4046' }} />
+                  )}
+                  <span style={{ flex: '1', minWidth: '0', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    {t.name}
+                  </span>
+                  <span style={parseStyle(t.metaStyle)}>
+                    {t.meta}
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       ) : null}
       {v.rcArtists ? (

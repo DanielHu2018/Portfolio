@@ -26,6 +26,7 @@ export type SiteState = {
   receiptSel?: number;
   album?: number | null;
   artist?: number | null;
+  top?: number | null; // the Top Tracks / Top Artists row opened on the Spotify iPod
   songSel?: number;
   skillSel?: number;
   flow?: number;
