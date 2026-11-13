@@ -15,8 +15,7 @@ export function initStaffs(site: SiteController) {
       { y: 0.46, amp: 70, len: 0.8, slide: 50, rev: false, seed: 4, count: 8, gap: 15, depth: 180 }
     ],
     'stf-off': [
-      { y: 0.14, amp: 40, len: 0.5, slide: 45, rev: true, seed: 7, count: 7, gap: 12, depth: 120 },
-      { y: 0.88, amp: 44, len: 0.42, slide: 60, rev: false, seed: 2, count: 6, gap: 13, depth: 130 }
+      { y: 0.14, amp: 40, len: 0.5, slide: 45, rev: true, seed: 7, count: 7, gap: 12, depth: 120 }
     ],
     'stf-skills': [
       { y: 0.15, amp: 46, len: 0.5, slide: 44, rev: false, seed: 9, count: 7, gap: 13, depth: 150 }
