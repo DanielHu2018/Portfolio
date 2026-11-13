@@ -4,7 +4,7 @@ import { execSync } from 'node:child_process';
 import { existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { basename } from 'node:path';
 
-const BASELINE = 'bad52f4';
+const BASELINE = 'd6cd643';
 const dir = '.port-baseline';
 const FONT_CSS = 'https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Permanent+Marker&display=swap';
 const CHROME_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
