@@ -8759,6 +8759,50 @@
       "artists": [
         "Lucy Bedroque"
       ]
+    },
+    {
+      "played_at": "2026-11-12T23:25:41.841Z",
+      "track_id": "026wpXkLAjImiWOzzcJBHj",
+      "track_name": "Good Looking",
+      "artist_ids": [
+        "5GGJosGMs08YEmKTZJe1fL"
+      ],
+      "artists": [
+        "Suki Waterhouse"
+      ]
+    },
+    {
+      "played_at": "2026-11-12T23:28:32.642Z",
+      "track_id": "5sl2735QKaOmL8UL4Q39Ut",
+      "track_name": "Peso",
+      "artist_ids": [
+        "13ubrt8QOOCPljQ2FL1Kca"
+      ],
+      "artists": [
+        "A$AP Rocky"
+      ]
+    },
+    {
+      "played_at": "2026-11-13T01:07:35.683Z",
+      "track_id": "57Xjny5yNzAcsxnusKmAfA",
+      "track_name": "Reptilia",
+      "artist_ids": [
+        "0epOFNiUfyON9EYx7Tpr6V"
+      ],
+      "artists": [
+        "The Strokes"
+      ]
+    },
+    {
+      "played_at": "2026-11-13T01:13:02.769Z",
+      "track_id": "2VjXGuPVVxyhMgER3Uz2Fe",
+      "track_name": "Ex-Factor",
+      "artist_ids": [
+        "2Mu5NfyYm8n5iTomuKAEHl"
+      ],
+      "artists": [
+        "Ms. Lauryn Hill"
+      ]
     }
   ]
 }
