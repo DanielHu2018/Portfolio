@@ -8825,6 +8825,72 @@
       "artists": [
         "Paramore"
       ]
+    },
+    {
+      "played_at": "2026-11-13T15:44:59.746Z",
+      "track_id": "4Uiw0Sl9yskBaC6P4DcdVD",
+      "track_name": "Be Quiet and Drive (Far Away)",
+      "artist_ids": [
+        "6Ghvu1VvMGScGpOUJBAHNH"
+      ],
+      "artists": [
+        "Deftones"
+      ]
+    },
+    {
+      "played_at": "2026-11-13T18:31:25.624Z",
+      "track_id": "4Uiw0Sl9yskBaC6P4DcdVD",
+      "track_name": "Be Quiet and Drive (Far Away)",
+      "artist_ids": [
+        "6Ghvu1VvMGScGpOUJBAHNH"
+      ],
+      "artists": [
+        "Deftones"
+      ]
+    },
+    {
+      "played_at": "2026-11-13T18:35:52.318Z",
+      "track_id": "5QLHGv0DfpeXLNFo7SFEy1",
+      "track_name": "1979 - Remastered 2012",
+      "artist_ids": [
+        "40Yq4vzPs9VNUrIBG5Jr2i"
+      ],
+      "artists": [
+        "The Smashing Pumpkins"
+      ]
+    },
+    {
+      "played_at": "2026-11-13T18:40:51.225Z",
+      "track_id": "0AxZUYeQ9bZwSdt1LmZuok",
+      "track_name": "Heaven or Las Vegas",
+      "artist_ids": [
+        "5Wabl1lPdNOeIn0SQ5A1mp"
+      ],
+      "artists": [
+        "Cocteau Twins"
+      ]
+    },
+    {
+      "played_at": "2026-11-13T18:44:33.210Z",
+      "track_id": "2GFExyKXf9383tSRSrEHEt",
+      "track_name": "Can't Take My Eyes Off of You - (I Love You Baby)",
+      "artist_ids": [
+        "2Mu5NfyYm8n5iTomuKAEHl"
+      ],
+      "artists": [
+        "Ms. Lauryn Hill"
+      ]
+    },
+    {
+      "played_at": "2026-11-13T18:54:19.563Z",
+      "track_id": "1LzNfuep1bnAUR9skqdHCK",
+      "track_name": "Fade Into You",
+      "artist_ids": [
+        "37w38cCSGgKLdayTRjna4W"
+      ],
+      "artists": [
+        "Mazzy Star"
+      ]
     }
   ]
 }

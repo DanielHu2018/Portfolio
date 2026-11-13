@@ -4,169 +4,1269 @@
     "tracks-1m": [
       {
         "name": "Sunday - Remastered 2026",
-        "secondary": "17 plays"
+        "secondary": "17 plays",
+        "id": "2nTcgF0BGEJBI3argOQWps",
+        "artist": "The Cranberries",
+        "album": "Everybody Else Is Doing It, So Why Can't We? (Remastered 2026)",
+        "year": "1993",
+        "ms": 210760,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193",
+        "url": "https://open.spotify.com/track/2nTcgF0BGEJBI3argOQWps",
+        "last": "2026-11-12T23:15:31.945Z"
       },
       {
         "name": "How to Pretend",
-        "secondary": "11 plays"
+        "secondary": "11 plays",
+        "id": "0H0eIjcXruQpntK0LuNa5v",
+        "artist": "Lucy Bedroque",
+        "album": "Fête de la Vanille",
+        "year": "2024",
+        "ms": 224086,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35",
+        "url": "https://open.spotify.com/track/0H0eIjcXruQpntK0LuNa5v",
+        "last": "2026-11-12T23:22:06.539Z"
       },
       {
         "name": "The Peace",
-        "secondary": "10 plays"
+        "secondary": "10 plays",
+        "id": "6wm3t4VpTxSFfOUgTMlHZM",
+        "artist": "underscores",
+        "album": "U",
+        "year": "2026",
+        "ms": 169500,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646",
+        "url": "https://open.spotify.com/track/6wm3t4VpTxSFfOUgTMlHZM",
+        "last": "2026-11-11T06:17:20.725Z"
       },
       {
         "name": "blade bird",
-        "secondary": "9 plays"
+        "secondary": "9 plays",
+        "id": "1zfPxWc0WSQ2MyVsGTLGtF",
+        "artist": "Oklou",
+        "album": "choke enough",
+        "year": "2025",
+        "ms": 198587,
+        "pic": "https://i.scdn.co/image/ab67616d00001e020b68095c4016bdeabd032e89",
+        "url": "https://open.spotify.com/track/1zfPxWc0WSQ2MyVsGTLGtF",
+        "last": "2026-11-12T15:54:25.321Z"
       },
       {
         "name": "The Only Exception",
-        "secondary": "9 plays"
+        "secondary": "9 plays",
+        "id": "7JIuqL4ZqkpfGKQhYlrirs",
+        "artist": "Paramore",
+        "album": "Brand New Eyes",
+        "year": "2009",
+        "ms": 267653,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02e01d7d558032457b0e4883f6",
+        "url": "https://open.spotify.com/track/7JIuqL4ZqkpfGKQhYlrirs",
+        "last": "2026-11-11T19:55:32.796Z"
       },
       {
         "name": "Linger - Remastered 2026",
-        "secondary": "9 plays"
-      },
-      {
-        "name": "Iris",
-        "secondary": "8 plays"
-      },
-      {
-        "name": "iPod Touch",
-        "secondary": "8 plays"
-      },
-      {
-        "name": "Be My Angel",
-        "secondary": "7 plays"
+        "secondary": "9 plays",
+        "id": "1WYrTfvKjQYaYfVziGG1ET",
+        "artist": "The Cranberries",
+        "album": "Everybody Else Is Doing It, So Why Can't We? (Remastered 2026)",
+        "year": "1993",
+        "ms": 274720,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193",
+        "url": "https://open.spotify.com/track/1WYrTfvKjQYaYfVziGG1ET",
+        "last": "2026-11-12T19:17:45.875Z"
       },
       {
         "name": "Heaven or Las Vegas",
-        "secondary": "7 plays"
+        "secondary": "8 plays",
+        "id": "0AxZUYeQ9bZwSdt1LmZuok",
+        "artist": "Cocteau Twins",
+        "album": "Heaven or Las Vegas",
+        "year": "1990",
+        "ms": 298400,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02",
+        "url": "https://open.spotify.com/track/0AxZUYeQ9bZwSdt1LmZuok",
+        "last": "2026-11-13T18:40:51.225Z"
+      },
+      {
+        "name": "Iris",
+        "secondary": "8 plays",
+        "id": "6Qyc6fS4DsZjB2mRW9DsQs",
+        "artist": "The Goo Goo Dolls",
+        "album": "Dizzy up the Girl",
+        "year": "1998",
+        "ms": 289533,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02eda9478c39a21e1cdc6609ca",
+        "url": "https://open.spotify.com/track/6Qyc6fS4DsZjB2mRW9DsQs",
+        "last": "2026-11-12T15:51:06.223Z"
+      },
+      {
+        "name": "iPod Touch",
+        "secondary": "8 plays",
+        "id": "1xqT27jSG1Y15vOXfsV0gv",
+        "artist": "Ninajirachi",
+        "album": "I Love My Computer",
+        "year": "2025",
+        "ms": 196522,
+        "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87",
+        "url": "https://open.spotify.com/track/1xqT27jSG1Y15vOXfsV0gv",
+        "last": "2026-11-12T17:34:05.618Z"
+      },
+      {
+        "name": "Be My Angel",
+        "secondary": "7 plays",
+        "id": "3R6kyOmqWcAsqZqqe9CGL0",
+        "artist": "Mazzy Star",
+        "album": "She Hangs Brightly",
+        "year": "1990",
+        "ms": 197333,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02afce4c9cd3313302c0a16ed1",
+        "url": "https://open.spotify.com/track/3R6kyOmqWcAsqZqqe9CGL0",
+        "last": "2026-11-11T04:59:19.485Z"
       }
     ],
     "artists-1m": [
       {
         "name": "The Cranberries",
-        "secondary": "52 listens"
+        "secondary": "52 listens",
+        "id": "7t0rwkOPGlDPEhaOcVtOt9",
+        "pic": "https://i.scdn.co/image/ab676161000051749d7ed10720669900a0649c98",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/7t0rwkOPGlDPEhaOcVtOt9",
+        "last": "2026-11-12T23:15:31.945Z",
+        "tracks": [
+          {
+            "name": "Sunday - Remastered 2026",
+            "plays": 17,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
+          },
+          {
+            "name": "Linger - Remastered 2026",
+            "plays": 9,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
+          },
+          {
+            "name": "Dreams - Remastered 2026",
+            "plays": 6,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
+          },
+          {
+            "name": "Zombie - 2025 Remastered",
+            "plays": 6,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0220a28883cdd0fc7d5f85a9a9"
+          },
+          {
+            "name": "Ode To My Family - 2025 Remastered",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0220a28883cdd0fc7d5f85a9a9"
+          },
+          {
+            "name": "Waltzing Back - Remastered 2026",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
+          },
+          {
+            "name": "When You're Gone",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e021eab8368d90f9c87692e6474"
+          },
+          {
+            "name": "Pretty - Remastered 2026",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
+          }
+        ]
       },
       {
         "name": "Lucy Bedroque",
-        "secondary": "46 listens"
+        "secondary": "46 listens",
+        "id": "2I8H267eH5va9da4vGt38O",
+        "pic": "https://i.scdn.co/image/ab67616100005174100cfd4653979ed518fbf28f",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/2I8H267eH5va9da4vGt38O",
+        "last": "2026-11-12T23:22:06.539Z",
+        "tracks": [
+          {
+            "name": "How to Pretend",
+            "plays": 11,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
+          },
+          {
+            "name": "SORORITY",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02928b9418e20589b7e47efa9f"
+          },
+          {
+            "name": "Knot Me",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
+          },
+          {
+            "name": "I KNOW (MY INFLUENCE)",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02ee2648cc133c8719bd03de6a"
+          },
+          {
+            "name": "ERASE YOUR SOCIAL",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0242f1c3ef70c241fe934bbcca"
+          },
+          {
+            "name": "I Am, She Is, We Are",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
+          },
+          {
+            "name": "Mimosa",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
+          },
+          {
+            "name": "One Of Us Is Lying",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0235c2d75dff53d549933ca10b"
+          }
+        ]
       },
       {
         "name": "PinkPantheress",
-        "secondary": "35 listens"
+        "secondary": "35 listens",
+        "id": "78rUTD7y6Cy67W1RVzYs7t",
+        "pic": "https://i.scdn.co/image/ab676161000051746bf10d74063b45938f5d8656",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/78rUTD7y6Cy67W1RVzYs7t",
+        "last": "2026-11-12T21:54:03.998Z",
+        "tracks": [
+          {
+            "name": "Stateside",
+            "plays": 6,
+            "pic": "https://i.scdn.co/image/ab67616d00001e022a6a5bd7ec690d91a384245d"
+          },
+          {
+            "name": "Take Me Home",
+            "plays": 6,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0257d764a60898b1e4fa65e857"
+          },
+          {
+            "name": "Just for Me",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e020348d174bc1253a02bcb4ca2"
+          },
+          {
+            "name": "The aisle",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0215a9d5a02103c2d683c07fb4"
+          },
+          {
+            "name": "Tonight",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e028ab2a25b0a6a914ac66d967a"
+          },
+          {
+            "name": "Girl Like Me",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e022a6a5bd7ec690d91a384245d"
+          },
+          {
+            "name": "Mosquito",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0215a9d5a02103c2d683c07fb4"
+          },
+          {
+            "name": "True romance",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0215a9d5a02103c2d683c07fb4"
+          }
+        ]
       },
       {
         "name": "underscores",
-        "secondary": "35 listens"
+        "secondary": "35 listens",
+        "id": "7HfUJxeVTgrvhk0eWHFzV7",
+        "pic": "https://i.scdn.co/image/ab67616100005174de8dfaf8e64fee65ef479e68",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/7HfUJxeVTgrvhk0eWHFzV7",
+        "last": "2026-11-12T22:17:30.179Z",
+        "tracks": [
+          {
+            "name": "The Peace",
+            "plays": 10,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646"
+          },
+          {
+            "name": "Lovefield",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646"
+          },
+          {
+            "name": "Do It",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646"
+          },
+          {
+            "name": "Wish U Well",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646"
+          },
+          {
+            "name": "Bodyfeeling",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646"
+          },
+          {
+            "name": "Locals (Girls like us) [with gabby start]",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02a1252ae06848a2d182eec0c7"
+          },
+          {
+            "name": "Innuendo (I Get U)",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646"
+          },
+          {
+            "name": "harvest sky",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e020b68095c4016bdeabd032e89"
+          }
+        ]
       },
       {
         "name": "Ninajirachi",
-        "secondary": "27 listens"
+        "secondary": "27 listens",
+        "id": "3MekbRujJg5VZThubOlrkR",
+        "pic": "https://i.scdn.co/image/ab676161000051746363b3a1630b8811a4d3d718",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/3MekbRujJg5VZThubOlrkR",
+        "last": "2026-11-12T17:34:05.618Z",
+        "tracks": [
+          {
+            "name": "iPod Touch",
+            "plays": 8,
+            "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87"
+          },
+          {
+            "name": "Delete",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87"
+          },
+          {
+            "name": "WannaCry",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02a4cd3b67b8747f787068b366"
+          },
+          {
+            "name": "All I Am",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87"
+          },
+          {
+            "name": "Battery Death",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87"
+          },
+          {
+            "name": "girl EDM",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02debe7f77e35c78a95ad5603c"
+          },
+          {
+            "name": "Ice u out",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02debe7f77e35c78a95ad5603c"
+          },
+          {
+            "name": "Angel Music",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02debe7f77e35c78a95ad5603c"
+          }
+        ]
       },
       {
         "name": "fakemink",
-        "secondary": "22 listens"
+        "secondary": "22 listens",
+        "id": "0qc4BFxcwRFZfevTck4fOi",
+        "pic": "https://i.scdn.co/image/ab67616100005174fea7ad1b3bc4a7f94234bd1c",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/0qc4BFxcwRFZfevTck4fOi",
+        "last": "2026-11-11T03:53:31.805Z",
+        "tracks": [
+          {
+            "name": "Easter Pink",
+            "plays": 6,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02148b32e65eb2564ea53b5f74"
+          },
+          {
+            "name": "Face To Face",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02909a8f4e79302b0d43737330"
+          },
+          {
+            "name": "Crush",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e024a8d870aff0c63f489ebd063"
+          },
+          {
+            "name": "Celebrity Deathmatch",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0211177bbdbdd2ed6f8d409616"
+          },
+          {
+            "name": "Fidelio",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0256bd54fa17fce27a5fb19c1f"
+          },
+          {
+            "name": "Hard Candy",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e024987b5a78ae7e264e17aa35e"
+          },
+          {
+            "name": "Music and Me",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e025352455888ba3b9073215d37"
+          },
+          {
+            "name": "51 Ttashpel Pony Ave .",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e024987b5a78ae7e264e17aa35e"
+          }
+        ]
       },
       {
         "name": "Paramore",
-        "secondary": "21 listens"
+        "secondary": "21 listens",
+        "id": "74XFHRwlV6OrjEM0A2NCMF",
+        "pic": "https://i.scdn.co/image/ab67616100005174b10c34546a4ca2d7faeb8865",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/74XFHRwlV6OrjEM0A2NCMF",
+        "last": "2026-11-13T07:05:06.888Z",
+        "tracks": [
+          {
+            "name": "The Only Exception",
+            "plays": 9,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02e01d7d558032457b0e4883f6"
+          },
+          {
+            "name": "All I Wanted",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02e01d7d558032457b0e4883f6"
+          },
+          {
+            "name": "Decode",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02b236d0eae2659e7e7adb8b56"
+          },
+          {
+            "name": "For a Pessimist, I'm Pretty Optimistic",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0269966efa45b125ed6711b43c"
+          },
+          {
+            "name": "That's What You Get",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0269966efa45b125ed6711b43c"
+          },
+          {
+            "name": "Hallelujah",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0269966efa45b125ed6711b43c"
+          },
+          {
+            "name": "Misery Business",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0269966efa45b125ed6711b43c"
+          },
+          {
+            "name": "Pressure",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e025cab62839794c2cc3d6a135b"
+          }
+        ]
       },
       {
         "name": "Porter Robinson",
-        "secondary": "20 listens"
+        "secondary": "20 listens",
+        "id": "3dz0NnIZhtKKeXZxLOxCam",
+        "pic": "https://i.scdn.co/image/ab67616100005174f67786cf70976b5d87b27b5a",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/3dz0NnIZhtKKeXZxLOxCam",
+        "last": "2026-11-11T07:02:01.214Z",
+        "tracks": [
+          {
+            "name": "Shelter",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0279921d9de5b4e523a379876d"
+          },
+          {
+            "name": "WannaCry",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02a4cd3b67b8747f787068b366"
+          },
+          {
+            "name": "Something Comforting",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0234dce7e864a4dd44ba72005d"
+          },
+          {
+            "name": "Musician",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0234dce7e864a4dd44ba72005d"
+          },
+          {
+            "name": "Knock Yourself Out XD",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e027c3a704f5148a42134878b5d"
+          },
+          {
+            "name": "Russian Roulette",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e027c3a704f5148a42134878b5d"
+          },
+          {
+            "name": "Is There Really No Happiness?",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e027c3a704f5148a42134878b5d"
+          },
+          {
+            "name": "Everything To Me - jamesjamesjames Remix",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02d2425ac83bd7f4fec63f1c9c"
+          }
+        ]
       },
       {
         "name": "The Strokes",
-        "secondary": "19 listens"
+        "secondary": "19 listens",
+        "id": "0epOFNiUfyON9EYx7Tpr6V",
+        "pic": "https://i.scdn.co/image/ab6761610000517498856eea770468af6dd999d9",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/0epOFNiUfyON9EYx7Tpr6V",
+        "last": "2026-11-13T01:07:35.683Z",
+        "tracks": [
+          {
+            "name": "Reptilia",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e020f35726025e0f025da4c688f"
+          },
+          {
+            "name": "What Ever Happened?",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e020f35726025e0f025da4c688f"
+          },
+          {
+            "name": "Is This It",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
+          },
+          {
+            "name": "The Adults Are Talking",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02e3f1ba3de4659708c25d0f39"
+          },
+          {
+            "name": "Last Nite",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
+          },
+          {
+            "name": "Hard To Explain",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
+          },
+          {
+            "name": "Ode To The Mets",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02e3f1ba3de4659708c25d0f39"
+          },
+          {
+            "name": "Someday",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
+          }
+        ]
       },
       {
         "name": "2hollis",
-        "secondary": "19 listens"
+        "secondary": "19 listens",
+        "id": "72NhFAGG5Pt91VbheJeEPG",
+        "pic": "https://i.scdn.co/image/ab67616100005174717e890b8769dc671c4c46a0",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/72NhFAGG5Pt91VbheJeEPG",
+        "last": "2026-11-12T17:58:28.860Z",
+        "tracks": [
+          {
+            "name": "Spring (Love Me)",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
+          },
+          {
+            "name": "Skin",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
+          },
+          {
+            "name": "Pressure",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
+          },
+          {
+            "name": "Sex",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
+          },
+          {
+            "name": "jeans",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02b8362432f72c45d2b6bf08d8"
+          },
+          {
+            "name": "Human After All",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
+          },
+          {
+            "name": "Sophie",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
+          },
+          {
+            "name": "Eyes Wide Closed",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
+          }
+        ]
       }
     ],
     "tracks-6m": [
       {
         "name": "Sunday - Remastered 2026",
-        "secondary": "17 plays"
+        "secondary": "17 plays",
+        "id": "2nTcgF0BGEJBI3argOQWps",
+        "artist": "The Cranberries",
+        "album": "Everybody Else Is Doing It, So Why Can't We? (Remastered 2026)",
+        "year": "1993",
+        "ms": 210760,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193",
+        "url": "https://open.spotify.com/track/2nTcgF0BGEJBI3argOQWps",
+        "last": "2026-11-12T23:15:31.945Z"
       },
       {
         "name": "How to Pretend",
-        "secondary": "11 plays"
+        "secondary": "11 plays",
+        "id": "0H0eIjcXruQpntK0LuNa5v",
+        "artist": "Lucy Bedroque",
+        "album": "Fête de la Vanille",
+        "year": "2024",
+        "ms": 224086,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35",
+        "url": "https://open.spotify.com/track/0H0eIjcXruQpntK0LuNa5v",
+        "last": "2026-11-12T23:22:06.539Z"
       },
       {
         "name": "The Peace",
-        "secondary": "10 plays"
+        "secondary": "10 plays",
+        "id": "6wm3t4VpTxSFfOUgTMlHZM",
+        "artist": "underscores",
+        "album": "U",
+        "year": "2026",
+        "ms": 169500,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646",
+        "url": "https://open.spotify.com/track/6wm3t4VpTxSFfOUgTMlHZM",
+        "last": "2026-11-11T06:17:20.725Z"
       },
       {
         "name": "blade bird",
-        "secondary": "9 plays"
+        "secondary": "9 plays",
+        "id": "1zfPxWc0WSQ2MyVsGTLGtF",
+        "artist": "Oklou",
+        "album": "choke enough",
+        "year": "2025",
+        "ms": 198587,
+        "pic": "https://i.scdn.co/image/ab67616d00001e020b68095c4016bdeabd032e89",
+        "url": "https://open.spotify.com/track/1zfPxWc0WSQ2MyVsGTLGtF",
+        "last": "2026-11-12T15:54:25.321Z"
       },
       {
         "name": "The Only Exception",
-        "secondary": "9 plays"
+        "secondary": "9 plays",
+        "id": "7JIuqL4ZqkpfGKQhYlrirs",
+        "artist": "Paramore",
+        "album": "Brand New Eyes",
+        "year": "2009",
+        "ms": 267653,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02e01d7d558032457b0e4883f6",
+        "url": "https://open.spotify.com/track/7JIuqL4ZqkpfGKQhYlrirs",
+        "last": "2026-11-11T19:55:32.796Z"
       },
       {
         "name": "Linger - Remastered 2026",
-        "secondary": "9 plays"
-      },
-      {
-        "name": "Iris",
-        "secondary": "8 plays"
-      },
-      {
-        "name": "iPod Touch",
-        "secondary": "8 plays"
-      },
-      {
-        "name": "Be My Angel",
-        "secondary": "7 plays"
+        "secondary": "9 plays",
+        "id": "1WYrTfvKjQYaYfVziGG1ET",
+        "artist": "The Cranberries",
+        "album": "Everybody Else Is Doing It, So Why Can't We? (Remastered 2026)",
+        "year": "1993",
+        "ms": 274720,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193",
+        "url": "https://open.spotify.com/track/1WYrTfvKjQYaYfVziGG1ET",
+        "last": "2026-11-12T19:17:45.875Z"
       },
       {
         "name": "Heaven or Las Vegas",
-        "secondary": "7 plays"
+        "secondary": "8 plays",
+        "id": "0AxZUYeQ9bZwSdt1LmZuok",
+        "artist": "Cocteau Twins",
+        "album": "Heaven or Las Vegas",
+        "year": "1990",
+        "ms": 298400,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02",
+        "url": "https://open.spotify.com/track/0AxZUYeQ9bZwSdt1LmZuok",
+        "last": "2026-11-13T18:40:51.225Z"
+      },
+      {
+        "name": "Iris",
+        "secondary": "8 plays",
+        "id": "6Qyc6fS4DsZjB2mRW9DsQs",
+        "artist": "The Goo Goo Dolls",
+        "album": "Dizzy up the Girl",
+        "year": "1998",
+        "ms": 289533,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02eda9478c39a21e1cdc6609ca",
+        "url": "https://open.spotify.com/track/6Qyc6fS4DsZjB2mRW9DsQs",
+        "last": "2026-11-12T15:51:06.223Z"
+      },
+      {
+        "name": "iPod Touch",
+        "secondary": "8 plays",
+        "id": "1xqT27jSG1Y15vOXfsV0gv",
+        "artist": "Ninajirachi",
+        "album": "I Love My Computer",
+        "year": "2025",
+        "ms": 196522,
+        "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87",
+        "url": "https://open.spotify.com/track/1xqT27jSG1Y15vOXfsV0gv",
+        "last": "2026-11-12T17:34:05.618Z"
+      },
+      {
+        "name": "Be My Angel",
+        "secondary": "7 plays",
+        "id": "3R6kyOmqWcAsqZqqe9CGL0",
+        "artist": "Mazzy Star",
+        "album": "She Hangs Brightly",
+        "year": "1990",
+        "ms": 197333,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02afce4c9cd3313302c0a16ed1",
+        "url": "https://open.spotify.com/track/3R6kyOmqWcAsqZqqe9CGL0",
+        "last": "2026-11-11T04:59:19.485Z"
       }
     ],
     "artists-6m": [
       {
         "name": "The Cranberries",
-        "secondary": "52 listens"
+        "secondary": "52 listens",
+        "id": "7t0rwkOPGlDPEhaOcVtOt9",
+        "pic": "https://i.scdn.co/image/ab676161000051749d7ed10720669900a0649c98",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/7t0rwkOPGlDPEhaOcVtOt9",
+        "last": "2026-11-12T23:15:31.945Z",
+        "tracks": [
+          {
+            "name": "Sunday - Remastered 2026",
+            "plays": 17,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
+          },
+          {
+            "name": "Linger - Remastered 2026",
+            "plays": 9,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
+          },
+          {
+            "name": "Dreams - Remastered 2026",
+            "plays": 6,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
+          },
+          {
+            "name": "Zombie - 2025 Remastered",
+            "plays": 6,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0220a28883cdd0fc7d5f85a9a9"
+          },
+          {
+            "name": "Ode To My Family - 2025 Remastered",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0220a28883cdd0fc7d5f85a9a9"
+          },
+          {
+            "name": "Waltzing Back - Remastered 2026",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
+          },
+          {
+            "name": "When You're Gone",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e021eab8368d90f9c87692e6474"
+          },
+          {
+            "name": "Pretty - Remastered 2026",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
+          }
+        ]
       },
       {
         "name": "Lucy Bedroque",
-        "secondary": "46 listens"
+        "secondary": "46 listens",
+        "id": "2I8H267eH5va9da4vGt38O",
+        "pic": "https://i.scdn.co/image/ab67616100005174100cfd4653979ed518fbf28f",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/2I8H267eH5va9da4vGt38O",
+        "last": "2026-11-12T23:22:06.539Z",
+        "tracks": [
+          {
+            "name": "How to Pretend",
+            "plays": 11,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
+          },
+          {
+            "name": "SORORITY",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02928b9418e20589b7e47efa9f"
+          },
+          {
+            "name": "Knot Me",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
+          },
+          {
+            "name": "I KNOW (MY INFLUENCE)",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02ee2648cc133c8719bd03de6a"
+          },
+          {
+            "name": "ERASE YOUR SOCIAL",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0242f1c3ef70c241fe934bbcca"
+          },
+          {
+            "name": "I Am, She Is, We Are",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
+          },
+          {
+            "name": "Mimosa",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
+          },
+          {
+            "name": "One Of Us Is Lying",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0235c2d75dff53d549933ca10b"
+          }
+        ]
       },
       {
         "name": "PinkPantheress",
-        "secondary": "35 listens"
+        "secondary": "35 listens",
+        "id": "78rUTD7y6Cy67W1RVzYs7t",
+        "pic": "https://i.scdn.co/image/ab676161000051746bf10d74063b45938f5d8656",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/78rUTD7y6Cy67W1RVzYs7t",
+        "last": "2026-11-12T21:54:03.998Z",
+        "tracks": [
+          {
+            "name": "Stateside",
+            "plays": 6,
+            "pic": "https://i.scdn.co/image/ab67616d00001e022a6a5bd7ec690d91a384245d"
+          },
+          {
+            "name": "Take Me Home",
+            "plays": 6,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0257d764a60898b1e4fa65e857"
+          },
+          {
+            "name": "Just for Me",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e020348d174bc1253a02bcb4ca2"
+          },
+          {
+            "name": "The aisle",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0215a9d5a02103c2d683c07fb4"
+          },
+          {
+            "name": "Tonight",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e028ab2a25b0a6a914ac66d967a"
+          },
+          {
+            "name": "Girl Like Me",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e022a6a5bd7ec690d91a384245d"
+          },
+          {
+            "name": "Mosquito",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0215a9d5a02103c2d683c07fb4"
+          },
+          {
+            "name": "True romance",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0215a9d5a02103c2d683c07fb4"
+          }
+        ]
       },
       {
         "name": "underscores",
-        "secondary": "35 listens"
+        "secondary": "35 listens",
+        "id": "7HfUJxeVTgrvhk0eWHFzV7",
+        "pic": "https://i.scdn.co/image/ab67616100005174de8dfaf8e64fee65ef479e68",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/7HfUJxeVTgrvhk0eWHFzV7",
+        "last": "2026-11-12T22:17:30.179Z",
+        "tracks": [
+          {
+            "name": "The Peace",
+            "plays": 10,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646"
+          },
+          {
+            "name": "Lovefield",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646"
+          },
+          {
+            "name": "Do It",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646"
+          },
+          {
+            "name": "Wish U Well",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646"
+          },
+          {
+            "name": "Bodyfeeling",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646"
+          },
+          {
+            "name": "Locals (Girls like us) [with gabby start]",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02a1252ae06848a2d182eec0c7"
+          },
+          {
+            "name": "Innuendo (I Get U)",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646"
+          },
+          {
+            "name": "harvest sky",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e020b68095c4016bdeabd032e89"
+          }
+        ]
       },
       {
         "name": "Ninajirachi",
-        "secondary": "27 listens"
+        "secondary": "27 listens",
+        "id": "3MekbRujJg5VZThubOlrkR",
+        "pic": "https://i.scdn.co/image/ab676161000051746363b3a1630b8811a4d3d718",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/3MekbRujJg5VZThubOlrkR",
+        "last": "2026-11-12T17:34:05.618Z",
+        "tracks": [
+          {
+            "name": "iPod Touch",
+            "plays": 8,
+            "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87"
+          },
+          {
+            "name": "Delete",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87"
+          },
+          {
+            "name": "WannaCry",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02a4cd3b67b8747f787068b366"
+          },
+          {
+            "name": "All I Am",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87"
+          },
+          {
+            "name": "Battery Death",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87"
+          },
+          {
+            "name": "girl EDM",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02debe7f77e35c78a95ad5603c"
+          },
+          {
+            "name": "Ice u out",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02debe7f77e35c78a95ad5603c"
+          },
+          {
+            "name": "Angel Music",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02debe7f77e35c78a95ad5603c"
+          }
+        ]
       },
       {
         "name": "fakemink",
-        "secondary": "22 listens"
+        "secondary": "22 listens",
+        "id": "0qc4BFxcwRFZfevTck4fOi",
+        "pic": "https://i.scdn.co/image/ab67616100005174fea7ad1b3bc4a7f94234bd1c",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/0qc4BFxcwRFZfevTck4fOi",
+        "last": "2026-11-11T03:53:31.805Z",
+        "tracks": [
+          {
+            "name": "Easter Pink",
+            "plays": 6,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02148b32e65eb2564ea53b5f74"
+          },
+          {
+            "name": "Face To Face",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02909a8f4e79302b0d43737330"
+          },
+          {
+            "name": "Crush",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e024a8d870aff0c63f489ebd063"
+          },
+          {
+            "name": "Celebrity Deathmatch",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0211177bbdbdd2ed6f8d409616"
+          },
+          {
+            "name": "Fidelio",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0256bd54fa17fce27a5fb19c1f"
+          },
+          {
+            "name": "Hard Candy",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e024987b5a78ae7e264e17aa35e"
+          },
+          {
+            "name": "Music and Me",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e025352455888ba3b9073215d37"
+          },
+          {
+            "name": "51 Ttashpel Pony Ave .",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e024987b5a78ae7e264e17aa35e"
+          }
+        ]
       },
       {
         "name": "Paramore",
-        "secondary": "21 listens"
+        "secondary": "21 listens",
+        "id": "74XFHRwlV6OrjEM0A2NCMF",
+        "pic": "https://i.scdn.co/image/ab67616100005174b10c34546a4ca2d7faeb8865",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/74XFHRwlV6OrjEM0A2NCMF",
+        "last": "2026-11-13T07:05:06.888Z",
+        "tracks": [
+          {
+            "name": "The Only Exception",
+            "plays": 9,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02e01d7d558032457b0e4883f6"
+          },
+          {
+            "name": "All I Wanted",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02e01d7d558032457b0e4883f6"
+          },
+          {
+            "name": "Decode",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02b236d0eae2659e7e7adb8b56"
+          },
+          {
+            "name": "For a Pessimist, I'm Pretty Optimistic",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0269966efa45b125ed6711b43c"
+          },
+          {
+            "name": "That's What You Get",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0269966efa45b125ed6711b43c"
+          },
+          {
+            "name": "Hallelujah",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0269966efa45b125ed6711b43c"
+          },
+          {
+            "name": "Misery Business",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0269966efa45b125ed6711b43c"
+          },
+          {
+            "name": "Pressure",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e025cab62839794c2cc3d6a135b"
+          }
+        ]
       },
       {
         "name": "Porter Robinson",
-        "secondary": "20 listens"
+        "secondary": "20 listens",
+        "id": "3dz0NnIZhtKKeXZxLOxCam",
+        "pic": "https://i.scdn.co/image/ab67616100005174f67786cf70976b5d87b27b5a",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/3dz0NnIZhtKKeXZxLOxCam",
+        "last": "2026-11-11T07:02:01.214Z",
+        "tracks": [
+          {
+            "name": "Shelter",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0279921d9de5b4e523a379876d"
+          },
+          {
+            "name": "WannaCry",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02a4cd3b67b8747f787068b366"
+          },
+          {
+            "name": "Something Comforting",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0234dce7e864a4dd44ba72005d"
+          },
+          {
+            "name": "Musician",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0234dce7e864a4dd44ba72005d"
+          },
+          {
+            "name": "Knock Yourself Out XD",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e027c3a704f5148a42134878b5d"
+          },
+          {
+            "name": "Russian Roulette",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e027c3a704f5148a42134878b5d"
+          },
+          {
+            "name": "Is There Really No Happiness?",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e027c3a704f5148a42134878b5d"
+          },
+          {
+            "name": "Everything To Me - jamesjamesjames Remix",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02d2425ac83bd7f4fec63f1c9c"
+          }
+        ]
       },
       {
         "name": "The Strokes",
-        "secondary": "19 listens"
+        "secondary": "19 listens",
+        "id": "0epOFNiUfyON9EYx7Tpr6V",
+        "pic": "https://i.scdn.co/image/ab6761610000517498856eea770468af6dd999d9",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/0epOFNiUfyON9EYx7Tpr6V",
+        "last": "2026-11-13T01:07:35.683Z",
+        "tracks": [
+          {
+            "name": "Reptilia",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e020f35726025e0f025da4c688f"
+          },
+          {
+            "name": "What Ever Happened?",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e020f35726025e0f025da4c688f"
+          },
+          {
+            "name": "Is This It",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
+          },
+          {
+            "name": "The Adults Are Talking",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02e3f1ba3de4659708c25d0f39"
+          },
+          {
+            "name": "Last Nite",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
+          },
+          {
+            "name": "Hard To Explain",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
+          },
+          {
+            "name": "Ode To The Mets",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02e3f1ba3de4659708c25d0f39"
+          },
+          {
+            "name": "Someday",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
+          }
+        ]
       },
       {
         "name": "2hollis",
-        "secondary": "19 listens"
+        "secondary": "19 listens",
+        "id": "72NhFAGG5Pt91VbheJeEPG",
+        "pic": "https://i.scdn.co/image/ab67616100005174717e890b8769dc671c4c46a0",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/72NhFAGG5Pt91VbheJeEPG",
+        "last": "2026-11-12T17:58:28.860Z",
+        "tracks": [
+          {
+            "name": "Spring (Love Me)",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
+          },
+          {
+            "name": "Skin",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
+          },
+          {
+            "name": "Pressure",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
+          },
+          {
+            "name": "Sex",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
+          },
+          {
+            "name": "jeans",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02b8362432f72c45d2b6bf08d8"
+          },
+          {
+            "name": "Human After All",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
+          },
+          {
+            "name": "Sophie",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
+          },
+          {
+            "name": "Eyes Wide Closed",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
+          }
+        ]
       }
     ]
   }
