@@ -1,4 +1,5 @@
 import { initCursor } from '../engine/cursor';
+import { initGlobe } from '../engine/globe';
 import { initMii } from '../engine/mii';
 import { initStaffs } from '../engine/staffs';
 import { initTour } from '../engine/tour';
@@ -294,6 +295,7 @@ export class SiteController {
     this.initMii();
     this.initTour();
     this.initHeroFade();
+    initGlobe(this);
     this.initReveal();
     const ids = this.sectionIds();
     const doc = typeof document !== 'undefined' ? document : null;
@@ -330,6 +332,7 @@ export class SiteController {
     if (this.miiOff) this.miiOff();
     if (this.tourOff) this.tourOff();
     if (this.heroFadeOff) this.heroFadeOff();
+    if (this.globeOff) this.globeOff();
     if (this.fPoseT) clearTimeout(this.fPoseT);
     if (this.fTimer) clearTimeout(this.fTimer);
     if (this.raf) cancelAnimationFrame(this.raf);
@@ -580,7 +583,12 @@ export class SiteController {
     // The card is the overlay child centered with translate(-50%, -50%) (the hobby blurb isn't).
     const card = root ? Array.prototype.find.call(root.children, (el: any) => (el.style.transform || '').indexOf('translate(-50%, -50%)') === 0) : null;
     if (!card) return;
+    // Measure where the card ends up, not wherever its zoom-in transition has got to (by 600ms it has finished
+    // for a visitor, but it runs on real time while timers can run faster, e.g. under the port tests' clock).
+    const tr = card.style.transition;
+    card.style.transition = 'none';
     const r = card.getBoundingClientRect();
+    card.style.transition = tr;
     const vw = window.innerWidth; const vh = window.innerHeight; const Z = this.pageZoom || 1;
     const pose = this.focusPose(kind, idx);
     // Concert cards have their arrows hanging 84px outside the card.

@@ -15,6 +15,7 @@ type Step = {
   side?: 'left' | 'right';
   pose?: string; // a sprite from engine/mii.ts: wave, cheer, dance, look, sit, spin, toetap, scratch, fight
   say: string;
+  globe?: string; // turn the Places globe to this place (a name in site/places.ts) and show its label
   phone?: Partial<Step>; // replaces these fields on phones (under 700px), where the navigator iPod is hidden
 };
 
@@ -50,7 +51,11 @@ const TOUR: Record<string, Step[]> = {
     { el: '#hb-guitar', pose: 'toetap', say: "I just started learning guitar after seeing The Strokes live. I'm not very good yet, but it's a lot of fun." },
     { el: '#hb-drawing', pose: 'sit', say: "I've been drawing for as long as I can remember, mostly little things in my sketchbook." },
     { el: '#hb-ski', pose: 'spin', say: 'Skiing is my favorite winter activity. Someday I want to ski in Hokkaido!' },
-    { el: '#hb-volley', pose: 'fight', say: 'And I play volleyball two or three times a week, indoor and sand.' }
+    { el: '#hb-volley', pose: 'fight', say: 'And I play volleyball two or three times a week, indoor and sand.' },
+    { el: '#globe', side: 'left', pose: 'look', globe: 'Columbus, OH', say: "Here's my globe of places! Drag it to spin it, and click any dot to see where it is. The gold star is home, right here in Columbus.",
+      phone: { say: "Here's my globe of places! Drag it to spin it, and tap any dot to see where it is. The gold star is home, right here in Columbus." } },
+    { el: '#globe', side: 'left', pose: 'toetap', globe: 'Cleveland, OH', say: "Pink dots are places I've been, like Cleveland, where I saw Kid Cudi." },
+    { el: '#globe', side: 'left', pose: 'spin', globe: 'Hokkaido, Japan', say: "And green dots are where I want to go next. Someday I'll ski in Hokkaido!" }
   ],
   contact: [
     { el: '#contact h2', text: true, side: 'right', pose: 'look', say: "I'm open to new grad software and AI engineering roles, so feel free to reach out!" },
@@ -71,6 +76,7 @@ export function initTour(site: SiteController) {
   let run = 0; // bumped to cancel whatever the tour is doing
   let sec = 0; let step = 0; // where the tour is (or where it was paused)
   let fresh = true; // the next start begins at the top of the site
+  let globeHeld = false; // the tour is holding the Places globe on a place
   const timers = new Set<any>();
   const sleep = (ms: number) => new Promise<void>((res) => { const t = setTimeout(() => { timers.delete(t); res(); }, ms); timers.add(t); });
   const alive = (tok: number) => tok === run && site.tourOn;
@@ -167,7 +173,7 @@ export function initTour(site: SiteController) {
   const play = async (tok: number) => {
     while (alive(tok)) {
       const steps = TOUR[ids[sec]] || [];
-      if (step === 0) { site.go(sec, true); await sleep(rm ? 200 : 950); }
+      if (step === 0) { site.go(sec, true); await sleep(rm ? 200 : 950); if (!alive(tok)) return; }
       while (step < steps.length) {
         if (!alive(tok)) return;
         const s = window.innerWidth < 700 && steps[step].phone ? { ...steps[step], ...steps[step].phone } : steps[step];
@@ -185,9 +191,13 @@ export function initTour(site: SiteController) {
           const me = site.miiPos();
           site.miiPose(s.pose || null, b.r.left + b.r.width / 2 < me.x);
         } else site.miiPose(s.pose || null, false);
+        // Globe stops turn the globe to their place; the first stop after them lets it spin again.
+        if ((s.globe || globeHeld) && site.globeFocus) { site.globeFocus(s.globe || null); globeHeld = !!s.globe; }
         if (!(await say(s.say, tok))) return;
         step++;
       }
+      // A cancelled run must not move on: a skip may have already put sec and step somewhere else.
+      if (!alive(tok)) return;
       if (sec >= ids.length - 1) { stop(true); return; }
       sec++; step = 0;
     }
@@ -207,6 +217,7 @@ export function initTour(site: SiteController) {
   };
   // finished: the tour reached the end, so the next start begins at the top again.
   const stop = (finished?: boolean) => {
+    if (globeHeld && site.globeFocus) { site.globeFocus(null); globeHeld = false; }
     run++;
     site.tourOn = false;
     hush();

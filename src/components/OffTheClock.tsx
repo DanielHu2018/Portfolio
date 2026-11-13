@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import type { SiteVals } from '../site/renderVals';
 import { parseStyle } from '../site/style';
+import { Places } from './Places';
 import { ReceiptScreen } from './ReceiptScreen';
 
 export function OffTheClock({ v }: { v: SiteVals }) {
@@ -128,6 +129,7 @@ export function OffTheClock({ v }: { v: SiteVals }) {
             </div>
           </div>
         </div>
+        <Places v={v} />
       </div>
     </section>
   );

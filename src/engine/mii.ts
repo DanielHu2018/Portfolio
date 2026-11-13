@@ -76,9 +76,9 @@ export function initMii(site: SiteController) {
   // Clicking a control: walk to a spot beside it (so it isn't covered) and react there. Each kind of control
   // gets its own reaction; 'none' leaves the avatar to whatever the click opens (focus views place it, the
   // tour button hands it to the tour). First match wins.
-  const CTL = 'a, button, [role="button"], input, textarea, .proj, .photo3d, canvas[id^="hb-"], .gb-board';
+  const CTL = 'a, button, [role="button"], input, textarea, .proj, .photo3d, canvas[id^="hb-"], #globe, .gb-board';
   const RULES: any = [
-    ['.ipod button[aria-pressed], .tour-fab button, a[href="#resume"], .skill-use, .proj:not(a):not(button), .photo3d, canvas[id^="hb-"]', 'none'],
+    ['#globe, .ipod button[aria-pressed], .tour-fab button, a[href="#resume"], .skill-use, .proj:not(a):not(button), .photo3d, canvas[id^="hb-"]', 'none'],
     ['.ipod [aria-label^="Menu"]', 'wave'],
     ['.ipod [aria-label^="Previous"]', 'look'],
     ['.ipod [aria-label^="Next"]', 'toetap'],

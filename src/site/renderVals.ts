@@ -3,6 +3,7 @@ import { albums } from './albums';
 import { artists } from './artists';
 import { experience } from './experience';
 import { censor } from './censor';
+import { home as placeHome, visited as placesVisited, wantToVisit as placesWant, PLACE_COLORS } from './places';
 
 declare const window: any;
 declare const document: any;
@@ -432,6 +433,11 @@ export function renderVals(site: SiteController) {
     prev: () => { if (site.tourOn && site.tourStep) site.tourStep(-1); else site.go(sel - 1); },
     next: () => { if (site.tourOn && site.tourStep) site.tourStep(1); else site.go(sel + 1); },
     center: () => site.go(sel),
+    placeHome: placeHome,
+    placesVisited: placesVisited,
+    placesWant: placesWant,
+    placeColors: PLACE_COLORS,
+    globeLabel: 'Globe of places. Home: ' + placeHome.name + '. Been there: ' + placesVisited.map((p) => p.name).join(', ') + '. Want to go: ' + placesWant.map((p) => p.name).join(', ') + '.',
     tourOn: !!s.tour,
     prevLabel: s.tour ? 'Previous tour stop' : 'Previous section',
     nextLabel: s.tour ? 'Next tour stop' : 'Next section',
