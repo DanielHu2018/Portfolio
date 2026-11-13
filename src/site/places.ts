@@ -92,6 +92,13 @@ export const wantToVisit: Place[] = [
   { name: 'Athens, Greece', lat: 37.98, lon: 23.73 },
   { name: 'Istanbul, Türkiye', lat: 41.01, lon: 28.98 },
   // Africa and the Middle East
+  { name: 'Cairo, Egypt', lat: 30.04, lon: 31.24 },
+  { name: 'Marrakesh, Morocco', lat: 31.63, lon: -7.98 },
+  { name: 'Fes, Morocco', lat: 34.03, lon: -5.0 },
+  { name: 'Tunisia (Tunis)', lat: 36.81, lon: 10.18 },
+  { name: 'Cape Town, South Africa', lat: -33.92, lon: 18.42 },
+  { name: 'Nairobi, Kenya', lat: -1.29, lon: 36.82 },
+  { name: 'Lagos, Nigeria', lat: 6.52, lon: 3.38 },
   { name: 'Pyramids of Giza, Egypt', lat: 29.98, lon: 31.13 },
   // Asia
   { name: 'Taj Mahal, India', lat: 27.18, lon: 78.04 },
