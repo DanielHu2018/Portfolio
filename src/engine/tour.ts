@@ -15,6 +15,7 @@ type Step = {
   side?: 'left' | 'right';
   pose?: string; // a sprite from engine/mii.ts: wave, cheer, dance, look, sit, spin, toetap, scratch, fight
   say: string;
+  phone?: Partial<Step>; // replaces these fields on phones (under 700px), where the navigator iPod is hidden
 };
 
 const TOUR: Record<string, Step[]> = {
@@ -22,7 +23,8 @@ const TOUR: Record<string, Step[]> = {
     { el: '#hero h1', text: true, side: 'right', pose: 'wave', say: "Hi, I'm Daniel! Welcome to my site. Let me show you around!" },
     { el: '#hero h1 + p', text: true, side: 'right', pose: 'toetap', say: "I'm a software and AI engineer. I build AI products that turn messy, high-stakes decisions into clear next steps." },
     { el: '#hero .pill', nth: 3, side: 'right', pose: 'look', say: "I study Computer Science and Engineering at Ohio State, and I graduate in December 2026. My resume, LinkedIn and GitHub are right here." },
-    { el: '.ipod', side: 'left', pose: 'scratch', say: 'Use the arrows on this iPod to skip ahead or go back, and press play or pause to stop the tour whenever you like.' }
+    { el: '.ipod', side: 'left', pose: 'scratch', say: 'Use the arrows on this iPod to skip ahead or go back, and press play or pause to stop the tour whenever you like.',
+      phone: { el: '.tour-fab', side: 'left', say: 'Use these buttons to skip ahead or go back, and press pause to stop the tour whenever you like.' } }
   ],
   about: [
     { el: '#about .slab3d', pose: 'toetap', say: "That's me! I like live music and being bad at things until I'm not." },
@@ -151,7 +153,7 @@ export function initTour(site: SiteController) {
       if (step === 0) { site.go(sec, true); await sleep(rm ? 200 : 950); }
       while (step < steps.length) {
         if (!alive(tok)) return;
-        const s = steps[step];
+        const s = window.innerWidth < 700 && steps[step].phone ? { ...steps[step], ...steps[step].phone } : steps[step];
         let b = box(s);
         if (b) {
           if (!(await reveal(b.el, tok))) return;

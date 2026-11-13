@@ -14,6 +14,7 @@ import { Ripples } from './components/Ripples';
 import { Skills } from './components/Skills';
 import { SvgDefs } from './components/SvgDefs';
 import { WiiCursor } from './components/WiiCursor';
+import { TourButton } from './components/TourButton';
 import { SiteController } from './site/controller';
 import { renderVals } from './site/renderVals';
 
@@ -53,6 +54,7 @@ export default function App() {
         <Ripples />
         <WiiCursor />
         <IpodNav v={v} />
+        <TourButton v={v} />
         <NowPlaying v={v} />
         <Hero v={v} />
         <About v={v} />

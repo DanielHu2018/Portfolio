@@ -128,3 +128,7 @@ footer.shift{padding-bottom:120px !important}
 @media (prefers-reduced-motion: reduce){.mii-bubble{transition:none;translate:none}}
 /* Home link bar: faded by initHeroFade() as you scroll; fully visible while one of its links has keyboard focus. */
 .hero-dock:focus-within{opacity:1 !important}
+/* Phone tour button (components/TourButton.tsx): only where the navigator iPod is hidden. The now-playing
+   badge leaves room for it. */
+.tour-fab{display:none}
+@media (max-width:699px){.tour-fab{display:flex}.np{max-width:calc(100% - 152px)}}

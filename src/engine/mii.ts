@@ -78,7 +78,7 @@ export function initMii(site: SiteController) {
   // tour button hands it to the tour). First match wins.
   const CTL = 'a, button, [role="button"], input, textarea, .proj, .photo3d, canvas[id^="hb-"], .gb-board';
   const RULES: any = [
-    ['.ipod button[aria-pressed], a[href="#resume"], .skill-use, .proj:not(a):not(button), .photo3d, canvas[id^="hb-"]', 'none'],
+    ['.ipod button[aria-pressed], .tour-fab button, a[href="#resume"], .skill-use, .proj:not(a):not(button), .photo3d, canvas[id^="hb-"]', 'none'],
     ['.ipod [aria-label^="Menu"]', 'wave'],
     ['.ipod [aria-label^="Previous"]', 'look'],
     ['.ipod [aria-label^="Next"]', 'toetap'],
