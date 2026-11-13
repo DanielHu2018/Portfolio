@@ -8803,6 +8803,28 @@
       "artists": [
         "Ms. Lauryn Hill"
       ]
+    },
+    {
+      "played_at": "2026-11-13T07:01:20.591Z",
+      "track_id": "0dWOFwdXrbBUYqD9DLsoyK",
+      "track_name": "BLEACH",
+      "artist_ids": [
+        "1Bl6wpkWCQ4KVgnASpvzzA"
+      ],
+      "artists": [
+        "BROCKHAMPTON"
+      ]
+    },
+    {
+      "played_at": "2026-11-13T07:05:06.888Z",
+      "track_id": "1Bv3h7Vc4AaYA2BcSM3rVd",
+      "track_name": "All I Wanted",
+      "artist_ids": [
+        "74XFHRwlV6OrjEM0A2NCMF"
+      ],
+      "artists": [
+        "Paramore"
+      ]
     }
   ]
 }
