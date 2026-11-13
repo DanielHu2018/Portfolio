@@ -137,3 +137,6 @@ footer.shift{padding-bottom:120px !important}
 @media (max-width:699px){.shift > *:not(.bleed):not(canvas){max-width:calc(100vw - 32px) !important;margin-left:auto !important;margin-right:auto !important}}
 /* Phones: room under the Home link bar's buttons for the Tour pill (components/TourButton.tsx). */
 @media (max-width:699px){.hero-dock{padding-bottom:96px !important}}
+
+/* Keep the resume above the mobile focus avatar. */
+@media (max-width:699px){.focus-root iframe{max-height:calc((100dvh - 260px) / var(--z,1))}}

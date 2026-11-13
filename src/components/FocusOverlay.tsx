@@ -16,7 +16,7 @@ export function FocusOverlay({ v }: { v: SiteVals }) {
             </svg>
           </button>
           {v.fIsPhoto ? (
-            <div style={parseStyle(v.fCard)}>
+            <div data-focus-card style={parseStyle(v.fCard)}>
               <div style={{ position: 'relative', background: '#FFFFFF', border: '3px solid #D5DAE1', borderRadius: '12px', padding: '22px 22px 0' }}>
                 <img src="/assets/web/photo_of_me.jpg" alt="Photo of Daniel" style={{ display: 'block', width: '100%', aspectRatio: '1 / 1', objectFit: 'cover', background: 'linear-gradient(180deg, #E9F8FE, #BDEBFB)', border: '2px solid #D5DAE1', borderRadius: '6px' }} />
                 <p style={{ margin: '18px 0 24px', fontFamily: '\'Permanent Marker\', cursive', fontSize: '32px', textAlign: 'center', color: '#3C4046' }}>
@@ -27,7 +27,7 @@ export function FocusOverlay({ v }: { v: SiteVals }) {
             </div>
           ) : null}
           {v.fIsResume ? (
-            <div style={parseStyle(v.fCard)}>
+            <div data-focus-card style={parseStyle(v.fCard)}>
               <div style={{ background: '#FFFFFF', border: '3px solid #D5DAE1', borderRadius: '12px', padding: '14px' }}>
                 <iframe src="/assets/Daniel_Hu_Resume_10312026.pdf" title="Daniel Hu resume" style={{ display: 'block', width: '100%', height: 'min(80vh, 720px)', border: '2px solid #D5DAE1', borderRadius: '6px', background: '#FFFFFF' }} />
                 <a href="/api/resume" download="Daniel_Hu_Resume_10312026.pdf" target="_blank" rel="noopener" style={{ display: 'inline-block', margin: '10px 2px 0', color: '#5A5F67', font: '600 14px \'Helvetica Neue\', Arial, sans-serif', textDecoration: 'underline', textUnderlineOffset: '3px' }}>
@@ -37,7 +37,7 @@ export function FocusOverlay({ v }: { v: SiteVals }) {
             </div>
           ) : null}
           {v.fIsConcert ? (
-            <div style={parseStyle(v.fCard)}>
+            <div data-focus-card style={parseStyle(v.fCard)}>
               <div style={{ background: '#FFFFFF', border: '3px solid #D5DAE1', borderRadius: '10px', padding: '18px 18px 0' }}>
                 <div style={{ position: 'relative' }}>
                   <button type="button" aria-label="Previous concert" onClick={v.concertPrev} style={{ position: 'absolute', zIndex: '1', left: '-84px', top: '50%', transform: 'translateY(-50%)', width: '42px', height: '42px', borderRadius: '50%', border: '3px solid #D5DAE1', background: 'linear-gradient(180deg, #FFFFFF, #EDF0F4)', boxShadow: 'inset 0 2px 0 #FFFFFF', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -63,7 +63,7 @@ export function FocusOverlay({ v }: { v: SiteVals }) {
           ) : null}
           {v.fIsExp ? (
             <>
-              <div style={parseStyle(v.fCard)}>
+              <div data-focus-card style={parseStyle(v.fCard)}>
                 <ExperienceCard e={v.fe} style={{ height: '100%' }} />
               </div>
               <button type="button" aria-label="Previous experience" onClick={v.expPrev} style={parseStyle(v.fExpPrev)}>
@@ -79,7 +79,7 @@ export function FocusOverlay({ v }: { v: SiteVals }) {
             </>
           ) : null}
           {v.fIsProj ? (
-            <div style={parseStyle(v.fCard)}>
+            <div data-focus-card style={parseStyle(v.fCard)}>
               <div style={{ position: 'relative', height: '100%', boxSizing: 'border-box', padding: '20px 20px 28px', borderRadius: '40px', background: 'linear-gradient(160deg, #FFFFFF 0%, #F2F4F7 55%, #DFE3E9 100%)', border: '3px solid #D5DAE1', boxShadow: 'inset 0 3px 0 #FFFFFF', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '22px' }}>
                 <div style={{ width: '100%', boxSizing: 'border-box', border: '8px solid #23262B', borderRadius: '12px', background: '#23262B', overflow: 'hidden' }}>
                   <div style={{ background: 'linear-gradient(180deg, #FAFBFC, #E7EAEE)', borderBottom: '1px solid #B9BFC8', padding: '3px 8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', font: '700 12px \'Helvetica Neue\', Arial, sans-serif', color: '#23262B' }}>
@@ -147,7 +147,7 @@ export function FocusOverlay({ v }: { v: SiteVals }) {
             </div>
           ) : null}
           {v.fIsSpotify ? (
-            <div style={parseStyle(v.fCard)}>
+            <div data-focus-card style={parseStyle(v.fCard)}>
               <div className="slab3d" style={{ position: 'relative', width: '100%', boxSizing: 'border-box', padding: '20px 20px 28px', borderRadius: '40px', background: 'linear-gradient(160deg, #FFFFFF 0%, #F2F4F7 55%, #DFE3E9 100%)', border: '3px solid #D5DAE1', boxShadow: 'inset 0 3px 0 #FFFFFF', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '22px' }}>
                 {v.slab.map((L: any, i0: number) => (
                   <Fragment key={i0}>
@@ -188,7 +188,7 @@ export function FocusOverlay({ v }: { v: SiteVals }) {
             </div>
           ) : null}
           {v.fIsSkills ? (
-            <div style={parseStyle(v.fCard)}>
+            <div data-focus-card style={parseStyle(v.fCard)}>
               <div className="slab3d" style={{ height: '100%', position: 'relative', boxSizing: 'border-box', padding: '20px 20px 28px', borderRadius: '40px', background: 'linear-gradient(160deg, #FFFFFF 0%, #F2F4F7 55%, #DFE3E9 100%)', border: '3px solid #D5DAE1', boxShadow: 'inset 0 3px 0 #FFFFFF', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '22px' }}>
                 {v.slab.map((L: any, i0: number) => (
                   <Fragment key={i0}>
@@ -253,7 +253,7 @@ export function FocusOverlay({ v }: { v: SiteVals }) {
                   {v.fh.blurb}
                 </p>
               </div>
-              <div style={parseStyle(v.fCard)}>
+              <div data-focus-card style={parseStyle(v.fCard)}>
                 <canvas id="hb-focus" role="img" aria-label={v.fh.label} width="256" height="256" style={{ display: 'block', width: '100%', aspectRatio: '1 / 1', imageRendering: 'pixelated', cursor: 'grab', touchAction: 'none' }} />
               </div>
             </>

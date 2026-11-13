@@ -51,13 +51,14 @@ export function renderVals(site: SiteController) {
   const fr: any = f ? { x: f.rect.x / Z, y: f.rect.y / Z, w: f.rect.w / Z, h: f.rect.h / Z } : null;
   if (f && (f.kind === 'proj' || f.kind === 'skills' || f.kind === 'spotify' || f.kind === 'exp')) {
     const vw0 = typeof window !== 'undefined' ? window.innerWidth / Z : 1440;
-    const vh0 = typeof window !== 'undefined' ? window.innerHeight / Z : 900;
-    let k = Math.max(0.5, Math.min(1.5, (vh0 - 110) / fr.h, (vw0 - 48) / fr.w));
+    const mobileFocus = typeof window !== 'undefined' && window.innerWidth < 700;
+    const vh0 = typeof window !== 'undefined' ? (window.innerHeight - (mobileFocus ? 160 : 0)) / Z : 900;
+    let k = Math.max(mobileFocus ? 0.1 : 0.5, Math.min(1.5, (vh0 - 110) / fr.h, (vw0 - 48) / fr.w));
     const ccx = vw0 / 2; let ccy = vh0 / 2;
     if (f.kind === 'exp') {
       // Prev/next arrows sit beside the card, or below it when the screen is too narrow.
       const side = (vw0 - fr.w * k) / 2 >= 84;
-      if (!side) { k = Math.max(0.5, Math.min(1.5, (vh0 - 180) / fr.h, (vw0 - 48) / fr.w)); ccy = vh0 / 2 - 36; }
+      if (!side) { k = Math.max(mobileFocus ? 0.1 : 0.5, Math.min(1.5, (vh0 - 180) / fr.h, (vw0 - 48) / fr.w)); ccy = vh0 / 2 - 36; }
       const hw = fr.w * k / 2; const hh = fr.h * k / 2;
       const arrow = (x: number, y: number) => 'position: fixed; z-index: 3; left: ' + x.toFixed(1) + 'px; top: ' + y.toFixed(1) + 'px; width: 52px; height: 52px; border-radius: 50%; border: 3px solid #D5DAE1; background: linear-gradient(180deg, #FFFFFF, #EDF0F4); box-shadow: inset 0 2px 0 #FFFFFF; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; opacity: ' + (shown ? 1 : 0) + '; transition: opacity 0.3s ease';
       fExpPrev = side ? arrow(ccx - hw - 24 - 52, ccy - 26) : arrow(ccx - 52 - 10, ccy + hh + 14);

@@ -282,6 +282,7 @@ export class SiteController {
     const z = window.innerWidth < 700 ? 0.75 : Math.round(Math.min(2.25, Math.max(1, Math.min(window.innerWidth / 1440, window.innerHeight / 900))) * 100) / 100;
     this.pageZoom = z;
     document.documentElement.style.setProperty('--z', String(z));
+    if (this.st().focus) this.setState({});
   }
   mount() {
     this.zoomOff = (() => { const f = () => this.fitZoom(); f(); window.addEventListener('resize', f); return () => window.removeEventListener('resize', f); })();
@@ -524,7 +525,7 @@ export class SiteController {
   focusTarget(kind: any) {
     const Z = this.pageZoom || 1;
     const vw = typeof window !== 'undefined' ? window.innerWidth / Z : 1440;
-    const vh = typeof window !== 'undefined' ? window.innerHeight / Z : 900;
+    const vh = typeof window !== 'undefined' ? (window.innerHeight - (window.innerWidth < 700 ? 160 : 0)) / Z : 900;
     const fit = (w: any, h: any) => Math.min(w, (vw - 48), (vh - 120) * (w / h));
     if (kind === 'photo') return { w: fit(440, 560), cx: vw / 2, cy: vh / 2 };
     if (kind === 'concert') return { w: fit(400, 520), cx: vw / 2, cy: vh / 2 };
@@ -547,7 +548,7 @@ export class SiteController {
     this.focusEl = e.currentTarget;
     this.sfx('open');
     this.setState({ focus: { kind: kind, idx: idx, rect: { x: r.left, y: r.top, w: r.width, h: r.height } }, fPhase: 'from' });
-    if ((kind === 'proj' || kind === 'exp') && this.miiReact) {
+    if (window.innerWidth >= 700 && (kind === 'proj' || kind === 'exp') && this.miiReact) {
       const vw = window.innerWidth; const vh = window.innerHeight;
       const k = Math.max(0.5, Math.min(1.5, (vh - 110) / r.height, (vw - 48) / r.width));
       const ax = vw / 2 - r.width * k / 2 - 70;
@@ -565,6 +566,7 @@ export class SiteController {
     }));
   }
   focusPose(kind: any, idx: any): { react?: string; hold: string } {
+    if (kind === 'proj' || kind === 'exp') return { react: 'cheer', hold: 'idle' };
     if (kind === 'photo') return { hold: 'toetap' };
     if (kind === 'resume') return { hold: 'look' };
     if (kind === 'concert') return { react: 'spin', hold: 'dance' };
@@ -591,6 +593,10 @@ export class SiteController {
     card.style.transition = tr;
     const vw = window.innerWidth; const vh = window.innerHeight; const Z = this.pageZoom || 1;
     const pose = this.focusPose(kind, idx);
+    if (vw < 700) {
+      this.miiReact(pose.react || null, { x: (r.left + r.right) / 2, y: Math.min(vh - 28, r.bottom + (kind === 'exp' ? 145 : 90)) }, { hold: pose.hold });
+      return;
+    }
     // Concert cards have their arrows hanging 84px outside the card.
     const gap = (kind === 'concert' ? 105 : 0) * Z + 64;
     const fits = (x: number) => x >= 60 && x <= vw - 50;

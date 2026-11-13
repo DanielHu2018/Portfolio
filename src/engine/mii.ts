@@ -223,6 +223,15 @@ export function initMii(site: SiteController) {
     if (!tour && !reacting && !st.pinned && hm.vis && now - st.lastClick > 2.5 && !st.walking) {
       if (Math.hypot(hm.x - st.x, hm.py - st.y) > 8) { st.tx = hm.x; st.ty = hm.py; }
     }
+    // Focus cards reserve a bottom strip on phones for the posing avatar.
+    if (st.pinned && site.st().focus && window.innerWidth < 700) {
+      const card = document.querySelector('.focus-root [data-focus-card]');
+      if (card) {
+        const r = card.getBoundingClientRect();
+        st.x = st.tx = (r.left + r.right) / 2;
+        st.y = st.ty = Math.min(window.innerHeight - 28, r.bottom + (site.st().focus.kind === 'exp' ? 145 : 90));
+      }
+    }
     const dx = st.tx - st.x; const dy = st.ty - st.y;
     const dist = Math.hypot(dx, dy);
     const wasWalking = st.walking;
