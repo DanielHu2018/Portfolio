@@ -61,14 +61,52 @@ export function initGlobe(site: SiteController) {
   };
   size();
 
-  // Rotate a unit vector into view space: x right, y up, z toward the viewer.
-  const view = (v: ArrayLike<number>, i = 0) => {
+  // Rotate a unit vector into view space: x right, y up, z toward the viewer. `turn()` takes the current view's
+  // sines and cosines once per frame; `view()` then rotates a point into `vo` without allocating.
+  let sth = 0; let cth = 1; let sph = 0; let cph = 1;
+  const turn = () => {
     const th = Math.PI / 2 - st.lon0 * DEG; const ph = st.lat0 * DEG;
-    const x = v[i + 2] * Math.sin(th) - v[i] * Math.cos(th); // east to the right
-    const z1 = v[i] * Math.sin(th) + v[i + 2] * Math.cos(th);
-    const y = v[i + 1] * Math.cos(ph) - z1 * Math.sin(ph);
-    const z = v[i + 1] * Math.sin(ph) + z1 * Math.cos(ph);
-    return [x, y, z];
+    sth = Math.sin(th); cth = Math.cos(th); sph = Math.sin(ph); cph = Math.cos(ph);
+  };
+  const vo = [0, 0, 0];
+  const view = (v: ArrayLike<number>, i = 0) => {
+    const x = v[i + 2] * sth - v[i] * cth; // east to the right
+    const z1 = v[i] * sth + v[i + 2] * cth;
+    vo[0] = x; vo[1] = v[i + 1] * cph - z1 * sph; vo[2] = v[i + 1] * sph + z1 * cph;
+    return vo;
+  };
+  // Land dots on the near side, sorted into four depth buckets of (x, y, z) triples; reused every frame.
+  const buckets = [0, 1, 2, 3].map(() => new Float64Array(dots.length));
+  const fillTo = [0, 0, 0, 0];
+
+  // Everything that depends only on the canvas size: the halftone shadow (hundreds of tiny dots, drawn once into
+  // an offscreen canvas and copied in each frame) and the gradients. Rebuilt when the size changes.
+  let cache: any = null;
+  const sized = () => {
+    const key = cv.width + 'x' + cv.height + '@' + W + '@' + dpr;
+    if (cache && cache.key === key) return cache;
+    const S = W; const cx = S / 2; const cy = S * 0.46; const R = S * 0.32;
+    const shadow = document.createElement('canvas');
+    shadow.width = cv.width; shadow.height = cv.height;
+    const c = shadow.getContext('2d');
+    c.setTransform(dpr, 0, 0, dpr, 0, 0);
+    c.fillStyle = '#9AD9F0';
+    const shy = cy + R * 1.14; const shr = R * 0.95;
+    for (let y = -shr * 0.22; y <= shr * 0.22; y += 6) {
+      for (let x = -shr; x <= shr; x += 6) {
+        const d = (x / shr) ** 2 + (y / (shr * 0.22)) ** 2;
+        if (d > 1) continue;
+        c.beginPath(); c.arc(cx + x, shy + y, 1.6 * (1 - d * 0.6), 0, Math.PI * 2); c.fill();
+      }
+    }
+    const ringG = ctx.createLinearGradient(cx - R * 1.5, 0, cx + R * 1.5, 0);
+    ringG.addColorStop(0, '#34BEED'); ringG.addColorStop(0.55, '#7FB8FF'); ringG.addColorStop(1, '#FF6FB5');
+    const ball = ctx.createRadialGradient(cx - R * 0.35, cy - R * 0.4, R * 0.1, cx, cy, R);
+    ball.addColorStop(0, '#FFFFFF'); ball.addColorStop(0.55, '#E9F8FE'); ball.addColorStop(1, '#BDEBFB');
+    const gloss = ctx.createRadialGradient(cx - R * 0.38, cy - R * 0.45, 0, cx - R * 0.38, cy - R * 0.45, R * 0.55);
+    gloss.addColorStop(0, 'rgba(255, 255, 255, 0.75)'); gloss.addColorStop(1, 'rgba(255, 255, 255, 0)');
+    cache = { key, shadow, ringG, ball, gloss };
+    return cache;
   };
 
   const star = (c: any, x: number, y: number, r: number) => {
@@ -81,9 +119,8 @@ export function initGlobe(site: SiteController) {
   };
 
   // The orbiting staff: five lines on a tilted ellipse, back half behind the ball, front half in front.
-  const ring = (c: any, cx: number, cy: number, R: number, front: boolean, t: number) => {
-    const tilt = -0.22; const g = c.createLinearGradient(cx - R * 1.5, 0, cx + R * 1.5, 0);
-    g.addColorStop(0, '#34BEED'); g.addColorStop(0.55, '#7FB8FF'); g.addColorStop(1, '#FF6FB5');
+  const ring = (c: any, cx: number, cy: number, R: number, front: boolean, t: number, g: any) => {
+    const tilt = -0.22;
     c.save();
     c.translate(cx, cy); c.rotate(tilt);
     c.strokeStyle = g; c.lineWidth = Math.max(1, R * 0.008);
@@ -110,36 +147,31 @@ export function initGlobe(site: SiteController) {
 
   const draw = (t: number) => {
     const S = W; const cx = S / 2; const cy = S * 0.46; const R = S * 0.32;
+    const C = sized();
+    turn();
+    // Halftone dot shadow under the ball, like the cards' dotted shadows (pre-drawn by sized()).
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ctx.drawImage(C.shadow, 0, 0);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    ctx.clearRect(0, 0, S, S);
-    // Halftone dot shadow under the ball, like the cards' dotted shadows.
-    ctx.fillStyle = '#9AD9F0';
-    const shy = cy + R * 1.14; const shr = R * 0.95;
-    for (let y = -shr * 0.22; y <= shr * 0.22; y += 6) {
-      for (let x = -shr; x <= shr; x += 6) {
-        const d = (x / shr) ** 2 + (y / (shr * 0.22)) ** 2;
-        if (d > 1) continue;
-        ctx.beginPath(); ctx.arc(cx + x, shy + y, 1.6 * (1 - d * 0.6), 0, Math.PI * 2); ctx.fill();
-      }
-    }
-    ring(ctx, cx, cy, R, false, t);
+    ring(ctx, cx, cy, R, false, t, C.ringG);
     // The ball: glossy white to sky blue, gray rim.
-    const g = ctx.createRadialGradient(cx - R * 0.35, cy - R * 0.4, R * 0.1, cx, cy, R);
-    g.addColorStop(0, '#FFFFFF'); g.addColorStop(0.55, '#E9F8FE'); g.addColorStop(1, '#BDEBFB');
-    ctx.fillStyle = g;
+    ctx.fillStyle = C.ball;
     ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fill();
     // Land dots on the near side, fading toward the edge.
-    const buckets: number[][] = [[], [], [], []];
+    fillTo[0] = fillTo[1] = fillTo[2] = fillTo[3] = 0;
     for (let i = 0; i < dots.length; i += 3) {
       const p = view(dots, i);
       if (p[2] <= 0.02) continue;
-      buckets[Math.min(3, Math.floor(p[2] * 4))].push(cx + p[0] * R, cy - p[1] * R, p[2]);
+      const k = Math.min(3, Math.floor(p[2] * 4)); const b = buckets[k]; let n = fillTo[k];
+      b[n++] = cx + p[0] * R; b[n++] = cy - p[1] * R; b[n++] = p[2];
+      fillTo[k] = n;
     }
     ctx.fillStyle = '#34BEED';
     buckets.forEach((b, k) => {
       ctx.globalAlpha = 0.3 + k * 0.23;
       ctx.beginPath();
-      for (let j = 0; j < b.length; j += 3) {
+      for (let j = 0; j < fillTo[k]; j += 3) {
         const r = R * 0.0115 * (0.55 + 0.45 * b[j + 2]);
         ctx.moveTo(b[j] + r, b[j + 1]); ctx.arc(b[j], b[j + 1], r, 0, Math.PI * 2);
       }
@@ -149,9 +181,7 @@ export function initGlobe(site: SiteController) {
     ctx.lineWidth = 3; ctx.strokeStyle = '#D5DAE1';
     ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.stroke();
     // Gloss.
-    const sh = ctx.createRadialGradient(cx - R * 0.38, cy - R * 0.45, 0, cx - R * 0.38, cy - R * 0.45, R * 0.55);
-    sh.addColorStop(0, 'rgba(255, 255, 255, 0.75)'); sh.addColorStop(1, 'rgba(255, 255, 255, 0)');
-    ctx.fillStyle = sh;
+    ctx.fillStyle = C.gloss;
     ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fill();
     // Markers on the near side; the home star pulses.
     st.hover = null;
@@ -174,7 +204,7 @@ export function initGlobe(site: SiteController) {
       if (st.px >= 0 && Math.hypot(st.px - x, st.py - y) < Math.max(12, R * 0.07)) st.hover = m;
     });
     ctx.globalAlpha = 1;
-    ring(ctx, cx, cy, R, true, t);
+    ring(ctx, cx, cy, R, true, t, C.ringG);
     // Label for the clicked (or hovered) marker, over everything: "Columbus, OH · Home" in a small pill.
     const lab = st.pinned || st.hover;
     const s = lab ? shown.find((q) => q.m === lab) : null;
@@ -192,7 +222,8 @@ export function initGlobe(site: SiteController) {
       ctx.fillStyle = KIND_INK[s.m.kind as keyof typeof KIND_INK]; ctx.fillText(what, lx + fs * 0.8 + nw, ly + h / 2 + 1);
       ctx.globalAlpha = 1;
     }
-    cv.style.cursor = st.drag ? 'grabbing' : cv === inlineCanvas ? 'zoom-in' : st.hover ? 'pointer' : 'grab';
+    const cursor = st.drag ? 'grabbing' : cv === inlineCanvas ? 'zoom-in' : st.hover ? 'pointer' : 'grab';
+    if (cv.style.cursor !== cursor) cv.style.cursor = cursor;
   };
 
   // Drag to turn (horizontal swipes on touch; vertical ones still scroll the page), with a little momentum.
