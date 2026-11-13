@@ -120,20 +120,37 @@ export function initTour(site: SiteController) {
     return alive(tok);
   };
   // Where to stand: beside the box on the side with room (or the step's side), feet level with its bottom.
-  const stand = (s: Step, r: any) => {
+  const stand = (s: Step, r: any, el?: any) => {
     const vw = window.innerWidth; const vh = window.innerHeight; const Z = site.pageZoom || 1;
     const nav = document.querySelector('.ipod');
     const navR = nav && s.el !== '.ipod' ? nav.getBoundingClientRect() : null;
     const maxX = navR && navR.width && navR.top < vh * 0.7 ? Math.min(vw - 50, navR.left - 40) : vw - 50;
     const gap = 58 * Z;
+    // The avatar's body around its feet (x, y): about 24px either side, 118px tall, at the roaming scale.
+    const k = (vw < 700 ? 0.75 : 1) * Z; const half = 24 * k; const tall = 118 * k;
+    // A pill stands for its whole row of links (Home's link bar, Contact's buttons).
+    if (el && el.classList && el.classList.contains('pill') && el.parentElement) r = el.parentElement.getBoundingClientRect();
+    // Never stand on anything you might want to tap: links, buttons, form fields (and the target itself).
+    const blocks = Array.prototype.map.call(document.querySelectorAll('a, button, input, textarea'), (b: any) => b.getBoundingClientRect())
+      .filter((b: any) => b.width && b.height && b.bottom > 0 && b.top < vh).concat([r]);
+    const clear = (p: number[]) => p[0] >= 50 && p[0] <= maxX && p[1] >= 250 && p[1] <= vh - 24
+      && !blocks.some((b: any) => p[0] + half > b.left && p[0] - half < b.right && p[1] > b.top && p[1] - tall < b.bottom);
     const y = Math.min(vh - 24, Math.max(250, r.bottom - 6));
-    const roomL = r.left - gap >= 50; const roomR = r.right + gap <= maxX;
-    let side = s.side || (r.left > maxX - r.right ? 'left' : 'right');
-    if (side === 'left' && !roomL && roomR) side = 'right';
-    if (side === 'right' && !roomR && roomL) side = 'left';
-    if ((side === 'left' && roomL) || (side === 'right' && roomR)) return { x: side === 'left' ? r.left - gap : r.right + gap, y: y };
-    // No room beside it (phones): stand below it if that's on screen, else at its lower left corner.
-    if (r.bottom + 130 < vh) return { x: Math.min(maxX, Math.max(60, r.left + r.width / 2)), y: r.bottom + 130 };
+    const left = [r.left - gap, y]; const right = [r.right + gap, y];
+    const side = s.side || (r.left > maxX - r.right ? 'left' : 'right');
+    const cx = Math.min(maxX, Math.max(60, r.left + r.width / 2));
+    const above = r.top - 8; const below = r.bottom + 8 + tall;
+    const cands = side === 'left' ? [left, right] : [right, left];
+    cands.push([cx, above], [cx, below]);
+    // Then anywhere along the lines above and below it, nearest the middle first (phones have no room beside),
+    // then further down and up the screen, nearest the element first.
+    const xs = [0.5, 0.25, 0.75, 0.12, 0.88].map((f) => 50 + (maxX - 50) * f);
+    xs.forEach((x) => { cands.push([x, above], [x, below]); });
+    for (let d = 24; d < vh; d += 24) xs.forEach((x) => { cands.push([x, below + d], [x, above - d]); });
+    const p = cands.find(clear);
+    if (p) return { x: p[0], y: p[1] };
+    // Nowhere clear: below it if that's on screen, else at its lower left corner.
+    if (r.bottom + 130 < vh) return { x: cx, y: r.bottom + 130 };
     return { x: Math.min(maxX, Math.max(60, r.left + 50)), y: y };
   };
   const arrive = async (tok: number) => {
@@ -162,7 +179,7 @@ export function initTour(site: SiteController) {
         if (b) {
           hush();
           site.miiPose(null);
-          const p = stand(s, b.r);
+          const p = stand(s, b.r, b.el);
           site.miiTo(p.x, p.y);
           if (!(await arrive(tok))) return;
           const me = site.miiPos();
@@ -214,10 +231,12 @@ export function initTour(site: SiteController) {
     resume();
   };
 
-  // Scrolling by hand: wait until it settles, then carry on from the section now on screen.
+  // Scrolling by wheel or keys (desktop): wait until it settles, then carry on from the section now on screen.
   let userT: any = 0;
   const onUser = (e: any) => {
     if (!site.tourOn || site.st().focus) return;
+    // Scrolling by touch (phones) pauses the tour; play picks it up again from the section on screen.
+    if (e.type === 'touchmove') { stop(); return; }
     if (e.type === 'keydown') {
       const t = e.target;
       if (t && t.closest && t.closest('input, textarea')) return;

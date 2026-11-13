@@ -132,3 +132,8 @@ footer.shift{padding-bottom:120px !important}
    badge leaves room for it. */
 .tour-fab{display:none}
 @media (max-width:699px){.tour-fab{display:flex}.np{max-width:calc(100% - 152px)}}
+/* Phones: fitZoom() renders the page at 75%; each section's content column keeps the phone's usual width
+   (so it ends up 75% as wide, centered), while backgrounds, music staffs and the Home link bar span the screen. */
+@media (max-width:699px){.shift > *:not(.bleed):not(canvas){max-width:calc(100vw - 32px) !important;margin-left:auto !important;margin-right:auto !important}}
+/* Phones: room under the Home link bar's buttons for the Tour pill (components/TourButton.tsx). */
+@media (max-width:699px){.hero-dock{padding-bottom:96px !important}}

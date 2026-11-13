@@ -290,7 +290,7 @@ export function initMii(site: SiteController) {
     spr.style.clipPath = m < 0.999 ? 'circle(' + (R / K).toFixed(1) + 'px at ' + ((120 - left) / K).toFixed(1) + 'px ' + ((128 - top) / K).toFixed(1) + 'px)' : 'none';
     if (bub && bub.classList.contains('on')) {
       // Speech bubble: centered over the head (the sprite's top edge, lower when sitting), kept on screen.
-      const Zb = site.pageZoom || 1;
+      const Zb = Math.max(0.9, site.pageZoom || 1); // phones shrink the page to 75%; keep the bubble readable
       const headY = st.y + (AY - lerp(128, 222) - (fb - (cur === 'sit' ? 130 : 34)) * K - bob) * sc;
       const bw = bub.offsetWidth * Zb; const bh = bub.offsetHeight * Zb;
       const bx = Math.max(10, Math.min((document.documentElement.clientWidth || vw) - bw - 10, st.x - bw / 2));

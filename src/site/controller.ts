@@ -275,9 +275,10 @@ export class SiteController {
       this.setState({ gbStatus: "Couldn't remove that sticker. Try again in a bit.", gbErr: true });
     }
   }
-  // Scale the 1440x900 design up to fill bigger screens (never down); sets --z for the CSS zoom rules.
+  // Scale the 1440x900 design up to fill bigger screens; on phones (under 700px) scale it down to 75%. Sets
+  // --z for the CSS zoom rules (each section zooms, so its background still spans the screen).
   fitZoom() {
-    const z = Math.round(Math.min(2.25, Math.max(1, Math.min(window.innerWidth / 1440, window.innerHeight / 900))) * 100) / 100;
+    const z = window.innerWidth < 700 ? 0.75 : Math.round(Math.min(2.25, Math.max(1, Math.min(window.innerWidth / 1440, window.innerHeight / 900))) * 100) / 100;
     this.pageZoom = z;
     document.documentElement.style.setProperty('--z', String(z));
   }
