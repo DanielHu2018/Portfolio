@@ -438,13 +438,8 @@ export function renderVals(site: SiteController) {
     rcNextLabel: openAny ? 'Next: back to ' + backTo : 'Next receipt',
     rcMenuLabel: openAny ? 'Menu: back to ' + backTo : 'Menu: back to top',
     rcMenu: () => { if (openAny) closeAlbum(); else { site.setState({ receiptView: 0, receiptSel: 0, album: null, artist: null, top: null }); site.go(0); } },
-    // Center: open the highlighted row; on an opened top track or artist, it links to it on Spotify.
-    rcCenterLabel: isAlbums && !openAlbum ? 'Open ' + albums[receiptSel].title : isFavArtists && !openArtist && artists.length ? 'Open ' + artists[receiptSel].name : rankedReal && !openTop ? 'Open ' + censor(receiptItems[receiptSel].name) : openTop && openTop.url ? censor(openTop.name) + ' on Spotify' : 'Daniel on Spotify',
-    rcCenter: (e: any) => {
-      if ((isAlbums && !openAlbum) || (isFavArtists && !openArtist && artists.length)) { e.preventDefault(); showAlbum(receiptSel, e); }
-      else if (rankedReal && !openTop) { e.preventDefault(); showTop(receiptSel); }
-    },
-    spotifyProfile: openTop && openTop.url ? openTop.url : 'https://open.spotify.com/user/rudda_rudda',
+    // The center button only ever links to Daniel's Spotify profile.
+    spotifyProfile: 'https://open.spotify.com/user/rudda_rudda',
     npShow: !!s.np,
     npLive: !!(s.np && s.np.playing),
     npLabel: s.np && s.np.playing ? 'Currently listening to' : 'Last listened to',

@@ -107,7 +107,7 @@ export function OffTheClock({ v }: { v: SiteVals }) {
                         <path d="M15 6v12M19 6v12" stroke="#7E848D" strokeWidth="2.5" />
                       </svg>
                     </span>
-                    <a className="proj-cta sp-btn" href={v.spotifyProfile} onClick={v.rcCenter} target="_blank" rel="noopener noreferrer" aria-label={v.rcCenterLabel} style={{ position: 'absolute', left: '50%', top: '50%', width: '62px', height: '62px', margin: '-31px 0 0 -31px', boxSizing: 'border-box', borderRadius: '50%', background: 'linear-gradient(180deg, #F4F6F9, #DDE1E7)', border: '3px solid #D5DAE1', boxShadow: 'inset 0 2px 0 #FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <a className="proj-cta sp-btn" href={v.spotifyProfile} target="_blank" rel="noopener noreferrer" aria-label="Daniel on Spotify" style={{ position: 'absolute', left: '50%', top: '50%', width: '62px', height: '62px', margin: '-31px 0 0 -31px', boxSizing: 'border-box', borderRadius: '50%', background: 'linear-gradient(180deg, #F4F6F9, #DDE1E7)', border: '3px solid #D5DAE1', boxShadow: 'inset 0 2px 0 #FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#4A4F57" strokeLinecap="round">
                         <path d="M3.6 8.7c5.4-1.8 11.6-1.3 16.6 1.4" strokeWidth="2.7" />
                         <path d="M5 12.7c4.5-1.4 9.6-1 13.6 1.2" strokeWidth="2.3" />
