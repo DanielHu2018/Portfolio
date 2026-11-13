@@ -28,15 +28,15 @@ export function Hero({ v }: { v: SiteVals }) {
           </p>
         </div>
       </div>
-      <div className="bleed" style={{ position: 'relative', zIndex: '2', margin: '0 calc(-1 * clamp(16px, 4vw, 48px))', background: 'linear-gradient(180deg, #F7F8FA, #E3E7EC)', borderTop: '3px solid #D5DAE1', borderRadius: '40px 40px 0 0', padding: '18px clamp(16px, 4vw, 48px) 29px' }}>
+      <div className="bleed hero-dock" style={{ position: 'relative', zIndex: '2', margin: '0 calc(-1 * clamp(16px, 4vw, 48px))', background: 'linear-gradient(180deg, #F7F8FA, #E3E7EC)', borderTop: '3px solid #D5DAE1', borderRadius: '40px 40px 0 0', padding: '18px clamp(16px, 4vw, 48px) 29px' }}>
         <div style={{ width: '100%', maxWidth: '1240px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: '14px' }}>
-          <a className="pill" href="https://www.linkedin.com/in/danielhu2005" style={{ minHeight: '52px', boxSizing: 'border-box', display: 'inline-flex', alignItems: 'center', fontWeight: '800', fontSize: '15px', textDecoration: 'none', color: '#3C4046', background: '#FFFFFF', border: '3px solid #C9CED6', borderRadius: '999px', padding: '10px 22px' }}>
+          <a className="pill" href="https://www.linkedin.com/in/danielhu2005" target="_blank" rel="noopener noreferrer" style={{ minHeight: '52px', boxSizing: 'border-box', display: 'inline-flex', alignItems: 'center', fontWeight: '800', fontSize: '15px', textDecoration: 'none', color: '#3C4046', background: '#FFFFFF', border: '3px solid #C9CED6', borderRadius: '999px', padding: '10px 22px' }}>
             LinkedIn
           </a>
           <a className="pill" href="#resume" onClick={v.openResume} style={{ minHeight: '52px', boxSizing: 'border-box', display: 'inline-flex', alignItems: 'center', fontWeight: '800', fontSize: '15px', textDecoration: 'none', color: '#3C4046', background: '#FFFFFF', border: '3px solid #C9CED6', borderRadius: '999px', padding: '10px 22px' }}>
             Resume
           </a>
-          <a className="pill" href="https://github.com/DanielHu2018" style={{ minHeight: '52px', boxSizing: 'border-box', display: 'inline-flex', alignItems: 'center', fontWeight: '800', fontSize: '15px', textDecoration: 'none', color: '#3C4046', background: '#FFFFFF', border: '3px solid #C9CED6', borderRadius: '999px', padding: '10px 22px' }}>
+          <a className="pill" href="https://github.com/DanielHu2018" target="_blank" rel="noopener noreferrer" style={{ minHeight: '52px', boxSizing: 'border-box', display: 'inline-flex', alignItems: 'center', fontWeight: '800', fontSize: '15px', textDecoration: 'none', color: '#3C4046', background: '#FFFFFF', border: '3px solid #C9CED6', borderRadius: '999px', padding: '10px 22px' }}>
             GitHub
           </a>
           <a className="pill" href="mailto:hu.daniel.w@gmail.com" style={{ minHeight: '52px', boxSizing: 'border-box', display: 'inline-flex', alignItems: 'center', fontWeight: '700', fontSize: '15px', textDecoration: 'none', color: '#3C4046', background: '#FFFFFF', border: '3px solid #C9CED6', borderRadius: '999px', padding: '10px 22px' }}>

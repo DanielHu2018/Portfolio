@@ -1,6 +1,7 @@
 import { initCursor } from '../engine/cursor';
 import { initMii } from '../engine/mii';
 import { initStaffs } from '../engine/staffs';
+import { initTour } from '../engine/tour';
 
 declare const document: any;
 declare const window: any;
@@ -31,13 +32,15 @@ export type SiteState = {
   sfxMuted?: boolean;
   pos?: { x: number; y: number } | null;
   reduced?: boolean;
+  tour?: boolean;
 };
 
 export class SiteController {
   state: SiteState = {};
   props = { accent: '#34BEED' };
   pageZoom?: number;
-  miiReact?: (type: string, at?: { x: number; y: number } | null) => void;
+  miiReact?: (type: string | null, at?: { x: number; y: number } | null, opts?: { hold?: string; flip?: boolean }) => void;
+  tourOn = false;
   // Instance fields the moved methods assign to, under their original names.
   [field: string]: any;
 
@@ -55,6 +58,7 @@ export class SiteController {
   initStaffs() { initStaffs(this); }
   initMii() { initMii(this); }
   initCursor() { initCursor(this); }
+  initTour() { initTour(this); }
   sectionIds() {
     return ['hero', 'about', 'experience', 'work', 'skills', 'off', 'contact'];
   }
@@ -91,6 +95,43 @@ export class SiteController {
         [392, 523, 659, 784, 988].forEach((f, i) => tone(f, i * 0.09, 1.3 - i * 0.1, 0.05, 'sine'));
         [1568, 1976, 2349].forEach((f, i) => tone(f, 0.5 + i * 0.08, 0.5, 0.025, 'sine'));
       }
+    } catch (e) { /* audio unavailable */ }
+  }
+  // The tour guide's voice: one short vowel-shaped blip per letter, like a sped-up babble. pitch scales it
+  // (the tour raises it at the end of a question).
+  voice(ch: string, pitch = 1) {
+    if (this.sfxMuted) return;
+    try {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return;
+      if (!this.ac) this.ac = new AC();
+      const ac = this.ac;
+      if (ac.state === 'suspended') ac.resume();
+      const out = this.sfxOut || (this.sfxOut = (() => { const g = ac.createGain(); g.gain.value = 0.55; g.connect(ac.destination); return g; })());
+      const c = ch.toLowerCase();
+      const VOW: any = { a: [800, 1200], e: [480, 1850], i: [330, 2250], o: [500, 880], u: [360, 760] };
+      const NEAR: any = { b: 'u', c: 'e', d: 'e', f: 'e', g: 'a', h: 'a', j: 'e', k: 'a', l: 'o', m: 'u', n: 'e', p: 'i', q: 'u', r: 'a', s: 'i', t: 'i', v: 'i', w: 'u', x: 'e', y: 'i', z: 'e' };
+      const vowel = !!VOW[c];
+      const fm = VOW[c] || VOW[NEAR[c]] || VOW.e;
+      const code = c.charCodeAt(0) || 0;
+      const f0 = 390 * pitch * Math.pow(2, (((code * 7) % 9) - 4) / 30 + (Math.random() - 0.5) * 0.04);
+      const dur = vowel ? 0.075 : 0.05;
+      const t0 = ac.currentTime + 0.005;
+      const o = ac.createOscillator();
+      o.type = 'sawtooth';
+      o.frequency.setValueAtTime(f0 * (vowel ? 1 : 1.08), t0);
+      o.frequency.exponentialRampToValueAtTime(f0 * 0.9, t0 + dur);
+      const env = ac.createGain();
+      env.gain.setValueAtTime(0.0001, t0);
+      env.gain.exponentialRampToValueAtTime(0.5, t0 + 0.008);
+      env.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+      fm.forEach((f: number, j: number) => {
+        const bp = ac.createBiquadFilter();
+        bp.type = 'bandpass'; bp.frequency.value = f; bp.Q.value = j ? 9 : 5;
+        o.connect(bp); bp.connect(env);
+      });
+      env.connect(out);
+      o.start(t0); o.stop(t0 + dur + 0.02);
     } catch (e) { /* audio unavailable */ }
   }
   initSfx() {
@@ -250,6 +291,8 @@ export class SiteController {
     setTimeout(() => { const b = typeof document !== 'undefined' ? document.querySelector('.boot') : null; if (b && b.focus) b.focus(); }, 50);
     this.initCursor();
     this.initMii();
+    this.initTour();
+    this.initHeroFade();
     this.initReveal();
     const ids = this.sectionIds();
     const doc = typeof document !== 'undefined' ? document : null;
@@ -284,6 +327,9 @@ export class SiteController {
     if (this.sfxOff) this.sfxOff();
     if (this.curOff) this.curOff();
     if (this.miiOff) this.miiOff();
+    if (this.tourOff) this.tourOff();
+    if (this.heroFadeOff) this.heroFadeOff();
+    if (this.fPoseT) clearTimeout(this.fPoseT);
     if (this.fTimer) clearTimeout(this.fTimer);
     if (this.raf) cancelAnimationFrame(this.raf);
     if (this.rvObs) this.rvObs.disconnect();
@@ -338,6 +384,23 @@ export class SiteController {
     const el = e && e.currentTarget;
     if (el) { el.style.left = ''; el.style.top = ''; el.style.right = ''; el.style.bottom = ''; el.style.transform = ''; el.style.transformOrigin = ''; }
     this.setState({ pos: null });
+  }
+  // The link bar at the bottom of Home (LinkedIn, Resume, GitHub, email) fades out over the first third of a
+  // screen of scrolling and back in at the top. (.hero-dock:focus-within in the stylesheet shows it for keyboard users.)
+  initHeroFade() {
+    const dock = typeof document !== 'undefined' ? document.querySelector('.hero-dock') : null;
+    if (!dock) return;
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      const a = Math.max(0, Math.min(1, 1 - window.scrollY / (window.innerHeight * 0.33)));
+      dock.style.opacity = a.toFixed(3);
+    };
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(update); };
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    this.heroFadeOff = () => { cancelAnimationFrame(raf); window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll); };
   }
   initReveal() {
     if (typeof document === 'undefined' || typeof IntersectionObserver === 'undefined') return;
@@ -483,6 +546,10 @@ export class SiteController {
       const k = Math.max(0.5, Math.min(1.5, (vh - 110) / r.height, (vw - 48) / r.width));
       const ax = vw / 2 - r.width * k / 2 - 70;
       this.miiReact('cheer', ax > 60 ? { x: ax, y: Math.min(vh - 30, vh / 2 + r.height * k / 2 - 20) } : null);
+    } else if (this.miiReact) {
+      // Everything else: once the card has landed, stand beside it and act out something that fits.
+      if (this.fPoseT) clearTimeout(this.fPoseT);
+      this.fPoseT = setTimeout(() => this.poseBeside(kind, idx), 600);
     }
     if (this.fTimer) clearTimeout(this.fTimer);
     requestAnimationFrame(() => requestAnimationFrame(() => {
@@ -490,6 +557,39 @@ export class SiteController {
       const root = document.querySelector('.focus-root');
       if (root && root.focus) root.focus();
     }));
+  }
+  focusPose(kind: any, idx: any): { react?: string; hold: string } {
+    if (kind === 'photo') return { hold: 'toetap' };
+    if (kind === 'resume') return { hold: 'look' };
+    if (kind === 'concert') return { react: 'spin', hold: 'dance' };
+    if (kind === 'spotify') return { hold: 'dance' };
+    if (kind === 'skills') return { hold: 'scratch' };
+    if (idx === 'hb-guitar') return { hold: 'toetap' };
+    if (idx === 'hb-drawing') return { hold: 'sit' };
+    if (idx === 'hb-ski') return { react: 'spin', hold: 'look' };
+    if (idx === 'hb-volley') return { hold: 'fight' };
+    return { hold: 'look' };
+  }
+  poseBeside(kind: any, idx: any) {
+    const f = this.st().focus;
+    if (!f || f.kind !== kind || this.st().fPhase !== 'open' || !this.miiReact) return;
+    const root = document.querySelector('.focus-root');
+    // The card is the overlay child centered with translate(-50%, -50%) (the hobby blurb isn't).
+    const card = root ? Array.prototype.find.call(root.children, (el: any) => (el.style.transform || '').indexOf('translate(-50%, -50%)') === 0) : null;
+    if (!card) return;
+    const r = card.getBoundingClientRect();
+    const vw = window.innerWidth; const vh = window.innerHeight; const Z = this.pageZoom || 1;
+    const pose = this.focusPose(kind, idx);
+    // Concert cards have their arrows hanging 84px outside the card.
+    const gap = (kind === 'concert' ? 105 : 0) * Z + 64;
+    const fits = (x: number) => x >= 60 && x <= vw - 50;
+    // The hobby blurb fills the left, so stand on the card's right there; elsewhere prefer the left.
+    let right = kind === 'hobby';
+    let x = right ? r.right + gap : r.left - gap;
+    if (!fits(x)) { right = !right; x = right ? r.right + gap : r.left - gap; }
+    if (!fits(x)) { this.miiReact(pose.react || 'cheer', null); return; }
+    // "Look right" faces the card from the left; mirror it when standing on the right.
+    this.miiReact(pose.react || null, { x: x, y: Math.min(vh - 30, r.bottom - 20) }, { hold: pose.hold, flip: right && pose.hold === 'look' });
   }
   projStep(d: any) {
     const f = this.st().focus;
@@ -534,6 +634,7 @@ export class SiteController {
       f.rect = { x: r.left, y: r.top, w: r.width, h: r.height };
     }
     this.setState({ focus: f, fPhase: 'closing' });
+    if (this.fPoseT) clearTimeout(this.fPoseT);
     if (this.fTimer) clearTimeout(this.fTimer);
     this.fTimer = setTimeout(() => {
       this.setState({ focus: null, fPhase: null });
@@ -551,9 +652,12 @@ export class SiteController {
       setTimeout(() => this.setState({ boot: 'done' }), 650);
     });
   }
-  go(i: any) {
+  // fromTour: the tour scrolling itself. Any other jump while the tour plays (the iPod's arrows, MENU, a
+  // menu row) moves the tour to that section instead, and the tour scrolls there.
+  go(i: any, fromTour?: boolean) {
     const ids = this.sectionIds();
     const n = Math.max(0, Math.min(ids.length - 1, i));
+    if (this.tourOn && !fromTour && this.tourJump) { this.tourJump(n); return; }
     const el = typeof document !== 'undefined' ? document.getElementById(ids[n]) : null;
     if (el) el.scrollIntoView({ behavior: this.st().reduced ? 'auto' : 'smooth', block: 'start' });
     this.setState({ sel: n, jumping: true });

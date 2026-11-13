@@ -188,7 +188,7 @@ export function renderVals(site: SiteController) {
   const expData: any = {
     nationwide: { card: 0, title: 'Nationwide Mutual Insurance Company', tag: 'Internship', mono: 'NW', media: '/assets/nationwide.png', isImage: true, band: 'linear-gradient(180deg, #E9F8FE, #BDEBFB)', pill: '#BDEBFB', fg: '#0B3550' },
     hackathon: { card: 0, title: 'Nationwide Hackathon', tag: 'Hackathon', mono: 'NW', media: '/assets/nationwide.png', isImage: true, band: 'linear-gradient(180deg, #FFF6D6, #FFE58A)', pill: '#FFE58A', fg: '#4A3700' },
-    robotics: { card: 1, title: 'Design Innovation & Simulation Lab', tag: 'Research', mono: 'OSU', media: '/assets/The-Ohio-State-University-Logo.png', isImage: true, band: 'linear-gradient(180deg, #F1ECFF, #CDBDFF)', pill: '#CDBDFF', fg: '#2E1F70' },
+    robotics: { card: 1, title: 'Intelligent Design and Robotics Laboratory', tag: 'Research', mono: 'OSU', media: '/assets/The-Ohio-State-University-Logo.png', isImage: true, band: 'linear-gradient(180deg, #F1ECFF, #CDBDFF)', pill: '#CDBDFF', fg: '#2E1F70' },
     site: { title: 'This site', tag: 'Project', mono: 'DH', band: 'linear-gradient(180deg, #FFE3F0, #FFB8DA)', pill: '#FFB8DA', fg: '#5C1236', to: 'hero' }
   };
   const skillSel = ((s.skillSel || 0) % skillData.length + skillData.length) % skillData.length;
@@ -428,9 +428,15 @@ export function renderVals(site: SiteController) {
     resetPos: (e: any) => site.resetPos(e),
     anim: !s.rm,
     menu: () => { site.setState({ receiptView: 0, receiptSel: 0, album: null, artist: null }); site.go(0); },
-    prev: () => site.go(sel - 1),
-    next: () => site.go(sel + 1),
+    // While the tour plays, the arrows move between its checkpoints instead of sections.
+    prev: () => { if (site.tourOn && site.tourStep) site.tourStep(-1); else site.go(sel - 1); },
+    next: () => { if (site.tourOn && site.tourStep) site.tourStep(1); else site.go(sel + 1); },
     center: () => site.go(sel),
+    tourOn: !!s.tour,
+    prevLabel: s.tour ? 'Previous tour stop' : 'Previous section',
+    nextLabel: s.tour ? 'Next tour stop' : 'Next section',
+    tourLabel: s.tour ? 'Pause the tour' : 'Play a guided tour',
+    tourToggle: () => { if (site.tourToggle) site.tourToggle(); },
     reduced: reduced ? 'true' : 'false',
     motionLabel: reduced ? 'Motion off' : 'Reduce motion',
     toggleMotion: () => site.setState({ reduced: !reduced }),

@@ -28,9 +28,9 @@ export const experience: ExperienceItem[] = [
   {
     logo: '/assets/The-Ohio-State-University-Logo.png', headerBg: '#FFFFFF', logoSize: 'contain',
     body: 'linear-gradient(180deg, #F1ECFF, #CDBDFF)', dot: '#AF98F6', meta: '#2E1F70',
-    company: 'Design Innovation & Simulation Lab',
+    company: 'Intelligent Design and Robotics Laboratory',
     role: 'Undergraduate AI/ML Researcher',
-    tag: 'Research', dates: 'Mar 2025 — May 2026', wrapDates: true,
+    tag: 'Research', dates: 'Mar 2024 — May 2026', wrapDates: true,
     blurb: "Integrated a VLA policy through OpenCV for autonomous robot manipulation, trained a CNN-based behavior-cloning model from wrist-camera input for a 6-DOF UR5e arm, and reproduced Stanford's UMI environment.",
     chips: ['VLA policies', 'Behavior cloning']
   },

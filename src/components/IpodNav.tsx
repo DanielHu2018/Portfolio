@@ -33,22 +33,22 @@ export function IpodNav({ v }: { v: SiteVals }) {
           <button type="button" aria-label="Menu: back to top" onClick={v.menu} style={{ position: 'absolute', top: '2px', left: '50%', transform: 'translateX(-50%)', minWidth: '60px', minHeight: '44px', border: '0', background: 'transparent', font: '800 12px \'Helvetica Neue\', Arial, sans-serif', letterSpacing: '0.06em', color: '#7E848D', cursor: 'pointer' }}>
             MENU
           </button>
-          <button type="button" aria-label="Previous section" onClick={v.prev} style={{ position: 'absolute', left: '0', top: '50%', transform: 'translateY(-50%)', width: '44px', height: '44px', border: '0', background: 'transparent', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+          <button type="button" aria-label={v.prevLabel} onClick={v.prev} style={{ position: 'absolute', left: '0', top: '50%', transform: 'translateY(-50%)', width: '44px', height: '44px', border: '0', background: 'transparent', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
             <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
               <path d="M6 6v12M18 6l-9 6 9 6z" fill="#7E848D" stroke="#7E848D" strokeWidth="2" strokeLinejoin="round" />
             </svg>
           </button>
-          <button type="button" aria-label="Next section" onClick={v.next} style={{ position: 'absolute', right: '0', top: '50%', transform: 'translateY(-50%)', width: '44px', height: '44px', border: '0', background: 'transparent', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+          <button type="button" aria-label={v.nextLabel} onClick={v.next} style={{ position: 'absolute', right: '0', top: '50%', transform: 'translateY(-50%)', width: '44px', height: '44px', border: '0', background: 'transparent', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
             <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
               <path d="M18 6v12M6 6l9 6-9 6z" fill="#7E848D" stroke="#7E848D" strokeWidth="2" strokeLinejoin="round" />
             </svg>
           </button>
-          <span aria-hidden="true" style={{ position: 'absolute', bottom: '2px', left: '50%', transform: 'translateX(-50%)', width: '44px', height: '44px', border: '0', background: 'transparent', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+          <button type="button" aria-label={v.tourLabel} aria-pressed={v.tourOn} title={v.tourLabel} onClick={v.tourToggle} style={{ position: 'absolute', bottom: '2px', left: '50%', transform: 'translateX(-50%)', width: '44px', height: '44px', border: '0', background: 'transparent', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
             <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
-              <path d="M4 6l8 6-8 6z" fill="#7E848D" />
-              <path d="M15 6v12M19 6v12" stroke="#7E848D" strokeWidth="2.5" />
+              <path d="M4 6l8 6-8 6z" fill={v.tourOn ? '#C2C7CE' : v.accent} />
+              <path d="M15 6v12M19 6v12" stroke={v.tourOn ? v.accent : '#7E848D'} strokeWidth="2.5" />
             </svg>
-          </span>
+          </button>
           <button type="button" aria-label="Open highlighted section" onClick={v.center} style={{ position: 'absolute', left: '50%', top: '50%', width: '62px', height: '62px', margin: '-31px 0 0 -31px', borderRadius: '50%', background: 'linear-gradient(180deg, #F4F6F9, #DDE1E7)', border: '3px solid #D5DAE1', boxShadow: 'inset 0 2px 0 #FFFFFF', cursor: 'pointer' }} />
         </div>
       </div>

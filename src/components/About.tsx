@@ -14,7 +14,7 @@ export function About({ v }: { v: SiteVals }) {
             Quick intro
           </h2>
           <p style={{ margin: '0', fontSize: '17px', lineHeight: '1.75', color: '#4A4F57' }}>
-            Hi, I'm Daniel. I like live music and being bad at things until I'm not. I'm studying Computer Science and Engineering at Ohio State with a Statistics minor, and most of my work so far has been in AI, from research in the DISL robotics lab to leading the Foundations of AI track for the Big Data &amp; Analytics Association. I've also built enterprise software at Nationwide.
+            Hi, I'm Daniel. I like live music and being bad at things until I'm not. I'm studying Computer Science and Engineering at Ohio State with a Statistics minor, and most of my work so far has been in AI, from research in the Intelligent Design and Robotics Laboratory to leading the Foundations of AI track for the Big Data &amp; Analytics Association. I've also built enterprise software at Nationwide.
           </p>
           <p style={{ margin: '0', fontSize: '17px', lineHeight: '1.75', color: '#4A4F57' }}>
             Outside of school and work, I spend my time on sports, live music and art. A few of those are still very much works in progress.

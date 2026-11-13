@@ -18,7 +18,7 @@ Daniel asks for a change.
 - `src/App.tsx`: holds one `SiteController`, re-renders on every state change, renders the components in order.
 - `src/site/controller.ts`: state and behavior (`setState` is synchronous and notifies React).
 - `src/site/renderVals.ts`: turns controller state into the `SiteVals` every component reads, and holds the site's copy.
-- `src/engine/`: canvas and pointer code that runs outside React (`staffs.ts`, `hobbies.ts`, `mii.ts`, `cursor.ts`).
+- `src/engine/`: canvas and pointer code that runs outside React (`staffs.ts`, `hobbies.ts`, `mii.ts`, `cursor.ts`, `tour.ts`).
 - `src/components/`: one component per page piece; each takes `{ v }: { v: SiteVals }`.
 - `src/styles/global.css`: the stylesheet.
 - `api/`: Vercel functions: `now-playing.js` (Daniel's live Spotify status),
@@ -42,7 +42,8 @@ places (`initCursor` looks for `[style*="cursor: pointer"]`), so keep them inlin
 | --- | --- |
 | Boot screen (Wii-style menu bar, clock, loading bar) | `components/BootScreen.tsx`, `bootGo()` in the controller |
 | Animated 3D music staff ribbons behind sections | `engine/staffs.ts` |
-| Avatar sprites from `public/assets/avatar/` (portrait on home, walks to clicks in 16 directions, waves, cheers, dances while Daniel is listening) | `engine/mii.ts`, `components/Avatar.tsx` |
+| Avatar sprites from `public/assets/avatar/` (portrait on home, walks to clicks in 16 directions (a click on a control walks beside it instead and plays that control's reaction from `RULES`), waves, cheers, dances while Daniel is listening; stands beside any focus view in a pose from `focusPose()`) | `engine/mii.ts`, `components/Avatar.tsx`, `focusPose()` / `poseBeside()` in the controller |
+| Guided tour (the iPod's play/pause button: the avatar walks each section, poses and talks in a speech bubble with a babbling voice; the iPod's arrows step between checkpoints, MENU and rows jump to a section; play/pause again stops it) | `engine/tour.ts` (script in `TOUR`), `voice()` and `go()` in the controller, `.mii-bubble` in `components/Avatar.tsx` |
 | Wii-style hand cursor | `engine/cursor.ts`, `components/WiiCursor.tsx` |
 | iPod navigator (draggable, click wheel scrolls between sections) | `components/IpodNav.tsx`, `go(i)` in the controller |
 | "Currently listening to" badge | `components/NowPlaying.tsx`, `watchNowPlaying()` in the controller |
@@ -54,7 +55,7 @@ places (`initCursor` looks for `[style*="cursor: pointer"]`), so keep them inlin
 | Synthesized sound effects (Web Audio, no files) | `sfx()`, `initSfx()` in the controller |
 | Sticker guestbook | `components/Contact.tsx`, `stickerUri()`, `gbAdd()` in the controller |
 
-The site plays no music itself; the click-wheel play/pause glyphs are decorative.
+The site plays no music itself. The navigator's play/pause button starts and pauses the tour; the play/pause glyphs on the other iPods are decorative.
 
 ## Still placeholder
 
