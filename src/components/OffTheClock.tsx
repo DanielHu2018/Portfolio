@@ -115,16 +115,16 @@ export function OffTheClock({ v }: { v: SiteVals }) {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '16px' }}>
             <div className="rv-item" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <canvas id="hb-guitar" onClick={v.openHob_hb_guitar} role="img" aria-label="3D model of an electric guitar (learning guitar)" width="128" height="128" style={{ display: 'block', width: '100%', maxWidth: '250px', aspectRatio: '1 / 1', imageRendering: 'pixelated', cursor: 'grab', touchAction: 'none' }} />
+              <canvas id="hb-guitar" onClick={v.openHob_hb_guitar} role="img" aria-label="3D model of an electric guitar (learning guitar)" width="128" height="128" style={{ display: 'block', width: '100%', maxWidth: '250px', aspectRatio: '1 / 1', imageRendering: 'pixelated', cursor: 'grab', touchAction: 'pan-y' }} />
             </div>
             <div className="rv-item" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <canvas id="hb-drawing" onClick={v.openHob_hb_drawing} role="img" aria-label="3D model of a pencil (drawing)" width="128" height="128" style={{ display: 'block', width: '100%', maxWidth: '250px', aspectRatio: '1 / 1', imageRendering: 'pixelated', cursor: 'grab', touchAction: 'none' }} />
+              <canvas id="hb-drawing" onClick={v.openHob_hb_drawing} role="img" aria-label="3D model of a pencil (drawing)" width="128" height="128" style={{ display: 'block', width: '100%', maxWidth: '250px', aspectRatio: '1 / 1', imageRendering: 'pixelated', cursor: 'grab', touchAction: 'pan-y' }} />
             </div>
             <div className="rv-item" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <canvas id="hb-ski" onClick={v.openHob_hb_ski} role="img" aria-label="3D model of crossed skis (skiing)" width="128" height="128" style={{ display: 'block', width: '100%', maxWidth: '250px', aspectRatio: '1 / 1', imageRendering: 'pixelated', cursor: 'grab', touchAction: 'none' }} />
+              <canvas id="hb-ski" onClick={v.openHob_hb_ski} role="img" aria-label="3D model of crossed skis (skiing)" width="128" height="128" style={{ display: 'block', width: '100%', maxWidth: '250px', aspectRatio: '1 / 1', imageRendering: 'pixelated', cursor: 'grab', touchAction: 'pan-y' }} />
             </div>
             <div className="rv-item" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <canvas id="hb-volley" onClick={v.openHob_hb_volley} role="img" aria-label="3D model of a volleyball (volleyball)" width="128" height="128" style={{ display: 'block', width: '100%', maxWidth: '250px', aspectRatio: '1 / 1', imageRendering: 'pixelated', cursor: 'grab', touchAction: 'none' }} />
+              <canvas id="hb-volley" onClick={v.openHob_hb_volley} role="img" aria-label="3D model of a volleyball (volleyball)" width="128" height="128" style={{ display: 'block', width: '100%', maxWidth: '250px', aspectRatio: '1 / 1', imageRendering: 'pixelated', cursor: 'grab', touchAction: 'pan-y' }} />
             </div>
           </div>
         </div>
