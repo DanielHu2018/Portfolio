@@ -15,6 +15,11 @@ export function FocusOverlay({ v }: { v: SiteVals }) {
               <path d="M6 6l12 12M18 6L6 18" stroke="#4A4F57" strokeWidth="2.6" strokeLinecap="round" />
             </svg>
           </button>
+          {v.fIsGlobe ? (
+            <div data-focus-card style={parseStyle(v.fCard)}>
+              <canvas id="globe-focus" role="img" aria-label={v.globeLabel} style={{ display: 'block', width: '100%', aspectRatio: '1 / 1', cursor: 'grab', touchAction: 'none' }} />
+            </div>
+          ) : null}
           {v.fIsPhoto ? (
             <div data-focus-card style={parseStyle(v.fCard)}>
               <div style={{ position: 'relative', background: '#FFFFFF', border: '3px solid #D5DAE1', borderRadius: '12px', padding: '22px 22px 0' }}>

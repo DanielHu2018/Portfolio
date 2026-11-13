@@ -39,9 +39,10 @@ function landDots() {
 
 export function initGlobe(site: SiteController) {
   if (typeof document === 'undefined' || typeof window === 'undefined') return;
-  const cv = document.getElementById('globe');
+  const inlineCanvas = document.getElementById('globe');
+  let cv = inlineCanvas;
   if (!cv || !cv.getContext) return;
-  const ctx = cv.getContext('2d');
+  let ctx = cv.getContext('2d');
   let rm = false;
   try { rm = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); } catch (e) { rm = false; }
   const dots = landDots();
@@ -191,7 +192,7 @@ export function initGlobe(site: SiteController) {
       ctx.fillStyle = KIND_INK[s.m.kind as keyof typeof KIND_INK]; ctx.fillText(what, lx + fs * 0.8 + nw, ly + h / 2 + 1);
       ctx.globalAlpha = 1;
     }
-    cv.style.cursor = st.drag ? 'grabbing' : st.hover ? 'pointer' : 'grab';
+    cv.style.cursor = st.drag ? 'grabbing' : cv === inlineCanvas ? 'zoom-in' : st.hover ? 'pointer' : 'grab';
   };
 
   // Drag to turn (horizontal swipes on touch; vertical ones still scroll the page), with a little momentum.
@@ -218,6 +219,10 @@ export function initGlobe(site: SiteController) {
   };
   const up = (e: any) => {
     const d = st.drag; st.drag = null;
+    if (d && !d.moved && cv === inlineCanvas) {
+      site.openFocus('globe', 0, { currentTarget: inlineCanvas, target: inlineCanvas });
+      return;
+    }
     if (d && !d.moved) {
       // A tap: show the nearest marker's name for a moment.
       const p = pos(e); st.px = p[0]; st.py = p[1];
@@ -229,11 +234,16 @@ export function initGlobe(site: SiteController) {
     if (rm) st.vel = 0;
   };
   const leave = () => { if (!st.drag) { st.px = -1; st.py = -1; } };
-  cv.addEventListener('pointerdown', down);
-  cv.addEventListener('pointermove', move);
-  cv.addEventListener('pointerup', up);
-  cv.addEventListener('pointercancel', () => { st.drag = null; });
-  cv.addEventListener('pointerleave', leave);
+  const cancel = () => { st.drag = null; st.vel = 0; };
+  const listen = (canvas: any, add: boolean) => {
+    const method = add ? 'addEventListener' : 'removeEventListener';
+    canvas[method]('pointerdown', down);
+    canvas[method]('pointermove', move);
+    canvas[method]('pointerup', up);
+    canvas[method]('pointercancel', cancel);
+    canvas[method]('pointerleave', leave);
+  };
+  listen(cv, true);
 
   let io: any = null;
   if (typeof IntersectionObserver !== 'undefined') {
@@ -247,7 +257,16 @@ export function initGlobe(site: SiteController) {
   const loop = (now: number) => {
     raf = requestAnimationFrame(loop);
     const t = now / 1000; const dt = Math.min(0.1, t - (prevT || t)); prevT = t;
-    if (!st.visible || (site.st().focus)) return;
+    // Reuse the same view and interaction state in the focused canvas, including on close.
+    const focused = document.getElementById('globe-focus');
+    const target = focused || inlineCanvas;
+    if (target !== cv) {
+      listen(cv, false);
+      cv = target; ctx = cv.getContext('2d');
+      st.drag = null; st.px = -1; st.py = -1;
+      listen(cv, true); size(); draw(t);
+    } else if (cv.clientWidth && cv.clientWidth !== W) size();
+    if ((!focused && !st.visible) || (site.st().focus && site.st().focus.kind !== 'globe')) return;
     flip = !flip;
     if (flip) return; // 30 fps is plenty
     if (st.goal && !st.drag) {
@@ -274,5 +293,5 @@ export function initGlobe(site: SiteController) {
     st.goal = m ? { lon: m.lon, lat: Math.max(-60, Math.min(70, m.lat - 6)) } : null;
     if (m && rm) { st.lon0 = st.goal!.lon; st.lat0 = st.goal!.lat; st.goal = null; draw(st.last); }
   };
-  site.globeOff = () => { cancelAnimationFrame(raf); if (io) io.disconnect(); window.removeEventListener('resize', onResize); };
+  site.globeOff = () => { listen(cv, false); cancelAnimationFrame(raf); if (io) io.disconnect(); window.removeEventListener('resize', onResize); };
 }

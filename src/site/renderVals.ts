@@ -92,6 +92,7 @@ export function renderVals(site: SiteController) {
     fIsSpotify: !!f && f.kind === 'spotify',
     fIsSkills: !!f && f.kind === 'skills',
     fIsHobby: !!f && f.kind === 'hobby',
+    fIsGlobe: !!f && f.kind === 'globe',
     fIsExp: !!f && f.kind === 'exp',
     fe: fe,
     fExpPrev: fExpPrev,
@@ -99,7 +100,7 @@ export function renderVals(site: SiteController) {
     expPrev: () => site.expStep(-1),
     expNext: () => site.expStep(1),
     openExp: experience.map((_, i) => opener('exp', i)),
-    fLabel: f ? (f.kind === 'exp' ? fe.company : f.kind === 'hobby' ? fh.title : (f.kind === 'proj' ? fp.name : (f.kind === 'resume' ? 'Resume' : (f.kind === 'spotify' ? 'Music player' : f.kind === 'skills' ? 'Skills' : (f.kind === 'concert' ? 'Concert photo' : 'Photo of Daniel'))))) : '',
+    fLabel: f ? (f.kind === 'globe' ? 'Places globe' : f.kind === 'exp' ? fe.company : f.kind === 'hobby' ? fh.title : (f.kind === 'proj' ? fp.name : (f.kind === 'resume' ? 'Resume' : (f.kind === 'spotify' ? 'Music player' : f.kind === 'skills' ? 'Skills' : (f.kind === 'concert' ? 'Concert photo' : 'Photo of Daniel'))))) : '',
     fp: fp,
     fc: fc,
     fh: fh,
@@ -112,6 +113,7 @@ export function renderVals(site: SiteController) {
       if (e.key === 'Escape') { e.preventDefault(); site.closeFocus(); }
       else if (f && f.kind === 'exp' && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) { e.preventDefault(); site.sfx('skip'); site.expStep(e.key === 'ArrowLeft' ? -1 : 1); }
     },
+    openGlobe: opener('globe', 0),
     openPhoto: opener('photo', 0),
     openResume: (e: any) => { if (e && e.preventDefault) e.preventDefault(); site.openFocus('resume', 0, e); },
     projectRepo: (e: any) => { if (e && e.stopPropagation) e.stopPropagation(); },

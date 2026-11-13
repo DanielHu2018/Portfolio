@@ -527,6 +527,7 @@ export class SiteController {
     const vw = typeof window !== 'undefined' ? window.innerWidth / Z : 1440;
     const vh = typeof window !== 'undefined' ? (window.innerHeight - (window.innerWidth < 700 ? 160 : 0)) / Z : 900;
     const fit = (w: any, h: any) => Math.min(w, (vw - 48), (vh - 120) * (w / h));
+    if (kind === 'globe') return { w: fit(640, 640), cx: vw / 2, cy: vh / 2 };
     if (kind === 'photo') return { w: fit(440, 560), cx: vw / 2, cy: vh / 2 };
     if (kind === 'concert') return { w: fit(400, 520), cx: vw / 2, cy: vh / 2 };
     if (kind === 'resume') return { w: fit(860, 860), cx: vw / 2, cy: vh / 2 };
@@ -567,6 +568,7 @@ export class SiteController {
   }
   focusPose(kind: any, idx: any): { react?: string; hold: string } {
     if (kind === 'proj' || kind === 'exp') return { react: 'cheer', hold: 'idle' };
+    if (kind === 'globe') return { hold: 'look' };
     if (kind === 'photo') return { hold: 'toetap' };
     if (kind === 'resume') return { hold: 'look' };
     if (kind === 'concert') return { react: 'spin', hold: 'dance' };

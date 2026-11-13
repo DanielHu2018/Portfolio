@@ -24,7 +24,7 @@ export function Places({ v }: { v: SiteVals }) {
         Places
       </h3>
       <div className="rv-item places" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: '8px 40px' }}>
-        <canvas id="globe" role="img" aria-label={v.globeLabel} style={{ display: 'block', flex: '1 1 300px', width: '100%', maxWidth: '460px', aspectRatio: '1 / 1', touchAction: 'pan-y', cursor: 'grab' }} />
+        <canvas id="globe" role="button" tabIndex={0} aria-label={'Focus globe. ' + v.globeLabel} aria-haspopup="dialog" onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); v.openGlobe(e); } }} style={{ display: 'block', flex: '1 1 300px', width: '100%', maxWidth: '460px', aspectRatio: '1 / 1', touchAction: 'pan-y', cursor: 'grab' }} />
         <div style={{ position: 'relative', zIndex: '1', display: 'flex', flexDirection: 'column', gap: '12px', textShadow: '0 0 3px #FFF6D6, 0 0 6px #FFF6D6, 0 0 10px #FFF6D6' }}>
           {key.map((k) => (
             <span key={k.label} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontWeight: '800', fontSize: '16px', color: '#3C4046' }}>
