@@ -8891,6 +8891,28 @@
       "artists": [
         "Mazzy Star"
       ]
+    },
+    {
+      "played_at": "2026-11-13T20:53:31.894Z",
+      "track_id": "1LzNfuep1bnAUR9skqdHCK",
+      "track_name": "Fade Into You",
+      "artist_ids": [
+        "37w38cCSGgKLdayTRjna4W"
+      ],
+      "artists": [
+        "Mazzy Star"
+      ]
+    },
+    {
+      "played_at": "2026-11-13T21:14:33.863Z",
+      "track_id": "1LzNfuep1bnAUR9skqdHCK",
+      "track_name": "Fade Into You",
+      "artist_ids": [
+        "37w38cCSGgKLdayTRjna4W"
+      ],
+      "artists": [
+        "Mazzy Star"
+      ]
     }
   ]
 }
