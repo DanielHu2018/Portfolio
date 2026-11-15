@@ -27,6 +27,18 @@
         "last": "2026-11-12T23:22:06.539Z"
       },
       {
+        "name": "The Only Exception",
+        "secondary": "10 plays",
+        "id": "7JIuqL4ZqkpfGKQhYlrirs",
+        "artist": "Paramore",
+        "album": "Brand New Eyes",
+        "year": "2009",
+        "ms": 267653,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02e01d7d558032457b0e4883f6",
+        "url": "https://open.spotify.com/track/7JIuqL4ZqkpfGKQhYlrirs",
+        "last": "2026-11-15T21:13:38.759Z"
+      },
+      {
         "name": "The Peace",
         "secondary": "10 plays",
         "id": "6wm3t4VpTxSFfOUgTMlHZM",
@@ -61,18 +73,6 @@
         "pic": "https://i.scdn.co/image/ab67616d00001e0289a392107ebd79818022b3ea",
         "url": "https://open.spotify.com/track/1LzNfuep1bnAUR9skqdHCK",
         "last": "2026-11-13T21:14:33.863Z"
-      },
-      {
-        "name": "The Only Exception",
-        "secondary": "9 plays",
-        "id": "7JIuqL4ZqkpfGKQhYlrirs",
-        "artist": "Paramore",
-        "album": "Brand New Eyes",
-        "year": "2009",
-        "ms": 267653,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02e01d7d558032457b0e4883f6",
-        "url": "https://open.spotify.com/track/7JIuqL4ZqkpfGKQhYlrirs",
-        "last": "2026-11-11T19:55:32.796Z"
       },
       {
         "name": "Linger - Remastered 2026",
@@ -126,12 +126,12 @@
     "artists-1m": [
       {
         "name": "The Cranberries",
-        "secondary": "52 listens",
+        "secondary": "53 listens",
         "id": "7t0rwkOPGlDPEhaOcVtOt9",
         "pic": "https://i.scdn.co/image/ab676161000051749d7ed10720669900a0649c98",
         "genres": [],
         "url": "https://open.spotify.com/artist/7t0rwkOPGlDPEhaOcVtOt9",
-        "last": "2026-11-12T23:15:31.945Z",
+        "last": "2026-11-15T21:06:31.869Z",
         "tracks": [
           {
             "name": "Sunday - Remastered 2026",
@@ -144,14 +144,14 @@
             "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
           },
           {
+            "name": "Zombie - 2025 Remastered",
+            "plays": 7,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0220a28883cdd0fc7d5f85a9a9"
+          },
+          {
             "name": "Dreams - Remastered 2026",
             "plays": 6,
             "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
-          },
-          {
-            "name": "Zombie - 2025 Remastered",
-            "plays": 6,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0220a28883cdd0fc7d5f85a9a9"
           },
           {
             "name": "Ode To My Family - 2025 Remastered",
@@ -432,16 +432,16 @@
       },
       {
         "name": "Paramore",
-        "secondary": "21 listens",
+        "secondary": "22 listens",
         "id": "74XFHRwlV6OrjEM0A2NCMF",
         "pic": "https://i.scdn.co/image/ab67616100005174b10c34546a4ca2d7faeb8865",
         "genres": [],
         "url": "https://open.spotify.com/artist/74XFHRwlV6OrjEM0A2NCMF",
-        "last": "2026-11-13T07:05:06.888Z",
+        "last": "2026-11-15T21:13:38.759Z",
         "tracks": [
           {
             "name": "The Only Exception",
-            "plays": 9,
+            "plays": 10,
             "pic": "https://i.scdn.co/image/ab67616d00001e02e01d7d558032457b0e4883f6"
           },
           {
@@ -533,6 +533,52 @@
         ]
       },
       {
+        "name": "beabadoobee",
+        "secondary": "19 listens",
+        "id": "35l9BRT7MXmM8bv2WDQiyB",
+        "pic": "https://i.scdn.co/image/ab676161000051743a41a62e7193703d29d30a9a",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/35l9BRT7MXmM8bv2WDQiyB",
+        "last": "2026-11-15T21:09:10.652Z",
+        "tracks": [
+          {
+            "name": "Talk",
+            "plays": 7,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
+          },
+          {
+            "name": "10:36",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
+          },
+          {
+            "name": "Satellite",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0212c805544ba208842da0d9f3"
+          },
+          {
+            "name": "Beaches",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
+          },
+          {
+            "name": "Cologne",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02110bbc10d8188cf73b3d336c"
+          },
+          {
+            "name": "California",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
+          },
+          {
+            "name": "Sun Has Set",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02068caa28105743b03ac6ee0f"
+          }
+        ]
+      },
+      {
         "name": "The Strokes",
         "secondary": "19 listens",
         "id": "0epOFNiUfyON9EYx7Tpr6V",
@@ -582,57 +628,6 @@
             "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
           }
         ]
-      },
-      {
-        "name": "2hollis",
-        "secondary": "19 listens",
-        "id": "72NhFAGG5Pt91VbheJeEPG",
-        "pic": "https://i.scdn.co/image/ab67616100005174717e890b8769dc671c4c46a0",
-        "genres": [],
-        "url": "https://open.spotify.com/artist/72NhFAGG5Pt91VbheJeEPG",
-        "last": "2026-11-12T17:58:28.860Z",
-        "tracks": [
-          {
-            "name": "Spring (Love Me)",
-            "plays": 3,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
-          },
-          {
-            "name": "Skin",
-            "plays": 3,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
-          },
-          {
-            "name": "Pressure",
-            "plays": 2,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
-          },
-          {
-            "name": "Sex",
-            "plays": 2,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
-          },
-          {
-            "name": "jeans",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02b8362432f72c45d2b6bf08d8"
-          },
-          {
-            "name": "Human After All",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
-          },
-          {
-            "name": "Sophie",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
-          },
-          {
-            "name": "Eyes Wide Closed",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
-          }
-        ]
       }
     ],
     "tracks-6m": [
@@ -659,6 +654,18 @@
         "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35",
         "url": "https://open.spotify.com/track/0H0eIjcXruQpntK0LuNa5v",
         "last": "2026-11-12T23:22:06.539Z"
+      },
+      {
+        "name": "The Only Exception",
+        "secondary": "10 plays",
+        "id": "7JIuqL4ZqkpfGKQhYlrirs",
+        "artist": "Paramore",
+        "album": "Brand New Eyes",
+        "year": "2009",
+        "ms": 267653,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02e01d7d558032457b0e4883f6",
+        "url": "https://open.spotify.com/track/7JIuqL4ZqkpfGKQhYlrirs",
+        "last": "2026-11-15T21:13:38.759Z"
       },
       {
         "name": "The Peace",
@@ -695,18 +702,6 @@
         "pic": "https://i.scdn.co/image/ab67616d00001e0289a392107ebd79818022b3ea",
         "url": "https://open.spotify.com/track/1LzNfuep1bnAUR9skqdHCK",
         "last": "2026-11-13T21:14:33.863Z"
-      },
-      {
-        "name": "The Only Exception",
-        "secondary": "9 plays",
-        "id": "7JIuqL4ZqkpfGKQhYlrirs",
-        "artist": "Paramore",
-        "album": "Brand New Eyes",
-        "year": "2009",
-        "ms": 267653,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02e01d7d558032457b0e4883f6",
-        "url": "https://open.spotify.com/track/7JIuqL4ZqkpfGKQhYlrirs",
-        "last": "2026-11-11T19:55:32.796Z"
       },
       {
         "name": "Linger - Remastered 2026",
@@ -760,12 +755,12 @@
     "artists-6m": [
       {
         "name": "The Cranberries",
-        "secondary": "52 listens",
+        "secondary": "53 listens",
         "id": "7t0rwkOPGlDPEhaOcVtOt9",
         "pic": "https://i.scdn.co/image/ab676161000051749d7ed10720669900a0649c98",
         "genres": [],
         "url": "https://open.spotify.com/artist/7t0rwkOPGlDPEhaOcVtOt9",
-        "last": "2026-11-12T23:15:31.945Z",
+        "last": "2026-11-15T21:06:31.869Z",
         "tracks": [
           {
             "name": "Sunday - Remastered 2026",
@@ -778,14 +773,14 @@
             "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
           },
           {
+            "name": "Zombie - 2025 Remastered",
+            "plays": 7,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0220a28883cdd0fc7d5f85a9a9"
+          },
+          {
             "name": "Dreams - Remastered 2026",
             "plays": 6,
             "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
-          },
-          {
-            "name": "Zombie - 2025 Remastered",
-            "plays": 6,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0220a28883cdd0fc7d5f85a9a9"
           },
           {
             "name": "Ode To My Family - 2025 Remastered",
@@ -1066,16 +1061,16 @@
       },
       {
         "name": "Paramore",
-        "secondary": "21 listens",
+        "secondary": "22 listens",
         "id": "74XFHRwlV6OrjEM0A2NCMF",
         "pic": "https://i.scdn.co/image/ab67616100005174b10c34546a4ca2d7faeb8865",
         "genres": [],
         "url": "https://open.spotify.com/artist/74XFHRwlV6OrjEM0A2NCMF",
-        "last": "2026-11-13T07:05:06.888Z",
+        "last": "2026-11-15T21:13:38.759Z",
         "tracks": [
           {
             "name": "The Only Exception",
-            "plays": 9,
+            "plays": 10,
             "pic": "https://i.scdn.co/image/ab67616d00001e02e01d7d558032457b0e4883f6"
           },
           {
@@ -1167,6 +1162,52 @@
         ]
       },
       {
+        "name": "beabadoobee",
+        "secondary": "19 listens",
+        "id": "35l9BRT7MXmM8bv2WDQiyB",
+        "pic": "https://i.scdn.co/image/ab676161000051743a41a62e7193703d29d30a9a",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/35l9BRT7MXmM8bv2WDQiyB",
+        "last": "2026-11-15T21:09:10.652Z",
+        "tracks": [
+          {
+            "name": "Talk",
+            "plays": 7,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
+          },
+          {
+            "name": "10:36",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
+          },
+          {
+            "name": "Satellite",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0212c805544ba208842da0d9f3"
+          },
+          {
+            "name": "Beaches",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
+          },
+          {
+            "name": "Cologne",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02110bbc10d8188cf73b3d336c"
+          },
+          {
+            "name": "California",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
+          },
+          {
+            "name": "Sun Has Set",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02068caa28105743b03ac6ee0f"
+          }
+        ]
+      },
+      {
         "name": "The Strokes",
         "secondary": "19 listens",
         "id": "0epOFNiUfyON9EYx7Tpr6V",
@@ -1214,57 +1255,6 @@
             "name": "Someday",
             "plays": 1,
             "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
-          }
-        ]
-      },
-      {
-        "name": "2hollis",
-        "secondary": "19 listens",
-        "id": "72NhFAGG5Pt91VbheJeEPG",
-        "pic": "https://i.scdn.co/image/ab67616100005174717e890b8769dc671c4c46a0",
-        "genres": [],
-        "url": "https://open.spotify.com/artist/72NhFAGG5Pt91VbheJeEPG",
-        "last": "2026-11-12T17:58:28.860Z",
-        "tracks": [
-          {
-            "name": "Spring (Love Me)",
-            "plays": 3,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
-          },
-          {
-            "name": "Skin",
-            "plays": 3,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
-          },
-          {
-            "name": "Pressure",
-            "plays": 2,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
-          },
-          {
-            "name": "Sex",
-            "plays": 2,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
-          },
-          {
-            "name": "jeans",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02b8362432f72c45d2b6bf08d8"
-          },
-          {
-            "name": "Human After All",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
-          },
-          {
-            "name": "Sophie",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
-          },
-          {
-            "name": "Eyes Wide Closed",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02db3c4c37735a6bd7fcadbc33"
           }
         ]
       }
