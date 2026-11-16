@@ -4,7 +4,7 @@
     "tracks-1m": [
       {
         "name": "Sunday - Remastered 2026",
-        "secondary": "17 plays",
+        "secondary": "18 plays",
         "id": "2nTcgF0BGEJBI3argOQWps",
         "artist": "The Cranberries",
         "album": "Everybody Else Is Doing It, So Why Can't We? (Remastered 2026)",
@@ -12,11 +12,11 @@
         "ms": 210760,
         "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193",
         "url": "https://open.spotify.com/track/2nTcgF0BGEJBI3argOQWps",
-        "last": "2026-11-12T23:15:31.945Z"
+        "last": "2026-11-16T04:44:11.008Z"
       },
       {
         "name": "How to Pretend",
-        "secondary": "11 plays",
+        "secondary": "12 plays",
         "id": "0H0eIjcXruQpntK0LuNa5v",
         "artist": "Lucy Bedroque",
         "album": "Fête de la Vanille",
@@ -24,7 +24,31 @@
         "ms": 224086,
         "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35",
         "url": "https://open.spotify.com/track/0H0eIjcXruQpntK0LuNa5v",
-        "last": "2026-11-12T23:22:06.539Z"
+        "last": "2026-11-16T04:55:20.080Z"
+      },
+      {
+        "name": "blade bird",
+        "secondary": "10 plays",
+        "id": "1zfPxWc0WSQ2MyVsGTLGtF",
+        "artist": "Oklou",
+        "album": "choke enough",
+        "year": "2025",
+        "ms": 198587,
+        "pic": "https://i.scdn.co/image/ab67616d00001e020b68095c4016bdeabd032e89",
+        "url": "https://open.spotify.com/track/1zfPxWc0WSQ2MyVsGTLGtF",
+        "last": "2026-11-16T05:19:06.449Z"
+      },
+      {
+        "name": "Fade Into You",
+        "secondary": "10 plays",
+        "id": "1LzNfuep1bnAUR9skqdHCK",
+        "artist": "Mazzy Star",
+        "album": "So Tonight That I Might See",
+        "year": "1993",
+        "ms": 295600,
+        "pic": "https://i.scdn.co/image/ab67616d00001e0289a392107ebd79818022b3ea",
+        "url": "https://open.spotify.com/track/1LzNfuep1bnAUR9skqdHCK",
+        "last": "2026-11-16T03:11:44.012Z"
       },
       {
         "name": "The Only Exception",
@@ -51,28 +75,40 @@
         "last": "2026-11-11T06:17:20.725Z"
       },
       {
-        "name": "blade bird",
+        "name": "Heaven or Las Vegas",
         "secondary": "9 plays",
-        "id": "1zfPxWc0WSQ2MyVsGTLGtF",
-        "artist": "Oklou",
-        "album": "choke enough",
-        "year": "2025",
-        "ms": 198587,
-        "pic": "https://i.scdn.co/image/ab67616d00001e020b68095c4016bdeabd032e89",
-        "url": "https://open.spotify.com/track/1zfPxWc0WSQ2MyVsGTLGtF",
-        "last": "2026-11-12T15:54:25.321Z"
+        "id": "0AxZUYeQ9bZwSdt1LmZuok",
+        "artist": "Cocteau Twins",
+        "album": "Heaven or Las Vegas",
+        "year": "1990",
+        "ms": 298400,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02",
+        "url": "https://open.spotify.com/track/0AxZUYeQ9bZwSdt1LmZuok",
+        "last": "2026-11-16T02:58:34.001Z"
       },
       {
-        "name": "Fade Into You",
+        "name": "Iris",
         "secondary": "9 plays",
-        "id": "1LzNfuep1bnAUR9skqdHCK",
-        "artist": "Mazzy Star",
-        "album": "So Tonight That I Might See",
-        "year": "1993",
-        "ms": 295600,
-        "pic": "https://i.scdn.co/image/ab67616d00001e0289a392107ebd79818022b3ea",
-        "url": "https://open.spotify.com/track/1LzNfuep1bnAUR9skqdHCK",
-        "last": "2026-11-13T21:14:33.863Z"
+        "id": "6Qyc6fS4DsZjB2mRW9DsQs",
+        "artist": "The Goo Goo Dolls",
+        "album": "Dizzy up the Girl",
+        "year": "1998",
+        "ms": 289533,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02eda9478c39a21e1cdc6609ca",
+        "url": "https://open.spotify.com/track/6Qyc6fS4DsZjB2mRW9DsQs",
+        "last": "2026-11-16T03:43:08.320Z"
+      },
+      {
+        "name": "iPod Touch",
+        "secondary": "9 plays",
+        "id": "1xqT27jSG1Y15vOXfsV0gv",
+        "artist": "Ninajirachi",
+        "album": "I Love My Computer",
+        "year": "2025",
+        "ms": 196522,
+        "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87",
+        "url": "https://open.spotify.com/track/1xqT27jSG1Y15vOXfsV0gv",
+        "last": "2026-11-16T04:27:36.727Z"
       },
       {
         "name": "Linger - Remastered 2026",
@@ -85,57 +121,21 @@
         "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193",
         "url": "https://open.spotify.com/track/1WYrTfvKjQYaYfVziGG1ET",
         "last": "2026-11-12T19:17:45.875Z"
-      },
-      {
-        "name": "Heaven or Las Vegas",
-        "secondary": "8 plays",
-        "id": "0AxZUYeQ9bZwSdt1LmZuok",
-        "artist": "Cocteau Twins",
-        "album": "Heaven or Las Vegas",
-        "year": "1990",
-        "ms": 298400,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02",
-        "url": "https://open.spotify.com/track/0AxZUYeQ9bZwSdt1LmZuok",
-        "last": "2026-11-13T18:40:51.225Z"
-      },
-      {
-        "name": "Iris",
-        "secondary": "8 plays",
-        "id": "6Qyc6fS4DsZjB2mRW9DsQs",
-        "artist": "The Goo Goo Dolls",
-        "album": "Dizzy up the Girl",
-        "year": "1998",
-        "ms": 289533,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02eda9478c39a21e1cdc6609ca",
-        "url": "https://open.spotify.com/track/6Qyc6fS4DsZjB2mRW9DsQs",
-        "last": "2026-11-12T15:51:06.223Z"
-      },
-      {
-        "name": "iPod Touch",
-        "secondary": "8 plays",
-        "id": "1xqT27jSG1Y15vOXfsV0gv",
-        "artist": "Ninajirachi",
-        "album": "I Love My Computer",
-        "year": "2025",
-        "ms": 196522,
-        "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87",
-        "url": "https://open.spotify.com/track/1xqT27jSG1Y15vOXfsV0gv",
-        "last": "2026-11-12T17:34:05.618Z"
       }
     ],
     "artists-1m": [
       {
         "name": "The Cranberries",
-        "secondary": "53 listens",
+        "secondary": "54 listens",
         "id": "7t0rwkOPGlDPEhaOcVtOt9",
         "pic": "https://i.scdn.co/image/ab676161000051749d7ed10720669900a0649c98",
         "genres": [],
         "url": "https://open.spotify.com/artist/7t0rwkOPGlDPEhaOcVtOt9",
-        "last": "2026-11-15T21:06:31.869Z",
+        "last": "2026-11-16T04:44:11.008Z",
         "tracks": [
           {
             "name": "Sunday - Remastered 2026",
-            "plays": 17,
+            "plays": 18,
             "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
           },
           {
@@ -177,27 +177,27 @@
       },
       {
         "name": "Lucy Bedroque",
-        "secondary": "46 listens",
+        "secondary": "48 listens",
         "id": "2I8H267eH5va9da4vGt38O",
         "pic": "https://i.scdn.co/image/ab67616100005174100cfd4653979ed518fbf28f",
         "genres": [],
         "url": "https://open.spotify.com/artist/2I8H267eH5va9da4vGt38O",
-        "last": "2026-11-12T23:22:06.539Z",
+        "last": "2026-11-16T04:55:20.080Z",
         "tracks": [
           {
             "name": "How to Pretend",
-            "plays": 11,
+            "plays": 12,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
+          },
+          {
+            "name": "Knot Me",
+            "plays": 6,
             "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
           },
           {
             "name": "SORORITY",
             "plays": 5,
             "pic": "https://i.scdn.co/image/ab67616d00001e02928b9418e20589b7e47efa9f"
-          },
-          {
-            "name": "Knot Me",
-            "plays": 5,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
           },
           {
             "name": "I KNOW (MY INFLUENCE)",
@@ -330,16 +330,16 @@
       },
       {
         "name": "Ninajirachi",
-        "secondary": "27 listens",
+        "secondary": "28 listens",
         "id": "3MekbRujJg5VZThubOlrkR",
         "pic": "https://i.scdn.co/image/ab676161000051746363b3a1630b8811a4d3d718",
         "genres": [],
         "url": "https://open.spotify.com/artist/3MekbRujJg5VZThubOlrkR",
-        "last": "2026-11-12T17:34:05.618Z",
+        "last": "2026-11-16T04:27:36.727Z",
         "tracks": [
           {
             "name": "iPod Touch",
-            "plays": 8,
+            "plays": 9,
             "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87"
           },
           {
@@ -381,12 +381,12 @@
       },
       {
         "name": "fakemink",
-        "secondary": "22 listens",
+        "secondary": "23 listens",
         "id": "0qc4BFxcwRFZfevTck4fOi",
         "pic": "https://i.scdn.co/image/ab67616100005174fea7ad1b3bc4a7f94234bd1c",
         "genres": [],
         "url": "https://open.spotify.com/artist/0qc4BFxcwRFZfevTck4fOi",
-        "last": "2026-11-11T03:53:31.805Z",
+        "last": "2026-11-16T05:37:36.285Z",
         "tracks": [
           {
             "name": "Easter Pink",
@@ -400,7 +400,7 @@
           },
           {
             "name": "Crush",
-            "plays": 3,
+            "plays": 4,
             "pic": "https://i.scdn.co/image/ab67616d00001e024a8d870aff0c63f489ebd063"
           },
           {
@@ -482,6 +482,52 @@
         ]
       },
       {
+        "name": "beabadoobee",
+        "secondary": "21 listens",
+        "id": "35l9BRT7MXmM8bv2WDQiyB",
+        "pic": "https://i.scdn.co/image/ab676161000051743a41a62e7193703d29d30a9a",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/35l9BRT7MXmM8bv2WDQiyB",
+        "last": "2026-11-16T05:27:40.430Z",
+        "tracks": [
+          {
+            "name": "Talk",
+            "plays": 8,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
+          },
+          {
+            "name": "10:36",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
+          },
+          {
+            "name": "Satellite",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0212c805544ba208842da0d9f3"
+          },
+          {
+            "name": "Beaches",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
+          },
+          {
+            "name": "Cologne",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02110bbc10d8188cf73b3d336c"
+          },
+          {
+            "name": "California",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
+          },
+          {
+            "name": "Sun Has Set",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02068caa28105743b03ac6ee0f"
+          }
+        ]
+      },
+      {
         "name": "Porter Robinson",
         "secondary": "20 listens",
         "id": "3dz0NnIZhtKKeXZxLOxCam",
@@ -533,59 +579,13 @@
         ]
       },
       {
-        "name": "beabadoobee",
-        "secondary": "19 listens",
-        "id": "35l9BRT7MXmM8bv2WDQiyB",
-        "pic": "https://i.scdn.co/image/ab676161000051743a41a62e7193703d29d30a9a",
-        "genres": [],
-        "url": "https://open.spotify.com/artist/35l9BRT7MXmM8bv2WDQiyB",
-        "last": "2026-11-15T21:09:10.652Z",
-        "tracks": [
-          {
-            "name": "Talk",
-            "plays": 7,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
-          },
-          {
-            "name": "10:36",
-            "plays": 4,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
-          },
-          {
-            "name": "Satellite",
-            "plays": 3,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0212c805544ba208842da0d9f3"
-          },
-          {
-            "name": "Beaches",
-            "plays": 2,
-            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
-          },
-          {
-            "name": "Cologne",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02110bbc10d8188cf73b3d336c"
-          },
-          {
-            "name": "California",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
-          },
-          {
-            "name": "Sun Has Set",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02068caa28105743b03ac6ee0f"
-          }
-        ]
-      },
-      {
         "name": "The Strokes",
-        "secondary": "19 listens",
+        "secondary": "20 listens",
         "id": "0epOFNiUfyON9EYx7Tpr6V",
         "pic": "https://i.scdn.co/image/ab6761610000517498856eea770468af6dd999d9",
         "genres": [],
         "url": "https://open.spotify.com/artist/0epOFNiUfyON9EYx7Tpr6V",
-        "last": "2026-11-13T01:07:35.683Z",
+        "last": "2026-11-16T04:35:54.077Z",
         "tracks": [
           {
             "name": "Reptilia",
@@ -603,14 +603,14 @@
             "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
           },
           {
+            "name": "Last Nite",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
+          },
+          {
             "name": "The Adults Are Talking",
             "plays": 2,
             "pic": "https://i.scdn.co/image/ab67616d00001e02e3f1ba3de4659708c25d0f39"
-          },
-          {
-            "name": "Last Nite",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
           },
           {
             "name": "Hard To Explain",
@@ -633,7 +633,7 @@
     "tracks-6m": [
       {
         "name": "Sunday - Remastered 2026",
-        "secondary": "17 plays",
+        "secondary": "18 plays",
         "id": "2nTcgF0BGEJBI3argOQWps",
         "artist": "The Cranberries",
         "album": "Everybody Else Is Doing It, So Why Can't We? (Remastered 2026)",
@@ -641,11 +641,11 @@
         "ms": 210760,
         "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193",
         "url": "https://open.spotify.com/track/2nTcgF0BGEJBI3argOQWps",
-        "last": "2026-11-12T23:15:31.945Z"
+        "last": "2026-11-16T04:44:11.008Z"
       },
       {
         "name": "How to Pretend",
-        "secondary": "11 plays",
+        "secondary": "12 plays",
         "id": "0H0eIjcXruQpntK0LuNa5v",
         "artist": "Lucy Bedroque",
         "album": "Fête de la Vanille",
@@ -653,7 +653,31 @@
         "ms": 224086,
         "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35",
         "url": "https://open.spotify.com/track/0H0eIjcXruQpntK0LuNa5v",
-        "last": "2026-11-12T23:22:06.539Z"
+        "last": "2026-11-16T04:55:20.080Z"
+      },
+      {
+        "name": "blade bird",
+        "secondary": "10 plays",
+        "id": "1zfPxWc0WSQ2MyVsGTLGtF",
+        "artist": "Oklou",
+        "album": "choke enough",
+        "year": "2025",
+        "ms": 198587,
+        "pic": "https://i.scdn.co/image/ab67616d00001e020b68095c4016bdeabd032e89",
+        "url": "https://open.spotify.com/track/1zfPxWc0WSQ2MyVsGTLGtF",
+        "last": "2026-11-16T05:19:06.449Z"
+      },
+      {
+        "name": "Fade Into You",
+        "secondary": "10 plays",
+        "id": "1LzNfuep1bnAUR9skqdHCK",
+        "artist": "Mazzy Star",
+        "album": "So Tonight That I Might See",
+        "year": "1993",
+        "ms": 295600,
+        "pic": "https://i.scdn.co/image/ab67616d00001e0289a392107ebd79818022b3ea",
+        "url": "https://open.spotify.com/track/1LzNfuep1bnAUR9skqdHCK",
+        "last": "2026-11-16T03:11:44.012Z"
       },
       {
         "name": "The Only Exception",
@@ -680,28 +704,40 @@
         "last": "2026-11-11T06:17:20.725Z"
       },
       {
-        "name": "blade bird",
+        "name": "Heaven or Las Vegas",
         "secondary": "9 plays",
-        "id": "1zfPxWc0WSQ2MyVsGTLGtF",
-        "artist": "Oklou",
-        "album": "choke enough",
-        "year": "2025",
-        "ms": 198587,
-        "pic": "https://i.scdn.co/image/ab67616d00001e020b68095c4016bdeabd032e89",
-        "url": "https://open.spotify.com/track/1zfPxWc0WSQ2MyVsGTLGtF",
-        "last": "2026-11-12T15:54:25.321Z"
+        "id": "0AxZUYeQ9bZwSdt1LmZuok",
+        "artist": "Cocteau Twins",
+        "album": "Heaven or Las Vegas",
+        "year": "1990",
+        "ms": 298400,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02",
+        "url": "https://open.spotify.com/track/0AxZUYeQ9bZwSdt1LmZuok",
+        "last": "2026-11-16T02:58:34.001Z"
       },
       {
-        "name": "Fade Into You",
+        "name": "Iris",
         "secondary": "9 plays",
-        "id": "1LzNfuep1bnAUR9skqdHCK",
-        "artist": "Mazzy Star",
-        "album": "So Tonight That I Might See",
-        "year": "1993",
-        "ms": 295600,
-        "pic": "https://i.scdn.co/image/ab67616d00001e0289a392107ebd79818022b3ea",
-        "url": "https://open.spotify.com/track/1LzNfuep1bnAUR9skqdHCK",
-        "last": "2026-11-13T21:14:33.863Z"
+        "id": "6Qyc6fS4DsZjB2mRW9DsQs",
+        "artist": "The Goo Goo Dolls",
+        "album": "Dizzy up the Girl",
+        "year": "1998",
+        "ms": 289533,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02eda9478c39a21e1cdc6609ca",
+        "url": "https://open.spotify.com/track/6Qyc6fS4DsZjB2mRW9DsQs",
+        "last": "2026-11-16T03:43:08.320Z"
+      },
+      {
+        "name": "iPod Touch",
+        "secondary": "9 plays",
+        "id": "1xqT27jSG1Y15vOXfsV0gv",
+        "artist": "Ninajirachi",
+        "album": "I Love My Computer",
+        "year": "2025",
+        "ms": 196522,
+        "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87",
+        "url": "https://open.spotify.com/track/1xqT27jSG1Y15vOXfsV0gv",
+        "last": "2026-11-16T04:27:36.727Z"
       },
       {
         "name": "Linger - Remastered 2026",
@@ -714,57 +750,21 @@
         "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193",
         "url": "https://open.spotify.com/track/1WYrTfvKjQYaYfVziGG1ET",
         "last": "2026-11-12T19:17:45.875Z"
-      },
-      {
-        "name": "Heaven or Las Vegas",
-        "secondary": "8 plays",
-        "id": "0AxZUYeQ9bZwSdt1LmZuok",
-        "artist": "Cocteau Twins",
-        "album": "Heaven or Las Vegas",
-        "year": "1990",
-        "ms": 298400,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02",
-        "url": "https://open.spotify.com/track/0AxZUYeQ9bZwSdt1LmZuok",
-        "last": "2026-11-13T18:40:51.225Z"
-      },
-      {
-        "name": "Iris",
-        "secondary": "8 plays",
-        "id": "6Qyc6fS4DsZjB2mRW9DsQs",
-        "artist": "The Goo Goo Dolls",
-        "album": "Dizzy up the Girl",
-        "year": "1998",
-        "ms": 289533,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02eda9478c39a21e1cdc6609ca",
-        "url": "https://open.spotify.com/track/6Qyc6fS4DsZjB2mRW9DsQs",
-        "last": "2026-11-12T15:51:06.223Z"
-      },
-      {
-        "name": "iPod Touch",
-        "secondary": "8 plays",
-        "id": "1xqT27jSG1Y15vOXfsV0gv",
-        "artist": "Ninajirachi",
-        "album": "I Love My Computer",
-        "year": "2025",
-        "ms": 196522,
-        "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87",
-        "url": "https://open.spotify.com/track/1xqT27jSG1Y15vOXfsV0gv",
-        "last": "2026-11-12T17:34:05.618Z"
       }
     ],
     "artists-6m": [
       {
         "name": "The Cranberries",
-        "secondary": "53 listens",
+        "secondary": "54 listens",
         "id": "7t0rwkOPGlDPEhaOcVtOt9",
         "pic": "https://i.scdn.co/image/ab676161000051749d7ed10720669900a0649c98",
         "genres": [],
         "url": "https://open.spotify.com/artist/7t0rwkOPGlDPEhaOcVtOt9",
-        "last": "2026-11-15T21:06:31.869Z",
+        "last": "2026-11-16T04:44:11.008Z",
         "tracks": [
           {
             "name": "Sunday - Remastered 2026",
-            "plays": 17,
+            "plays": 18,
             "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
           },
           {
@@ -806,27 +806,27 @@
       },
       {
         "name": "Lucy Bedroque",
-        "secondary": "46 listens",
+        "secondary": "48 listens",
         "id": "2I8H267eH5va9da4vGt38O",
         "pic": "https://i.scdn.co/image/ab67616100005174100cfd4653979ed518fbf28f",
         "genres": [],
         "url": "https://open.spotify.com/artist/2I8H267eH5va9da4vGt38O",
-        "last": "2026-11-12T23:22:06.539Z",
+        "last": "2026-11-16T04:55:20.080Z",
         "tracks": [
           {
             "name": "How to Pretend",
-            "plays": 11,
+            "plays": 12,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
+          },
+          {
+            "name": "Knot Me",
+            "plays": 6,
             "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
           },
           {
             "name": "SORORITY",
             "plays": 5,
             "pic": "https://i.scdn.co/image/ab67616d00001e02928b9418e20589b7e47efa9f"
-          },
-          {
-            "name": "Knot Me",
-            "plays": 5,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
           },
           {
             "name": "I KNOW (MY INFLUENCE)",
@@ -959,16 +959,16 @@
       },
       {
         "name": "Ninajirachi",
-        "secondary": "27 listens",
+        "secondary": "28 listens",
         "id": "3MekbRujJg5VZThubOlrkR",
         "pic": "https://i.scdn.co/image/ab676161000051746363b3a1630b8811a4d3d718",
         "genres": [],
         "url": "https://open.spotify.com/artist/3MekbRujJg5VZThubOlrkR",
-        "last": "2026-11-12T17:34:05.618Z",
+        "last": "2026-11-16T04:27:36.727Z",
         "tracks": [
           {
             "name": "iPod Touch",
-            "plays": 8,
+            "plays": 9,
             "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87"
           },
           {
@@ -1010,12 +1010,12 @@
       },
       {
         "name": "fakemink",
-        "secondary": "22 listens",
+        "secondary": "23 listens",
         "id": "0qc4BFxcwRFZfevTck4fOi",
         "pic": "https://i.scdn.co/image/ab67616100005174fea7ad1b3bc4a7f94234bd1c",
         "genres": [],
         "url": "https://open.spotify.com/artist/0qc4BFxcwRFZfevTck4fOi",
-        "last": "2026-11-11T03:53:31.805Z",
+        "last": "2026-11-16T05:37:36.285Z",
         "tracks": [
           {
             "name": "Easter Pink",
@@ -1029,7 +1029,7 @@
           },
           {
             "name": "Crush",
-            "plays": 3,
+            "plays": 4,
             "pic": "https://i.scdn.co/image/ab67616d00001e024a8d870aff0c63f489ebd063"
           },
           {
@@ -1111,6 +1111,52 @@
         ]
       },
       {
+        "name": "beabadoobee",
+        "secondary": "21 listens",
+        "id": "35l9BRT7MXmM8bv2WDQiyB",
+        "pic": "https://i.scdn.co/image/ab676161000051743a41a62e7193703d29d30a9a",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/35l9BRT7MXmM8bv2WDQiyB",
+        "last": "2026-11-16T05:27:40.430Z",
+        "tracks": [
+          {
+            "name": "Talk",
+            "plays": 8,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
+          },
+          {
+            "name": "10:36",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
+          },
+          {
+            "name": "Satellite",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0212c805544ba208842da0d9f3"
+          },
+          {
+            "name": "Beaches",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
+          },
+          {
+            "name": "Cologne",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02110bbc10d8188cf73b3d336c"
+          },
+          {
+            "name": "California",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
+          },
+          {
+            "name": "Sun Has Set",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02068caa28105743b03ac6ee0f"
+          }
+        ]
+      },
+      {
         "name": "Porter Robinson",
         "secondary": "20 listens",
         "id": "3dz0NnIZhtKKeXZxLOxCam",
@@ -1162,59 +1208,13 @@
         ]
       },
       {
-        "name": "beabadoobee",
-        "secondary": "19 listens",
-        "id": "35l9BRT7MXmM8bv2WDQiyB",
-        "pic": "https://i.scdn.co/image/ab676161000051743a41a62e7193703d29d30a9a",
-        "genres": [],
-        "url": "https://open.spotify.com/artist/35l9BRT7MXmM8bv2WDQiyB",
-        "last": "2026-11-15T21:09:10.652Z",
-        "tracks": [
-          {
-            "name": "Talk",
-            "plays": 7,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
-          },
-          {
-            "name": "10:36",
-            "plays": 4,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
-          },
-          {
-            "name": "Satellite",
-            "plays": 3,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0212c805544ba208842da0d9f3"
-          },
-          {
-            "name": "Beaches",
-            "plays": 2,
-            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
-          },
-          {
-            "name": "Cologne",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02110bbc10d8188cf73b3d336c"
-          },
-          {
-            "name": "California",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
-          },
-          {
-            "name": "Sun Has Set",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02068caa28105743b03ac6ee0f"
-          }
-        ]
-      },
-      {
         "name": "The Strokes",
-        "secondary": "19 listens",
+        "secondary": "20 listens",
         "id": "0epOFNiUfyON9EYx7Tpr6V",
         "pic": "https://i.scdn.co/image/ab6761610000517498856eea770468af6dd999d9",
         "genres": [],
         "url": "https://open.spotify.com/artist/0epOFNiUfyON9EYx7Tpr6V",
-        "last": "2026-11-13T01:07:35.683Z",
+        "last": "2026-11-16T04:35:54.077Z",
         "tracks": [
           {
             "name": "Reptilia",
@@ -1232,14 +1232,14 @@
             "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
           },
           {
+            "name": "Last Nite",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
+          },
+          {
             "name": "The Adults Are Talking",
             "plays": 2,
             "pic": "https://i.scdn.co/image/ab67616d00001e02e3f1ba3de4659708c25d0f39"
-          },
-          {
-            "name": "Last Nite",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
           },
           {
             "name": "Hard To Explain",
