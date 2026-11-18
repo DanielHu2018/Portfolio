@@ -25,6 +25,7 @@ PHOTOS = [
     ('photo_of_me.jpg', 1200, 84),
     ('sierra.png', 1000, 90),  # opaque screenshot; 1000px tall = 2154px wide
     ('Baby_Keem_06102026_Columbus.jpeg', 1200, 82),
+    ('Frost_Children_11132026_Cleveland.jpg', 1200, 82),
     ('Glaive_10042026_Columbus.JPG', 1200, 82),
     ('Jane_Remover_09182026_Columbus.JPEG', 1200, 82),
     ('jpegmafia_9202024_Columbus.JPEG', 1200, 82),
