@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import type { SiteVals } from '../site/renderVals';
 import { parseStyle } from '../site/style';
 import { Places } from './Places';
+import { ConcertArt } from './ConcertTicket';
 import { ReceiptScreen } from './ReceiptScreen';
 
 export function OffTheClock({ v }: { v: SiteVals }) {
@@ -39,16 +40,16 @@ export function OffTheClock({ v }: { v: SiteVals }) {
                               <div className="slab-layer" aria-hidden="true" style={parseStyle(L.style)} />
                             </Fragment>
                           ))}
-                          <img src={c.src} alt={`${c.artist} concert photo`} style={{ display: 'block', width: '100%', aspectRatio: '1 / 1', objectFit: 'cover', background: '#3C4046', borderRadius: '3px' }} />
-                          <p style={{ margin: '8px 0 10px', fontFamily: '\'Permanent Marker\', cursive', fontSize: '15px', textAlign: 'center', color: '#3C4046' }}>
+                          <ConcertArt c={c.concert} radius="3px" />
+                          <p style={{ margin: '8px 0 10px', fontFamily: '\'Permanent Marker\', cursive', fontSize: c.artist.length > 15 ? '12px' : '15px', whiteSpace: 'nowrap', textAlign: 'center', color: '#3C4046' }}>
                             {c.artist}
                           </p>
                         </div>
                       </div>
                       <div aria-hidden="true" style={{ position: 'absolute', left: '0', right: '0', top: '100%', marginTop: '6px', transform: 'scaleY(-1)', transformOrigin: '50% 50%', pointerEvents: 'none' }}>
                         <div style={{ position: 'relative', background: '#FFFFFF', border: '3px solid #D5DAE1', borderRadius: '6px', padding: '10px 10px 0' }}>
-                          <img src={c.src} alt={`${c.artist} concert photo`} style={{ display: 'block', width: '100%', aspectRatio: '1 / 1', objectFit: 'cover', background: '#3C4046', borderRadius: '3px' }} />
-                          <p style={{ margin: '8px 0 10px', fontFamily: '\'Permanent Marker\', cursive', fontSize: '15px', textAlign: 'center', color: '#3C4046' }}>
+                          <ConcertArt c={c.concert} radius="3px" />
+                          <p style={{ margin: '8px 0 10px', fontFamily: '\'Permanent Marker\', cursive', fontSize: c.artist.length > 15 ? '12px' : '15px', whiteSpace: 'nowrap', textAlign: 'center', color: '#3C4046' }}>
                             {c.artist}
                           </p>
                         </div>

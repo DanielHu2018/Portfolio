@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import type { SiteVals } from '../site/renderVals';
 import { parseStyle } from '../site/style';
+import { ConcertArt } from './ConcertTicket';
 import { ReceiptScreen } from './ReceiptScreen';
 import { ExperienceCard } from './ExperienceCard';
 
@@ -50,7 +51,7 @@ export function FocusOverlay({ v }: { v: SiteVals }) {
                       <path d="M6 6v12M18 6l-9 6 9 6z" fill="#7E848D" stroke="#7E848D" strokeWidth="2" strokeLinejoin="round" />
                     </svg>
                   </button>
-                  <img src={v.fc.src} alt={`${v.fc.artist} concert photo`} style={{ display: 'block', width: '100%', aspectRatio: '1 / 1', objectFit: 'cover', background: '#3C4046', borderRadius: '5px' }} />
+                  <ConcertArt c={v.fc} radius="5px" />
                   <button type="button" aria-label="Next concert" onClick={v.concertNext} style={{ position: 'absolute', zIndex: '1', right: '-84px', top: '50%', transform: 'translateY(-50%)', width: '42px', height: '42px', borderRadius: '50%', border: '3px solid #D5DAE1', background: 'linear-gradient(180deg, #FFFFFF, #EDF0F4)', boxShadow: 'inset 0 2px 0 #FFFFFF', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
                     <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16">
                       <path d="M18 6v12M6 6l9 6-9 6z" fill="#7E848D" stroke="#7E848D" strokeWidth="2" strokeLinejoin="round" />

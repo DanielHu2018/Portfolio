@@ -153,6 +153,7 @@ export function renderVals(site: SiteController) {
       artist: concertData[i % PHOTOS].artist,
       city: concertData[i % PHOTOS].city,
       date: concertData[i % PHOTOS].date,
+      concert: concertData[i % PHOTOS],
       style: 'position: absolute; top: 44px; left: 50%; width: 170px; margin-left: -85px; perspective: 700px; cursor: pointer; z-index: ' + (20 - ad) + '; opacity: ' + (shown ? 1 : 0) + '; pointer-events: ' + (shown ? 'auto' : 'none') + '; transform: translateX(' + x + 'px) rotateY(' + ry + 'deg) translateZ(' + z + 'px); transition: transform 0.65s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.45s ease',
       open: (e: any) => site.openFocus('concert', i % PHOTOS, e)
     };

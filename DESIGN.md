@@ -111,7 +111,7 @@ Each project iPod needs: a one-line summary, Daniel's role, stack, one result, a
 
 | Hobby | How it appears |
 | --- | --- |
-| Going to concerts | Cover Flow of photo cards with artist, venue and date; endless loop with solid reflections, skip arrows and drag |
+| Going to concerts | Cover Flow of photo cards with artist, venue and date (a ticket stub stands in for concerts without a photo); endless loop with solid reflections, skip arrows and drag |
 | Listening to music | Spotify iPod with the playlist embed, plus the mini player's playlist on every page |
 | Learning guitar | 3D electric guitar model |
 | Drawing | 3D pencil model (code-drawn only; no sketches shown) |
@@ -135,7 +135,7 @@ These are built and live on the site; the backlog at the end lists what could co
 2. **iPod navigator.** A white iPod pinned to the right: its menu lists the sections and highlights the current one; MENU, back, forward and the center button move between sections; play and pause control the music. It can be dragged anywhere. On phones it opens from a button in the mini player.
 3. **Music staff ribbons.** Five-line staffs with simple line-style notes twist, ripple and slide in 3D behind sections, fading blue to pink.
 4. **Project iPods.** Each project is a 3D iPod you can see the sides of; it tilts toward the cursor and springs back. The screen shows the project; VIEW opens it.
-5. **Concert Cover Flow.** Photo cards in an endless loop with solid mirrored reflections. iPod-style skip buttons or a drag spin the carousel; cards tilt on hover and glide back.
+5. **Concert Cover Flow.** Photo cards, in the order Daniel went, in an endless loop with solid mirrored reflections. iPod-style skip buttons or a drag spin the carousel; cards tilt on hover and glide back.
 6. **Hobby models.** Guitar, pencil, skis and volleyball idle-spin on their own; click one to focus it with its blurb.
     - **Places globe.** Under the hobbies: a glossy globe with the land as halftone dots and a music-staff ring orbiting it, with a gold star for home (Columbus), pink dots for places visited and green dots for places to visit. It drifts slowly; drag to spin it, click a dot for its name and whether it is home, been there or want to go. A small key beside it explains the symbols; the tour explains how to spin it and click the dots. The land comes from Natural Earth's public-domain outlines, baked into a code-drawn dot grid.
 7. **Focus mode.** Clicking the photo of Daniel, a project iPod, an experience card, a concert photo, the Spotify iPod or a hobby model flies it to the center over a dimmed page; Esc, the X or a click outside closes it. Experience cards cycle with prev/next buttons or the arrow keys, and the project and experience rows under the Skills section's "Where I've used it" open the same focus views.
