@@ -3,6 +3,7 @@ import { initGlobe } from '../engine/globe';
 import { initMii } from '../engine/mii';
 import { initStaffs } from '../engine/staffs';
 import { initTour } from '../engine/tour';
+import { CONCERTS } from './concerts';
 
 declare const document: any;
 declare const window: any;
@@ -520,7 +521,7 @@ export class SiteController {
   concertMove(dir: any) {
     const f = this.st().focus;
     if (!f || f.kind !== 'concert') return;
-    const n = 10;
+    const n = CONCERTS.length;
     this.setState({ focus: { ...f, idx: (f.idx + dir + n) % n } });
   }
   focusTarget(kind: any) {
