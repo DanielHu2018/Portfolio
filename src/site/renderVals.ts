@@ -1,7 +1,7 @@
 import type { SiteController } from './controller';
 import { albums } from './albums';
 import { artists } from './artists';
-import { CONCERTS } from './concerts';
+import { CONCERTS, FLOW_START } from './concerts';
 import { experience } from './experience';
 import { censor } from './censor';
 import { home as placeHome, visited as placesVisited, wantToVisit as placesWant, PLACE_COLORS } from './places';
@@ -137,7 +137,7 @@ export function renderVals(site: SiteController) {
   const rv = (id: any) => 'reveal';
   const PHOTOS = concertData.length;
   const M = PHOTOS * 2;
-  const center = s.flow ?? 0;
+  const center = s.flow ?? FLOW_START;
   const flow = Array.from({ length: M }, (_, i) => {
     let d = ((i - center) % M + M) % M;
     if (d >= M / 2) d -= M;
