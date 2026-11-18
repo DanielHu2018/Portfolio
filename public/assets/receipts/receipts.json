@@ -51,6 +51,18 @@
         "last": "2026-11-16T21:01:41.284Z"
       },
       {
+        "name": "The Peace",
+        "secondary": "11 plays",
+        "id": "6wm3t4VpTxSFfOUgTMlHZM",
+        "artist": "underscores",
+        "album": "U",
+        "year": "2026",
+        "ms": 169500,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646",
+        "url": "https://open.spotify.com/track/6wm3t4VpTxSFfOUgTMlHZM",
+        "last": "2026-11-17T23:38:19.832Z"
+      },
+      {
         "name": "blade bird",
         "secondary": "10 plays",
         "id": "1zfPxWc0WSQ2MyVsGTLGtF",
@@ -73,18 +85,6 @@
         "pic": "https://i.scdn.co/image/ab67616d00001e02e01d7d558032457b0e4883f6",
         "url": "https://open.spotify.com/track/7JIuqL4ZqkpfGKQhYlrirs",
         "last": "2026-11-15T21:13:38.759Z"
-      },
-      {
-        "name": "The Peace",
-        "secondary": "10 plays",
-        "id": "6wm3t4VpTxSFfOUgTMlHZM",
-        "artist": "underscores",
-        "album": "U",
-        "year": "2026",
-        "ms": 169500,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646",
-        "url": "https://open.spotify.com/track/6wm3t4VpTxSFfOUgTMlHZM",
-        "last": "2026-11-11T06:17:20.725Z"
       },
       {
         "name": "iPod Touch",
@@ -177,12 +177,12 @@
       },
       {
         "name": "Lucy Bedroque",
-        "secondary": "51 listens",
+        "secondary": "53 listens",
         "id": "2I8H267eH5va9da4vGt38O",
         "pic": "https://i.scdn.co/image/ab67616100005174100cfd4653979ed518fbf28f",
         "genres": [],
         "url": "https://open.spotify.com/artist/2I8H267eH5va9da4vGt38O",
-        "last": "2026-11-16T22:12:48.753Z",
+        "last": "2026-11-17T22:59:55.912Z",
         "tracks": [
           {
             "name": "How to Pretend",
@@ -190,14 +190,14 @@
             "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
           },
           {
+            "name": "SORORITY",
+            "plays": 7,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02928b9418e20589b7e47efa9f"
+          },
+          {
             "name": "Knot Me",
             "plays": 7,
             "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
-          },
-          {
-            "name": "SORORITY",
-            "plays": 5,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02928b9418e20589b7e47efa9f"
           },
           {
             "name": "I KNOW (MY INFLUENCE)",
@@ -228,22 +228,22 @@
       },
       {
         "name": "PinkPantheress",
-        "secondary": "35 listens",
+        "secondary": "36 listens",
         "id": "78rUTD7y6Cy67W1RVzYs7t",
         "pic": "https://i.scdn.co/image/ab676161000051746bf10d74063b45938f5d8656",
         "genres": [],
         "url": "https://open.spotify.com/artist/78rUTD7y6Cy67W1RVzYs7t",
-        "last": "2026-11-12T21:54:03.998Z",
+        "last": "2026-11-17T23:46:00.220Z",
         "tracks": [
+          {
+            "name": "Take Me Home",
+            "plays": 7,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0257d764a60898b1e4fa65e857"
+          },
           {
             "name": "Stateside",
             "plays": 6,
             "pic": "https://i.scdn.co/image/ab67616d00001e022a6a5bd7ec690d91a384245d"
-          },
-          {
-            "name": "Take Me Home",
-            "plays": 6,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0257d764a60898b1e4fa65e857"
           },
           {
             "name": "Just for Me",
@@ -279,16 +279,16 @@
       },
       {
         "name": "underscores",
-        "secondary": "35 listens",
+        "secondary": "36 listens",
         "id": "7HfUJxeVTgrvhk0eWHFzV7",
         "pic": "https://i.scdn.co/image/ab67616100005174de8dfaf8e64fee65ef479e68",
         "genres": [],
         "url": "https://open.spotify.com/artist/7HfUJxeVTgrvhk0eWHFzV7",
-        "last": "2026-11-12T22:17:30.179Z",
+        "last": "2026-11-17T23:38:19.832Z",
         "tracks": [
           {
             "name": "The Peace",
-            "plays": 10,
+            "plays": 11,
             "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646"
           },
           {
@@ -655,6 +655,18 @@
         "last": "2026-11-16T21:01:41.284Z"
       },
       {
+        "name": "The Peace",
+        "secondary": "11 plays",
+        "id": "6wm3t4VpTxSFfOUgTMlHZM",
+        "artist": "underscores",
+        "album": "U",
+        "year": "2026",
+        "ms": 169500,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646",
+        "url": "https://open.spotify.com/track/6wm3t4VpTxSFfOUgTMlHZM",
+        "last": "2026-11-17T23:38:19.832Z"
+      },
+      {
         "name": "blade bird",
         "secondary": "10 plays",
         "id": "1zfPxWc0WSQ2MyVsGTLGtF",
@@ -677,18 +689,6 @@
         "pic": "https://i.scdn.co/image/ab67616d00001e02e01d7d558032457b0e4883f6",
         "url": "https://open.spotify.com/track/7JIuqL4ZqkpfGKQhYlrirs",
         "last": "2026-11-15T21:13:38.759Z"
-      },
-      {
-        "name": "The Peace",
-        "secondary": "10 plays",
-        "id": "6wm3t4VpTxSFfOUgTMlHZM",
-        "artist": "underscores",
-        "album": "U",
-        "year": "2026",
-        "ms": 169500,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646",
-        "url": "https://open.spotify.com/track/6wm3t4VpTxSFfOUgTMlHZM",
-        "last": "2026-11-11T06:17:20.725Z"
       },
       {
         "name": "iPod Touch",
@@ -781,12 +781,12 @@
       },
       {
         "name": "Lucy Bedroque",
-        "secondary": "51 listens",
+        "secondary": "53 listens",
         "id": "2I8H267eH5va9da4vGt38O",
         "pic": "https://i.scdn.co/image/ab67616100005174100cfd4653979ed518fbf28f",
         "genres": [],
         "url": "https://open.spotify.com/artist/2I8H267eH5va9da4vGt38O",
-        "last": "2026-11-16T22:12:48.753Z",
+        "last": "2026-11-17T22:59:55.912Z",
         "tracks": [
           {
             "name": "How to Pretend",
@@ -794,14 +794,14 @@
             "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
           },
           {
+            "name": "SORORITY",
+            "plays": 7,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02928b9418e20589b7e47efa9f"
+          },
+          {
             "name": "Knot Me",
             "plays": 7,
             "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
-          },
-          {
-            "name": "SORORITY",
-            "plays": 5,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02928b9418e20589b7e47efa9f"
           },
           {
             "name": "I KNOW (MY INFLUENCE)",
@@ -832,22 +832,22 @@
       },
       {
         "name": "PinkPantheress",
-        "secondary": "35 listens",
+        "secondary": "36 listens",
         "id": "78rUTD7y6Cy67W1RVzYs7t",
         "pic": "https://i.scdn.co/image/ab676161000051746bf10d74063b45938f5d8656",
         "genres": [],
         "url": "https://open.spotify.com/artist/78rUTD7y6Cy67W1RVzYs7t",
-        "last": "2026-11-12T21:54:03.998Z",
+        "last": "2026-11-17T23:46:00.220Z",
         "tracks": [
+          {
+            "name": "Take Me Home",
+            "plays": 7,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0257d764a60898b1e4fa65e857"
+          },
           {
             "name": "Stateside",
             "plays": 6,
             "pic": "https://i.scdn.co/image/ab67616d00001e022a6a5bd7ec690d91a384245d"
-          },
-          {
-            "name": "Take Me Home",
-            "plays": 6,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0257d764a60898b1e4fa65e857"
           },
           {
             "name": "Just for Me",
@@ -883,16 +883,16 @@
       },
       {
         "name": "underscores",
-        "secondary": "35 listens",
+        "secondary": "36 listens",
         "id": "7HfUJxeVTgrvhk0eWHFzV7",
         "pic": "https://i.scdn.co/image/ab67616100005174de8dfaf8e64fee65ef479e68",
         "genres": [],
         "url": "https://open.spotify.com/artist/7HfUJxeVTgrvhk0eWHFzV7",
-        "last": "2026-11-12T22:17:30.179Z",
+        "last": "2026-11-17T23:38:19.832Z",
         "tracks": [
           {
             "name": "The Peace",
-            "plays": 10,
+            "plays": 11,
             "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646"
           },
           {
