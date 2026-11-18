@@ -27,6 +27,30 @@
         "last": "2026-11-16T22:12:48.753Z"
       },
       {
+        "name": "Cherry-coloured Funk",
+        "secondary": "12 plays",
+        "id": "37pKTyMwalomKCZjxTc2QZ",
+        "artist": "Cocteau Twins",
+        "album": "Heaven or Las Vegas",
+        "year": "1990",
+        "ms": 192466,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02",
+        "url": "https://open.spotify.com/track/37pKTyMwalomKCZjxTc2QZ",
+        "last": "2026-11-18T05:15:57.702Z"
+      },
+      {
+        "name": "The Peace",
+        "secondary": "12 plays",
+        "id": "6wm3t4VpTxSFfOUgTMlHZM",
+        "artist": "underscores",
+        "album": "U",
+        "year": "2026",
+        "ms": 169500,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646",
+        "url": "https://open.spotify.com/track/6wm3t4VpTxSFfOUgTMlHZM",
+        "last": "2026-11-18T04:15:06.022Z"
+      },
+      {
         "name": "Fade Into You",
         "secondary": "11 plays",
         "id": "1LzNfuep1bnAUR9skqdHCK",
@@ -37,30 +61,6 @@
         "pic": "https://i.scdn.co/image/ab67616d00001e0289a392107ebd79818022b3ea",
         "url": "https://open.spotify.com/track/1LzNfuep1bnAUR9skqdHCK",
         "last": "2026-11-16T21:47:24.608Z"
-      },
-      {
-        "name": "Cherry-coloured Funk",
-        "secondary": "11 plays",
-        "id": "37pKTyMwalomKCZjxTc2QZ",
-        "artist": "Cocteau Twins",
-        "album": "Heaven or Las Vegas",
-        "year": "1990",
-        "ms": 192466,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02",
-        "url": "https://open.spotify.com/track/37pKTyMwalomKCZjxTc2QZ",
-        "last": "2026-11-16T21:01:41.284Z"
-      },
-      {
-        "name": "The Peace",
-        "secondary": "11 plays",
-        "id": "6wm3t4VpTxSFfOUgTMlHZM",
-        "artist": "underscores",
-        "album": "U",
-        "year": "2026",
-        "ms": 169500,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646",
-        "url": "https://open.spotify.com/track/6wm3t4VpTxSFfOUgTMlHZM",
-        "last": "2026-11-17T23:38:19.832Z"
       },
       {
         "name": "blade bird",
@@ -126,12 +126,12 @@
     "artists-1m": [
       {
         "name": "The Cranberries",
-        "secondary": "59 listens",
+        "secondary": "62 listens",
         "id": "7t0rwkOPGlDPEhaOcVtOt9",
         "pic": "https://i.scdn.co/image/ab676161000051749d7ed10720669900a0649c98",
         "genres": [],
         "url": "https://open.spotify.com/artist/7t0rwkOPGlDPEhaOcVtOt9",
-        "last": "2026-11-16T21:23:13.158Z",
+        "last": "2026-11-18T04:34:55.829Z",
         "tracks": [
           {
             "name": "Sunday - Remastered 2026",
@@ -144,6 +144,11 @@
             "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
           },
           {
+            "name": "Ode To My Family - 2025 Remastered",
+            "plays": 8,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0220a28883cdd0fc7d5f85a9a9"
+          },
+          {
             "name": "Zombie - 2025 Remastered",
             "plays": 8,
             "pic": "https://i.scdn.co/image/ab67616d00001e0220a28883cdd0fc7d5f85a9a9"
@@ -152,11 +157,6 @@
             "name": "Dreams - Remastered 2026",
             "plays": 7,
             "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
-          },
-          {
-            "name": "Ode To My Family - 2025 Remastered",
-            "plays": 5,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0220a28883cdd0fc7d5f85a9a9"
           },
           {
             "name": "Waltzing Back - Remastered 2026",
@@ -228,16 +228,16 @@
       },
       {
         "name": "PinkPantheress",
-        "secondary": "36 listens",
+        "secondary": "38 listens",
         "id": "78rUTD7y6Cy67W1RVzYs7t",
         "pic": "https://i.scdn.co/image/ab676161000051746bf10d74063b45938f5d8656",
         "genres": [],
         "url": "https://open.spotify.com/artist/78rUTD7y6Cy67W1RVzYs7t",
-        "last": "2026-11-17T23:46:00.220Z",
+        "last": "2026-11-18T04:22:46.426Z",
         "tracks": [
           {
             "name": "Take Me Home",
-            "plays": 7,
+            "plays": 8,
             "pic": "https://i.scdn.co/image/ab67616d00001e0257d764a60898b1e4fa65e857"
           },
           {
@@ -247,7 +247,7 @@
           },
           {
             "name": "Just for Me",
-            "plays": 5,
+            "plays": 6,
             "pic": "https://i.scdn.co/image/ab67616d00001e020348d174bc1253a02bcb4ca2"
           },
           {
@@ -279,16 +279,16 @@
       },
       {
         "name": "underscores",
-        "secondary": "36 listens",
+        "secondary": "37 listens",
         "id": "7HfUJxeVTgrvhk0eWHFzV7",
         "pic": "https://i.scdn.co/image/ab67616100005174de8dfaf8e64fee65ef479e68",
         "genres": [],
         "url": "https://open.spotify.com/artist/7HfUJxeVTgrvhk0eWHFzV7",
-        "last": "2026-11-17T23:38:19.832Z",
+        "last": "2026-11-18T04:15:06.022Z",
         "tracks": [
           {
             "name": "The Peace",
-            "plays": 11,
+            "plays": 12,
             "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646"
           },
           {
@@ -330,12 +330,12 @@
       },
       {
         "name": "Ninajirachi",
-        "secondary": "29 listens",
+        "secondary": "30 listens",
         "id": "3MekbRujJg5VZThubOlrkR",
         "pic": "https://i.scdn.co/image/ab676161000051746363b3a1630b8811a4d3d718",
         "genres": [],
         "url": "https://open.spotify.com/artist/3MekbRujJg5VZThubOlrkR",
-        "last": "2026-11-16T18:45:39.514Z",
+        "last": "2026-11-18T01:19:33.155Z",
         "tracks": [
           {
             "name": "iPod Touch",
@@ -344,7 +344,7 @@
           },
           {
             "name": "Delete",
-            "plays": 5,
+            "plays": 6,
             "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87"
           },
           {
@@ -431,6 +431,47 @@
         ]
       },
       {
+        "name": "Cocteau Twins",
+        "secondary": "25 listens",
+        "id": "5Wabl1lPdNOeIn0SQ5A1mp",
+        "pic": "https://i.scdn.co/image/ab6761610000517400f01cecce8a4475c3de0998",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/5Wabl1lPdNOeIn0SQ5A1mp",
+        "last": "2026-11-18T05:25:40.714Z",
+        "tracks": [
+          {
+            "name": "Cherry-coloured Funk",
+            "plays": 12,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02"
+          },
+          {
+            "name": "Heaven or Las Vegas",
+            "plays": 9,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02"
+          },
+          {
+            "name": "Frou-frou Foxes in Midsummer Fires",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02"
+          },
+          {
+            "name": "Pitch the Baby",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02"
+          },
+          {
+            "name": "Iceblink Luck",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02"
+          },
+          {
+            "name": "Fifty-fifty Clown",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02"
+          }
+        ]
+      },
+      {
         "name": "Paramore",
         "secondary": "22 listens",
         "id": "74XFHRwlV6OrjEM0A2NCMF",
@@ -482,32 +523,6 @@
         ]
       },
       {
-        "name": "Cocteau Twins",
-        "secondary": "21 listens",
-        "id": "5Wabl1lPdNOeIn0SQ5A1mp",
-        "pic": "https://i.scdn.co/image/ab6761610000517400f01cecce8a4475c3de0998",
-        "genres": [],
-        "url": "https://open.spotify.com/artist/5Wabl1lPdNOeIn0SQ5A1mp",
-        "last": "2026-11-16T21:01:41.284Z",
-        "tracks": [
-          {
-            "name": "Cherry-coloured Funk",
-            "plays": 11,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02"
-          },
-          {
-            "name": "Heaven or Las Vegas",
-            "plays": 9,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02"
-          },
-          {
-            "name": "Frou-frou Foxes in Midsummer Fires",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02"
-          }
-        ]
-      },
-      {
         "name": "beabadoobee",
         "secondary": "21 listens",
         "id": "35l9BRT7MXmM8bv2WDQiyB",
@@ -554,53 +569,38 @@
         ]
       },
       {
-        "name": "Porter Robinson",
-        "secondary": "20 listens",
-        "id": "3dz0NnIZhtKKeXZxLOxCam",
-        "pic": "https://i.scdn.co/image/ab67616100005174f67786cf70976b5d87b27b5a",
+        "name": "A$AP Rocky",
+        "secondary": "21 listens",
+        "id": "13ubrt8QOOCPljQ2FL1Kca",
+        "pic": "https://i.scdn.co/image/ab67616100005174ad160b333f9a240f84aff7d7",
         "genres": [],
-        "url": "https://open.spotify.com/artist/3dz0NnIZhtKKeXZxLOxCam",
-        "last": "2026-11-11T07:02:01.214Z",
+        "url": "https://open.spotify.com/artist/13ubrt8QOOCPljQ2FL1Kca",
+        "last": "2026-11-18T04:05:43.180Z",
         "tracks": [
           {
-            "name": "Shelter",
+            "name": "Fashion Killa",
+            "plays": 6,
+            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
+          },
+          {
+            "name": "Peso",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0220f0799a7bfd974e465fea7a"
+          },
+          {
+            "name": "LVL",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
+          },
+          {
+            "name": "DON'T BE DUMB / TRIP BABY",
             "plays": 4,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0279921d9de5b4e523a379876d"
+            "pic": "https://i.scdn.co/image/ab67616d00001e02be35d523672e13da3debc413"
           },
           {
-            "name": "WannaCry",
-            "plays": 4,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02a4cd3b67b8747f787068b366"
-          },
-          {
-            "name": "Something Comforting",
-            "plays": 3,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0234dce7e864a4dd44ba72005d"
-          },
-          {
-            "name": "Musician",
-            "plays": 2,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0234dce7e864a4dd44ba72005d"
-          },
-          {
-            "name": "Knock Yourself Out XD",
-            "plays": 2,
-            "pic": "https://i.scdn.co/image/ab67616d00001e027c3a704f5148a42134878b5d"
-          },
-          {
-            "name": "Russian Roulette",
+            "name": "New Choppa",
             "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e027c3a704f5148a42134878b5d"
-          },
-          {
-            "name": "Is There Really No Happiness?",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e027c3a704f5148a42134878b5d"
-          },
-          {
-            "name": "Everything To Me - jamesjamesjames Remix",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02d2425ac83bd7f4fec63f1c9c"
+            "pic": "https://i.scdn.co/image/ab67616d00001e02e31a279d267f3b3d8912e6f1"
           }
         ]
       }
@@ -631,6 +631,30 @@
         "last": "2026-11-16T22:12:48.753Z"
       },
       {
+        "name": "Cherry-coloured Funk",
+        "secondary": "12 plays",
+        "id": "37pKTyMwalomKCZjxTc2QZ",
+        "artist": "Cocteau Twins",
+        "album": "Heaven or Las Vegas",
+        "year": "1990",
+        "ms": 192466,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02",
+        "url": "https://open.spotify.com/track/37pKTyMwalomKCZjxTc2QZ",
+        "last": "2026-11-18T05:15:57.702Z"
+      },
+      {
+        "name": "The Peace",
+        "secondary": "12 plays",
+        "id": "6wm3t4VpTxSFfOUgTMlHZM",
+        "artist": "underscores",
+        "album": "U",
+        "year": "2026",
+        "ms": 169500,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646",
+        "url": "https://open.spotify.com/track/6wm3t4VpTxSFfOUgTMlHZM",
+        "last": "2026-11-18T04:15:06.022Z"
+      },
+      {
         "name": "Fade Into You",
         "secondary": "11 plays",
         "id": "1LzNfuep1bnAUR9skqdHCK",
@@ -641,30 +665,6 @@
         "pic": "https://i.scdn.co/image/ab67616d00001e0289a392107ebd79818022b3ea",
         "url": "https://open.spotify.com/track/1LzNfuep1bnAUR9skqdHCK",
         "last": "2026-11-16T21:47:24.608Z"
-      },
-      {
-        "name": "Cherry-coloured Funk",
-        "secondary": "11 plays",
-        "id": "37pKTyMwalomKCZjxTc2QZ",
-        "artist": "Cocteau Twins",
-        "album": "Heaven or Las Vegas",
-        "year": "1990",
-        "ms": 192466,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02",
-        "url": "https://open.spotify.com/track/37pKTyMwalomKCZjxTc2QZ",
-        "last": "2026-11-16T21:01:41.284Z"
-      },
-      {
-        "name": "The Peace",
-        "secondary": "11 plays",
-        "id": "6wm3t4VpTxSFfOUgTMlHZM",
-        "artist": "underscores",
-        "album": "U",
-        "year": "2026",
-        "ms": 169500,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646",
-        "url": "https://open.spotify.com/track/6wm3t4VpTxSFfOUgTMlHZM",
-        "last": "2026-11-17T23:38:19.832Z"
       },
       {
         "name": "blade bird",
@@ -730,12 +730,12 @@
     "artists-6m": [
       {
         "name": "The Cranberries",
-        "secondary": "59 listens",
+        "secondary": "62 listens",
         "id": "7t0rwkOPGlDPEhaOcVtOt9",
         "pic": "https://i.scdn.co/image/ab676161000051749d7ed10720669900a0649c98",
         "genres": [],
         "url": "https://open.spotify.com/artist/7t0rwkOPGlDPEhaOcVtOt9",
-        "last": "2026-11-16T21:23:13.158Z",
+        "last": "2026-11-18T04:34:55.829Z",
         "tracks": [
           {
             "name": "Sunday - Remastered 2026",
@@ -748,6 +748,11 @@
             "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
           },
           {
+            "name": "Ode To My Family - 2025 Remastered",
+            "plays": 8,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0220a28883cdd0fc7d5f85a9a9"
+          },
+          {
             "name": "Zombie - 2025 Remastered",
             "plays": 8,
             "pic": "https://i.scdn.co/image/ab67616d00001e0220a28883cdd0fc7d5f85a9a9"
@@ -756,11 +761,6 @@
             "name": "Dreams - Remastered 2026",
             "plays": 7,
             "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
-          },
-          {
-            "name": "Ode To My Family - 2025 Remastered",
-            "plays": 5,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0220a28883cdd0fc7d5f85a9a9"
           },
           {
             "name": "Waltzing Back - Remastered 2026",
@@ -832,16 +832,16 @@
       },
       {
         "name": "PinkPantheress",
-        "secondary": "36 listens",
+        "secondary": "38 listens",
         "id": "78rUTD7y6Cy67W1RVzYs7t",
         "pic": "https://i.scdn.co/image/ab676161000051746bf10d74063b45938f5d8656",
         "genres": [],
         "url": "https://open.spotify.com/artist/78rUTD7y6Cy67W1RVzYs7t",
-        "last": "2026-11-17T23:46:00.220Z",
+        "last": "2026-11-18T04:22:46.426Z",
         "tracks": [
           {
             "name": "Take Me Home",
-            "plays": 7,
+            "plays": 8,
             "pic": "https://i.scdn.co/image/ab67616d00001e0257d764a60898b1e4fa65e857"
           },
           {
@@ -851,7 +851,7 @@
           },
           {
             "name": "Just for Me",
-            "plays": 5,
+            "plays": 6,
             "pic": "https://i.scdn.co/image/ab67616d00001e020348d174bc1253a02bcb4ca2"
           },
           {
@@ -883,16 +883,16 @@
       },
       {
         "name": "underscores",
-        "secondary": "36 listens",
+        "secondary": "37 listens",
         "id": "7HfUJxeVTgrvhk0eWHFzV7",
         "pic": "https://i.scdn.co/image/ab67616100005174de8dfaf8e64fee65ef479e68",
         "genres": [],
         "url": "https://open.spotify.com/artist/7HfUJxeVTgrvhk0eWHFzV7",
-        "last": "2026-11-17T23:38:19.832Z",
+        "last": "2026-11-18T04:15:06.022Z",
         "tracks": [
           {
             "name": "The Peace",
-            "plays": 11,
+            "plays": 12,
             "pic": "https://i.scdn.co/image/ab67616d00001e02cab898cdda3ee7d1e9b25646"
           },
           {
@@ -934,12 +934,12 @@
       },
       {
         "name": "Ninajirachi",
-        "secondary": "29 listens",
+        "secondary": "30 listens",
         "id": "3MekbRujJg5VZThubOlrkR",
         "pic": "https://i.scdn.co/image/ab676161000051746363b3a1630b8811a4d3d718",
         "genres": [],
         "url": "https://open.spotify.com/artist/3MekbRujJg5VZThubOlrkR",
-        "last": "2026-11-16T18:45:39.514Z",
+        "last": "2026-11-18T01:19:33.155Z",
         "tracks": [
           {
             "name": "iPod Touch",
@@ -948,7 +948,7 @@
           },
           {
             "name": "Delete",
-            "plays": 5,
+            "plays": 6,
             "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87"
           },
           {
@@ -1035,6 +1035,47 @@
         ]
       },
       {
+        "name": "Cocteau Twins",
+        "secondary": "25 listens",
+        "id": "5Wabl1lPdNOeIn0SQ5A1mp",
+        "pic": "https://i.scdn.co/image/ab6761610000517400f01cecce8a4475c3de0998",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/5Wabl1lPdNOeIn0SQ5A1mp",
+        "last": "2026-11-18T05:25:40.714Z",
+        "tracks": [
+          {
+            "name": "Cherry-coloured Funk",
+            "plays": 12,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02"
+          },
+          {
+            "name": "Heaven or Las Vegas",
+            "plays": 9,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02"
+          },
+          {
+            "name": "Frou-frou Foxes in Midsummer Fires",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02"
+          },
+          {
+            "name": "Pitch the Baby",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02"
+          },
+          {
+            "name": "Iceblink Luck",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02"
+          },
+          {
+            "name": "Fifty-fifty Clown",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02"
+          }
+        ]
+      },
+      {
         "name": "Paramore",
         "secondary": "22 listens",
         "id": "74XFHRwlV6OrjEM0A2NCMF",
@@ -1086,32 +1127,6 @@
         ]
       },
       {
-        "name": "Cocteau Twins",
-        "secondary": "21 listens",
-        "id": "5Wabl1lPdNOeIn0SQ5A1mp",
-        "pic": "https://i.scdn.co/image/ab6761610000517400f01cecce8a4475c3de0998",
-        "genres": [],
-        "url": "https://open.spotify.com/artist/5Wabl1lPdNOeIn0SQ5A1mp",
-        "last": "2026-11-16T21:01:41.284Z",
-        "tracks": [
-          {
-            "name": "Cherry-coloured Funk",
-            "plays": 11,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02"
-          },
-          {
-            "name": "Heaven or Las Vegas",
-            "plays": 9,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02"
-          },
-          {
-            "name": "Frou-frou Foxes in Midsummer Fires",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02fe6211303e796f3d5b7a0e02"
-          }
-        ]
-      },
-      {
         "name": "beabadoobee",
         "secondary": "21 listens",
         "id": "35l9BRT7MXmM8bv2WDQiyB",
@@ -1158,53 +1173,38 @@
         ]
       },
       {
-        "name": "Porter Robinson",
-        "secondary": "20 listens",
-        "id": "3dz0NnIZhtKKeXZxLOxCam",
-        "pic": "https://i.scdn.co/image/ab67616100005174f67786cf70976b5d87b27b5a",
+        "name": "A$AP Rocky",
+        "secondary": "21 listens",
+        "id": "13ubrt8QOOCPljQ2FL1Kca",
+        "pic": "https://i.scdn.co/image/ab67616100005174ad160b333f9a240f84aff7d7",
         "genres": [],
-        "url": "https://open.spotify.com/artist/3dz0NnIZhtKKeXZxLOxCam",
-        "last": "2026-11-11T07:02:01.214Z",
+        "url": "https://open.spotify.com/artist/13ubrt8QOOCPljQ2FL1Kca",
+        "last": "2026-11-18T04:05:43.180Z",
         "tracks": [
           {
-            "name": "Shelter",
+            "name": "Fashion Killa",
+            "plays": 6,
+            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
+          },
+          {
+            "name": "Peso",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0220f0799a7bfd974e465fea7a"
+          },
+          {
+            "name": "LVL",
+            "plays": 5,
+            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
+          },
+          {
+            "name": "DON'T BE DUMB / TRIP BABY",
             "plays": 4,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0279921d9de5b4e523a379876d"
+            "pic": "https://i.scdn.co/image/ab67616d00001e02be35d523672e13da3debc413"
           },
           {
-            "name": "WannaCry",
-            "plays": 4,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02a4cd3b67b8747f787068b366"
-          },
-          {
-            "name": "Something Comforting",
-            "plays": 3,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0234dce7e864a4dd44ba72005d"
-          },
-          {
-            "name": "Musician",
-            "plays": 2,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0234dce7e864a4dd44ba72005d"
-          },
-          {
-            "name": "Knock Yourself Out XD",
-            "plays": 2,
-            "pic": "https://i.scdn.co/image/ab67616d00001e027c3a704f5148a42134878b5d"
-          },
-          {
-            "name": "Russian Roulette",
+            "name": "New Choppa",
             "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e027c3a704f5148a42134878b5d"
-          },
-          {
-            "name": "Is There Really No Happiness?",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e027c3a704f5148a42134878b5d"
-          },
-          {
-            "name": "Everything To Me - jamesjamesjames Remix",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02d2425ac83bd7f4fec63f1c9c"
+            "pic": "https://i.scdn.co/image/ab67616d00001e02e31a279d267f3b3d8912e6f1"
           }
         ]
       }
