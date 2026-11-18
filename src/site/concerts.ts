@@ -24,7 +24,7 @@ export const CONCERTS: Concert[] = [
   { artist: 'Glaive', date: 'October 4, 2026', city: 'Columbus', src: '/assets/web/Glaive_10042026_Columbus.jpg' },
   { artist: 'Tiffany Day', date: 'October 4, 2026', city: 'Columbus', src: '/assets/web/Tiffany_Day_10042026_Columbus.jpg' },
   { artist: 'Wynton Marsalis', date: 'October 6, 2026', city: 'Columbus', src: '/assets/web/Wynton_Marsalis_10062026_Columbus.jpg' },
-  { artist: 'Frost Children', date: 'November 13, 2026', city: 'Cleveland', src: '/assets/web/Frost_Children_11132026_Cleveland.jpg' },
+  { artist: 'Frost Children', date: 'November 13, 2026', city: 'Cleveland', src: '/assets/web/Frost_Children_11132026_Cleveland.jpg?v=2' },
   { artist: "Moon Man's Landing", date: 'September 17, 2022', city: 'Cleveland', venue: 'West Bank of the Flats', lineup: ['Pusha T', 'Don Toliver', 'Dominic Fike', 'Haim', '070 Shake', 'Playboi Carti'] },
   { artist: 'Destroy Lonely', date: 'February 11, 2023', city: 'Columbus', venue: 'The King of Clubs' },
   { artist: 'Travis Scott', date: 'January 24, 2024', city: 'Columbus', venue: 'Schottenstein Center', tour: 'Utopia: Circus Maximus Tour' },
