@@ -16,7 +16,7 @@
       },
       {
         "name": "How to Pretend",
-        "secondary": "13 plays",
+        "secondary": "15 plays",
         "id": "0H0eIjcXruQpntK0LuNa5v",
         "artist": "Lucy Bedroque",
         "album": "Fête de la Vanille",
@@ -24,7 +24,7 @@
         "ms": 224086,
         "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35",
         "url": "https://open.spotify.com/track/0H0eIjcXruQpntK0LuNa5v",
-        "last": "2026-11-16T22:12:48.753Z"
+        "last": "2026-11-19T15:54:22.417Z"
       },
       {
         "name": "Cherry-coloured Funk",
@@ -75,6 +75,18 @@
         "last": "2026-11-18T04:15:06.022Z"
       },
       {
+        "name": "Linger - Remastered 2026",
+        "secondary": "12 plays",
+        "id": "1WYrTfvKjQYaYfVziGG1ET",
+        "artist": "The Cranberries",
+        "album": "Everybody Else Is Doing It, So Why Can't We? (Remastered 2026)",
+        "year": "1993",
+        "ms": 274720,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193",
+        "url": "https://open.spotify.com/track/1WYrTfvKjQYaYfVziGG1ET",
+        "last": "2026-11-19T23:36:11.119Z"
+      },
+      {
         "name": "blade bird",
         "secondary": "11 plays",
         "id": "1zfPxWc0WSQ2MyVsGTLGtF",
@@ -109,29 +121,17 @@
         "pic": "https://i.scdn.co/image/ab67616d00001e02eda9478c39a21e1cdc6609ca",
         "url": "https://open.spotify.com/track/6Qyc6fS4DsZjB2mRW9DsQs",
         "last": "2026-11-19T00:39:58.131Z"
-      },
-      {
-        "name": "iPod Touch",
-        "secondary": "11 plays",
-        "id": "1xqT27jSG1Y15vOXfsV0gv",
-        "artist": "Ninajirachi",
-        "album": "I Love My Computer",
-        "year": "2025",
-        "ms": 196522,
-        "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87",
-        "url": "https://open.spotify.com/track/1xqT27jSG1Y15vOXfsV0gv",
-        "last": "2026-11-19T01:29:12.499Z"
       }
     ],
     "artists-1m": [
       {
         "name": "The Cranberries",
-        "secondary": "65 listens",
+        "secondary": "66 listens",
         "id": "7t0rwkOPGlDPEhaOcVtOt9",
         "pic": "https://i.scdn.co/image/ab676161000051749d7ed10720669900a0649c98",
         "genres": [],
         "url": "https://open.spotify.com/artist/7t0rwkOPGlDPEhaOcVtOt9",
-        "last": "2026-11-19T01:21:45.440Z",
+        "last": "2026-11-19T23:36:11.119Z",
         "tracks": [
           {
             "name": "Sunday - Remastered 2026",
@@ -140,7 +140,7 @@
           },
           {
             "name": "Linger - Remastered 2026",
-            "plays": 11,
+            "plays": 12,
             "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
           },
           {
@@ -177,16 +177,16 @@
       },
       {
         "name": "Lucy Bedroque",
-        "secondary": "53 listens",
+        "secondary": "55 listens",
         "id": "2I8H267eH5va9da4vGt38O",
         "pic": "https://i.scdn.co/image/ab67616100005174100cfd4653979ed518fbf28f",
         "genres": [],
         "url": "https://open.spotify.com/artist/2I8H267eH5va9da4vGt38O",
-        "last": "2026-11-17T22:59:55.912Z",
+        "last": "2026-11-19T15:54:22.417Z",
         "tracks": [
           {
             "name": "How to Pretend",
-            "plays": 13,
+            "plays": 15,
             "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
           },
           {
@@ -228,22 +228,22 @@
       },
       {
         "name": "PinkPantheress",
-        "secondary": "39 listens",
+        "secondary": "40 listens",
         "id": "78rUTD7y6Cy67W1RVzYs7t",
         "pic": "https://i.scdn.co/image/ab676161000051746bf10d74063b45938f5d8656",
         "genres": [],
         "url": "https://open.spotify.com/artist/78rUTD7y6Cy67W1RVzYs7t",
-        "last": "2026-11-19T01:05:56.770Z",
+        "last": "2026-11-19T16:00:17.211Z",
         "tracks": [
+          {
+            "name": "Stateside",
+            "plays": 8,
+            "pic": "https://i.scdn.co/image/ab67616d00001e022a6a5bd7ec690d91a384245d"
+          },
           {
             "name": "Take Me Home",
             "plays": 8,
             "pic": "https://i.scdn.co/image/ab67616d00001e0257d764a60898b1e4fa65e857"
-          },
-          {
-            "name": "Stateside",
-            "plays": 7,
-            "pic": "https://i.scdn.co/image/ab67616d00001e022a6a5bd7ec690d91a384245d"
           },
           {
             "name": "Just for Me",
@@ -422,12 +422,12 @@
       },
       {
         "name": "Paramore",
-        "secondary": "27 listens",
+        "secondary": "29 listens",
         "id": "74XFHRwlV6OrjEM0A2NCMF",
         "pic": "https://i.scdn.co/image/ab67616100005174b10c34546a4ca2d7faeb8865",
         "genres": [],
         "url": "https://open.spotify.com/artist/74XFHRwlV6OrjEM0A2NCMF",
-        "last": "2026-11-19T02:07:44.047Z",
+        "last": "2026-11-19T17:55:20.386Z",
         "tracks": [
           {
             "name": "The Only Exception",
@@ -436,7 +436,7 @@
           },
           {
             "name": "All I Wanted",
-            "plays": 6,
+            "plays": 7,
             "pic": "https://i.scdn.co/image/ab67616d00001e02e01d7d558032457b0e4883f6"
           },
           {
@@ -446,7 +446,7 @@
           },
           {
             "name": "Pressure",
-            "plays": 2,
+            "plays": 3,
             "pic": "https://i.scdn.co/image/ab67616d00001e025cab62839794c2cc3d6a135b"
           },
           {
@@ -468,6 +468,42 @@
             "name": "Misery Business",
             "plays": 1,
             "pic": "https://i.scdn.co/image/ab67616d00001e0269966efa45b125ed6711b43c"
+          }
+        ]
+      },
+      {
+        "name": "A$AP Rocky",
+        "secondary": "26 listens",
+        "id": "13ubrt8QOOCPljQ2FL1Kca",
+        "pic": "https://i.scdn.co/image/ab67616100005174ad160b333f9a240f84aff7d7",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/13ubrt8QOOCPljQ2FL1Kca",
+        "last": "2026-11-19T17:37:25.271Z",
+        "tracks": [
+          {
+            "name": "LVL",
+            "plays": 8,
+            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
+          },
+          {
+            "name": "Fashion Killa",
+            "plays": 7,
+            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
+          },
+          {
+            "name": "Peso",
+            "plays": 6,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0220f0799a7bfd974e465fea7a"
+          },
+          {
+            "name": "DON'T BE DUMB / TRIP BABY",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02be35d523672e13da3debc413"
+          },
+          {
+            "name": "New Choppa",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02e31a279d267f3b3d8912e6f1"
           }
         ]
       },
@@ -523,53 +559,17 @@
         ]
       },
       {
-        "name": "A$AP Rocky",
-        "secondary": "24 listens",
-        "id": "13ubrt8QOOCPljQ2FL1Kca",
-        "pic": "https://i.scdn.co/image/ab67616100005174ad160b333f9a240f84aff7d7",
-        "genres": [],
-        "url": "https://open.spotify.com/artist/13ubrt8QOOCPljQ2FL1Kca",
-        "last": "2026-11-19T02:37:12.348Z",
-        "tracks": [
-          {
-            "name": "Fashion Killa",
-            "plays": 7,
-            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
-          },
-          {
-            "name": "Peso",
-            "plays": 6,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0220f0799a7bfd974e465fea7a"
-          },
-          {
-            "name": "LVL",
-            "plays": 6,
-            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
-          },
-          {
-            "name": "DON'T BE DUMB / TRIP BABY",
-            "plays": 4,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02be35d523672e13da3debc413"
-          },
-          {
-            "name": "New Choppa",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02e31a279d267f3b3d8912e6f1"
-          }
-        ]
-      },
-      {
         "name": "beabadoobee",
-        "secondary": "23 listens",
+        "secondary": "24 listens",
         "id": "35l9BRT7MXmM8bv2WDQiyB",
-        "pic": "https://i.scdn.co/image/ab676161000051743a41a62e7193703d29d30a9a",
+        "pic": "https://i.scdn.co/image/ab676161000051748724b689605796e605b6b439",
         "genres": [],
         "url": "https://open.spotify.com/artist/35l9BRT7MXmM8bv2WDQiyB",
-        "last": "2026-11-19T02:26:56.970Z",
+        "last": "2026-11-19T17:48:30.955Z",
         "tracks": [
           {
             "name": "Talk",
-            "plays": 9,
+            "plays": 10,
             "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
           },
           {
@@ -620,7 +620,7 @@
       },
       {
         "name": "How to Pretend",
-        "secondary": "13 plays",
+        "secondary": "15 plays",
         "id": "0H0eIjcXruQpntK0LuNa5v",
         "artist": "Lucy Bedroque",
         "album": "Fête de la Vanille",
@@ -628,7 +628,7 @@
         "ms": 224086,
         "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35",
         "url": "https://open.spotify.com/track/0H0eIjcXruQpntK0LuNa5v",
-        "last": "2026-11-16T22:12:48.753Z"
+        "last": "2026-11-19T15:54:22.417Z"
       },
       {
         "name": "Cherry-coloured Funk",
@@ -679,6 +679,18 @@
         "last": "2026-11-18T04:15:06.022Z"
       },
       {
+        "name": "Linger - Remastered 2026",
+        "secondary": "12 plays",
+        "id": "1WYrTfvKjQYaYfVziGG1ET",
+        "artist": "The Cranberries",
+        "album": "Everybody Else Is Doing It, So Why Can't We? (Remastered 2026)",
+        "year": "1993",
+        "ms": 274720,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193",
+        "url": "https://open.spotify.com/track/1WYrTfvKjQYaYfVziGG1ET",
+        "last": "2026-11-19T23:36:11.119Z"
+      },
+      {
         "name": "blade bird",
         "secondary": "11 plays",
         "id": "1zfPxWc0WSQ2MyVsGTLGtF",
@@ -713,29 +725,17 @@
         "pic": "https://i.scdn.co/image/ab67616d00001e02eda9478c39a21e1cdc6609ca",
         "url": "https://open.spotify.com/track/6Qyc6fS4DsZjB2mRW9DsQs",
         "last": "2026-11-19T00:39:58.131Z"
-      },
-      {
-        "name": "iPod Touch",
-        "secondary": "11 plays",
-        "id": "1xqT27jSG1Y15vOXfsV0gv",
-        "artist": "Ninajirachi",
-        "album": "I Love My Computer",
-        "year": "2025",
-        "ms": 196522,
-        "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87",
-        "url": "https://open.spotify.com/track/1xqT27jSG1Y15vOXfsV0gv",
-        "last": "2026-11-19T01:29:12.499Z"
       }
     ],
     "artists-6m": [
       {
         "name": "The Cranberries",
-        "secondary": "65 listens",
+        "secondary": "66 listens",
         "id": "7t0rwkOPGlDPEhaOcVtOt9",
         "pic": "https://i.scdn.co/image/ab676161000051749d7ed10720669900a0649c98",
         "genres": [],
         "url": "https://open.spotify.com/artist/7t0rwkOPGlDPEhaOcVtOt9",
-        "last": "2026-11-19T01:21:45.440Z",
+        "last": "2026-11-19T23:36:11.119Z",
         "tracks": [
           {
             "name": "Sunday - Remastered 2026",
@@ -744,7 +744,7 @@
           },
           {
             "name": "Linger - Remastered 2026",
-            "plays": 11,
+            "plays": 12,
             "pic": "https://i.scdn.co/image/ab67616d00001e02753dbf92830094154a21b193"
           },
           {
@@ -781,16 +781,16 @@
       },
       {
         "name": "Lucy Bedroque",
-        "secondary": "53 listens",
+        "secondary": "55 listens",
         "id": "2I8H267eH5va9da4vGt38O",
         "pic": "https://i.scdn.co/image/ab67616100005174100cfd4653979ed518fbf28f",
         "genres": [],
         "url": "https://open.spotify.com/artist/2I8H267eH5va9da4vGt38O",
-        "last": "2026-11-17T22:59:55.912Z",
+        "last": "2026-11-19T15:54:22.417Z",
         "tracks": [
           {
             "name": "How to Pretend",
-            "plays": 13,
+            "plays": 15,
             "pic": "https://i.scdn.co/image/ab67616d00001e02367048530b1e018c30162d35"
           },
           {
@@ -832,22 +832,22 @@
       },
       {
         "name": "PinkPantheress",
-        "secondary": "39 listens",
+        "secondary": "40 listens",
         "id": "78rUTD7y6Cy67W1RVzYs7t",
         "pic": "https://i.scdn.co/image/ab676161000051746bf10d74063b45938f5d8656",
         "genres": [],
         "url": "https://open.spotify.com/artist/78rUTD7y6Cy67W1RVzYs7t",
-        "last": "2026-11-19T01:05:56.770Z",
+        "last": "2026-11-19T16:00:17.211Z",
         "tracks": [
+          {
+            "name": "Stateside",
+            "plays": 8,
+            "pic": "https://i.scdn.co/image/ab67616d00001e022a6a5bd7ec690d91a384245d"
+          },
           {
             "name": "Take Me Home",
             "plays": 8,
             "pic": "https://i.scdn.co/image/ab67616d00001e0257d764a60898b1e4fa65e857"
-          },
-          {
-            "name": "Stateside",
-            "plays": 7,
-            "pic": "https://i.scdn.co/image/ab67616d00001e022a6a5bd7ec690d91a384245d"
           },
           {
             "name": "Just for Me",
@@ -1026,12 +1026,12 @@
       },
       {
         "name": "Paramore",
-        "secondary": "27 listens",
+        "secondary": "29 listens",
         "id": "74XFHRwlV6OrjEM0A2NCMF",
         "pic": "https://i.scdn.co/image/ab67616100005174b10c34546a4ca2d7faeb8865",
         "genres": [],
         "url": "https://open.spotify.com/artist/74XFHRwlV6OrjEM0A2NCMF",
-        "last": "2026-11-19T02:07:44.047Z",
+        "last": "2026-11-19T17:55:20.386Z",
         "tracks": [
           {
             "name": "The Only Exception",
@@ -1040,7 +1040,7 @@
           },
           {
             "name": "All I Wanted",
-            "plays": 6,
+            "plays": 7,
             "pic": "https://i.scdn.co/image/ab67616d00001e02e01d7d558032457b0e4883f6"
           },
           {
@@ -1050,7 +1050,7 @@
           },
           {
             "name": "Pressure",
-            "plays": 2,
+            "plays": 3,
             "pic": "https://i.scdn.co/image/ab67616d00001e025cab62839794c2cc3d6a135b"
           },
           {
@@ -1072,6 +1072,42 @@
             "name": "Misery Business",
             "plays": 1,
             "pic": "https://i.scdn.co/image/ab67616d00001e0269966efa45b125ed6711b43c"
+          }
+        ]
+      },
+      {
+        "name": "A$AP Rocky",
+        "secondary": "26 listens",
+        "id": "13ubrt8QOOCPljQ2FL1Kca",
+        "pic": "https://i.scdn.co/image/ab67616100005174ad160b333f9a240f84aff7d7",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/13ubrt8QOOCPljQ2FL1Kca",
+        "last": "2026-11-19T17:37:25.271Z",
+        "tracks": [
+          {
+            "name": "LVL",
+            "plays": 8,
+            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
+          },
+          {
+            "name": "Fashion Killa",
+            "plays": 7,
+            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
+          },
+          {
+            "name": "Peso",
+            "plays": 6,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0220f0799a7bfd974e465fea7a"
+          },
+          {
+            "name": "DON'T BE DUMB / TRIP BABY",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02be35d523672e13da3debc413"
+          },
+          {
+            "name": "New Choppa",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02e31a279d267f3b3d8912e6f1"
           }
         ]
       },
@@ -1127,53 +1163,17 @@
         ]
       },
       {
-        "name": "A$AP Rocky",
-        "secondary": "24 listens",
-        "id": "13ubrt8QOOCPljQ2FL1Kca",
-        "pic": "https://i.scdn.co/image/ab67616100005174ad160b333f9a240f84aff7d7",
-        "genres": [],
-        "url": "https://open.spotify.com/artist/13ubrt8QOOCPljQ2FL1Kca",
-        "last": "2026-11-19T02:37:12.348Z",
-        "tracks": [
-          {
-            "name": "Fashion Killa",
-            "plays": 7,
-            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
-          },
-          {
-            "name": "Peso",
-            "plays": 6,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0220f0799a7bfd974e465fea7a"
-          },
-          {
-            "name": "LVL",
-            "plays": 6,
-            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
-          },
-          {
-            "name": "DON'T BE DUMB / TRIP BABY",
-            "plays": 4,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02be35d523672e13da3debc413"
-          },
-          {
-            "name": "New Choppa",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02e31a279d267f3b3d8912e6f1"
-          }
-        ]
-      },
-      {
         "name": "beabadoobee",
-        "secondary": "23 listens",
+        "secondary": "24 listens",
         "id": "35l9BRT7MXmM8bv2WDQiyB",
-        "pic": "https://i.scdn.co/image/ab676161000051743a41a62e7193703d29d30a9a",
+        "pic": "https://i.scdn.co/image/ab676161000051748724b689605796e605b6b439",
         "genres": [],
         "url": "https://open.spotify.com/artist/35l9BRT7MXmM8bv2WDQiyB",
-        "last": "2026-11-19T02:26:56.970Z",
+        "last": "2026-11-19T17:48:30.955Z",
         "tracks": [
           {
             "name": "Talk",
-            "plays": 9,
+            "plays": 10,
             "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
           },
           {
