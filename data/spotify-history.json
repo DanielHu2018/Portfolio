@@ -11279,6 +11279,17 @@
       "artists": [
         "The Strokes"
       ]
+    },
+    {
+      "played_at": "2026-11-22T06:00:57.786Z",
+      "track_id": "654f3RV4IZdpvH189db8mQ",
+      "track_name": "Once then we'll be free",
+      "artist_ids": [
+        "3TJZG17pjOKXwx1ELKJPfm"
+      ],
+      "artists": [
+        "Wisp"
+      ]
     }
   ]
 }
