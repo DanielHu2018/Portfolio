@@ -24,6 +24,7 @@ export const visited: Place[] = [
   { name: 'Memphis, TN', lat: 35.15, lon: -90.05 },
   { name: 'Nashville, TN', lat: 36.16, lon: -86.78 },
   { name: 'Great Smoky Mountains', lat: 35.61, lon: -83.49 },
+  { name: 'Red River Gorge, KY', lat: 37.8, lon: -83.68 },
   { name: 'Atlanta, GA', lat: 33.75, lon: -84.39 },
   { name: 'Orlando, FL', lat: 28.54, lon: -81.38 },
   { name: 'Durham, NC', lat: 35.99, lon: -78.9 },
