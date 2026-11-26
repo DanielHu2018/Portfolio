@@ -3,6 +3,54 @@
   "views": {
     "tracks-1m": [
       {
+        "name": "iPod Touch",
+        "secondary": "29 plays",
+        "id": "1xqT27jSG1Y15vOXfsV0gv",
+        "artist": "Ninajirachi",
+        "album": "I Love My Computer",
+        "year": "2025",
+        "ms": 196522,
+        "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87",
+        "url": "https://open.spotify.com/track/1xqT27jSG1Y15vOXfsV0gv",
+        "last": "2026-11-26T09:08:38.870Z"
+      },
+      {
+        "name": "Talk",
+        "secondary": "27 plays",
+        "id": "4tf04WrZTy60CawyvueIdK",
+        "artist": "beabadoobee",
+        "album": "Beatopia",
+        "year": "2022",
+        "ms": 158293,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713",
+        "url": "https://open.spotify.com/track/4tf04WrZTy60CawyvueIdK",
+        "last": "2026-11-26T09:02:31.799Z"
+      },
+      {
+        "name": "Knot Me",
+        "secondary": "25 plays",
+        "id": "6qyRaRvjQIIYBBRMHSPiz7",
+        "artist": "Lucy Bedroque",
+        "album": "Fête de la Vanille",
+        "year": "2024",
+        "ms": 244735,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02da81537bdc7de47cb60b48fd",
+        "url": "https://open.spotify.com/track/6qyRaRvjQIIYBBRMHSPiz7",
+        "last": "2026-11-26T08:59:52.993Z"
+      },
+      {
+        "name": "Peso",
+        "secondary": "24 plays",
+        "id": "3tTpvK7QgjjQCKGnHt5xn3",
+        "artist": "A$AP Rocky",
+        "album": "LIVE.LOVE.A$AP",
+        "year": "2011",
+        "ms": 169560,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd",
+        "url": "https://open.spotify.com/track/3tTpvK7QgjjQCKGnHt5xn3",
+        "last": "2026-11-26T09:11:28.891Z"
+      },
+      {
         "name": "Sunday - Remastered 2026",
         "secondary": "23 plays",
         "id": "2nTcgF0BGEJBI3argOQWps",
@@ -15,56 +63,8 @@
         "last": "2026-11-23T04:08:42.885Z"
       },
       {
-        "name": "iPod Touch",
-        "secondary": "23 plays",
-        "id": "1xqT27jSG1Y15vOXfsV0gv",
-        "artist": "Ninajirachi",
-        "album": "I Love My Computer",
-        "year": "2025",
-        "ms": 196522,
-        "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87",
-        "url": "https://open.spotify.com/track/1xqT27jSG1Y15vOXfsV0gv",
-        "last": "2026-11-26T07:34:43.328Z"
-      },
-      {
-        "name": "Talk",
-        "secondary": "20 plays",
-        "id": "4tf04WrZTy60CawyvueIdK",
-        "artist": "beabadoobee",
-        "album": "Beatopia",
-        "year": "2022",
-        "ms": 158293,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713",
-        "url": "https://open.spotify.com/track/4tf04WrZTy60CawyvueIdK",
-        "last": "2026-11-26T07:18:23.995Z"
-      },
-      {
-        "name": "Knot Me",
-        "secondary": "19 plays",
-        "id": "6qyRaRvjQIIYBBRMHSPiz7",
-        "artist": "Lucy Bedroque",
-        "album": "Fête de la Vanille",
-        "year": "2024",
-        "ms": 244735,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02da81537bdc7de47cb60b48fd",
-        "url": "https://open.spotify.com/track/6qyRaRvjQIIYBBRMHSPiz7",
-        "last": "2026-11-26T07:25:46.248Z"
-      },
-      {
-        "name": "Peso",
-        "secondary": "18 plays",
-        "id": "3tTpvK7QgjjQCKGnHt5xn3",
-        "artist": "A$AP Rocky",
-        "album": "LIVE.LOVE.A$AP",
-        "year": "2011",
-        "ms": 169560,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd",
-        "url": "https://open.spotify.com/track/3tTpvK7QgjjQCKGnHt5xn3",
-        "last": "2026-11-26T07:31:26.287Z"
-      },
-      {
         "name": "What Ever Happened?",
-        "secondary": "17 plays",
+        "secondary": "23 plays",
         "id": "78Gzxi27GuNHTfkn2BylG4",
         "artist": "The Strokes",
         "album": "Room On Fire",
@@ -72,7 +72,7 @@
         "ms": 169506,
         "pic": "https://i.scdn.co/image/ab67616d00001e020f35726025e0f025da4c688f",
         "url": "https://open.spotify.com/track/78Gzxi27GuNHTfkn2BylG4",
-        "last": "2026-11-26T07:28:36.242Z"
+        "last": "2026-11-26T09:05:21.790Z"
       },
       {
         "name": "How to Pretend",
@@ -126,16 +126,16 @@
     "artists-1m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "71 listens",
+        "secondary": "77 listens",
         "id": "2I8H267eH5va9da4vGt38O",
         "pic": "https://i.scdn.co/image/ab67616100005174100cfd4653979ed518fbf28f",
         "genres": [],
         "url": "https://open.spotify.com/artist/2I8H267eH5va9da4vGt38O",
-        "last": "2026-11-26T07:25:46.248Z",
+        "last": "2026-11-26T08:59:52.993Z",
         "tracks": [
           {
             "name": "Knot Me",
-            "plays": 19,
+            "plays": 25,
             "pic": "https://i.scdn.co/image/ab67616d00001e02da81537bdc7de47cb60b48fd"
           },
           {
@@ -228,16 +228,16 @@
       },
       {
         "name": "Ninajirachi",
-        "secondary": "49 listens",
+        "secondary": "55 listens",
         "id": "3MekbRujJg5VZThubOlrkR",
         "pic": "https://i.scdn.co/image/ab676161000051746363b3a1630b8811a4d3d718",
         "genres": [],
         "url": "https://open.spotify.com/artist/3MekbRujJg5VZThubOlrkR",
-        "last": "2026-11-26T07:34:43.328Z",
+        "last": "2026-11-26T09:08:38.870Z",
         "tracks": [
           {
             "name": "iPod Touch",
-            "plays": 23,
+            "plays": 29,
             "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87"
           },
           {
@@ -274,6 +274,98 @@
             "name": "Ice u out",
             "plays": 1,
             "pic": "https://i.scdn.co/image/ab67616d00001e02debe7f77e35c78a95ad5603c"
+          }
+        ]
+      },
+      {
+        "name": "A$AP Rocky",
+        "secondary": "47 listens",
+        "id": "13ubrt8QOOCPljQ2FL1Kca",
+        "pic": "https://i.scdn.co/image/ab67616100005174ad160b333f9a240f84aff7d7",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/13ubrt8QOOCPljQ2FL1Kca",
+        "last": "2026-11-26T09:11:28.891Z",
+        "tracks": [
+          {
+            "name": "Peso",
+            "plays": 24,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd"
+          },
+          {
+            "name": "LVL",
+            "plays": 9,
+            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
+          },
+          {
+            "name": "Fashion Killa",
+            "plays": 8,
+            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
+          },
+          {
+            "name": "DON'T BE DUMB / TRIP BABY",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02be35d523672e13da3debc413"
+          },
+          {
+            "name": "New Choppa",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02e31a279d267f3b3d8912e6f1"
+          },
+          {
+            "name": "Sandman",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd"
+          }
+        ]
+      },
+      {
+        "name": "The Strokes",
+        "secondary": "43 listens",
+        "id": "0epOFNiUfyON9EYx7Tpr6V",
+        "pic": "https://i.scdn.co/image/ab6761610000517498856eea770468af6dd999d9",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/0epOFNiUfyON9EYx7Tpr6V",
+        "last": "2026-11-26T09:05:21.790Z",
+        "tracks": [
+          {
+            "name": "What Ever Happened?",
+            "plays": 23,
+            "pic": "https://i.scdn.co/image/ab67616d00001e020f35726025e0f025da4c688f"
+          },
+          {
+            "name": "Reptilia",
+            "plays": 7,
+            "pic": "https://i.scdn.co/image/ab67616d00001e020f35726025e0f025da4c688f"
+          },
+          {
+            "name": "The Adults Are Talking",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02e3f1ba3de4659708c25d0f39"
+          },
+          {
+            "name": "Is This It",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
+          },
+          {
+            "name": "Last Nite",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
+          },
+          {
+            "name": "Hard To Explain",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
+          },
+          {
+            "name": "Ode To The Mets",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02e3f1ba3de4659708c25d0f39"
+          },
+          {
+            "name": "Someday",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
           }
         ]
       },
@@ -329,6 +421,52 @@
         ]
       },
       {
+        "name": "beabadoobee",
+        "secondary": "41 listens",
+        "id": "35l9BRT7MXmM8bv2WDQiyB",
+        "pic": "https://i.scdn.co/image/ab676161000051748724b689605796e605b6b439",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/35l9BRT7MXmM8bv2WDQiyB",
+        "last": "2026-11-26T09:02:31.799Z",
+        "tracks": [
+          {
+            "name": "Talk",
+            "plays": 27,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
+          },
+          {
+            "name": "10:36",
+            "plays": 6,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
+          },
+          {
+            "name": "Satellite",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0212c805544ba208842da0d9f3"
+          },
+          {
+            "name": "Beaches",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
+          },
+          {
+            "name": "Cologne",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02110bbc10d8188cf73b3d336c"
+          },
+          {
+            "name": "California",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
+          },
+          {
+            "name": "Sun Has Set",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02068caa28105743b03ac6ee0f"
+          }
+        ]
+      },
+      {
         "name": "underscores",
         "secondary": "41 listens",
         "id": "7HfUJxeVTgrvhk0eWHFzV7",
@@ -376,98 +514,6 @@
             "name": "Perfect Pinterest Garden - Ninajirachi & underscores Remix",
             "plays": 2,
             "pic": "https://i.scdn.co/image/ab67616d00001e02d2425ac83bd7f4fec63f1c9c"
-          }
-        ]
-      },
-      {
-        "name": "A$AP Rocky",
-        "secondary": "41 listens",
-        "id": "13ubrt8QOOCPljQ2FL1Kca",
-        "pic": "https://i.scdn.co/image/ab67616100005174ad160b333f9a240f84aff7d7",
-        "genres": [],
-        "url": "https://open.spotify.com/artist/13ubrt8QOOCPljQ2FL1Kca",
-        "last": "2026-11-26T07:31:26.287Z",
-        "tracks": [
-          {
-            "name": "Peso",
-            "plays": 18,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd"
-          },
-          {
-            "name": "LVL",
-            "plays": 9,
-            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
-          },
-          {
-            "name": "Fashion Killa",
-            "plays": 8,
-            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
-          },
-          {
-            "name": "DON'T BE DUMB / TRIP BABY",
-            "plays": 4,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02be35d523672e13da3debc413"
-          },
-          {
-            "name": "New Choppa",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02e31a279d267f3b3d8912e6f1"
-          },
-          {
-            "name": "Sandman",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd"
-          }
-        ]
-      },
-      {
-        "name": "The Strokes",
-        "secondary": "37 listens",
-        "id": "0epOFNiUfyON9EYx7Tpr6V",
-        "pic": "https://i.scdn.co/image/ab6761610000517498856eea770468af6dd999d9",
-        "genres": [],
-        "url": "https://open.spotify.com/artist/0epOFNiUfyON9EYx7Tpr6V",
-        "last": "2026-11-26T07:28:36.242Z",
-        "tracks": [
-          {
-            "name": "What Ever Happened?",
-            "plays": 17,
-            "pic": "https://i.scdn.co/image/ab67616d00001e020f35726025e0f025da4c688f"
-          },
-          {
-            "name": "Reptilia",
-            "plays": 7,
-            "pic": "https://i.scdn.co/image/ab67616d00001e020f35726025e0f025da4c688f"
-          },
-          {
-            "name": "The Adults Are Talking",
-            "plays": 4,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02e3f1ba3de4659708c25d0f39"
-          },
-          {
-            "name": "Is This It",
-            "plays": 3,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
-          },
-          {
-            "name": "Last Nite",
-            "plays": 2,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
-          },
-          {
-            "name": "Hard To Explain",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
-          },
-          {
-            "name": "Ode To The Mets",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02e3f1ba3de4659708c25d0f39"
-          },
-          {
-            "name": "Someday",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
           }
         ]
       },
@@ -523,52 +569,6 @@
         ]
       },
       {
-        "name": "beabadoobee",
-        "secondary": "34 listens",
-        "id": "35l9BRT7MXmM8bv2WDQiyB",
-        "pic": "https://i.scdn.co/image/ab676161000051748724b689605796e605b6b439",
-        "genres": [],
-        "url": "https://open.spotify.com/artist/35l9BRT7MXmM8bv2WDQiyB",
-        "last": "2026-11-26T07:18:23.995Z",
-        "tracks": [
-          {
-            "name": "Talk",
-            "plays": 20,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
-          },
-          {
-            "name": "10:36",
-            "plays": 6,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
-          },
-          {
-            "name": "Satellite",
-            "plays": 3,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0212c805544ba208842da0d9f3"
-          },
-          {
-            "name": "Beaches",
-            "plays": 2,
-            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
-          },
-          {
-            "name": "Cologne",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02110bbc10d8188cf73b3d336c"
-          },
-          {
-            "name": "California",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
-          },
-          {
-            "name": "Sun Has Set",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02068caa28105743b03ac6ee0f"
-          }
-        ]
-      },
-      {
         "name": "Cocteau Twins",
         "secondary": "32 listens",
         "id": "5Wabl1lPdNOeIn0SQ5A1mp",
@@ -612,6 +612,54 @@
     ],
     "tracks-6m": [
       {
+        "name": "iPod Touch",
+        "secondary": "29 plays",
+        "id": "1xqT27jSG1Y15vOXfsV0gv",
+        "artist": "Ninajirachi",
+        "album": "I Love My Computer",
+        "year": "2025",
+        "ms": 196522,
+        "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87",
+        "url": "https://open.spotify.com/track/1xqT27jSG1Y15vOXfsV0gv",
+        "last": "2026-11-26T09:08:38.870Z"
+      },
+      {
+        "name": "Talk",
+        "secondary": "27 plays",
+        "id": "4tf04WrZTy60CawyvueIdK",
+        "artist": "beabadoobee",
+        "album": "Beatopia",
+        "year": "2022",
+        "ms": 158293,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713",
+        "url": "https://open.spotify.com/track/4tf04WrZTy60CawyvueIdK",
+        "last": "2026-11-26T09:02:31.799Z"
+      },
+      {
+        "name": "Knot Me",
+        "secondary": "25 plays",
+        "id": "6qyRaRvjQIIYBBRMHSPiz7",
+        "artist": "Lucy Bedroque",
+        "album": "Fête de la Vanille",
+        "year": "2024",
+        "ms": 244735,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02da81537bdc7de47cb60b48fd",
+        "url": "https://open.spotify.com/track/6qyRaRvjQIIYBBRMHSPiz7",
+        "last": "2026-11-26T08:59:52.993Z"
+      },
+      {
+        "name": "Peso",
+        "secondary": "24 plays",
+        "id": "3tTpvK7QgjjQCKGnHt5xn3",
+        "artist": "A$AP Rocky",
+        "album": "LIVE.LOVE.A$AP",
+        "year": "2011",
+        "ms": 169560,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd",
+        "url": "https://open.spotify.com/track/3tTpvK7QgjjQCKGnHt5xn3",
+        "last": "2026-11-26T09:11:28.891Z"
+      },
+      {
         "name": "Sunday - Remastered 2026",
         "secondary": "23 plays",
         "id": "2nTcgF0BGEJBI3argOQWps",
@@ -624,56 +672,8 @@
         "last": "2026-11-23T04:08:42.885Z"
       },
       {
-        "name": "iPod Touch",
-        "secondary": "23 plays",
-        "id": "1xqT27jSG1Y15vOXfsV0gv",
-        "artist": "Ninajirachi",
-        "album": "I Love My Computer",
-        "year": "2025",
-        "ms": 196522,
-        "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87",
-        "url": "https://open.spotify.com/track/1xqT27jSG1Y15vOXfsV0gv",
-        "last": "2026-11-26T07:34:43.328Z"
-      },
-      {
-        "name": "Talk",
-        "secondary": "20 plays",
-        "id": "4tf04WrZTy60CawyvueIdK",
-        "artist": "beabadoobee",
-        "album": "Beatopia",
-        "year": "2022",
-        "ms": 158293,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713",
-        "url": "https://open.spotify.com/track/4tf04WrZTy60CawyvueIdK",
-        "last": "2026-11-26T07:18:23.995Z"
-      },
-      {
-        "name": "Knot Me",
-        "secondary": "19 plays",
-        "id": "6qyRaRvjQIIYBBRMHSPiz7",
-        "artist": "Lucy Bedroque",
-        "album": "Fête de la Vanille",
-        "year": "2024",
-        "ms": 244735,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02da81537bdc7de47cb60b48fd",
-        "url": "https://open.spotify.com/track/6qyRaRvjQIIYBBRMHSPiz7",
-        "last": "2026-11-26T07:25:46.248Z"
-      },
-      {
-        "name": "Peso",
-        "secondary": "18 plays",
-        "id": "3tTpvK7QgjjQCKGnHt5xn3",
-        "artist": "A$AP Rocky",
-        "album": "LIVE.LOVE.A$AP",
-        "year": "2011",
-        "ms": 169560,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd",
-        "url": "https://open.spotify.com/track/3tTpvK7QgjjQCKGnHt5xn3",
-        "last": "2026-11-26T07:31:26.287Z"
-      },
-      {
         "name": "What Ever Happened?",
-        "secondary": "17 plays",
+        "secondary": "23 plays",
         "id": "78Gzxi27GuNHTfkn2BylG4",
         "artist": "The Strokes",
         "album": "Room On Fire",
@@ -681,7 +681,7 @@
         "ms": 169506,
         "pic": "https://i.scdn.co/image/ab67616d00001e020f35726025e0f025da4c688f",
         "url": "https://open.spotify.com/track/78Gzxi27GuNHTfkn2BylG4",
-        "last": "2026-11-26T07:28:36.242Z"
+        "last": "2026-11-26T09:05:21.790Z"
       },
       {
         "name": "How to Pretend",
@@ -735,16 +735,16 @@
     "artists-6m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "71 listens",
+        "secondary": "77 listens",
         "id": "2I8H267eH5va9da4vGt38O",
         "pic": "https://i.scdn.co/image/ab67616100005174100cfd4653979ed518fbf28f",
         "genres": [],
         "url": "https://open.spotify.com/artist/2I8H267eH5va9da4vGt38O",
-        "last": "2026-11-26T07:25:46.248Z",
+        "last": "2026-11-26T08:59:52.993Z",
         "tracks": [
           {
             "name": "Knot Me",
-            "plays": 19,
+            "plays": 25,
             "pic": "https://i.scdn.co/image/ab67616d00001e02da81537bdc7de47cb60b48fd"
           },
           {
@@ -837,16 +837,16 @@
       },
       {
         "name": "Ninajirachi",
-        "secondary": "49 listens",
+        "secondary": "55 listens",
         "id": "3MekbRujJg5VZThubOlrkR",
         "pic": "https://i.scdn.co/image/ab676161000051746363b3a1630b8811a4d3d718",
         "genres": [],
         "url": "https://open.spotify.com/artist/3MekbRujJg5VZThubOlrkR",
-        "last": "2026-11-26T07:34:43.328Z",
+        "last": "2026-11-26T09:08:38.870Z",
         "tracks": [
           {
             "name": "iPod Touch",
-            "plays": 23,
+            "plays": 29,
             "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87"
           },
           {
@@ -883,6 +883,98 @@
             "name": "Ice u out",
             "plays": 1,
             "pic": "https://i.scdn.co/image/ab67616d00001e02debe7f77e35c78a95ad5603c"
+          }
+        ]
+      },
+      {
+        "name": "A$AP Rocky",
+        "secondary": "47 listens",
+        "id": "13ubrt8QOOCPljQ2FL1Kca",
+        "pic": "https://i.scdn.co/image/ab67616100005174ad160b333f9a240f84aff7d7",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/13ubrt8QOOCPljQ2FL1Kca",
+        "last": "2026-11-26T09:11:28.891Z",
+        "tracks": [
+          {
+            "name": "Peso",
+            "plays": 24,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd"
+          },
+          {
+            "name": "LVL",
+            "plays": 9,
+            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
+          },
+          {
+            "name": "Fashion Killa",
+            "plays": 8,
+            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
+          },
+          {
+            "name": "DON'T BE DUMB / TRIP BABY",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02be35d523672e13da3debc413"
+          },
+          {
+            "name": "New Choppa",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02e31a279d267f3b3d8912e6f1"
+          },
+          {
+            "name": "Sandman",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd"
+          }
+        ]
+      },
+      {
+        "name": "The Strokes",
+        "secondary": "43 listens",
+        "id": "0epOFNiUfyON9EYx7Tpr6V",
+        "pic": "https://i.scdn.co/image/ab6761610000517498856eea770468af6dd999d9",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/0epOFNiUfyON9EYx7Tpr6V",
+        "last": "2026-11-26T09:05:21.790Z",
+        "tracks": [
+          {
+            "name": "What Ever Happened?",
+            "plays": 23,
+            "pic": "https://i.scdn.co/image/ab67616d00001e020f35726025e0f025da4c688f"
+          },
+          {
+            "name": "Reptilia",
+            "plays": 7,
+            "pic": "https://i.scdn.co/image/ab67616d00001e020f35726025e0f025da4c688f"
+          },
+          {
+            "name": "The Adults Are Talking",
+            "plays": 4,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02e3f1ba3de4659708c25d0f39"
+          },
+          {
+            "name": "Is This It",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
+          },
+          {
+            "name": "Last Nite",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
+          },
+          {
+            "name": "Hard To Explain",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
+          },
+          {
+            "name": "Ode To The Mets",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02e3f1ba3de4659708c25d0f39"
+          },
+          {
+            "name": "Someday",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
           }
         ]
       },
@@ -938,6 +1030,52 @@
         ]
       },
       {
+        "name": "beabadoobee",
+        "secondary": "41 listens",
+        "id": "35l9BRT7MXmM8bv2WDQiyB",
+        "pic": "https://i.scdn.co/image/ab676161000051748724b689605796e605b6b439",
+        "genres": [],
+        "url": "https://open.spotify.com/artist/35l9BRT7MXmM8bv2WDQiyB",
+        "last": "2026-11-26T09:02:31.799Z",
+        "tracks": [
+          {
+            "name": "Talk",
+            "plays": 27,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
+          },
+          {
+            "name": "10:36",
+            "plays": 6,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
+          },
+          {
+            "name": "Satellite",
+            "plays": 3,
+            "pic": "https://i.scdn.co/image/ab67616d00001e0212c805544ba208842da0d9f3"
+          },
+          {
+            "name": "Beaches",
+            "plays": 2,
+            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
+          },
+          {
+            "name": "Cologne",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02110bbc10d8188cf73b3d336c"
+          },
+          {
+            "name": "California",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
+          },
+          {
+            "name": "Sun Has Set",
+            "plays": 1,
+            "pic": "https://i.scdn.co/image/ab67616d00001e02068caa28105743b03ac6ee0f"
+          }
+        ]
+      },
+      {
         "name": "underscores",
         "secondary": "41 listens",
         "id": "7HfUJxeVTgrvhk0eWHFzV7",
@@ -989,98 +1127,6 @@
         ]
       },
       {
-        "name": "A$AP Rocky",
-        "secondary": "41 listens",
-        "id": "13ubrt8QOOCPljQ2FL1Kca",
-        "pic": "https://i.scdn.co/image/ab67616100005174ad160b333f9a240f84aff7d7",
-        "genres": [],
-        "url": "https://open.spotify.com/artist/13ubrt8QOOCPljQ2FL1Kca",
-        "last": "2026-11-26T07:31:26.287Z",
-        "tracks": [
-          {
-            "name": "Peso",
-            "plays": 18,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd"
-          },
-          {
-            "name": "LVL",
-            "plays": 9,
-            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
-          },
-          {
-            "name": "Fashion Killa",
-            "plays": 8,
-            "pic": "https://i.scdn.co/image/ab67616d00001e022ae92030b51fb8135d694af9"
-          },
-          {
-            "name": "DON'T BE DUMB / TRIP BABY",
-            "plays": 4,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02be35d523672e13da3debc413"
-          },
-          {
-            "name": "New Choppa",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02e31a279d267f3b3d8912e6f1"
-          },
-          {
-            "name": "Sandman",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd"
-          }
-        ]
-      },
-      {
-        "name": "The Strokes",
-        "secondary": "37 listens",
-        "id": "0epOFNiUfyON9EYx7Tpr6V",
-        "pic": "https://i.scdn.co/image/ab6761610000517498856eea770468af6dd999d9",
-        "genres": [],
-        "url": "https://open.spotify.com/artist/0epOFNiUfyON9EYx7Tpr6V",
-        "last": "2026-11-26T07:28:36.242Z",
-        "tracks": [
-          {
-            "name": "What Ever Happened?",
-            "plays": 17,
-            "pic": "https://i.scdn.co/image/ab67616d00001e020f35726025e0f025da4c688f"
-          },
-          {
-            "name": "Reptilia",
-            "plays": 7,
-            "pic": "https://i.scdn.co/image/ab67616d00001e020f35726025e0f025da4c688f"
-          },
-          {
-            "name": "The Adults Are Talking",
-            "plays": 4,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02e3f1ba3de4659708c25d0f39"
-          },
-          {
-            "name": "Is This It",
-            "plays": 3,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
-          },
-          {
-            "name": "Last Nite",
-            "plays": 2,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
-          },
-          {
-            "name": "Hard To Explain",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
-          },
-          {
-            "name": "Ode To The Mets",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02e3f1ba3de4659708c25d0f39"
-          },
-          {
-            "name": "Someday",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0213f2466b83507515291acce4"
-          }
-        ]
-      },
-      {
         "name": "Paramore",
         "secondary": "35 listens",
         "id": "74XFHRwlV6OrjEM0A2NCMF",
@@ -1128,52 +1174,6 @@
             "name": "Misery Business",
             "plays": 1,
             "pic": "https://i.scdn.co/image/ab67616d00001e0269966efa45b125ed6711b43c"
-          }
-        ]
-      },
-      {
-        "name": "beabadoobee",
-        "secondary": "34 listens",
-        "id": "35l9BRT7MXmM8bv2WDQiyB",
-        "pic": "https://i.scdn.co/image/ab676161000051748724b689605796e605b6b439",
-        "genres": [],
-        "url": "https://open.spotify.com/artist/35l9BRT7MXmM8bv2WDQiyB",
-        "last": "2026-11-26T07:18:23.995Z",
-        "tracks": [
-          {
-            "name": "Talk",
-            "plays": 20,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
-          },
-          {
-            "name": "10:36",
-            "plays": 6,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
-          },
-          {
-            "name": "Satellite",
-            "plays": 3,
-            "pic": "https://i.scdn.co/image/ab67616d00001e0212c805544ba208842da0d9f3"
-          },
-          {
-            "name": "Beaches",
-            "plays": 2,
-            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
-          },
-          {
-            "name": "Cologne",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02110bbc10d8188cf73b3d336c"
-          },
-          {
-            "name": "California",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e027d9a2e7835a178df7b0153aa"
-          },
-          {
-            "name": "Sun Has Set",
-            "plays": 1,
-            "pic": "https://i.scdn.co/image/ab67616d00001e02068caa28105743b03ac6ee0f"
           }
         ]
       },
