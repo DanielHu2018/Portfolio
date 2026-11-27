@@ -4,7 +4,7 @@
     "tracks-1m": [
       {
         "name": "iPod Touch",
-        "secondary": "34 plays",
+        "secondary": "35 plays",
         "id": "1xqT27jSG1Y15vOXfsV0gv",
         "artist": "Ninajirachi",
         "album": "I Love My Computer",
@@ -12,11 +12,11 @@
         "ms": 196522,
         "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87",
         "url": "https://open.spotify.com/track/1xqT27jSG1Y15vOXfsV0gv",
-        "last": "2026-11-27T07:25:03.574Z"
+        "last": "2026-11-27T16:41:30.663Z"
       },
       {
         "name": "Talk",
-        "secondary": "32 plays",
+        "secondary": "34 plays",
         "id": "4tf04WrZTy60CawyvueIdK",
         "artist": "beabadoobee",
         "album": "Beatopia",
@@ -24,11 +24,11 @@
         "ms": 158293,
         "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713",
         "url": "https://open.spotify.com/track/4tf04WrZTy60CawyvueIdK",
-        "last": "2026-11-27T07:30:32.374Z"
+        "last": "2026-11-27T17:05:52.142Z"
       },
       {
         "name": "Knot Me",
-        "secondary": "30 plays",
+        "secondary": "32 plays",
         "id": "6qyRaRvjQIIYBBRMHSPiz7",
         "artist": "Lucy Bedroque",
         "album": "Fête de la Vanille",
@@ -36,23 +36,11 @@
         "ms": 244735,
         "pic": "https://i.scdn.co/image/ab67616d00001e02da81537bdc7de47cb60b48fd",
         "url": "https://open.spotify.com/track/6qyRaRvjQIIYBBRMHSPiz7",
-        "last": "2026-11-27T07:21:45.341Z"
-      },
-      {
-        "name": "Peso",
-        "secondary": "29 plays",
-        "id": "3tTpvK7QgjjQCKGnHt5xn3",
-        "artist": "A$AP Rocky",
-        "album": "LIVE.LOVE.A$AP",
-        "year": "2011",
-        "ms": 169560,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd",
-        "url": "https://open.spotify.com/track/3tTpvK7QgjjQCKGnHt5xn3",
-        "last": "2026-11-27T07:27:53.574Z"
+        "last": "2026-11-27T19:41:06.064Z"
       },
       {
         "name": "What Ever Happened?",
-        "secondary": "28 plays",
+        "secondary": "31 plays",
         "id": "78Gzxi27GuNHTfkn2BylG4",
         "artist": "The Strokes",
         "album": "Room On Fire",
@@ -60,7 +48,19 @@
         "ms": 169506,
         "pic": "https://i.scdn.co/image/ab67616d00001e020f35726025e0f025da4c688f",
         "url": "https://open.spotify.com/track/78Gzxi27GuNHTfkn2BylG4",
-        "last": "2026-11-27T07:17:40.043Z"
+        "last": "2026-11-27T17:03:13.335Z"
+      },
+      {
+        "name": "Peso",
+        "secondary": "30 plays",
+        "id": "3tTpvK7QgjjQCKGnHt5xn3",
+        "artist": "A$AP Rocky",
+        "album": "LIVE.LOVE.A$AP",
+        "year": "2011",
+        "ms": 169560,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd",
+        "url": "https://open.spotify.com/track/3tTpvK7QgjjQCKGnHt5xn3",
+        "last": "2026-11-27T16:31:29.765Z"
       },
       {
         "name": "Sunday - Remastered 2026",
@@ -126,16 +126,16 @@
     "artists-1m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "82 listens",
+        "secondary": "84 listens",
         "id": "2I8H267eH5va9da4vGt38O",
         "pic": "https://i.scdn.co/image/ab67616100005174100cfd4653979ed518fbf28f",
         "genres": [],
         "url": "https://open.spotify.com/artist/2I8H267eH5va9da4vGt38O",
-        "last": "2026-11-27T07:21:45.341Z",
+        "last": "2026-11-27T19:41:06.064Z",
         "tracks": [
           {
             "name": "Knot Me",
-            "plays": 30,
+            "plays": 32,
             "pic": "https://i.scdn.co/image/ab67616d00001e02da81537bdc7de47cb60b48fd"
           },
           {
@@ -228,16 +228,16 @@
       },
       {
         "name": "Ninajirachi",
-        "secondary": "60 listens",
+        "secondary": "61 listens",
         "id": "3MekbRujJg5VZThubOlrkR",
         "pic": "https://i.scdn.co/image/ab676161000051746363b3a1630b8811a4d3d718",
         "genres": [],
         "url": "https://open.spotify.com/artist/3MekbRujJg5VZThubOlrkR",
-        "last": "2026-11-27T07:25:03.574Z",
+        "last": "2026-11-27T16:41:30.663Z",
         "tracks": [
           {
             "name": "iPod Touch",
-            "plays": 34,
+            "plays": 35,
             "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87"
           },
           {
@@ -279,16 +279,16 @@
       },
       {
         "name": "A$AP Rocky",
-        "secondary": "52 listens",
+        "secondary": "53 listens",
         "id": "13ubrt8QOOCPljQ2FL1Kca",
         "pic": "https://i.scdn.co/image/ab67616100005174ad160b333f9a240f84aff7d7",
         "genres": [],
         "url": "https://open.spotify.com/artist/13ubrt8QOOCPljQ2FL1Kca",
-        "last": "2026-11-27T07:27:53.574Z",
+        "last": "2026-11-27T16:31:29.765Z",
         "tracks": [
           {
             "name": "Peso",
-            "plays": 29,
+            "plays": 30,
             "pic": "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd"
           },
           {
@@ -320,16 +320,16 @@
       },
       {
         "name": "The Strokes",
-        "secondary": "48 listens",
+        "secondary": "51 listens",
         "id": "0epOFNiUfyON9EYx7Tpr6V",
         "pic": "https://i.scdn.co/image/ab6761610000517498856eea770468af6dd999d9",
         "genres": [],
         "url": "https://open.spotify.com/artist/0epOFNiUfyON9EYx7Tpr6V",
-        "last": "2026-11-27T07:17:40.043Z",
+        "last": "2026-11-27T17:03:13.335Z",
         "tracks": [
           {
             "name": "What Ever Happened?",
-            "plays": 28,
+            "plays": 31,
             "pic": "https://i.scdn.co/image/ab67616d00001e020f35726025e0f025da4c688f"
           },
           {
@@ -371,16 +371,16 @@
       },
       {
         "name": "beabadoobee",
-        "secondary": "46 listens",
+        "secondary": "48 listens",
         "id": "35l9BRT7MXmM8bv2WDQiyB",
         "pic": "https://i.scdn.co/image/ab676161000051748724b689605796e605b6b439",
         "genres": [],
         "url": "https://open.spotify.com/artist/35l9BRT7MXmM8bv2WDQiyB",
-        "last": "2026-11-27T07:30:32.374Z",
+        "last": "2026-11-27T17:05:52.142Z",
         "tracks": [
           {
             "name": "Talk",
-            "plays": 32,
+            "plays": 34,
             "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
           },
           {
@@ -613,7 +613,7 @@
     "tracks-6m": [
       {
         "name": "iPod Touch",
-        "secondary": "34 plays",
+        "secondary": "35 plays",
         "id": "1xqT27jSG1Y15vOXfsV0gv",
         "artist": "Ninajirachi",
         "album": "I Love My Computer",
@@ -621,11 +621,11 @@
         "ms": 196522,
         "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87",
         "url": "https://open.spotify.com/track/1xqT27jSG1Y15vOXfsV0gv",
-        "last": "2026-11-27T07:25:03.574Z"
+        "last": "2026-11-27T16:41:30.663Z"
       },
       {
         "name": "Talk",
-        "secondary": "32 plays",
+        "secondary": "34 plays",
         "id": "4tf04WrZTy60CawyvueIdK",
         "artist": "beabadoobee",
         "album": "Beatopia",
@@ -633,11 +633,11 @@
         "ms": 158293,
         "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713",
         "url": "https://open.spotify.com/track/4tf04WrZTy60CawyvueIdK",
-        "last": "2026-11-27T07:30:32.374Z"
+        "last": "2026-11-27T17:05:52.142Z"
       },
       {
         "name": "Knot Me",
-        "secondary": "30 plays",
+        "secondary": "32 plays",
         "id": "6qyRaRvjQIIYBBRMHSPiz7",
         "artist": "Lucy Bedroque",
         "album": "Fête de la Vanille",
@@ -645,23 +645,11 @@
         "ms": 244735,
         "pic": "https://i.scdn.co/image/ab67616d00001e02da81537bdc7de47cb60b48fd",
         "url": "https://open.spotify.com/track/6qyRaRvjQIIYBBRMHSPiz7",
-        "last": "2026-11-27T07:21:45.341Z"
-      },
-      {
-        "name": "Peso",
-        "secondary": "29 plays",
-        "id": "3tTpvK7QgjjQCKGnHt5xn3",
-        "artist": "A$AP Rocky",
-        "album": "LIVE.LOVE.A$AP",
-        "year": "2011",
-        "ms": 169560,
-        "pic": "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd",
-        "url": "https://open.spotify.com/track/3tTpvK7QgjjQCKGnHt5xn3",
-        "last": "2026-11-27T07:27:53.574Z"
+        "last": "2026-11-27T19:41:06.064Z"
       },
       {
         "name": "What Ever Happened?",
-        "secondary": "28 plays",
+        "secondary": "31 plays",
         "id": "78Gzxi27GuNHTfkn2BylG4",
         "artist": "The Strokes",
         "album": "Room On Fire",
@@ -669,7 +657,19 @@
         "ms": 169506,
         "pic": "https://i.scdn.co/image/ab67616d00001e020f35726025e0f025da4c688f",
         "url": "https://open.spotify.com/track/78Gzxi27GuNHTfkn2BylG4",
-        "last": "2026-11-27T07:17:40.043Z"
+        "last": "2026-11-27T17:03:13.335Z"
+      },
+      {
+        "name": "Peso",
+        "secondary": "30 plays",
+        "id": "3tTpvK7QgjjQCKGnHt5xn3",
+        "artist": "A$AP Rocky",
+        "album": "LIVE.LOVE.A$AP",
+        "year": "2011",
+        "ms": 169560,
+        "pic": "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd",
+        "url": "https://open.spotify.com/track/3tTpvK7QgjjQCKGnHt5xn3",
+        "last": "2026-11-27T16:31:29.765Z"
       },
       {
         "name": "Sunday - Remastered 2026",
@@ -735,16 +735,16 @@
     "artists-6m": [
       {
         "name": "Lucy Bedroque",
-        "secondary": "82 listens",
+        "secondary": "84 listens",
         "id": "2I8H267eH5va9da4vGt38O",
         "pic": "https://i.scdn.co/image/ab67616100005174100cfd4653979ed518fbf28f",
         "genres": [],
         "url": "https://open.spotify.com/artist/2I8H267eH5va9da4vGt38O",
-        "last": "2026-11-27T07:21:45.341Z",
+        "last": "2026-11-27T19:41:06.064Z",
         "tracks": [
           {
             "name": "Knot Me",
-            "plays": 30,
+            "plays": 32,
             "pic": "https://i.scdn.co/image/ab67616d00001e02da81537bdc7de47cb60b48fd"
           },
           {
@@ -837,16 +837,16 @@
       },
       {
         "name": "Ninajirachi",
-        "secondary": "60 listens",
+        "secondary": "61 listens",
         "id": "3MekbRujJg5VZThubOlrkR",
         "pic": "https://i.scdn.co/image/ab676161000051746363b3a1630b8811a4d3d718",
         "genres": [],
         "url": "https://open.spotify.com/artist/3MekbRujJg5VZThubOlrkR",
-        "last": "2026-11-27T07:25:03.574Z",
+        "last": "2026-11-27T16:41:30.663Z",
         "tracks": [
           {
             "name": "iPod Touch",
-            "plays": 34,
+            "plays": 35,
             "pic": "https://i.scdn.co/image/ab67616d00001e023b9b742c5c525af6e6767d87"
           },
           {
@@ -888,16 +888,16 @@
       },
       {
         "name": "A$AP Rocky",
-        "secondary": "52 listens",
+        "secondary": "53 listens",
         "id": "13ubrt8QOOCPljQ2FL1Kca",
         "pic": "https://i.scdn.co/image/ab67616100005174ad160b333f9a240f84aff7d7",
         "genres": [],
         "url": "https://open.spotify.com/artist/13ubrt8QOOCPljQ2FL1Kca",
-        "last": "2026-11-27T07:27:53.574Z",
+        "last": "2026-11-27T16:31:29.765Z",
         "tracks": [
           {
             "name": "Peso",
-            "plays": 29,
+            "plays": 30,
             "pic": "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd"
           },
           {
@@ -929,16 +929,16 @@
       },
       {
         "name": "The Strokes",
-        "secondary": "48 listens",
+        "secondary": "51 listens",
         "id": "0epOFNiUfyON9EYx7Tpr6V",
         "pic": "https://i.scdn.co/image/ab6761610000517498856eea770468af6dd999d9",
         "genres": [],
         "url": "https://open.spotify.com/artist/0epOFNiUfyON9EYx7Tpr6V",
-        "last": "2026-11-27T07:17:40.043Z",
+        "last": "2026-11-27T17:03:13.335Z",
         "tracks": [
           {
             "name": "What Ever Happened?",
-            "plays": 28,
+            "plays": 31,
             "pic": "https://i.scdn.co/image/ab67616d00001e020f35726025e0f025da4c688f"
           },
           {
@@ -980,16 +980,16 @@
       },
       {
         "name": "beabadoobee",
-        "secondary": "46 listens",
+        "secondary": "48 listens",
         "id": "35l9BRT7MXmM8bv2WDQiyB",
         "pic": "https://i.scdn.co/image/ab676161000051748724b689605796e605b6b439",
         "genres": [],
         "url": "https://open.spotify.com/artist/35l9BRT7MXmM8bv2WDQiyB",
-        "last": "2026-11-27T07:30:32.374Z",
+        "last": "2026-11-27T17:05:52.142Z",
         "tracks": [
           {
             "name": "Talk",
-            "plays": 32,
+            "plays": 34,
             "pic": "https://i.scdn.co/image/ab67616d00001e02384d10f967c2b914de7e2713"
           },
           {
